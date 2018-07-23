@@ -8,7 +8,7 @@
                     <h1 class="title">Screenshots</h1>
                 </div>
                 <div id="visage" class="content imgcontent">
-                {{ range .Pages}}
+                {{ range sort .Pages .Params.weight}}
                     <div class="item col-md-4 col-sm-6 col-xs-12 screenshot-container">
                         <div class="content">
                             <div class="screenshot">
