@@ -1,5 +1,4 @@
-{{partial "header.html" .}}
-
+{{ define "main"}}
 <section id="promo" class="promo section offset-header has-pattern">
         <div class="container cover-image" style="margin-top:20px;">
             <div class="row">
@@ -20,6 +19,6 @@
 
         </div>
     </section>
-{{partial "feature_panel.html" .}}
+{{ partial "feature_panel.html" . }}
 
-{{ partial "footer.html" . }}
+{{ end }}

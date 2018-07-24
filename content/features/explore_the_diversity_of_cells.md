@@ -1,10 +1,11 @@
 +++
 title= "Explore the Diversity of Cells Within Your Sample"
-image_link= "/images/Cell-Type-Discovery-small.png"
+thumbnailImage= "/images/Cell-Type-Discovery-small.png"
 css_class =  "cell-type-discovery"
-video_link_tag =  "3nMcI4Hxm7c&t=0s"
-more_link =  "/features/interactive-data-visualization/"
-text_position = "right"
+video =  "3nMcI4Hxm7c&t=0s"
+learnMore =  "/features/interactive-data-visualization/"
+thumbnailImagePosition = "left"
+weight = 30
 +++
 
 
