@@ -20,7 +20,7 @@
                 {{ if .Params.learnMore }}
                 <a href="{{ .Params.learnMore }}">
                     <div class="learn-more feature-block">
-
+                    	<div class="feature-block fa fa-arrow-circle-o-right jsonly" > </div>
                         <div class="feature-block feature-link">Learn More</div>
                     </div>
                 </a>
@@ -31,6 +31,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;
                     {{ end }}
                 <a class="lightbox" href="https://www.youtube.com/watch?v={{ .Params.video }}&autoplay=1">
+                	<div class="feature-block fa fa-play-circle-o jsonly"></div>
                     <div class="feature-block feature-link">Watch Video</div>
                 </a>
                 {{ end }}

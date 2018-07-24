@@ -1,4 +1,9 @@
 {{ define "feature_panel"}}
+
+{{ $headless := .Site.GetPage "/features" }}
+{{ range $headless}}
+{{ .Title}}
+{{end}}
 <section id="features" class="features section">
         <a id="Orange-Features" class="features-anchor"></a>
         <div class="container">
