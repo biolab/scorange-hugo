@@ -1,11 +1,15 @@
 <html>    
     
     <body>
+
     {{ partial "header.html" . }}
+    <div id="main">
+        <div class="container clear-top">
+		    {{ block "main" .}}
 
-    {{ block "main" .}}
-
-    {{end}}
+		    {{end}}
+		</div>
+	</div>
     {{ partial "footer.html" . }}
     </body>
 </html>

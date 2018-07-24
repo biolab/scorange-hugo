@@ -19,6 +19,17 @@
 
         </div>
     </section>
-{{ partial "feature_panel.html" . }}
+
+
+{{ block "feature_panel" . }}
+
+{{ end }}
+
+<script>
+function click_features() {
+    var elmnt = document.getElementById("features");
+    elmnt.scrollIntoView();
+}
+</script>
 
 {{ end }}
