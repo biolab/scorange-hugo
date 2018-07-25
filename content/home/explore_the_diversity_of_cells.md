@@ -5,7 +5,7 @@ css_class =  "cell-type-discovery"
 video =  "3nMcI4Hxm7c&t=0s"
 learnMore =  "/features/interactive-data-visualization/"
 thumbnailImagePosition = "left"
-weight = 30
+weight = -30
 +++
 
 

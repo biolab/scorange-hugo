@@ -8,7 +8,7 @@ title = "My New Hugo Site"
   [[menu.main]]
     identifier = "features"
     name = "Features"
-    url = "/features/"
+    url = "/#features"
     weight = -130
 
   [[menu.main]]

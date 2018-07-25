@@ -1,5 +1,6 @@
 {{ define "main"}}
-<section id="promo" class="promo section offset-header has-pattern">
+<div>
+<section id="promo" class="offset-header">
         <div class="container cover-image" style="margin-top:20px;">
             <div class="row">
                 <div class="overview">
@@ -18,14 +19,69 @@
             </div>
         </div>
     </section>
+</div>
 
-{{partial "feature_panel" . }}
+<section id="features" class="features section">
+        <a id="Orange-Features" class="features-anchor"></a>
+        <div class="container">
+            
+           {{ range .Pages.ByWeight }}
+            <div class="feature-panel row {{ .Params.css_class }}">
+        <div class='content col-md-6 col-xs-12 feature-description pull-{{if (eq .Params.thumbnailImagePosition "left")}}right{{else}}left{{ end }}'>
+            <h2 class="feature-title">
+            {{ if .Params.learnMore }}
+                <a href="{{ .Params.learnMore }}">{{ .Title }}</a>
+                {{else}}
+                {{ .Title }}
+                {{ end }}
+            </h2>
+            <p class="feature-text">{{ .Content }}</p>
+            <div class="more">
+                {{ if .Params.learnMore }}
+                <a href="{{ .Params.learnMore }}">
+                    <div class="learn-more feature-block">
+                        <div class="feature-block fa fa-arrow-circle-o-right jsonly" > </div>
+                        <div class="feature-block feature-link">Learn More</div>
+                    </div>
+                </a>
+                {{ end }}
+
+                {{ if .Params.video }}
+                    {{ if .Params.learnMore }}
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    {{ end }}
+                <a class="lightbox" href="https://www.youtube.com/watch?v={{ .Params.video }}&autoplay=1">
+                    <div class="feature-block fa fa-play-circle-o jsonly"></div>
+                    <div class="feature-block feature-link">Watch Video</div>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+        <div class='content col-xs-12 feature-image {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
+            {{ if .Params.learnMore }}<a href="{{ .Params.learnMore }}">{{end}}
+                <img class='image {{.Params.thumbnailImagePosition}}' src="{{ .Params.thumbnailImage}}">
+            {{ if .Params.learnMore }}</a>{{end}}
+        </div>
+        
+
+    </div>
+            {{ end }}
+            
+        </div>
+    </section>
 
 
 <script>
 function click_features() {
     var elmnt = document.getElementById("features");
     elmnt.scrollIntoView();
+    var menu = document.getElementById("menu_feature");
+    menu.innerHTML = "Home";
+    // var menu2 = document.getElementById("menu_feature");
+    // menu2.href= "/";
+
+    // menu.href="/";
+    // console.log(menu)
 }
 </script>
 

@@ -25,7 +25,12 @@
                         <li class="nav-item"><a id="header-download-link" href="{% url 'download' %}">Download</a></li>
                         <li class="nav-item"><a id="header-docs-link" href="{% url 'docs' %}">Docs</a></li> -->
                         {{ range .Site.Menus.main }}
-                    <li class="nav-item"><a id="header-screenshots-link" href="{{ .URL }}">{{ .Name }}</a></li>
+                        {{ if (eq .Name "Features") }}
+                            <li class="nav-item"><a id="menu_feature" onclick="click_features()" href="{{ .URL }}">{{ .Name }}</a></li>                            
+                        {{else}}
+                            <li class="nav-item"><a id="header-screenshots-link" href="{{ .URL }}">{{ .Name }}</a></li>
+                        {{end}}
+                    
                     {{end}}
                     </ul><!--//nav-->
                 </div>
