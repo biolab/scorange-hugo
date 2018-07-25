@@ -1,5 +1,5 @@
 <html>    
-    
+    {{ partial "head.html" . }}
     <body>
 
     {{ partial "header.html" . }}
@@ -12,4 +12,30 @@
 	</div>
     {{ partial "footer.html" . }}
     </body>
+    <script type="text/javascript">
+        
+        function click_features(){
+        var menu = document.getElementById("menu_feature");
+        console.log(menu);
+        if (menu.innerHTML == "Home"){
+            var elmnt = document.getElementById("promoo");
+            elmnt.scrollIntoView(true);
+            // document.getElementById("menu_feature").onclick = function(){
+            //     window.location.href = "/";
+            // }     
+        }
+        else{
+            var elmnt = document.getElementById("features");
+            elmnt.scrollIntoView();
+            menu.innerHTML = "Home";
+
+        // }
+        //     var elmnt = document.getElementById("features");
+        //     elmnt.scrollIntoView();
+        //     var menu = document.getElementById("menu_feature");
+        //     menu.innerHTML = "Home";
+               
+        }
+    }
+    </script>
 </html>

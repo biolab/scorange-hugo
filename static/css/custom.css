@@ -724,3 +724,8 @@ ul li.no-bullet {
 .container .promo {
     background-color: inherit;
 }
+
+
+.container-fluid{
+    padding: 0;
+}

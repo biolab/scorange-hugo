@@ -399,9 +399,9 @@ blockquote {
   position: relative;
 }
 /* ======= Promo Section ======= */
-.promo {
+/*.promo {
   background-color: #fff;
-}
+}*/
 .promo .container {
   padding-bottom: 15px;
 }

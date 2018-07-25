@@ -1,18 +1,20 @@
 {{ define "main"}}
-<div>
-<section id="promo" class="offset-header">
+<div id="promoo">
+<section id="promo" class="promo section offset-header has-pattern">
         <div class="container cover-image" style="margin-top:20px;">
             <div class="row">
                 <div class="overview">
                     <div class="col-lg-4 col-md-5 col-xs-12">
                         
-                        <h1 class="title firstpagetitle"><span style="white-space:nowrap">{{ .Title }}</span> <span style="white-space:nowrap">{{ .Description }}</span></h1>
+                        <h1 class="title firstpagetitle"><span style="white-space:nowrap">{{.Title}}</span> <span style="white-space:nowrap">{{ .Description}}</span></h1>
                     <div class="content">
-                        <p class="bigsummary summary">{{ .Content}}</p>
+                        <span class="bigsummary summary">
+                        {{.Content}}
+                    </span>
+                    
                     </div>
                     <br />
-                    <a id="main-page-download-button" class="btn btn-warning big-button-base" href="">
-                                Download scOrange
+                    <a id="main-page-download-button" class="btn btn-warning big-button-base" href="">Download scOrange
                     </a>
                     </div>
                 </div>
@@ -20,6 +22,8 @@
         </div>
     </section>
 </div>
+
+<!-- class="promo section offset-header has-pattern" -->
 
 <section id="features" class="features section">
         <a id="Orange-Features" class="features-anchor"></a>
@@ -72,17 +76,29 @@
 
 
 <script>
-function click_features() {
-    var elmnt = document.getElementById("features");
-    elmnt.scrollIntoView();
-    var menu = document.getElementById("menu_feature");
-    menu.innerHTML = "Home";
-    // var menu2 = document.getElementById("menu_feature");
-    // menu2.href= "/";
+//  function click_features(){
+//     var menu = document.getElementById("menu_feature");
+//     console.log(menu);
+//     if (menu.innerHTML == "Home"){
+//         var elmnt = document.getElementById("promoo");
+//         elmnt.scrollIntoView(true);
+//         // document.getElementById("menu_feature").onclick = function(){
+//         //     window.location.href = "/";
+//         // }     
+//     }
+//     else{
+//         var elmnt = document.getElementById("features");
+//         elmnt.scrollIntoView();
+//         menu.innerHTML = "Home";
 
-    // menu.href="/";
-    // console.log(menu)
-}
+//     // }
+//     //     var elmnt = document.getElementById("features");
+//     //     elmnt.scrollIntoView();
+//     //     var menu = document.getElementById("menu_feature");
+//     //     menu.innerHTML = "Home";
+           
+//     }
+// }
 </script>
 
 {{ end }}
