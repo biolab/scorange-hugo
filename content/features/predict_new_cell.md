@@ -1,7 +1,6 @@
 +++
 title = "Predict New Cell Types Based on Marker Genes"
 thumbnailImage = "/images/Population-Prediction-small.png"
-css_class = "population-prediction"
 learnMore = "/features/education-in-data-science/"
 thumbnailImagePosition = "left"
 weight = -10
