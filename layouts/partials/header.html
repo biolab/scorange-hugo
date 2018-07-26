@@ -25,7 +25,7 @@
                         {{ if (eq .Name "Features") }}
                             <li class="nav-item"><a id="menu_feature" onclick="click_features()" href="{{ .URL }}">{{ .Name }}</a></li>                            
                         {{else}}
-                            <li class="nav-item"><a id="header-screenshots-link" href="{{ .URL }}">{{ .Name }}</a></li>
+                            <li class="nav-item"><a id="header-screenshots-link" onclick="click_features()" href="#{{ .URL }}">{{ .Name }}</a></li>
                         {{end}}
                     
                     {{end}}
@@ -35,27 +35,32 @@
         </div>
     </header>
 <script>
- // function click_features(){
- //    var menu = document.getElementById("menu_feature");
- //    if (menu.innerHTML == "Home"){
- //        console.log("pride");
- //        var elmnt = document.getElementById("promoo");
- //        console.log(elmnt);
- //        elmnt.scrollIntoView(true);
- //    }
- //    else{
- //        var elmnt = document.getElementById("features");
- //        elmnt.scrollIntoView();
- //        menu.innerHTML = "Home";
+ function click_features(){
+    console.log(window.location.pathname);
+    if(window.hash == "#features"){
+        var menu = document.getElementById("menu_feature");
+        menu.innerHTML = "Home";
+    }
+    // var menu = document.getElementById("menu_feature");
+    // if (menu.innerHTML == "Home"){
+    //     console.log("pride");
+    //     var elmnt = document.getElementById("promoo");
+    //     console.log(elmnt);
+    //     elmnt.scrollIntoView(true);
+    // }
+    // else{
+    //     var elmnt = document.getElementById("features");
+    //     elmnt.scrollIntoView();
+    //     menu.innerHTML = "Home";
 
- //    }
+    // }
         
         
         
- //        // console.log(menu);
- //        // document.getElementById("menu_feature").onclick = function(){
- //        //     window.location.href = "/";
+        // console.log(menu);
+        // document.getElementById("menu_feature").onclick = function(){
+        //     window.location.href = "/";
 
- //        // }        
- //    }
+        // }        
+    }
 </script>
