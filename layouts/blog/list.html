@@ -1,6 +1,5 @@
 {{ define "main"}}
 
-<div id="loop-container" class="loop-container">
 	<div class="container" style="background-color: white; padding-top: 60px;">
 	{{ $paginator := .Paginate (where (where .Pages "Type" "post") "IsPage" true) }}
 	{{ range $index, $element := .Paginator.Pages }}
@@ -61,7 +60,6 @@
 			{{ end }}
 		</div>
 	</div>
-</div>
 </div>
 {{ partial "pagination.html" . }}
 
