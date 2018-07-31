@@ -1,5 +1,5 @@
 +++
-title = "Visual programming"
+title = "Visual Programming"
 weight = -120
 image = "/images/orange_docs_01_small.png"
 +++

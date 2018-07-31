@@ -729,3 +729,13 @@ ul li.no-bullet {
 .container-fluid{
     padding: 0;
 }
+blockquote {
+  margin: 1.5em 0;
+  padding: 0 1.5em;
+  border-left: solid 0.75em #ffa500;
+}
+blockquote cite {
+  display: block;
+  text-align: right;
+}
+

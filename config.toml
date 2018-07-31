@@ -1,6 +1,7 @@
 baseURL = "http://localhost:1313/"
 languageCode = "en-us"
 title = "My New Hugo Site"
+paginate = 5 #frontpage pagination
 
 
 [menu]
@@ -26,3 +27,11 @@ title = "My New Hugo Site"
     name = "Docs"
     url = "/docs/"
     weight = -100
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = -90
+
+
+
