@@ -899,7 +899,8 @@ blockquote {
 }
 
 body {
-    background-image: url('/images/bg.png'); background-repeat: repeat-x;
+    /*background-image: url('/images/bg.png'); background-repeat: repeat-x;*/
+    background-color: #cde2ea;
 }
 
 .cover-image {
@@ -910,7 +911,7 @@ body {
 
 @media (max-width: 991px) {
   body {
-    background-image: url('/images/bg2.png'); background-repeat: repeat-x;
+    /*background-image: url('/images/bg2.png'); background-repeat: repeat-x;*/
   }
 
   #main-page-download-button {
@@ -1779,7 +1780,7 @@ input[type="search"] {
     clear: both;
     padding: 0;
     margin-bottom: 1.5em;
-    opacity: 0.8;
+    /*opacity: 0.8;*/
   }
   .excerpt .featured-image {
     -webkit-transform: translateZ(0);
@@ -1792,9 +1793,9 @@ input[type="search"] {
     position: absolute;
     right: -1px;
   }
-  .excerpt:hover {
+  /*.excerpt:hover {
     opacity: 1;
-  }
+  }*/
 
   .excerpt.even .excerpt-container {
     float: right;
