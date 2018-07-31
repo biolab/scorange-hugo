@@ -732,7 +732,7 @@ ul li.no-bullet {
 blockquote {
   margin: 1.5em 0;
   padding: 0 1.5em;
-  border-left: solid 0.75em #ffa500;
+  border-left: solid 0.375em #ffbc44;
 }
 blockquote cite {
   display: block;
