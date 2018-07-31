@@ -254,7 +254,7 @@ blockquote {
 }
 /* ======= Header ======= */
 .header {
-  position: relative;
+  /*position: absolute;*/
   padding: 15px 0;
   background: #fff;
   z-index: 9999;

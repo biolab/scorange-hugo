@@ -1,6 +1,6 @@
 {{ define "main"}}
 
-	<div class="container" style="background-color: white; padding-top: 60px;">
+	<div class="container" style="background-color: white; padding-top: 120px;">
 	{{ $paginator := .Paginate (where (where .Pages "Type" "post") "IsPage" true) }}
 	{{ range $index, $element := .Paginator.Pages }}
 	{{ if and (isset .Params "image") .Params.image }}
