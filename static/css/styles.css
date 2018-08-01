@@ -56,6 +56,10 @@ a:hover {
   border: 1px solid #E19C14;
   color: #fff;
 }
+
+.background-features{
+  background-color: white;
+}
 .btn-theme:hover {
   background: #f69111;
   border: 1px solid #f69111;
