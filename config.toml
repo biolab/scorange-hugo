@@ -2,6 +2,7 @@ baseURL = "http://localhost:1313/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 paginate = 5 #frontpage pagination
+disqusShortname = "localblog-2"
 
 
 [menu]
