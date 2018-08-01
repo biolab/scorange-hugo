@@ -1,10 +1,10 @@
 +++
 date = "2016-11-05T19:41:01+05:30"
 title = "This is a Standard Post"
-draft = false
+draft = true
 image = "/images/blog/2.png"
 showonlyimage = false
-categories = [ "Design"]
+categories = [ "design", "test"]
 weight = 1
 description = "Individual meta description for this post"
 type = "post"

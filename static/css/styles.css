@@ -18,8 +18,7 @@ blockquote cite {
 }
 body {
   font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  color: #000;
-  #color: #351400;
+  color: #351400;
 }
 a {
   color: #E19C14;
@@ -32,6 +31,10 @@ a {
 a:hover {
   text-decoration: none;
   color: #f69111;
+}
+.container{
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .btn {
   -webkit-transition: all 0.4s ease-in-out;
@@ -411,6 +414,7 @@ blockquote {
 /*.promo {
   background-color: #fff;
 }*/
+
 .promo .container {
   padding-bottom: 15px;
 }

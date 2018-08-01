@@ -1,8 +1,9 @@
 +++
 showonlyimage = false
-draft = false
+draft = true
 image = "/images/blog/1.png"
 date = "2016-11-05T19:59:22+05:30"
+categories = [ "design", "test"]
 title = "A Post with lot of comments"
 weight = 8
 type = "post"

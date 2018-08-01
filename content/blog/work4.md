@@ -4,7 +4,7 @@ image = ""
 showonlyimage = false
 date = "2016-11-05T19:50:47+05:30"
 title = "A post without an Image"
-categories = [ "code" ]
+categories = [ "code", "test", "photography" ]
 weight = 4
 type = "post"
 +++

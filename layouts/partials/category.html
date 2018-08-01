@@ -1,21 +1,18 @@
-{{ define "main"}}
-
-	<div class="container" style="background-color: white; padding-top: 120px;">
-	<div class="post type-post status-publish format-standard hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured excerpt">
+<div class="post type-post status-publish format-standard hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured excerpt">
 		<div class='excerpt-intro excerpt-header'>
 			<h2 class='excerpt-title'>
-				<a> This is an Intro post </a>
+				<a> Category: {{ .Title }}  </a>
 			</h2>
 		</div>
 		<div class='excerpt-content'>
 			<article>
-				Summary <br>
-				Some more text was required to see what this would properly look like <br>
-				so here it is
+				Filtered blog posts by category.
 			</article>
 		</div>
 	</div>
-	{{ $paginator := .Paginate (where (where .Pages "Type" "post") "IsPage" true) }}
+
+<div class="container" style="background-color: white;">
+	{{ $paginator := .Paginate (.Pages )}}
 	{{ range $index, $element := .Paginator.Pages }}
 	{{ if and (isset .Params "image") .Params.image }}
 	{{ if eq (mod $index 2) 0 }}
@@ -78,5 +75,3 @@
 	</div>
 </div>
 {{ partial "pagination.html" . }}
-
-{{end}}

@@ -805,8 +805,12 @@ a img {
 /* 600 */
 @media all and (min-width: 37.5em) {
   .excerpt {
+<<<<<<< Updated upstream
     /*background: #110800;*/
     background: #ffffff;
+=======
+    background: white;
+>>>>>>> Stashed changes
     margin-bottom: 1.5em;
   }
   .excerpt:first-child {

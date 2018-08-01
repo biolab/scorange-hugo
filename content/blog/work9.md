@@ -3,6 +3,7 @@ draft = false
 showonlyimage = false
 date = "2016-11-05T20:02:19+05:30"
 title = "Blogging is Fun and Worthwhile"
+categories = [ "design", "test"]
 weight = 9
 type = "post"
 +++

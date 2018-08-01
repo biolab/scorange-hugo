@@ -1,10 +1,10 @@
 +++
 image = "/images/blog/4.png"
 showonlyimage = true
-draft = false
+draft = true
 date = "2016-11-05T19:53:42+05:30"
 title = "A Totally Response Theme"
-categories = [ "photography" ]
+categories = ["photography" ]
 weight = 5
 type = "post"
 +++
