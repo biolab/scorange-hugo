@@ -31,7 +31,7 @@
 
 				{{ if and (isset .Params "image") .Params.image }}
 				<a class="featured-image-link" href="{{ .Permalink }}"><div class='featured-image lazy lazy-bg-image'>
-					<img src="{{.Params.image}}">
+					<img src="{{.Params.thumbImage}}">
 				</div></a>
 
 				{{ end }}

@@ -2,13 +2,22 @@
 showonlyimage = false
 draft = false
 image = "/blog_img/IMG_20180713_092503.jpg"
+thumbImage = "/blog_img/Data_Mining_and_Machine_Learning_for_Economists-thumb.png"
 date = "2016-11-05T18:25:22+05:30"
 title = "Data Mining and Machine Learning for Economists"
 weight = 15
 type = "post"
+hardLineBreak = true 
+categories = ["clustering", "data mining", "summer school"]
+
+joinLines = false
 +++
 
-Last week Blaž, Marko and I held a week long introductory Data Mining and Machine Learning course at the Ljubljana Doctoral Summer School 2018. We got a room full of dedicated students and we embarked on a journey through standard and advanced machine learning techniques, all presented of course in Orange. We have covered a wide array of topics, from different clustering techniques (hierarchical clustering, k-means) to predictive models (logistic regression, naive Bayes, decision trees, random forests), regression and regularization, projections, text mining and image analytics
+Last week Blaž, Marko and I held a week long introductory Data Mining and Machine Learning course at the Ljubljana Doctoral Summer School 2018. We got a room full of dedicated students and we embarked on a journey through standard and advanced machine learning techniques, all presented of course in Orange.
+<!--more-->
+
+
+We have covered a wide array of topics, from different clustering techniques (hierarchical clustering, k-means) to predictive models (logistic regression, naive Bayes, decision trees, random forests), regression and regularization, projections, text mining and image analytics
 
 \
 \
@@ -54,7 +63,7 @@ Of course, when we are talking about countries one naturally wants to see them o
 \
 \
 
-{{% figure src="/blog_img/Screen-Shot-2018-07-17-at-10.52.29.png" caption="Use Encode to convert a column with region identifiers (in our case Country) to latitude/longitude pairs." %}}
+{{% figure src="/blog_img/Screen-Shot-2018-07-17-at-10.52.29.png" caption="Use Encode to convert a column with region identifiers (in our case Country) to latitude/longitude pairs." height="50%" width="70%" %}}
 
 \
 \
@@ -73,7 +82,7 @@ Now, let us display these countries on a map with Choropleth widget. Beautiful. 
 The final workflow:
 
 
-{{% figure src="/blog_img/Screen-Shot-2018-07-17-at-10.52.29.png" %}}
+{{% figure src="/blog_img/Screen-Shot-2018-07-17-at-11.10.26.png" %}}
 \
 \
 
