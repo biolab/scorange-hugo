@@ -9,7 +9,7 @@ weight = 15
 type = "post"
 hardLineBreak = true 
 categories = ["clustering", "data mining", "summer school"]
-
+excerpt = ""
 joinLines = false
 +++
 

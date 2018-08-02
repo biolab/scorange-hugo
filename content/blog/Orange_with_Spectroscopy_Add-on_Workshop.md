@@ -9,6 +9,7 @@ thumbImage = "/blog_img/Orange_with_Spectroscopy_Add-on_Workshop-thumb.png"
 type = "post"
 categories = ["infraorange", "spectral orange", "workshop"]
 hardLineBreak = true 
+excerpt = ""
 joinLines = false
 +++
 

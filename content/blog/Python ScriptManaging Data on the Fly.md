@@ -8,6 +8,7 @@ type = "post"
 hardLineBreak = true 
 categories = ["Python", "Numpy"]
 joinLines = false
+excerpt = ""
 +++
 
 

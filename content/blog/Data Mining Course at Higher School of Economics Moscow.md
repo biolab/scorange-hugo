@@ -9,7 +9,9 @@ thumbImage = "/blog_img/moscow-thumb.png"
 type = "post"
 categories = ["data mining", "HSE", "python","workshop"]
 hardLineBreak = true 
+author = "Janez Novak"
 joinLines = false
+excerpt = ""
 +++
 
 
