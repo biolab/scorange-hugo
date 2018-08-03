@@ -4,6 +4,8 @@ title = "My New Hugo Site"
 paginate = 5 #frontpage pagination
 disqusShortname = "localblog-2"
 
+[outputs]
+  home = [ "HTML", "RSS", "JSON"]
 
 [menu]
 

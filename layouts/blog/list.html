@@ -1,86 +1,148 @@
 {{ define "main"}}
+<div class="container" style="background-color: white; padding-top: 120px;">
+   <!-- <div>
+      <div class="searchbox">
+        <input data-search-input id="search-by" type="text">
+      </div>
+      <script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}"></script>
+      <script type="text/javascript" src="{{"js/auto-complete.js" | relURL}}"></script>
+      <link href="{{"css/auto-complete.css" | relURL}}" rel="stylesheet">
+      <script type="text/javascript">
+        
+            var baseurl = "{{.Site.BaseURL}}";
+      </script>
+      <script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
+      </div> -->
+   <div class="row">
+      <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12">
+         <div class="post type-post status-publish format-standard hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured excerpt">
+            <div class='excerpt-intro excerpt-header'>
+               <h2 class='excerpt-title'>
+                  <a> This is an Intro post </a>
+               </h2>
+            </div>
+            <div class='excerpt-content'>
+               <article>
+                  Summary <br>
+                  Some more text was required to see what this would properly look like <br>
+                  so here it is
+               </article>
+            </div>
+         </div>
+         {{ $paginator := .Paginate (where (where .Pages "Type" "post") "IsPage" true) }}
+         {{ range $index, $element := .Paginator.Pages }}
+         {{ if and (isset .Params "image") .Params.image }}
+         {{ if eq (mod $index 2) 0 }}
+         <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured odd excerpt">
+            {{ else }}
+            <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured even excerpt">
+               {{ end }}
+               {{ else }}
+               <div class="post type-post status-publish format-standard hentry category-standard category-travel excerpt zoom full-without-featured odd excerpt">
+                  {{ end }}
+                  {{ if and (isset .Params "image") .Params.image }}
+                  <a class="featured-image-link" href="{{ .Permalink }}">
+                     <div class='featured-image lazy lazy-bg-image'>
+                        <img src="{{.Params.thumbImage}}">
+                     </div>
+                  </a>
+                  {{ end }}
+                  <div class="excerpt-container">
+                     <div class="excerpt-meta">
+                        <span class="date">{{ .Date.Format "02 January" }}</span>	<span> / </span>
+                        {{ if and (isset .Site.Params "author") .Site.Params.author }}
+                        <span class="author">
+                        {{ if and (isset .Site.Params "authorlink") .Site.Params.authorLink }}
+                        <a href="{{ .Site.Params.authorLink | default "" | absURL }}" title="Posts by {{ .Site.Params.author | default "" }}" rel="author">{{ .Site.Params.author  | default "" }}</a>
+                        {{ else }}
+                        {{ .Site.Params.author | default "" }}
+                        {{ end }}
+                        </span>
+                        {{ end }}
+                        {{ range .Params.categories }}
+                        <span> / </span>
+                        <span class="category">
+                        <a href="/categories/{{ . | urlize }}">{{ . }}</a>
+                        </span>
+                        {{ end }}
+                     </div>
+                     <div class='excerpt-header'>
+                        <h2 class='excerpt-title'>
+                           <a href="{{ .Permalink }} "> {{ .Title }} </a>
+                        </h2>
+                     </div>
+                     <div class='excerpt-content'>
+                        <article>
+                           {{ if and (isset .Params "excerpt") .Params.excerpt }}
+                           {{ .Params.excerpt}}
+                           {{else}}
+                           {{ .Summary }}
+                           {{end}}
+                           <div class="more-link-wrapper"><a class="more-link" href="{{ .Permalink }}">Read the post<span class="screen-reader-text">This is a Standard Post</span></a></div>
+                        </article>
+                     </div>
+                  </div>
+               </div>
+               <div class="hline-separator">
+               </div>
+               {{ end }}
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12" >
+               <!-- {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                  <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}({{.Count}})</a>
+                  {{ end }} -->
+               <section class="panel panel-default">
+                  <div class="panel-heading">
+                     <b>Categories</b>
+                     <!-- <div style="float: right"><a href="{{ "/categories/" | relLangURL }}">- full list -</a></div> -->
+                  </div>
+                  {{ if not (eq (len $.Site.Taxonomies.categories) 0) }}
+                  {{ $fontUnit := "rem" }}
+                  {{ $largestFontSize := 2.5 }}
+                  {{ $smallestFontSize := 1.0 }}
+                  {{ $max := len (index $.Site.Taxonomies.categories.ByCount 0).Pages }}
+                  {{ $min := len (index $.Site.Taxonomies.categories.ByCount.Reverse 0).Pages }}
+                  <div id="tag-cloud" style="padding: 5px 15px">
 
-	<div class="container" style="background-color: white; padding-top: 120px;">
-	<div class="post type-post status-publish format-standard hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured excerpt">
-		<div class='excerpt-intro excerpt-header'>
-			<h2 class='excerpt-title'>
-				<a> This is an Intro post </a>
-			</h2>
-		</div>
-		<div class='excerpt-content'>
-			<article>
-				Summary <br>
-				Some more text was required to see what this would properly look like <br>
-				so here it is
-			</article>
-		</div>
-	</div>
-	{{ $paginator := .Paginate (where (where .Pages "Type" "post") "IsPage" true) }}
-	{{ range $index, $element := .Paginator.Pages }}
-	{{ if and (isset .Params "image") .Params.image }}
-	{{ if eq (mod $index 2) 0 }}
-	<div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured odd excerpt">
-		{{ else }}
-		<div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured even excerpt">
-			{{ end }}
-			{{ else }}
+                     {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
+                     {{ $count := len $taxonomy.Pages }}
+                     {{ $weigth := div (sub (math.Log $count) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
+                     {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth) ) }}
+                     <!--Current font size: {{$currentFontSize}}-->
+                     <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }}</a>
+                     {{ end }}
+                  </div>
+                  {{ end }}
+               </section>
 
-			<div class="post type-post status-publish format-standard hentry category-standard category-travel excerpt zoom full-without-featured odd excerpt">
 
-				{{ end }}
+               <section class="panel panel-default">
+               	<!-- <div> -->
+               		<div class="input-group">
+				      <input type="text" data-search-input id="search-by"  class="form-control" placeholder="Search for...">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button">Go!</button>
+				      </span>
+				    </div>
+				    
+				     
+				   <!-- <div class="searchbox">
+				      <input data-search-input id="search-by" type="text">
+				   </div> -->
+				   <script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}"></script>
+				   <script type="text/javascript" src="{{"js/auto-complete.js" | relURL}}"></script>
+				   <link href="{{"css/auto-complete.css" | relURL}}" rel="stylesheet">
+				   <script type="text/javascript">
+				      var baseurl = "{{.Site.BaseURL}}";
+				   </script>
+				   <script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
+				<!-- </div> -->
 
-				{{ if and (isset .Params "image") .Params.image }}
-				<a class="featured-image-link" href="{{ .Permalink }}"><div class='featured-image lazy lazy-bg-image'>
-					<img src="{{.Params.thumbImage}}">
-				</div></a>
-
-				{{ end }}
-				<div class="excerpt-container">
-					<div class="excerpt-meta">
-						<span class="date">{{ .Date.Format "02 January" }}</span>	<span> / </span>
-
-						{{ if and (isset .Site.Params "author") .Site.Params.author }}
-
-						<span class="author">
-							{{ if and (isset .Site.Params "authorlink") .Site.Params.authorLink }}
-							<a href="{{ .Site.Params.authorLink | default "" | absURL }}" title="Posts by {{ .Site.Params.author | default "" }}" rel="author">{{ .Site.Params.author  | default "" }}</a>
-							{{ else }}
-							{{ .Site.Params.author | default "" }}
-							{{ end }}
-						</span>
-						{{ end }}
-
-						{{ range .Params.categories }}
-						<span> / </span>
-						<span class="category">
-							<a href="/categories/{{ . | urlize }}">{{ . }}</a>
-						</span>
-						{{ end }}
-					</div>
-					<div class='excerpt-header'>
-						<h2 class='excerpt-title'>
-							<a href="{{ .Permalink }} "> {{ .Title }} </a>
-						</h2>
-					</div>
-					<div class='excerpt-content'>
-						<article>
-							{{ if and (isset .Params "excerpt") .Params.excerpt }}
-							{{ .Params.excerpt}}
-							{{else}}
-							{{ .Summary }}
-							{{end}}
-
-							<div class="more-link-wrapper"><a class="more-link" href="{{ .Permalink }}">Read the post<span class="screen-reader-text">This is a Standard Post</span></a></div>
-						</article>
-					</div>
-				</div>
-			</div>
-			<div class="hline-separator">
-			</div>
-			{{ end }}
-		</div>
-	</div>
+               </section>
+            </div>
+         </div>
+      </div>
+   </div>
 </div>
 {{ partial "pagination.html" . }}
-
 {{end}}
