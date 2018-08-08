@@ -1,7 +1,7 @@
 +++
 showonlyimage = false
 draft = false
-date = "2016-11-05T18:25:22+05:30"
+date = "2016-02-05"
 title = "Orange with Spectroscopy Add-on Workshop"
 weight = 15
 image = "/blog_img/Orange_with_Spectroscopy_Add-on_Workshop-1.jpg"

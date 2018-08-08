@@ -1,7 +1,7 @@
 +++
 showonlyimage = false
 draft = false
-date = "2016-11-05T18:25:22+05:30"
+date = "2016-03-05"
 title = "Python Script: Managing Data on the Fly"
 weight = 15
 type = "post"

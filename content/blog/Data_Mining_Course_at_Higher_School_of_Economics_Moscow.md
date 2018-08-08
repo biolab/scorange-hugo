@@ -1,7 +1,7 @@
 +++
 showonlyimage = false
 draft = false
-date = "2016-11-05T18:25:22+05:30"
+date = "2017-09-07"
 title = "Data Mining Course at Higher School of Economics, Moscow"
 weight = 15
 image = "/blog_img/moscow-1.jpg"
