@@ -118,6 +118,7 @@ jQuery(document).ready(function() {
             value = input.val(),
             items = jQuery('[data-nav-id]');
         items.removeClass('search-match');
+        console.log(value,items)
         if (!value.length) {
             $('ul.topics').removeClass('searched');
             items.css('display', 'block');

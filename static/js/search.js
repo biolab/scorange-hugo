@@ -21,7 +21,7 @@ function initLunr() {
             lunrIndex.field('title', {
                 boost: 15
             });
-            lunrIndex.field('tags', {
+            lunrIndex.field('categories', {
                 boost: 10
             });
             lunrIndex.field("content", {
@@ -55,12 +55,20 @@ function search(query) {
         });
 }
 
+// function search_content(){
+//     console.log($("#search-by").get(0).value);
+//     var param = $("#search-by").get(0).value;
+//     var results  = search(param);
+//     console.log(results);
+//     // document.getElementById('search-by').value;
+// }
+
 // Let's get started
 initLunr();
 $( document ).ready(function() {
     var searchList = new autoComplete({
         /* selector for the search box element */
-        selector: $("#search-by").get(0),
+        selector: $("#search-input").get(0),
         /* source is the callback to perform the search */
         source: function(term, response) {
             response(search(term));
@@ -72,6 +80,7 @@ $( document ).ready(function() {
                 "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
                     term+"(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}");
             item.context = text;
+
             return '<div class="autocomplete-suggestion" ' +
                 'data-term="' + term + '" ' +
                 'data-title="' + item.title + '" ' +
