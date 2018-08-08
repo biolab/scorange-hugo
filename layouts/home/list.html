@@ -23,6 +23,72 @@
     </section>
 </div>
 
+<div id="promoo" class="blog-home">
+<section id="promo" class="promo section has-pattern">
+        <div class="container" style="margin-top:20px;">
+            <div class="row">
+            <div class="col-xs-12 blog-mark">
+                <img alt="Blog mark" src="/images/blog-mark.svg">
+            </div>
+             </div>
+            <div class="row">
+                {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
+                <div class="col-lg-4 col-md-5 col-xs-12 home-page-blog" >
+                {{ if and (isset .Params "image") .Params.image }}
+                
+                    <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured excerpt" >
+         
+               {{ else }}
+               <div class="post type-post status-publish format-standard hentry category-standard category-travel excerpt zoom full-without-featured excerpt">
+                  {{ end }}
+                  
+                  <div class="excerpt-container2 blog-home">
+                     <div class="excerpt-meta">
+                        <span class="date">{{ .Date.Format "02 January" }}</span>   <span> / </span>
+                        {{ if and (isset .Site.Params "author") .Site.Params.author }}
+                        <span class="author">
+                        {{ if and (isset .Site.Params "authorlink") .Site.Params.authorLink }}
+                        <a href="{{ .Site.Params.authorLink | default "" | absURL }}" title="Posts by {{ .Site.Params.author | default "" }}" rel="author">{{ .Site.Params.author  | default "" }}</a>
+                        {{ else }}
+                        {{ .Site.Params.author | default "" }}
+                        {{ end }}
+                        </span>
+                        {{ end }}
+                        
+                     </div>
+                     <div class='excerpt-header'>
+                        <h2 class='excerpt-title'>
+                           <a href="{{ .Permalink }} "> {{ .Title }} </a>
+                        </h2>
+                     </div>
+                     <div class='excerpt-content'>
+                        <article>
+                           {{ if and (isset .Params "excerpt") .Params.excerpt }}
+                           {{ .Params.excerpt}}
+                           {{else}}
+                           {{ .Summary }}
+                           {{end}}
+                           
+                        </article>
+                       <!--   {{ if and (isset .Params "image") .Params.image }}
+                  <a class="featured-image-link" href="{{ .Permalink }}">
+                     <div class='featured-image lazy lazy-bg-image'>
+                        <img src="{{.Params.thumbImage}}">
+                     </div>
+                  </a>
+                  {{ end }} -->
+                     </div>
+                     <div class="more-link-wrapper"><a class="more-link" href="{{ .Permalink }}">Read the post<span class="screen-reader-text">This is a Standard Post</span></a></div>
+                  </div>
+               </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </section>
+</div>
+
+
 <!-- class="promo section offset-header has-pattern" -->
 
 <section id="features" class="features section background-features">

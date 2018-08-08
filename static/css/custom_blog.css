@@ -150,28 +150,6 @@ img {
 }
 
 /* Form styles */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="url"],
-textarea {
-  padding: 0.8em;
-  width: 100%;
-  max-width: 27.75em;
-  min-height: 45px;
-  outline: solid 1px #000;
-  border: none;
-  font-family: "raleway", sans-serif;
-  font-size: 0.813em;
-  line-height: 1.85;
-  border-radius: 0;
-  -webkit-appearance: none;
-  -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease;
-}
 
 textarea {
   max-width: 41.625em;

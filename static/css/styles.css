@@ -911,6 +911,20 @@ body {
     background-color: #cde2ea;
 }
 
+.blog-home{
+  background-color: #b5b5b5;
+}
+.blog-home .excerpt-meta{
+  color: black;
+}
+.blog-home .more-link{
+  color: black !important;
+}
+
+/*.blog-mark */
+svg{
+  fill: #ffbc44;
+}
 .cover-image {
     background: url('/images/scorange-web-750.png');
     background-position: center;
@@ -1162,7 +1176,7 @@ textarea {
   width: 100%;
   max-width: 27.75em;
   min-height: 45px;
-  outline: solid 1px #000;
+  /*outline: solid 1px #000;*/
   border: none;
   font-family: "raleway", sans-serif;
   font-size: 0.813em;
@@ -1659,7 +1673,7 @@ input[type="search"] {
 
 .excerpt-title, .entry-title {
   letter-spacing: 0.04em;
-  font-size: 1.313em;
+  font-size: 16px !important;
   /* 21px / 16px */
   line-height: 1.143;
 }
@@ -3540,6 +3554,55 @@ li.pingback:first-child {
     width: 500px !important;
   }
 }
+
+
+.home-page-blog .excerpt{
+  padding-bottom: 0;
+  margin-bottom:30px;
+}
+.home-page-blog .excerpt-content{
+  padding-bottom: 0;
+  height: 200px !important;
+}
+.home-page-blog .excerpt-meta{
+  padding-top: 10px;
+}
+
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+.example button {
+  float: left;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+   /* Prevent double borders */
+  cursor: pointer;
+}
+
+.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*.home-page-blog .excerpt{
+  .padding-bottom: 0;
+}*/
 /*
 
 ATTENTION:
