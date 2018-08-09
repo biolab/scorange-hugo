@@ -912,7 +912,7 @@ body {
 }
 
 .blog-home{
-  background-color: #b5b5b5;
+  background-color: #EEEEEE;
 }
 .blog-home .excerpt-meta{
   color: black;
@@ -1670,10 +1670,18 @@ input[type="search"] {
 .excerpt-meta a:hover, .entry-meta a:hover, .excerpt-meta a:active, .entry-meta a:active, .excerpt-meta a:focus, .entry-meta a:focus {
   color: #222;
 }
-
-.excerpt-title, .entry-title {
+.entry-title-intro {
+  font-size: 80px !important;
+}
+.entry-title{
   letter-spacing: 0.04em;
-  font-size: 16px !important;
+  font-size: 38px !important;
+  /* 21px / 16px */
+  line-height: 1.143;
+}
+.excerpt-title {
+  letter-spacing: 0.04em;
+  font-size: 16px !important ;
   /* 21px / 16px */
   line-height: 1.143;
 }
@@ -3569,19 +3577,22 @@ li.pingback:first-child {
 }
 
 
-form.example input[type=text] {
-  padding: 10px;
+.example input[type=text] {
+  float: right;
+  /*padding: 10px;*/
+  height: 45px;
   font-size: 17px;
   border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
+  width: 30%;
+  /*background: #f1f1f1;*/
 }
 
 /* Style the submit button */
 .example button {
-  float: left;
+  /*float: left;*/
   padding: 10px;
+  height: 45px;
+  width: 45px;
   background: #2196F3;
   color: white;
   font-size: 17px;
@@ -3590,16 +3601,24 @@ form.example input[type=text] {
   cursor: pointer;
 }
 
-.example button:hover {
-  background: #0b7dda;
+
+.search-field{
+  margin-top: -18px;
+  margin-right: 20px;
+  margin-bottom: 18px;
 }
+      
+
+/*.example button:hover {
+  background: #0b7dda;
+}*/
 
 /* Clear floats */
-.example::after {
+/*.example::after {
   content: "";
   clear: both;
   display: table;
-}
+}*/
 /*.home-page-blog .excerpt{
   .padding-bottom: 0;
 }*/
