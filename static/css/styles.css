@@ -37,10 +37,10 @@ a:hover {
   padding-right: 0px;
 }
 .btn {
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
 }
 .btn .fa {
   color: #fff;
@@ -1172,7 +1172,7 @@ input[type="search"],
 input[type="tel"],
 input[type="url"],
 textarea {
-  padding: 0.8em;
+  padding: 0.4em;
   width: 100%;
   max-width: 27.75em;
   min-height: 45px;
@@ -1671,7 +1671,9 @@ input[type="search"] {
   color: #222;
 }
 .entry-title-intro {
-  font-size: 80px !important;
+  font-size: 60px !important;
+    color: black ;
+
 }
 .entry-title{
   letter-spacing: 0.04em;
@@ -3580,8 +3582,9 @@ li.pingback:first-child {
 .example input[type=text] {
   float: right;
   /*padding: 10px;*/
-  height: 45px;
-  font-size: 17px;
+  height: 30px;
+  min-height: 10px !important;
+  font-size: 15px;
   border: 1px solid grey;
   width: 30%;
   /*background: #f1f1f1;*/
@@ -3590,12 +3593,12 @@ li.pingback:first-child {
 /* Style the submit button */
 .example button {
   /*float: left;*/
-  padding: 10px;
-  height: 45px;
-  width: 45px;
+  /*padding: 10px;*/
+  height: 30px;
+  width: 30px;
   background: #2196F3;
   color: white;
-  font-size: 17px;
+  font-size: 16px;
   border: 1px solid grey;
    /* Prevent double borders */
   cursor: pointer;
@@ -3603,9 +3606,19 @@ li.pingback:first-child {
 
 
 .search-field{
+  
   margin-top: -18px;
   margin-right: 20px;
   margin-bottom: 18px;
+}
+
+.intro-title{
+  margin-bottom: 0px !important;
+}
+
+.search-result-title{
+  font-size:21px; 
+
 }
       
 

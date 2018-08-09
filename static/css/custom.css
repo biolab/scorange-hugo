@@ -63,7 +63,14 @@ h6, .h6 {
     color: #fff;
     background-color: #f49111;
     border: solid 2px;
-    border-color: #d99614;
+    border-color: #f49111;
+}
+
+.btn-warning:hover {
+    color: #fff;
+    background-color: #ffbc44;
+    border: solid 2px;
+    border-color: #ffbc44;
 }
 
 .big-button-empty {

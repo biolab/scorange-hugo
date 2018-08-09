@@ -22,11 +22,11 @@
       <script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
       </div> -->
    <div class="row">
-   	<div class="col-lg-12 col-md-8 col-sm-7 col-xs-12" id="search-results" style="display: none;">
+   	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="search-results" style="display: none;">
    		
    	</div>
-      <div class="col-lg-12 col-md-8 col-sm-7 col-xs-12" id="post_nor">
-         <div class="post type-post status-publish format-standard hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured excerpt">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="post_nor">
+         <div class="post type-post status-publish format-standard hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured excerpt intro-title">
             <div class='excerpt-intro excerpt-header'>
 
             	<!-- interactive_data_vis_01_scaled -->
@@ -34,8 +34,9 @@
             		
             		<div>
             			<img style="width:300px;" src="/images/interactive_data_vis_01_scaled.png">
-		               <h2 class='entry-title '>
-		                  <a class="entry-title-intro"> scOrange blog </a>
+		               <h2 class='feature-title entry-title-intro'>
+		                  <!-- <a class="entry-title-intro">  </a> -->
+		                  scOrange Blog
 		               </h2>
            			</div>
 		            
@@ -43,6 +44,8 @@
             </div>
         
          </div>
+         <div class="hline-separator intro-separator">
+               </div>
          {{ $paginator := .Paginate (where (where .Pages "Type" "post") "IsPage" true) }}
          {{ range $index, $element := .Paginator.Pages }}
          {{ if and (isset .Params "image") .Params.image }}
@@ -150,7 +153,7 @@
 				      	}
 				      	else{
 					      	$("#post_nor").hide();
-					      	var html_el = '<div class="post type-post status-publish format-standard hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured excerpt"><div class="excerpt-intro excerpt-header"><h2 class="excerpt-title"><a> Blog scorange</a></h2></div> <div class="excerpt-content"> <article> Search results for: <b>'+ param +'</b></article></div></div>';
+					      	var html_el = '<div class="post type-post status-publish format-standard hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured excerpt"> <div class="excerpt-content"> <article class="search-result-title"> Search results for: <b>'+ param +'</b></article></div></div> ';
 
 					      	var results  = search(param);
 					      	$("#search-results").show();
