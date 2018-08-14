@@ -1,5 +1,5 @@
 {{ define "main"}}
-    <section id="features" class="features section custom-reduce-padding-2">
+    <section id="features" class="features section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -8,7 +8,9 @@
 
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="content">
-                        <h3 class="custom-reduce-padding">Download and Install</h3>
+
+                        {{.Content}}
+                        <!-- <h3 class="custom-reduce-padding">Download and Install</h3>
                         <p>
                             <a href="{% url 'download' %}">Download</a> Orange distribution package and run the
                             installation file on your local computer. <a href="http://biolab.github.io/datafusion-installation-guide/">
@@ -114,7 +116,7 @@
                             Consider exploring other widgets and their combinations, or load some data of
                             your own and see how Orange can help you in the analysis.
                         </p>
-                    </div>
+                    </div> -->
                 </div>
             </div><!--//row-->
         </div><!--//container-->
