@@ -70,13 +70,6 @@
                            {{end}}
                            
                         </article>
-                       <!--   {{ if and (isset .Params "image") .Params.image }}
-                  <a class="featured-image-link" href="{{ .Permalink }}">
-                     <div class='featured-image lazy lazy-bg-image'>
-                        <img src="{{.Params.thumbImage}}">
-                     </div>
-                  </a>
-                  {{ end }} -->
                      </div>
                      <div class="more-link-wrapper"><a class="more-link" href="{{ .Permalink }}">Read the post<span class="screen-reader-text">This is a Standard Post</span></a></div>
                   </div>
@@ -132,39 +125,11 @@
                 <img class='image {{.Params.thumbnailImagePosition}}' src="{{ .Params.thumbnailImage}}">
             {{ if isset .Params "learnMore" }}</a>{{end}}
         </div>
-        
-
     </div>
             {{ end }}
             
         </div>
     </section>
 
-
-<script>
-//  function click_features(){
-//     var menu = document.getElementById("menu_feature");
-//     console.log(menu);
-//     if (menu.innerHTML == "Home"){
-//         var elmnt = document.getElementById("promoo");
-//         elmnt.scrollIntoView(true);
-//         // document.getElementById("menu_feature").onclick = function(){
-//         //     window.location.href = "/";
-//         // }     
-//     }
-//     else{
-//         var elmnt = document.getElementById("features");
-//         elmnt.scrollIntoView();
-//         menu.innerHTML = "Home";
-
-//     // }
-//     //     var elmnt = document.getElementById("features");
-//     //     elmnt.scrollIntoView();
-//     //     var menu = document.getElementById("menu_feature");
-//     //     menu.innerHTML = "Home";
-           
-//     }
-// }
-</script>
 
 {{ end }}

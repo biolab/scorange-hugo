@@ -16,11 +16,7 @@
                 </div><!--//navbar-header-->
                <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-<!--                             <li class="active nav-item sr-only"><a id="header-home-link2" href="/">Home</a></li>
- -->                            <!-- <li class="nav-item"><a id="header-home-link" href="/">Home</a></li>
-                        <li class="nav-item"><a id="header-screenshots-link" href="{% url 'screenshots' %}">Screenshots</a></li>
-                        <li class="nav-item"><a id="header-download-link" href="{% url 'download' %}">Download</a></li>
-                        <li class="nav-item"><a id="header-docs-link" href="{% url 'docs' %}">Docs</a></li> -->
+
                         {{ range .Site.Menus.main }}
                         {{ if (eq .Name "Features") }}
                             <li class="nav-item"><a id="menu_feature" onclick="click_features()" href="{{ .URL }}">{{ .Name }}</a></li>                            
@@ -34,33 +30,3 @@
             </nav><!--//main-nav-->
         </div>
     </header>
-<script>
- function click_features(){
-    // console.log(window.location.pathname);
-    // if(window.hash == "#features"){
-    //     var menu = document.getElementById("menu_feature");
-    //     menu.innerHTML = "Home";
-    // }
-    // var menu = document.getElementById("menu_feature");
-    // if (menu.innerHTML == "Home"){
-    //     console.log("pride");
-    //     var elmnt = document.getElementById("promoo");
-    //     console.log(elmnt);
-    //     elmnt.scrollIntoView(true);
-    // }
-    // else{
-    //     var elmnt = document.getElementById("features");
-    //     elmnt.scrollIntoView();
-    //     menu.innerHTML = "Home";
-
-    // }
-        
-        
-        
-        // console.log(menu);
-        // document.getElementById("menu_feature").onclick = function(){
-        //     window.location.href = "/";
-
-        // }        
-    }
-</script>
