@@ -25,7 +25,7 @@ We have covered a wide array of topics, from different clustering techniques (hi
 {{% figure src="/blog_img/IMG_20180713_092503.jpg"  %}}
 
 
-Related:[Data Mining for Business and Public Administration](https://blog.biolab.si/2017/11/17/data-mining-business-public-administration)
+Related: {{< link_new url="https://blog.biolab.si/2017/11/17/data-mining-business-public-administration" name="Data Mining for Business and Public Administration">}}
 \
 \
 \

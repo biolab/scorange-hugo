@@ -16,7 +16,7 @@ excerpt = ""
 
 
 
-Janez and I have recently returned from a two-week stay in Moscow, Russian Federation, where we were teaching data mining to MA students of [Applied Statistics](https://www.hse.ru/en/ma/sna/). This is a new Master’s course that attracts the best students from different backgrounds and teaches them statistical methods for work in the industry.
+Janez and I have recently returned from a two-week stay in Moscow, Russian Federation, where we were teaching data mining to MA students of {{< link_new url="https://www.hse.ru/en/ma/sna/" name="Applied Statistics">}}. This is a new Master’s course that attracts the best students from different backgrounds and teaches them statistical methods for work in the industry.
 <!--more-->
 
 It was a real pleasure working at HSE. The students were proactive by asking questions and really challenged us to do our best.

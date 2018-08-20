@@ -14,7 +14,7 @@ joinLines = false
 +++
 
 
-We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis. [Spectroscopy add-on](https://www.tandfonline.com/doi/full/10.1080/08940886.2017.1338424?src=recsys) is intended for the analysis of spectral data and it is just as fun as our other add-ons (if not more!).
+We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis. {{< link_new url="https://www.tandfonline.com/doi/full/10.1080/08940886.2017.1338424?src=recsys" name="Spectroscopy add-on">}} is intended for the analysis of spectral data and it is just as fun as our other add-ons (if not more!).
 <!--more-->
 
 
@@ -22,7 +22,7 @@ We have just concluded our enhanced Introduction to Data Science workshop, which
 
 We will prove it with a simple classification workflow. First, install Spectroscopy add-on from Options – Add-ons menu in Orange. Restart Orange for the add-on to appear. Great, you are ready for some spectral analysis!
 
-Use Datasets widget and load Collagen spectroscopy data. This data contains cells measured with [FTIR](https://en.wikipedia.org/wiki/Fourier-transform_infrared_spectroscopy) and annotated with the major chemical compound at the imaged part of a cell. A quick glance in a Data Table will give us an idea how the data looks like. Seems like a very standard spectral data set.
+Use Datasets widget and load Collagen spectroscopy data. This data contains cells measured with {{< link_new url="https://en.wikipedia.org/wiki/Fourier-transform_infrared_spectroscopy" name="FTIR">}} and annotated with the major chemical compound at the imaged part of a cell. A quick glance in a Data Table will give us an idea how the data looks like. Seems like a very standard spectral data set.
 
 
 

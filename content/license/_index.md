@@ -23,15 +23,14 @@ for more details.
 Orange documentation, content on its website and other non-code content
 are all available under Creative Commons Attribution-ShareAlike
 license unless specified otherwise. Attribution should be made
-to Orange, Data Mining Fruitful & Fun, with a link to its website
-([http://orange.biolab.si/](http://orange.biolab.si/)).
+to Orange, Data Mining Fruitful & Fun, with a link to its website {{< link_new url="http://orange.biolab.si/" name="http://orange.biolab.si/">}}.
 
 Orange Widgets and Canvas are based on Qt, which is distributed under
-GPL 3.0 (as well as LGPL 2.1, see [http://qt.nokia.com/products/licensing](http://qt.nokia.com/products/licensing)).
+GPL 3.0 (as well as LGPL 2.1, see {{< link_new url="http://qt.nokia.com/products/licensing" name="http://qt.nokia.com/products/licensing">}}.
 
 Random numbers in Orange are computed with Shaw Cookus' implementation
 of Mersenne twister. CRC 32 is computed by the code published at
-([http://www.createwindow.com/programming/crc32/]http://www.createwindow.com/programming/crc32/)
+({{< link_new url="http://www.createwindow.com/programming/crc32/" name="http://www.createwindow.com/programming/crc32/">}})
 by Richard A. Ellingson.
 
 Orange contains libsvm, liblinear and qhull, which are distributed under
@@ -151,5 +150,5 @@ the following copyright notices:
 
 Orange add-ons may have additional licensing requirements. Please, see their respective license files.
 
-If you want to cite Orange or give it an attribution, you can find more information [here](/citation/).
+If you want to cite Orange or give it an attribution, you can find more information {{< link_new url="/citation/" name="here">}}.
                     

@@ -21,8 +21,7 @@ While using our Site, we may ask you to provide us with certain personally ident
 ### Log Data
 Like many site operators, we collect information that your browser sends whenever you visit our Site (''Log Data'').
 This Log Data may include information such as your computer's Internet Protocol (''IP'') address, browser type, browser version, the pages of our Site that you visit, the time and date of your visit, the time spent on those pages and other statistics.
-In addition, we are using third party services, i.e. Google Analytics, that collect, monitor and analyze these data. If you wish to opt-out of data collection on our site, we recommend you to use [Google Analytics Opt-Out Add On](https://tools.google.com/dlpage/gaoptout/)
-
+In addition, we are using third party services, i.e. Google Analytics, that collect, monitor and analyze these data. If you wish to opt-out of data collection on our site, we recommend you to use {{< link_new url="https://tools.google.com/dlpage/gaoptout/" name="Google Analytics Opt-Out Add On">}}.
 ### Communications
 We may use your Personal Information to contact you when replying to your contact request or conducting a survey of activities.
 
@@ -35,7 +34,8 @@ This Privacy Policy is effective as of 14.1.2016 and will remain in effect excep
 We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. Your continued use of the Service after we post any modifications to the Privacy Policy on this page will constitute your acknowledgement of the modifications and your consent to abide and be bound by the modified Privacy Policy.
 
 ### Contact Us
-If you have any questions about this Privacy Policy, please contact us through the [contact form](/contact/) on our website.
+If you have any questions about this Privacy Policy, please contact us through the 
+{{< link_new url="/contact/" name="contact form">}} on our website.
 
 
 
