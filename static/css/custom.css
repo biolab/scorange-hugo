@@ -590,9 +590,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     padding-bottom: 50px;
 }*/
 
-.download-container{
+./*download-container{
     padding-bottom: 50px !important;
-}
+}*/
 
 .donate {
     font-size: 18px;
@@ -602,6 +602,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     padding: 6px 12px !important;
     margin-top: 7px !important;
 }
+
 a.donate:visited, a.donate:focus {
     border: 2px solid #e8e8e8 !important;
     background-color: #efefef !important;

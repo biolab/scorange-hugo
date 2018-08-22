@@ -3624,6 +3624,22 @@ li.pingback:first-child {
 .padding-bottom{
   padding-bottom: 50px
 }
+
+.mac{
+  display: none;
+}
+
+.icon-button{
+  cursor: pointer;
+}
+
+.download-os{
+    background-color: white;
+    width: 100%;
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-bottom: 60px;
+}
       
 
 /*.example button:hover {
