@@ -5,7 +5,7 @@
                 <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
                     {{ range .Site.Data.tabs}}
                     <div class="icon-item col-md-3 col-sm-3 col-xs-12 text-center">
-                        <a onclick="windows({{.os}})">
+                        <a onclick="windows({{.os}})" href="#{{.os}}">
                             <div class="icon{{ if eq os .os }}-selected{{end}}">
                                 <i class="fa fa-{{ .icon }} jsonly icon-button"></i>
                             </div><!--//icon-->
@@ -18,7 +18,7 @@
         </div><!--//container-->
 
         <div class="container-fluid download-container">
-            <div id="windows" class="container download-os ">
+            <div id="win" class="container download-os ">
                 <div class="faq-col col-md-12 col-sm-12 col-xs-12">
                     <div class="content">
                         <h2>Download the latest version for Windows</h2>
@@ -50,13 +50,25 @@
 
         </div>
         <script type="text/javascript">
+            var hash = window.location.hash.substr(1);
+            
+            if (hash == "windows"){
+                $("#mac").hide();
+                $("#win").show();
+            }
+
+            else if( hash == "macos"){
+                    $("#win").hide();
+                    $("#mac").show();
+            }
+
             function windows(os) {
                 if (os =="windows"){
                     $("#mac").hide();
-                    $("#windows").show();
+                    $("#win").show();
                 }
                 else if( os == "macos"){
-                    $("#windows").hide();
+                    $("#win").hide();
                     $("#mac").show();
                 }
             }
