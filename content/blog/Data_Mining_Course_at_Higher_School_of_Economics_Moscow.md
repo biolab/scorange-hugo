@@ -1,12 +1,10 @@
 +++
-showonlyimage = false
 draft = false
 date = "2017-09-07"
 title = "Data Mining Course at Higher School of Economics, Moscow"
 weight = 15
 image = "/blog_img/moscow-1.jpg"
 thumbImage = "/blog_img/moscow-thumb.png"
-type = "post"
 categories = ["data mining", "HSE", "python","workshop"]
 hardLineBreak = true 
 author = "Janez Novak"
