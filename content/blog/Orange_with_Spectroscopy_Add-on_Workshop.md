@@ -1,5 +1,4 @@
 +++
-showonlyimage = false
 draft = false
 date = "2016-02-05"
 title = "Orange with Spectroscopy Add-on Workshop"

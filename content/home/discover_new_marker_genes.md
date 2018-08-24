@@ -1,7 +1,6 @@
 +++
 title = "Discover New Marker Genes that Distinguish Cell Types"
-thumbnailImage = "/images/Biomarkers-small.png"
-css_class = "biomarkers"
+image = "/images/Biomarkers.png"
 learnMore = "/features/visual-programming/"
 video = "lb-x36xqJ-E?start=6"
 thumbnailImagePosition = "right"

@@ -1,5 +1,4 @@
 +++
-showonlyimage = false
 draft = false
 image = "/blog_img/IMG_20180713_092503.jpg"
 thumbImage = "/blog_img/Data_Mining_and_Machine_Learning_for_Economists-thumb.png"

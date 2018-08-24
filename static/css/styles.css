@@ -972,7 +972,7 @@ svg{
 
   #features .feature-panel {
     padding-top: inherit;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat !important;
   }
 
   #features .feature-panel .content {
@@ -984,18 +984,6 @@ svg{
     margin-top: 0px;
   }
 
-  .cell-type-discovery {
-    background: url('/images/Cell-Type-Discovery.png');
-  }
-
-  .biomarkers {
-    background: url('/images/Biomarkers.png');
-    background-position: right top;
-  }
-
-  .population-prediction {
-    background: url('/images/Population-Prediction.png');
-  }
 }
 
 /* Large devices (large desktops, 1200px and up) */
