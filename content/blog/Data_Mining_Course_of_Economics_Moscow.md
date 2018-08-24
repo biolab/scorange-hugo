@@ -1,5 +1,4 @@
 +++
-showonlyimage = false
 draft = false
 date = "2017-09-07"
 title = "Data Mining Course at Higher School of Economics, Moscow"
