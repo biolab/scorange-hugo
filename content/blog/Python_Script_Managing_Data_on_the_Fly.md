@@ -1,10 +1,9 @@
 +++
-showonlyimage = false
 draft = false
 date = "2016-03-05"
+type= "blog"
 title = "Python Script: Managing Data on the Fly"
 weight = 15
-type = "post"
 hardLineBreak = true 
 categories = ["Python", "Numpy"]
 joinLines = false

@@ -1,7 +1,6 @@
 +++
 title= "Explore the Diversity of Cells Within Your Sample"
-thumbnailImage= "/images/Cell-Type-Discovery-small.png"
-css_class =  "cell-type-discovery"
+image= "/images/Cell-Type-Discovery.png"
 video =  "3nMcI4Hxm7c&t=0s"
 learnMore =  "/features/interactive-data-visualization/"
 thumbnailImagePosition = "left"

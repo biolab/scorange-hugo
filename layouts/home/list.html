@@ -89,7 +89,7 @@
         <div class="container">
             
            {{ range .Pages.ByWeight }}
-            <div class="feature-panel row {{ .Params.css_class }}">
+            <div class="feature-panel row" style="background: url({{.Params.image}}); ">
         <div class='content col-md-6 col-xs-12 feature-description pull-{{if (eq .Params.thumbnailImagePosition "left")}}right{{else}}left{{ end }}'>
             <h2 class="feature-title">
             {{ if isset .Params "learnMore" }}

@@ -1,12 +1,11 @@
 +++
-showonlyimage = false
 draft = false
 date = "2016-02-05"
+type = "blog"
 title = "Orange with Spectroscopy Add-on Workshop"
 weight = 15
 image = "/blog_img/Orange_with_Spectroscopy_Add-on_Workshop-1.jpg"
 thumbImage = "/blog_img/Orange_with_Spectroscopy_Add-on_Workshop-thumb.png"
-type = "post"
 categories = ["infraorange", "spectral orange", "workshop"]
 hardLineBreak = true 
 excerpt = ""
