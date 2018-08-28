@@ -1,11 +1,11 @@
 +++
 draft = false
+type = "blog"
 image = "/blog_img/IMG_20180713_092503.jpg"
 thumbImage = "/blog_img/Data_Mining_and_Machine_Learning_for_Economists-thumb.png"
 date = "2013-05-05"
 title = "Data Mining and Machine Learning for Economists"
 weight = 15
-type = "post"
 hardLineBreak = true 
 categories = ["clustering", "data mining", "summer school"]
 excerpt = ""

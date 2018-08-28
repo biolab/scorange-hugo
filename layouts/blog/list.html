@@ -29,7 +29,7 @@
          </div>
          <div class="hline-separator intro-separator">
                </div>
-         {{ $paginator := .Paginate (where (where .Pages "Type" "post") "IsPage" true) }}
+         {{ $paginator := .Paginate (where (where .Pages "Type" "blog") "IsPage" true) }}
          {{ range $index, $element := .Paginator.Pages }}
          {{ if and (isset .Params "image") .Params.image }}
          {{ if eq (mod $index 2) 0 }}
