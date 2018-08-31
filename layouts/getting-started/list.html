@@ -1,7 +1,7 @@
 {{ define "main"}}
-    <section id="features" class="features section">
-        <div class="container">
-            <div class="row">
+    <!-- <section id="features" class="features section">
+        <div class="container page-background" >
+            
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <h1 class="title">Getting Started</h1>
                 </div>
@@ -9,8 +9,68 @@
                     <div class="content">
                         {{.Content}}
                 </div>
-            </div><!--//row-->
-        </div><!--//container-->
-    </section><!--//features-->
+            </div>
+        </div>
+    </section> -->
+
+    <section id="features" class="features section padding-bottom">
+        <!-- <a id="Orange-Features" class="features-anchor"></a> -->
+        <div class="container page-background">
+            <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h1 class="title">Getting Started</h1>
+            </div>
+        </div>
+            
+           {{ range .Pages.ByWeight }}
+            <div class=" row">
+        <div class='content col-md-6 col-xs-12 feature-description pull-{{if (eq .Params.thumbnailImagePosition "left")}}right{{else}}left{{ end }}'>
+            <h2 class="feature-title">
+            <!-- {{ if isset .Params "learnMore" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> -->
+                <!-- {{else}} -->
+                {{ .Title }}
+                <!-- {{ end }} -->
+            </h2>
+            <p class="feature-text">{{ .Content }}</p>
+            <div class="getting-started-button">
+                {{ if isset .Params "button"}}
+                 {{ if .Params.button }}
+                <a class="btn btn-warning" href="{{.Params.buttonURL}}">{{.Params.buttonText}}
+                    </a>
+                    {{end }}
+                    {{end}}
+                <!-- {{ if isset .Params "learnMore" }}
+                asdas
+                <a href="{{ .Permalink }}">
+                    <div class="learn-more feature-block">
+                        <div class="feature-block fa fa-arrow-circle-o-right jsonly" > </div>
+                        <div class="feature-block feature-link">Learn More</div>
+                    </div>
+                </a>
+                {{ end }} -->
+
+                <!-- {{ if isset .Params "video" }}
+                    {{ if isset .Params "learnMore" }}
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    {{ end }} -->
+                <!-- <a class="lightbox" href="https://www.youtube.com/watch?v={{ .Params.video }}&autoplay=1">
+                    <div class="feature-block fa fa-play-circle-o jsonly"></div>
+                    <div class="feature-block feature-link">Watch Video</div>
+                </a> -->
+                <!-- {{ end }} -->
+            </div>
+        </div>
+        <div class='content col-md-6 col-xs-12 {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
+            <!-- {{ if isset .Params "learnMore" }}<a href="{{ .Permalink }}">{{end}} -->
+                <img class='image {{.Params.thumbnailImagePosition}}' src="{{ .Params.image}}" style="padding:40px;">
+            <!-- {{ if isset .Params "learnMore" }}</a>{{end}} -->
+        </div>
+    </div>
+            {{ end }}
+            
+        </div>
+    <!-- </div> -->
+    </section>
 
 {{ end }}
