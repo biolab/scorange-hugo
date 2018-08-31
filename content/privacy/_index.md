@@ -3,7 +3,7 @@ title = "Privacy"
 url = "/privacy/"
 +++
 
-#### Last updated: 14.1.2016
+##### Last updated: 14.1.2016
 
 ##### Laboratory of Bioinformatics, Faculty of Computer and Information Science, University of Ljubljana (''us'', ''we'', or ''ours'') operastes http://orange.biolab.si (the ''Site''). This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the Site.
 

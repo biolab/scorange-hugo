@@ -3644,6 +3644,14 @@ li.pingback:first-child {
   font-size: 18px !important;
 }
       
+.contact input, textarea{
+    background-color: #efefef !important;
+    color: black !important;
+}
+
+.contact textarea{
+  border: 0;
+}
 
 /*.example button:hover {
   background: #0b7dda;

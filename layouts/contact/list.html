@@ -1,7 +1,7 @@
 {{ define "main"}}
 
 <section id="features" class="features section">
-    <div class="container">
+    <div class="container page-background" >
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <!-- {% if post > 0 %}
@@ -28,8 +28,7 @@
                         on our <a href="https://github.com/biolab/orange3/issues">GitHub issue tracker</a> instead.</p>
                     <br>
                 </div>
-
-                <form role="form" class="form-horizontal" action="{% url 'contact' %}" method="post" name="license-form">
+                <form role="form" id="send_mail" class="form-horizontal contact" action="https://singlecell.biolab.si/mail/" method="POST" name="license-form">
                     <div class="form-group">
                         <label class="col-md-1 col-sm-2 col-xs-10" for="email">E-mail:</label>
                         <div class="inline-label-input col-md-4 col-sm-4 col-xs-10">
@@ -49,8 +48,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-md-offset-1 col-md-10 col-sm-offset-3 col-sm-9">
+                        <!-- <div class="col-md-offset-1 col-md-10 col-sm-offset-3 col-sm-9">
                             <div class="g-recaptcha" data-sitekey="6Lemwf4SAAAAACdTLL0TYpvYQ9LE91r6r_i7Yg2a"></div>
+                        </div> -->
+                        <!-- 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI -->
+                        <div class="col-md-offset-1 col-md-10 col-sm-offset-3 col-sm-9">
+                            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                        <span id="captcha" style="margin-left:100px;color:red" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -62,6 +66,29 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+       
+            $('#send_mail').submit(function(event){
+
+                var v = grecaptcha.getResponse();
+                if(v.length == 0)
+                {
+                    event.preventDefault();
+                    document.getElementById('captcha').innerHTML="You can't leave Captcha Code";
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('captcha').innerHTML="Captcha completed";
+                    return true; 
+                }
+            });
+                
+            
+        
+
+    </script>
 </section>
+
 
 {{end}}
