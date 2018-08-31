@@ -67,6 +67,16 @@
                     <div class="latest-blog-posts">
                         <ul class="links list-sitemap" style="padding-bottom: 10px">
                             <li><b><a class="sitemap-cat" href="http://blog.biolab.si/">Latest blog posts</a></b></li>
+                            {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
+                            <li>
+                            <div class="row">
+                            <div class="col-md-2"><a class="sitemap-sub"> {{ .Date.Format "02 Jan" }} </a></div>
+                            <div class="col-md-10">
+                                <a class="sitemap-sub" style="color: orange" href="{{.Permalink}}">{{.Title}}</a>
+                            </div>
+                            </div>
+                            </li>
+                            {{end}}
                         </ul>
                     </div>
                 </div>
