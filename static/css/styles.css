@@ -3571,7 +3571,7 @@ li.pingback:first-child {
 }
 .home-page-blog .excerpt-content{
   padding-bottom: 0;
-  height: 200px !important;
+  /*height: 200px !important;*/
 }
 .home-page-blog .excerpt-meta{
   padding-top: 10px;

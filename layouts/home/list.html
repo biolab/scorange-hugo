@@ -61,17 +61,24 @@
                            <a href="{{ .Permalink }} "> {{ .Title }} </a>
                         </h2>
                      </div>
-                     <div class='excerpt-content'>
-                        <article>
-                           {{ if and (isset .Params "excerpt") .Params.excerpt }}
-                           {{ .Params.excerpt}}
+                     <div class='excerpt-content front-page-image'>
+                        <!-- {{.Params.frontPageText | markdownify}} -->
+                        
+                        <article style="padding-bottom: 20px;">
+                           {{ if .Params.frontPageText}}
+                           {{ .Params.frontPageText | markdownify}}
                            {{else}}
-                           {{ .Summary }}
+                           {{ .Params.excerpt }}
                            {{end}}
+                           <a href="{{ .Permalink }} "> Read more </a>
                            
                         </article>
+
+                        {{ if .Params.frontPageImage }}
+                        <img  src="{{ .Params.frontPageImage}}" >
+                        {{end}}
                      </div>
-                     <div class="more-link-wrapper"><a class="more-link" href="{{ .Permalink }}">Read the post<span class="screen-reader-text">This is a Standard Post</span></a></div>
+                     <!-- <div class="more-link-wrapper"><a class="more-link" href="{{ .Permalink }}">Read the post<span class="screen-reader-text">This is a Standard Post</span></a></div> -->
                   </div>
                </div>
                 </div>
