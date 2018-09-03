@@ -1,0 +1,30 @@
+{{ define "main"}}
+<section id="features" class="features section padding-bottom">
+   <div id="widgets"class="container page-background" style="margin-top: 20px;">
+      <!-- <div class="col-xs-12 content">
+         <input type="text" class="form-control jsonly" id="search-box" placeholder="Quick Search" tabindex="1" autofocus />
+      </div> -->
+      <div class="row">
+         <div class="col-md-12 col-sm-12 col-xs-12">
+            {{ range $key, $value := $.Site.Data.widgets }}
+            <h2 class="widget-topic">{{ $key }}</h2>
+            <div class="toctree-wrapper compound">
+               <ul>
+                  {{range $value}}
+                  <li class="toctree-l1">
+                     <a href="{{ .doc }}">
+                     <img alt="{{ .text }}" src="http://docs.orange.biolab.si/3/visual-programming/{{ .img }}"/>
+                     </a>
+                     <a class="reference internal" href="{{ .doc }}">
+                     {{ .text }}
+                     </a>
+                  </li>
+                  {{end}}
+               </ul>
+            </div>
+            {{ end }}
+         </div>
+      </div>
+   </div>
+</section>
+{{end}}
