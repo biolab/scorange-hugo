@@ -576,10 +576,12 @@ blockquote {
 
 .features .panel-left {
   padding-left: 0;
+  float: left;
 }
 
 .features .panel-right {
   padding-right: 0;
+  float: right;
 }
 
 .features h2 a {
@@ -974,6 +976,10 @@ svg{
   #features .feature-panel img {
     display: none;
   }
+
+ /* #features .feature-panel-getting-started img {
+    display: none;
+  }*/
 
   #features .feature-panel {
     padding-top: inherit;
@@ -3633,7 +3639,19 @@ li.pingback:first-child {
     padding-right: 160px;
     padding-bottom: 60px;
 }
+
+.getting-started-button a{
+  font-size: 18px !important;
+}
       
+.contact input, textarea{
+    background-color: #efefef !important;
+    color: black !important;
+}
+
+.contact textarea{
+  border: 0;
+}
 
 /*.example button:hover {
   background: #0b7dda;

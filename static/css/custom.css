@@ -49,6 +49,8 @@ h6, .h6 {
 }
 
 .sitemap-sub {
+    white-space: nowrap;
+    overflow: hidden;
     /*padding-left: 1em;*/
 }
 
@@ -554,6 +556,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .faq pre{
     margin-left: 20px !important;
+}
+
+.privacy p{
+    padding-left: 20px !important;
+}
+.privacy h5 {
+    font-size: 16px;
 }
 .nopadding {
     padding: 0 !important;
