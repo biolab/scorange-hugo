@@ -50,14 +50,21 @@
 
         </div>
         <script type="text/javascript">
-            var hash = window.location.hash.substr(1);
-            
+            hash = window.location.hash.substr(1);
+
+            if (hash == ""){
+                if (navigator.appVersion.indexOf("Win")!=-1) hash="windows";
+                if (navigator.appVersion.indexOf("Mac")!=-1) hash="macos";
+            }
+                        
             if (hash == "windows"){
                 $("#mac").hide();
                 $("#win").show();
+                window.location.hash = hash;
             }
 
             else if( hash == "macos"){
+                window.location.hash = hash;
                     $("#win").hide();
                     $("#mac").show();
             }
