@@ -636,7 +636,8 @@ a img {
 
 .featured-image img {
   max-height: 80%;
-  max-width: 80%;
+  max-width: 90%;
+  width: 420px;
   position:absolute;
     top:0;
     bottom:0;
@@ -763,6 +764,10 @@ a img {
           transform: scaleX(0);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+}
+
+.front-page-image img {
+  width: 300px;
 }
 
 .pagination {
