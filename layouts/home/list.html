@@ -116,8 +116,8 @@
                 </a>
                 {{ end }}
 
-                {{ if isset .Params "video" }}
-                    {{ if isset .Params "learnMore" }}
+                {{ if .Params.video }}
+                    {{ if .Params.learnMore }}
                         &nbsp;&nbsp;&nbsp;&nbsp;
                     {{ end }}
                 <a class="lightbox" href="https://www.youtube.com/watch?v={{ .Params.video }}&autoplay=1">
