@@ -61,17 +61,24 @@
                            <a href="{{ .Permalink }} "> {{ .Title }} </a>
                         </h2>
                      </div>
-                     <div class='excerpt-content'>
-                        <article>
-                           {{ if and (isset .Params "excerpt") .Params.excerpt }}
-                           {{ .Params.excerpt}}
+                     <div class='excerpt-content front-page-image'>
+                        <!-- {{.Params.frontPageText | markdownify}} -->
+                        
+                        <article style="padding-bottom: 20px;">
+                           {{ if .Params.frontPageText}}
+                           {{ .Params.frontPageText | markdownify}}
                            {{else}}
-                           {{ .Summary }}
+                           {{ .Params.excerpt }}
                            {{end}}
+                           <a href="{{ .Permalink }} "> Read more </a>
                            
                         </article>
+
+                        {{ if .Params.frontPageImage }}
+                        <img  src="{{ .Params.frontPageImage}}" >
+                        {{end}}
                      </div>
-                     <div class="more-link-wrapper"><a class="more-link" href="{{ .Permalink }}">Read the post<span class="screen-reader-text">This is a Standard Post</span></a></div>
+                     <!-- <div class="more-link-wrapper"><a class="more-link" href="{{ .Permalink }}">Read the post<span class="screen-reader-text">This is a Standard Post</span></a></div> -->
                   </div>
                </div>
                 </div>
@@ -92,16 +99,16 @@
             <div class="feature-panel row" style="background: url({{.Params.image}}); ">
         <div class='content col-md-6 col-xs-12 feature-description pull-{{if (eq .Params.thumbnailImagePosition "left")}}right{{else}}left{{ end }}'>
             <h2 class="feature-title">
-            {{ if isset .Params "learnMore" }}
-                <a href="{{ .Params.learnMore }}">{{ .Title }}</a>
+            {{ if .Params.learnMore}}
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
                 {{else}}
                 {{ .Title }}
                 {{ end }}
             </h2>
-            <p class="feature-text">{{ .Content }}</p>
+            <p class="feature-text">{{ .Params.excerpt }}</p>
             <div class="more">
-                {{ if isset .Params "learnMore" }}
-                <a href="{{ .Params.learnMore }}">
+                {{ if .Params.learnMore }}
+                <a href="{{ .Permalink }}">
                     <div class="learn-more feature-block">
                         <div class="feature-block fa fa-arrow-circle-o-right jsonly" > </div>
                         <div class="feature-block feature-link">Learn More</div>
@@ -121,7 +128,7 @@
             </div>
         </div>
         <div class='content col-xs-12 feature-image {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
-            {{ if isset .Params "learnMore" }}<a href="{{ .Params.learnMore }}">{{end}}
+            {{ if isset .Params "learnMore" }}<a href="{{ .Permalink }}">{{end}}
                 <img class='image {{.Params.thumbnailImagePosition}}' src="{{ .Params.thumbnailImage}}">
             {{ if isset .Params "learnMore" }}</a>{{end}}
         </div>

@@ -8,6 +8,7 @@ hardLineBreak = true
 categories = ["Python", "Numpy"]
 joinLines = false
 excerpt = ""
+frontPageText = "Python Script is this mysterious widget most people don't know how to use, even those versed in Python. Python Script is the widget that supplements Orange functionalities with (almost) everything that Python can offer"
 +++
 
 
