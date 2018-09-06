@@ -1,15 +1,30 @@
 +++
+showonlyimage = false
 draft = false
+hardLineBreak = true 
+joinLines = false
 type = "blog"
-image = "/blog_img/IMG_20180713_092503.jpg"
-thumbImage = "/blog_img/Data_Mining_and_Machine_Learning_for_Economists-thumb.png"
+
+# Date format is YYYY-MM-DD.
 date = "2013-05-05"
+categories = ["clustering", "data mining", "summer school"]
+author = "Janez Novak"
 title = "Data Mining and Machine Learning for Economists"
 weight = 15
-hardLineBreak = true 
-categories = ["clustering", "data mining", "summer school"]
-excerpt = ""
-joinLines = false
+
+image = "/blog_img/IMG_20180713_092503.jpg"
+
+#  Size of frontPageImage:  width: 300px, height: 170px. 
+frontPageImage = ""
+
+#  Size of thumbImage:  width: 450px, height: 300px. 
+thumbImage = "/blog_img/Data_Mining_and_Machine_Learning_for_Economists-thumb.png"
+
+#Short excerpt will be shown on the home page. Limit text to 140 characters.
+shortExcerpt = ""
+
+# Long excerpt will be shown on the blog page. Limit text to 280 characters.
+longExcerpt = ""
 +++
 
 Last week Blaž, Marko and I held a week long introductory Data Mining and Machine Learning course at the Ljubljana Doctoral Summer School 2018. We got a room full of dedicated students and we embarked on a journey through standard and advanced machine learning techniques, all presented of course in Orange.
