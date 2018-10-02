@@ -1,6 +1,21 @@
 import glob
 import shutil
 
+
+def add_front_matter(file):
+    front_matter = "+++\n"
+
+    with open(file, 'r+') as f:
+        content = f.readlines()
+        front_matter += '"title" = "' + content[0].strip()+'"\n'
+        icon = next(ele for ele in content if "![]" in ele)
+        front_matter += '"icon" = "' + icon[icon.find("(")+1: icon.find(")")]+'"\n'
+        front_matter += "+++\n"
+        front_matter += ''.join(map(str, content))
+        f.close()
+    return front_matter
+
+
 # find all .include_hugo files in content folder
 files = glob.glob('content/**/.include_hugo', recursive=True)
 # iterate over all files(.include_hugo) that were founded
@@ -20,14 +35,30 @@ for file in files:
             #
             files_in_folder = glob.glob(x+'/**', recursive=True)
             for file_to_copy in files_in_folder:
+                print(file_to_copy)
                 if '.' in file_to_copy:
-                    shutil.copy2(file_to_copy, location)
+                    text = add_front_matter(file_to_copy)
+                    with open(location + file_to_copy.split("/")[-1], 'w') as tmp:
+                        tmp.write(text)
+                        tmp.close()
         # copy file
         elif '*' not in x and '.' in x:
-            shutil.copy2(x, location)
+            text = add_front_matter(x)
+            with open(location+x.split("/")[-1], 'w') as tmp:
+                tmp.write(text)
+                tmp.close()
+
         # copy all files recursive from folder
         elif '**' in x:
             files_in_folder = glob.glob(x, recursive=True)
             for file_to_copy in files_in_folder:
                 if '.' in file_to_copy:
-                    shutil.copy2(file_to_copy, location)
+                    print(file_to_copy)
+                    text = add_front_matter(file_to_copy)
+                    with open(location + file_to_copy.split("/")[-1], 'w') as tmp:
+                        tmp.write(text)
+                        tmp.close()
+
+
+
+
