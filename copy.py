@@ -1,64 +1,89 @@
 import glob
 import shutil
+import json
+
+"""
+Generates string of values which is later added to .md files.
+
+Parameters
+----------
+filename:
+    The location of the widget .md file.
+widget: 
+    JSON object of widget data.
+
+"""
 
 
-def add_front_matter(file):
+def add_front_matter(filename,widget):
     front_matter = "+++\n"
 
-    with open(file, 'r+') as f:
-        content = f.readlines()
-        front_matter += '"title" = "' + content[0].strip()+'"\n'
-        icon = next(ele for ele in content if "![]" in ele)
-        front_matter += '"icon" = "' + icon[icon.find("(")+1: icon.find(")")]+'"\n'
+    with open(filename, 'r+') as f:
+        content = f.read()
+        for element in widget:
+            if 'file' not in element:
+                front_matter += '"'+element+'" = "' + str(widget[element]) + '"\n'
         front_matter += "+++\n"
-        front_matter += ''.join(map(str, content))
-        f.close()
+        front_matter += content
     return front_matter
 
 
-# find all .include_hugo files in content folder
-files = glob.glob('content/**/.include_hugo', recursive=True)
-# iterate over all files(.include_hugo) that were founded
-for file in files:
-    # read content
-    with open(file, 'r') as f:
-        content = f.readlines()
+"""
+Build json file for widget catalog from widget_data.json.
 
-    content = [x.strip() for x in content]
-    # save location(path) of file
-    location = file.split('.')[0]
+Parameters
+----------
+filename:
+    The location of the file widget_data.json
 
-    # iterate over files included in .include_hugo file
-    for x in content:
-        # copy all files from folder
-        if '*' not in x and '.' not in x:
-            #
-            files_in_folder = glob.glob(x+'/**', recursive=True)
-            for file_to_copy in files_in_folder:
-                print(file_to_copy)
-                if '.' in file_to_copy:
-                    text = add_front_matter(file_to_copy)
-                    with open(location + file_to_copy.split("/")[-1], 'w') as tmp:
-                        tmp.write(text)
-                        tmp.close()
-        # copy file
-        elif '*' not in x and '.' in x:
-            text = add_front_matter(x)
-            with open(location+x.split("/")[-1], 'w') as tmp:
-                tmp.write(text)
-                tmp.close()
-
-        # copy all files recursive from folder
-        elif '**' in x:
-            files_in_folder = glob.glob(x, recursive=True)
-            for file_to_copy in files_in_folder:
-                if '.' in file_to_copy:
-                    print(file_to_copy)
-                    text = add_front_matter(file_to_copy)
-                    with open(location + file_to_copy.split("/")[-1], 'w') as tmp:
-                        tmp.write(text)
-                        tmp.close()
+"""
 
 
+def build_json(filename):
+    json_content = {}
+    widgets = {}
+    with open(filename, 'r+') as f:
+        widgets = json.loads(f.read())
+        for widget in widgets:
+            widget_obj = widgets[widget]
+            if widget_obj["category"] not in json_content:
+                json_content[widget_obj["category"]] = []
+            json_content[widget_obj["category"]].append(widget_obj)
+
+    with open('data/widgets.json', 'w') as outfile:
+        json.dump(json_content, outfile)
+        outfile.close()
+
+    with open('static/widgets.json', 'w') as outfile:
+        json.dump(json_content, outfile)
+        outfile.close()
+
+    return widgets
 
 
+# find widgets_data.json file in submodule
+files = glob.glob('external/**/widgets_data.json', recursive=True)
+
+# if no file found, exit
+if len(files) < 1:
+    print("Can't find widgets_data.json file.")
+    exit()
+json_content = {}
+
+path = files[0].split("widgets_data")[0]
+file = files[0]
+location = "content/widget-catalog/"
+
+widgets_data = build_json(file)
+
+# open widgets_data.json file
+with open(file, 'r+') as f:
+    widgets = json.loads(f.read())
+    # for each widget in widgets_data.json file generate FrontMatter and copy .md file and icon image
+    for widget in widgets:
+        widget_data = widgets[widget]
+        text = add_front_matter(path+widget_data['file'], widgets_data[widget_data['title']])
+        with open(location+widget_data['file'].split("/")[-1], 'w') as tmp:
+            tmp.write(text)
+            tmp.close()
+        shutil.copy2(path + widget_data['icon'], 'static/icons/')

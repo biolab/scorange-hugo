@@ -14,10 +14,10 @@
                <ul>
                   {{range $value}}
                   <li class="toctree-l1">
-                     <a href="{{ .title | urlize}}">
+                     <a href="{{ .title |urlize }}">
                      <img alt="{{ .title }}" src="/{{ .icon }}"/>
                      </a>
-                     <a class="reference internal" href="{{ .title | urlize}}">
+                     <a class="reference internal" href="{{ .title |urlize }}">
                      {{ .title }}
                      </a>
                   </li>
@@ -49,11 +49,12 @@
 			        WIDG_JS[key] = widget_idx
 			        //  Widget keywords
 			        for ( var keyword in field_val[widget].keywords){
-
-			            WIDG_JS[keyword] = widget_idx
+                var key = field_val[widget].keywords[keyword]
+			            WIDG_JS[key] = widget_idx
 			        }
 			        widget_idx += 1
 			    }
+
 			    }
 			var data_for_trie = WIDG_JS;
       var options = {
