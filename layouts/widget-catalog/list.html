@@ -8,6 +8,7 @@
      </div>
       <div class="row">
          <div class="col-md-12 col-sm-12 col-xs-12">
+          {{ if $.Site.Data.widgets}}
             {{ range $key, $value := $.Site.Data.widgets }}
             <h2 class="widget-topic">{{ $key }}</h2>
             <div class="toctree-wrapper compound">
@@ -25,6 +26,7 @@
                </ul>
             </div>
             {{ end }}
+            {{end}}
          </div>
       </div>
    </div>
