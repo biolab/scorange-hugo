@@ -1,20 +1,29 @@
 +++
 draft = false
+hardLineBreak = true 
+joinLines = false
+type = "blog"
+
+# Date format is YYYY-MM-DD.
 date = "2017-09-07"
+categories = ["data mining", "HSE", "python","workshop"]
+author = "Janez Novak"
 title = "Data Mining Course at Higher School of Economics, Moscow"
 weight = 15
-#  Size of frontPageImage:  width: 300px , height: 170px 
-frontPageImage = "/blog_img/front_page_data_mining_for_economists.jpg"
+
 image = "/blog_img/moscow-1.jpg"
-#  Size of thumbImage:  width: 450px , height: 300px 
+
+#  Size of frontPageImage:  width: 300px, height: 170px. 
+frontPageImage = "/blog_img/front_page_data_mining_for_economists.jpg"
+
+#  Size of thumbImage:  width: 450px, height: 300px. 
 thumbImage = "/blog_img/moscow-thumb.png"
-type = "blog"
-categories = ["data mining", "HSE", "python","workshop"]
-hardLineBreak = true 
-author = "Janez Novak"
-joinLines = false
-excerpt = ""
-frontPageText = 'Janez and I have recently returned from a two-week stay in Moscow, Russian Federation, where we were teaching data mining to MA students of Applied Statistics.'
+
+#Short excerpt will be shown on the home page. Limit text to 140 characters.
+shortExcerpt = "Janez and I have recently returned from a two-week stay in Moscow, Russian Federation, where we were teaching data mining to MA students of Applied Statistics."
+
+# Long excerpt will be shown on the blog page. Limit text to 280 characters.
+longExcerpt = ""
 
 +++
 
