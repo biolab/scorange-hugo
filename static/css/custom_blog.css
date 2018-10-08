@@ -2605,3 +2605,7 @@ li.pingback:first-child {
   }
 }
 
+.blog-excerpt{
+  text-align: left !important;
+}
+
