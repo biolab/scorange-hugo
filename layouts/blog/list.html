@@ -73,11 +73,13 @@
                      </div>
                      <div class='excerpt-content'>
                         <article>
+                           <span class="blog-excerpt">
                            {{ if and (isset .Params "longExcerpt") .Params.longExcerpt }}
                            {{ .Params.longExcerpt}}
                            {{else}}
                            {{ .Summary }}
                            {{end}}
+                        </span>
                            <div class="more-link-wrapper"><a class="more-link" href="{{ .Permalink }}">Read the post<span class="screen-reader-text">This is a Standard Post</span></a></div>
                         </article>
                      </div>
