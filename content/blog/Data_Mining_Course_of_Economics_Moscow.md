@@ -1,5 +1,4 @@
 +++
-showonlyimage = false
 draft = false
 hardLineBreak = true 
 joinLines = false
