@@ -1,398 +1,553 @@
-[
-  [
-    "Data",
-    [
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/file.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/file.png",
-        "keywords": [],
-        "text": "File"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/save.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/save.png",
-        "keywords": [],
-        "text": "Save"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/datainfo.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/data-info.png",
-        "keywords": [],
-        "text": "Data Info"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/datatable.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/data-table.png",
-        "keywords": [],
-        "text": "Data Table"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/selectcolumns.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/select-columns.png",
-        "keywords": [
-          "Select Attributes"
-        ],
-        "text": "Select Columns"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/selectrows.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/select-rows.png",
-        "keywords": [],
-        "text": "Select Rows"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/datasampler.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/data-sampler.png",
-        "keywords": [],
-        "text": "Data Sampler"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/discretize.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/discretize.png",
-        "keywords": [],
-        "text": "Discretize"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/continuize.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/continuize.png",
-        "keywords": [],
-        "text": "Continuize"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/concatenate.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/concatenate.png",
-        "keywords": [],
-        "text": "Concatenate"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/paintdata.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/paint-data.png",
-        "keywords": [],
-        "text": "Paint Data"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/pythonscript.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/python-script.png",
-        "keywords": [],
-        "text": "Python Script"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/featureconstructor.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/feature-constructor.png",
-        "keywords": [],
-        "text": "Feature Constructor"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/editdomain.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/edit-domain.png",
-        "keywords": [],
-        "text": "Edit Domain"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/imageviewer.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/image-viewer.png",
-        "keywords": [],
-        "text": "Image Viewer"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/impute.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/impute.png",
-        "keywords": [],
-        "text": "Impute"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/mergedata.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/merge-data.png",
-        "keywords": [],
-        "text": "Merge Data"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/outliers.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/outliers.png",
-        "keywords": [],
-        "text": "Outliers"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/preprocess.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/preprocess.png",
-        "keywords": [],
-        "text": "Preprocess"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/purgedomain.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/purge-domain.png",
-        "keywords": [],
-        "text": "Purge Domain"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/data/rank.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/rank.png",
-        "keywords": [],
-        "text": "Rank"
-      }
-    ]
+{
+  "Data": [{
+      "text": "File",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/file.html",
+      "img": "icons/Orange.widgets.data.owfile.OWFile.png",
+      "keyword": [
+        "file",
+        "load",
+        "read",
+        "open"
+      ]
+    },
+    {
+      "text": "Datasets",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/datasets.html",
+      "img": "icons/Orange.widgets.data.owdatasets.OWDataSets.png",
+      "keyword": [
+        "online"
+      ]
+    },
+    {
+      "text": "SQL Table",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/sqltable.html",
+      "img": "icons/Orange.widgets.data.owsql.OWSql.png",
+      "keyword": [
+        "load"
+      ]
+    },
+    {
+      "text": "Data Table",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/datatable.html",
+      "img": "icons/Orange.widgets.data.owtable.OWDataTable.png",
+      "keyword": []
+    },
+    {
+      "text": "Paint Data",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/paintdata.html",
+      "img": "icons/Orange.widgets.data.owpaintdata.OWPaintData.png",
+      "keyword": [
+        "create",
+        "draw"
+      ]
+    },
+    {
+      "text": "Data Info",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/datainfo.html",
+      "img": "icons/Orange.widgets.data.owdatainfo.OWDataInfo.png",
+      "keyword": [
+        "information",
+        "inspect"
+      ]
+    },
+    {
+      "text": "Data Sampler",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/datasampler.html",
+      "img": "icons/Orange.widgets.data.owdatasampler.OWDataSampler.png",
+      "keyword": [
+        "random"
+      ]
+    },
+    {
+      "text": "Select Columns",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/selectcolumns.html",
+      "img": "icons/Orange.widgets.data.owselectcolumns.OWSelectAttributes.png",
+      "keyword": [
+        "filter"
+      ]
+    },
+    {
+      "text": "Select Rows",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/selectrows.html",
+      "img": "icons/Orange.widgets.data.owselectrows.OWSelectRows.png",
+      "keyword": [
+        "filter"
+      ]
+    },
+    {
+      "text": "Rank",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/rank.html",
+      "img": "icons/Orange.widgets.data.owrank.OWRank.png",
+      "keyword": []
+    },
+    {
+      "text": "Merge Data",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/mergedata.html",
+      "img": "icons/Orange.widgets.data.owmergedata.OWMergeData.png",
+      "keyword": [
+        "join"
+      ]
+    },
+    {
+      "text": "Concatenate",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/concatenate.html",
+      "img": "icons/Orange.widgets.data.owconcatenate.OWConcatenate.png",
+      "keyword": [
+        "append",
+        "join",
+        "extend"
+      ]
+    },
+    {
+      "text": "Select by Data Index",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/select-by-data-index.html",
+      "img": "icons/Orange.widgets.data.owselectbydataindex.OWSelectByDataIndex.png",
+      "keyword": []
+    },
+    {
+      "text": "Transpose",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/transpose.html",
+      "img": "icons/Orange.widgets.data.owtranspose.OWTranspose.png",
+      "keyword": []
+    },
+    {
+      "text": "Randomize",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/randomize.html",
+      "img": "icons/Orange.widgets.data.owrandomize.OWRandomize.png",
+      "keyword": []
+    },
+    {
+      "text": "Preprocess",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/preprocess.html",
+      "img": "icons/Orange.widgets.data.owpreprocess.OWPreprocess.png",
+      "keyword": [
+        "process"
+      ]
+    },
+    {
+      "text": "Impute",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/impute.html",
+      "img": "icons/Orange.widgets.data.owimpute.OWImpute.png",
+      "keyword": [
+        "substitute",
+        "missing"
+      ]
+    },
+    {
+      "text": "Outliers",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/outliers.html",
+      "img": "icons/Orange.widgets.data.owoutliers.OWOutliers.png",
+      "keyword": [
+        "inlier"
+      ]
+    },
+    {
+      "text": "Edit Domain",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/editdomain.html",
+      "img": "icons/Orange.widgets.data.oweditdomain.OWEditDomain.png",
+      "keyword": []
+    },
+    {
+      "text": "Python Script",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/pythonscript.html",
+      "img": "icons/Orange.widgets.data.owpythonscript.OWPythonScript.png",
+      "keyword": [
+        "file",
+        "program"
+      ]
+    },
+    {
+      "text": "Color",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/color.html",
+      "img": "icons/Orange.widgets.data.owcolor.OWColor.png",
+      "keyword": []
+    },
+    {
+      "text": "Continuize",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/continuize.html",
+      "img": "icons/Orange.widgets.data.owcontinuize.OWContinuize.png",
+      "keyword": []
+    },
+    {
+      "text": "Create Class",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/createclass.html",
+      "img": "icons/Orange.widgets.data.owcreateclass.OWCreateClass.png",
+      "keyword": []
+    },
+    {
+      "text": "Discretize",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/discretize.html",
+      "img": "icons/Orange.widgets.data.owdiscretize.OWDiscretize.png",
+      "keyword": []
+    },
+    {
+      "text": "Feature Constructor",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/featureconstructor.html",
+      "img": "icons/Orange.widgets.data.owfeatureconstructor.OWFeatureConstructor.png",
+      "keyword": []
+    },
+    {
+      "text": "Purge Domain",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/purgedomain.html",
+      "img": "icons/Orange.widgets.data.owpurgedomain.OWPurgeDomain.png",
+      "keyword": [
+        "remove",
+        "delete",
+        "unused"
+      ]
+    },
+    {
+      "text": "Save Data",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/data/save.html",
+      "img": "icons/Orange.widgets.data.owsave.OWSave.png",
+      "keyword": []
+    }
   ],
-  [
-    "Visualize",
-    [
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/visualize/boxplot.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/box-plot.png",
-        "keywords": [],
-        "text": "Box Plot"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/visualize/distributions.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/distributions.png",
-        "keywords": [],
-        "text": "Distributions"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/visualize/heatmap.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/heat-map.png",
-        "keywords": [],
-        "text": "Heat Map"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/visualize/scatterplot.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/scatter-plot.png",
-        "keywords": [],
-        "text": "Scatter Plot"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/visualize/venn-diagram.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/venn-diagram.png",
-        "keywords": [],
-        "text": "Venn Diagram"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/visualize/linearprojection.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/linear-projection.png",
-        "keywords": [],
-        "text": "Linear Projection"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/visualize/modelmapprojectionrank.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/modelmap-projection.png",
-        "keywords": [],
-        "text": "ModelMap Projection Rank"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/visualize/scattermap.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/scatter-map.png",
-        "keywords": [],
-        "text": "Scatter Map"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/visualize/sievediagram.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/sieve-diagram.png",
-        "keywords": [],
-        "text": "Sieve Diagram"
-      }
-    ]
+  "Visualize": [{
+      "text": "Tree Viewer",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/treeviewer.html",
+      "img": "icons/Orange.widgets.visualize.owtreeviewer.OWTreeGraph.png",
+      "keyword": []
+    },
+    {
+      "text": "Box Plot",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/boxplot.html",
+      "img": "icons/Orange.widgets.visualize.owboxplot.OWBoxPlot.png",
+      "keyword": [
+        "whisker"
+      ]
+    },
+    {
+      "text": "Distributions",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/distributions.html",
+      "img": "icons/Orange.widgets.visualize.owdistributions.OWDistributions.png",
+      "keyword": []
+    },
+    {
+      "text": "Scatter Plot",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/scatterplot.html",
+      "img": "icons/Orange.widgets.visualize.owscatterplot.OWScatterPlot.png",
+      "keyword": []
+    },
+    {
+      "text": "Sieve Diagram",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/sievediagram.html",
+      "img": "icons/Orange.widgets.visualize.owsieve.OWSieveDiagram.png",
+      "keyword": []
+    },
+    {
+      "text": "Mosaic Display",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/mosaicdisplay.html",
+      "img": "icons/Orange.widgets.visualize.owmosaic.OWMosaicDisplay.png",
+      "keyword": []
+    },
+    {
+      "text": "FreeViz",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/freeviz.html",
+      "img": "icons/Orange.widgets.visualize.owfreeviz.OWFreeViz.png",
+      "keyword": [
+        "viz"
+      ]
+    },
+    {
+      "text": "Linear Projection",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/linearprojection.html",
+      "img": "icons/Orange.widgets.visualize.owlinearprojection.OWLinearProjection.png",
+      "keyword": []
+    },
+    {
+      "text": "Radviz",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/radviz.html",
+      "img": "icons/Orange.widgets.visualize.owradviz.OWRadviz.png",
+      "keyword": [
+        "viz"
+      ]
+    },
+    {
+      "text": "Heat Map",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/heatmap.html",
+      "img": "icons/Orange.widgets.visualize.owheatmap.OWHeatMap.png",
+      "keyword": []
+    },
+    {
+      "text": "Venn Diagram",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/venndiagram.html",
+      "img": "icons/Orange.widgets.visualize.owvenndiagram.OWVennDiagram.png",
+      "keyword": []
+    },
+    {
+      "text": "Silhouette Plot",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/silhouetteplot.html",
+      "img": "icons/Orange.widgets.visualize.owsilhouetteplot.OWSilhouettePlot.png",
+      "keyword": []
+    },
+    {
+      "text": "Pythagorean Tree",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/pythagoreantree.html",
+      "img": "icons/Orange.widgets.visualize.owpythagorastree.OWPythagorasTree.png",
+      "keyword": [
+        "fractal"
+      ]
+    },
+    {
+      "text": "Pythagorean Forest",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/pythagoreanforest.html",
+      "img": "icons/Orange.widgets.visualize.owpythagoreanforest.OWPythagoreanForest.png",
+      "keyword": [
+        "fractal"
+      ]
+    },
+    {
+      "text": "CN2 Rule Viewer",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/cn2ruleviewer.html",
+      "img": "icons/Orange.widgets.visualize.owruleviewer.OWRuleViewer.png",
+      "keyword": []
+    },
+    {
+      "text": "Nomogram",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/visualize/nomogram.html",
+      "img": "icons/Orange.widgets.visualize.ownomogram.OWNomogram.png",
+      "keyword": []
+    }
   ],
-  [
-    "Classify",
-    [
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/classify/naivebayes.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/naive-bayes.png",
-        "keywords": [],
-        "text": "Naive Bayes"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/classify/logisticregression.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/logistic-regression.png",
-        "keywords": [],
-        "text": "Logistic Regression"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/classify/classificationtree.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/classification-tree.png",
-        "keywords": [],
-        "text": "Classification Tree"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/classify/classificationtreeviewer.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/classification-tree-viewer.png",
-        "keywords": [],
-        "text": "Classification Tree Viewer"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/classify/knearestneighbours.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/k-nearest-neighbors.png",
-        "keywords": [
-          "kNN",
-          "k Nearest Neighbors"
-        ],
-        "text": "Nearest Neighbors"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/classify/loadclassifier.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/load-classifier.png",
-        "keywords": [],
-        "text": "Load Classifier"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/classify/majority.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/majority.png",
-        "keywords": [],
-        "text": "Majority"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/classify/randomforest.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/random-forest.png",
-        "keywords": [],
-        "text": "Random Forest"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/classify/saveclassifier.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/save-classifier.png",
-        "keywords": [],
-        "text": "Save Classifier"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/classify/svm.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/svm-classification.png",
-        "keywords": [
-          "Support Vector Machine"
-        ],
-        "text": "SVM"
-      }
-    ]
+  "Model": [{
+      "text": "Constant",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/constant.html",
+      "img": "icons/Orange.widgets.model.owconstant.OWConstant.png",
+      "keyword": [
+        "majority",
+        "mean"
+      ]
+    },
+    {
+      "text": "CN2 Rule Induction",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/cn2ruleinduction.html",
+      "img": "icons/Orange.widgets.model.owrules.OWRuleLearner.png",
+      "keyword": []
+    },
+    {
+      "text": "kNN",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/knn.html",
+      "img": "icons/Orange.widgets.model.owknn.OWKNNLearner.png",
+      "keyword": [
+        "k nearest",
+        "knearest",
+        "neighbor",
+        "neighbour"
+      ]
+    },
+    {
+      "text": "Tree",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/tree.html",
+      "img": "icons/Orange.widgets.model.owtree.OWTreeLearner.png",
+      "keyword": []
+    },
+    {
+      "text": "Random Forest",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/randomforest.html",
+      "img": "icons/Orange.widgets.model.owrandomforest.OWRandomForest.png",
+      "keyword": []
+    },
+    {
+      "text": "SVM",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/svm.html",
+      "img": "icons/Orange.widgets.model.owsvm.OWSVM.png",
+      "keyword": [
+        "support vector machines"
+      ]
+    },
+    {
+      "text": "Linear Regression",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/linearregression.html",
+      "img": "icons/Orange.widgets.model.owlinearregression.OWLinearRegression.png",
+      "keyword": [
+        "ridge",
+        "lasso",
+        "elastic net"
+      ]
+    },
+    {
+      "text": "Logistic Regression",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/logisticregression.html",
+      "img": "icons/Orange.widgets.model.owlogisticregression.OWLogisticRegression.png",
+      "keyword": []
+    },
+    {
+      "text": "Naive Bayes",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/naivebayes.html",
+      "img": "icons/Orange.widgets.model.ownaivebayes.OWNaiveBayes.png",
+      "keyword": []
+    },
+    {
+      "text": "AdaBoost",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/adaboost.html",
+      "img": "icons/Orange.widgets.model.owadaboost.OWAdaBoost.png",
+      "keyword": [
+        "boost"
+      ]
+    },
+    {
+      "text": "Neural Network",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/neuralnetwork.html",
+      "img": "icons/Orange.widgets.model.owneuralnetwork.OWNNLearner.png",
+      "keyword": [
+        "mlp"
+      ]
+    },
+    {
+      "text": "Stochastic Gradient Descent",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/stochasticgradient.html",
+      "img": "icons/Orange.widgets.model.owsgd.OWSGD.png",
+      "keyword": [
+        "sgd"
+      ]
+    },
+    {
+      "text": "Save Model",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/savemodel.html",
+      "img": "icons/Orange.widgets.model.owsavemodel.OWSaveModel.png",
+      "keyword": []
+    },
+    {
+      "text": "Load Model",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/model/loadmodel.html",
+      "img": "icons/Orange.widgets.model.owloadmodel.OWLoadModel.png",
+      "keyword": [
+        "file",
+        "open"
+      ]
+    }
   ],
-  [
-    "Regression",
-    [
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/regression/linear.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/linear-regression.png",
-        "keywords": [],
-        "text": "Linear Regression"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/regression/mean.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/mean-learner.png",
-        "keywords": [],
-        "text": "Mean Learner"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/regression/nearestneighbors.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/k-nearest-neighbors-regression.png",
-        "keywords": [
-          "kNN",
-          "k Nearest Neighbors"
-        ],
-        "text": "Nearest Neighbors"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/regression/stochasticgradient.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/stochastic-gradient-descent.png",
-        "keywords": [],
-        "text": "Stochastic Gradient Descent"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/regression/svmregression.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/svm-regression.png",
-        "keywords": [
-          "Support Vector Machine"
-        ],
-        "text": "SVM Regression"
-      }
-    ]
+  "Evaluate": [{
+      "text": "Test & Score",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/evaluation/testandscore.html",
+      "img": "icons/Orange.widgets.evaluate.owtestlearners.OWTestLearners.png",
+      "keyword": []
+    },
+    {
+      "text": "Predictions",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/evaluation/predictions.html",
+      "img": "icons/Orange.widgets.evaluate.owpredictions.OWPredictions.png",
+      "keyword": []
+    },
+    {
+      "text": "Confusion Matrix",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/evaluation/confusionmatrix.html",
+      "img": "icons/Orange.widgets.evaluate.owconfusionmatrix.OWConfusionMatrix.png",
+      "keyword": []
+    },
+    {
+      "text": "ROC Analysis",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/evaluation/rocanalysis.html",
+      "img": "icons/Orange.widgets.evaluate.owrocanalysis.OWROCAnalysis.png",
+      "keyword": []
+    },
+    {
+      "text": "Lift Curve",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/evaluation/liftcurve.html",
+      "img": "icons/Orange.widgets.evaluate.owliftcurve.OWLiftCurve.png",
+      "keyword": []
+    },
+    {
+      "text": "Calibration Plot",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/evaluation/calibrationplot.html",
+      "img": "icons/Orange.widgets.evaluate.owcalibrationplot.OWCalibrationPlot.png",
+      "keyword": []
+    }
   ],
-  [
-    "Unsupervised",
-    [
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/PCA.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/pca.png",
-        "keywords": [
-          "Principal Component Analysis"
-        ],
-        "text": "PCA"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/correspondenceanalysis.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/correspondence-analysis.png",
-        "keywords": [],
-        "text": "Correspondence Analysis"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/distancemap.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/distance-map.png",
-        "keywords": [],
-        "text": "Distance Map"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/distances.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/distances.png",
-        "keywords": [],
-        "text": "Distances"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/hierarchicalclustering.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/hierarchical-clustering.png",
-        "keywords": [],
-        "text": "Hierarchical Clustering"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/kmeansclustering.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/k-means.png",
-        "keywords": [],
-        "text": "k-Means"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/mds.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/mds.png",
-        "keywords": [
-          "Multidimensional Scaling"
-        ],
-        "text": "MDS"
-      }
-    ]
-  ],
-  [
-    "Evaluation",
-    [
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/evaluation/calibrationplot.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/calibration-plot.png",
-        "keywords": [],
-        "text": "Calibration Plot"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/evaluation/confusionmatrix.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/confusion-matrix.png",
-        "keywords": [],
-        "text": "Confusion Matrix"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/evaluation/liftcurve.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/lift-curve.png",
-        "keywords": [],
-        "text": "Lift Curve"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/evaluation/predictions.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/predictions.png",
-        "keywords": [],
-        "text": "Predictions"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/evaluation/rocanalysis.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/roc-analysis.png",
-        "keywords": [
-          "Receiver Under Operating Characteristics"
-        ],
-        "text": "ROC Analysis"
-      },
-      {
-        "doc": "http://docs.orange.biolab.si/3/visual-programming/widgets/evaluation/testlearners.html",
-        "img": "http://docs.orange.biolab.si/3/visual-programming/_images/test-learners.png",
-        "keywords": [],
-        "text": "Test & Score"
-      }
-    ]
+  "Unsupervised": [{
+      "text": "Distance File",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/distancefile.html",
+      "img": "icons/Orange.widgets.unsupervised.owdistancefile.OWDistanceFile.png",
+      "keyword": [
+        "load",
+        "read",
+        "open"
+      ]
+    },
+    {
+      "text": "Distance Matrix",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/distancematrix.html",
+      "img": "icons/Orange.widgets.unsupervised.owdistancematrix.OWDistanceMatrix.png",
+      "keyword": []
+    },
+    {
+      "text": "Distance Map",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/distancemap.html",
+      "img": "icons/Orange.widgets.unsupervised.owdistancemap.OWDistanceMap.png",
+      "keyword": []
+    },
+    {
+      "text": "Hierarchical Clustering",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/hierarchicalclustering.html",
+      "img": "icons/Orange.widgets.unsupervised.owhierarchicalclustering.OWHierarchicalClustering.png",
+      "keyword": []
+    },
+    {
+      "text": "k-Means",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/kmeansclustering.html",
+      "img": "icons/Orange.widgets.unsupervised.owkmeans.OWKMeans.png",
+      "keyword": [
+        "kmeans",
+        "clustering"
+      ]
+    },
+    {
+      "text": "Louvain Clustering",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/louvainclustering.html",
+      "img": "icons/Orange.widgets.unsupervised.owlouvainclustering.OWLouvainClustering.png",
+      "keyword": []
+    },
+    {
+      "text": "Manifold Learning",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/manifoldlearning.html",
+      "img": "icons/Orange.widgets.unsupervised.owmanifoldlearning.OWManifoldLearning.png",
+      "keyword": []
+    },
+    {
+      "text": "PCA",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/PCA.html",
+      "img": "icons/Orange.widgets.unsupervised.owpca.OWPCA.png",
+      "keyword": [
+        "principal component analysis",
+        "linear transformation"
+      ]
+    },
+    {
+      "text": "Correspondence Analysis",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/correspondenceanalysis.html",
+      "img": "icons/Orange.widgets.unsupervised.owcorrespondence.OWCorrespondenceAnalysis.png",
+      "keyword": []
+    },
+    {
+      "text": "Distances",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/distances.html",
+      "img": "icons/Orange.widgets.unsupervised.owdistances.OWDistances.png",
+      "keyword": []
+    },
+    {
+      "text": "Distance Transformation",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/distancetransformation.html",
+      "img": "icons/Orange.widgets.unsupervised.owdistancetransformation.OWDistanceTransformation.png",
+      "keyword": []
+    },
+    {
+      "text": "MDS",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/mds.html",
+      "img": "icons/Orange.widgets.unsupervised.owmds.OWMDS.png",
+      "keyword": [
+        "multidimensional scaling",
+        "multi dimensional scaling"
+      ]
+    },
+    {
+      "text": "Save Distance Matrix",
+      "doc": "https://docs.orange.biolab.si/3/visual-programming/widgets/unsupervised/savedistancematrix.html",
+      "img": "icons/Orange.widgets.unsupervised.owsavedistances.OWSaveDistances.png",
+      "keyword": [
+        "distance matrix",
+        "save"
+      ]
+    }
   ]
-]
+}
