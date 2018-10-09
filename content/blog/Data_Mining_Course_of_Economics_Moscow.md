@@ -25,9 +25,6 @@ shortExcerpt = "Janez and I have recently returned from a two-week stay in Mosco
 # Long excerpt will be shown on the blog page. Limit text to 280 characters.
 longExcerpt = ""
 
-+++
-
-
 
 Janez and I have recently returned from a two-week stay in Moscow, Russian Federation, where we were teaching data mining to MA students of {{< link_new url="https://www.hse.ru/en/ma/sna/" name="Applied Statistics">}}. This is a new Master’s course that attracts the best students from different backgrounds and teaches them statistical methods for work in the industry.
 <!--more-->

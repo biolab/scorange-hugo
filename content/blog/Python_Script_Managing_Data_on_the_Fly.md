@@ -4,14 +4,12 @@ draft = false
 hardLineBreak = true 
 joinLines = false
 type = "blog"
-
 # Date format is YYYY-MM-DD.
 date = "2016-03-05"
 categories = ["Python", "Numpy"]
 author = "Janez Novak"
 title = "Python Script: Managing Data on the Fly"
 weight = 15 
-
 image = "/blog_img/IMG_20180713_092503.jpg"
 
 #  Size of frontPageImage:  width: 300px, height: 170px. 
@@ -25,8 +23,6 @@ shortExcerpt = "Python Script is this mysterious widget most people don't know h
 
 # Long excerpt will be shown on the blog page. Limit text to 280 characters.
 longExcerpt = ""
-
-+++
 
 
 Python Script is this mysterious widget most people don't know how to use, even those versed in Python. Python Script is the widget that supplements Orange functionalities with (almost) everything that Python can offer.
