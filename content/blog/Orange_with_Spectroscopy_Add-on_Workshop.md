@@ -1,18 +1,29 @@
 +++
+showonlyimage = false
 draft = false
-date = "2016-02-05"
+hardLineBreak = true 
+joinLines = false
 type = "blog"
+
+# Date format is YYYY-MM-DD. 
+date = "2016-02-05"
+categories = ["infraorange", "spectral orange", "workshop"]
+author = "Janez Novak"
 title = "Orange with Spectroscopy Add-on Workshop"
 weight = 15
 image = "/blog_img/Orange_with_Spectroscopy_Add-on_Workshop-1.jpg"
-#  Size of thumbImage:  width: 450px , height: 300px 
+
+#  Size of frontPageImage:  width: 300px, height: 170px. 
+frontPageImage = ""
+
+#  Size of thumbImage:  width: 450px, height: 300px .
 thumbImage = "/blog_img/Orange_with_Spectroscopy_Add-on_Workshop-thumb.png"
-categories = ["infraorange", "spectral orange", "workshop"]
-hardLineBreak = true 
-excerpt = ""
-joinLines = false
-frontPageText = "We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis."
-+++
+
+#Short excerpt will be shown on the home page. Limit text to 140 characters.
+shortExcerpt = "We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis."
+
+# Long excerpt will be shown on the blog page. Limit text to 280 characters.
+longExcerpt = ""
 
 
 We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis. {{< link_new url="https://www.tandfonline.com/doi/full/10.1080/08940886.2017.1338424?src=recsys" name="Spectroscopy add-on">}} is intended for the analysis of spectral data and it is just as fun as our other add-ons (if not more!).

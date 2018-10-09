@@ -73,8 +73,8 @@
                      </div>
                      <div class='excerpt-content'>
                         <article>
-                           {{ if and (isset .Params "excerpt") .Params.excerpt }}
-                           {{ .Params.excerpt}}
+                           {{ if and (isset .Params "longExcerpt") .Params.longExcerpt }}
+                           {{ .Params.longExcerpt}}
                            {{else}}
                            {{ .Summary }}
                            {{end}}

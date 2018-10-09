@@ -61,14 +61,14 @@
                            <a href="{{ .Permalink }} "> {{ .Title }} </a>
                         </h2>
                      </div>
-                     <div class='excerpt-content front-page-image'>
-                        <!-- {{.Params.frontPageText | markdownify}} -->
-                        
+
+                     <div class='excerpt-content front-page-image'>                        
                         <article style="padding-bottom: 20px;">
-                           {{ if .Params.frontPageText}}
-                           {{ .Params.frontPageText | markdownify}}
+                           {{ if .Params.shortExcerpt}}
+                           {{ .Params.shortExcerpt | markdownify}}
                            {{else}}
-                           {{ .Params.excerpt }}
+                           {{ .Params.longExcerpt }}
+
                            {{end}}
                            <a href="{{ .Permalink }} "> Read more </a>
                            

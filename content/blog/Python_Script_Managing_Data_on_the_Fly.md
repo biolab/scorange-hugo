@@ -1,19 +1,34 @@
 +++
+showonlyimage = false
 draft = false
-date = "2016-03-05"
-type= "blog"
-title = "Python Script: Managing Data on the Fly"
-weight = 15
 hardLineBreak = true 
-categories = ["Python", "Numpy"]
 joinLines = false
-excerpt = ""
-frontPageText = "Python Script is this mysterious widget most people don't know how to use, even those versed in Python. Python Script is the widget that supplements Orange functionalities with (almost) everything that Python can offer"
-+++
+type = "blog"
+# Date format is YYYY-MM-DD.
+date = "2016-03-05"
+categories = ["Python", "Numpy"]
+author = "Janez Novak"
+title = "Python Script: Managing Data on the Fly"
+weight = 15 
+image = "/blog_img/IMG_20180713_092503.jpg"
+
+#  Size of frontPageImage:  width: 300px, height: 170px. 
+frontPageImage = ""
+
+#  Size of thumbImage:  width: 450px, height: 300px. 
+thumbImage = "/blog_img/Data_Mining_and_Machine_Learning_for_Economists-thumb.png"
+
+#Short excerpt will be shown on the home page. Limit text to 140 characters.
+shortExcerpt = "Python Script is this mysterious widget most people don't know how to use, even those versed in Python. Python Script is the widget that supplements Orange functionalities with (almost) everything that Python can offer."
+
+# Long excerpt will be shown on the blog page. Limit text to 280 characters.
+longExcerpt = ""
 
 
-Python Script is this mysterious widget most people don't know how to use, even those versed in Python. Python Script is the widget that supplements Orange functionalities with (almost) everything that Python can offer. And it's time we unveil some of its functionalities with a simple example
+Python Script is this mysterious widget most people don't know how to use, even those versed in Python. Python Script is the widget that supplements Orange functionalities with (almost) everything that Python can offer.
 <!--more-->
+And it's time we unveil some of its functionalities with a simple example
+
 ### .Example: Batch Transform the Data
 
 
