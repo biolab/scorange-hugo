@@ -23,5 +23,6 @@ If you are using Orange in your research, please cite:
 		pages   = {2349-2353},
 		url     = {http://jmlr.org/papers/v14/demsar13a.html}
 		}
+
 Orange is developed by {{< link_new url="http://www.biolab.si" name="Bioinformatics Lab">}} at University of Ljubljana, Slovenia, in collaboration with {{< link_new url="/community/" name="open source community">}}.
-Orange is an open source project. If you include it within your programs, please comply with the {{< link_new url="/license/" name="license">}}.{{< link_new url="/contact/" name="Contact us">}} if you would like to use Orange under other licenses.
+Orange is an open source project. If you include it within your programs, please comply with the {{< link_new url="/license/" name="license">}}. {{< link_new url="/contact/" name="Contact us">}} if you would like to use Orange under other licenses.
