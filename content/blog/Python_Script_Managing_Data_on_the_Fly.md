@@ -23,7 +23,7 @@ shortExcerpt = "Python Script is this mysterious widget most people don't know h
 
 # Long excerpt will be shown on the blog page. Limit text to 280 characters.
 longExcerpt = ""
-
++++
 
 Python Script is this mysterious widget most people don't know how to use, even those versed in Python. Python Script is the widget that supplements Orange functionalities with (almost) everything that Python can offer.
 <!--more-->

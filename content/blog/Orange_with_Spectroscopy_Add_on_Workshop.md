@@ -24,6 +24,7 @@ shortExcerpt = "We have just concluded our enhanced Introduction to Data Science
 
 # Long excerpt will be shown on the blog page. Limit text to 280 characters.
 longExcerpt = ""
++++
 
 
 We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis. {{< link_new url="https://www.tandfonline.com/doi/full/10.1080/08940886.2017.1338424?src=recsys" name="Spectroscopy add-on">}} is intended for the analysis of spectral data and it is just as fun as our other add-ons (if not more!).
