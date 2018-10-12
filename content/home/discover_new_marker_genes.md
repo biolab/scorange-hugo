@@ -17,7 +17,7 @@ We take care to make Orange visualizations interactive: you can select data poin
 
 Orange includes many standard visualizations. Scatter plot is great for visualizing correlations between pair of attributes, box plot for displaying basic statistics, heat map to provide an overview across entire data set, and projection plots like MDS for plotting the multinomial data in two dimensions.
 
-{{% figure src="/images/tree-selection-scatterplot.png"  %}}
+{{% figure src="/images/features/vis/tree-selection-scatterplot.png"  %}}
 
 
 ## Exploratory Data Analysis

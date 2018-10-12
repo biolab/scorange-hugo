@@ -9,4 +9,4 @@ buttonText = "YouTube tutorials"
 +++
 
 
-Introduction to scOrange data mining software. Learn about the development of scOrange workflows, data loading, basic machine learning algorithms and interactive visualizations. Video tutorials are available in button bellow.
+Introduction to the scOrange data mining software. Learn about the development of scOrange workflows, data loading, basic machine learning algorithms and interactive visualizations. Video tutorials are available in button below.

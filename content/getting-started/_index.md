@@ -7,7 +7,7 @@ listing = true
 
 ### Download and Install
 {{< link_new url="/download/" name="Download">}} Orange distribution package and run the
-installation file on your local computer.{{< link_new url="http://biolab.github.io/datafusion-installation-guide/" name="Here">}} is a step-by-step installation guide, that we recommend you to follow.
+installation file on your local computer. {{< link_new url="http://biolab.github.io/datafusion-installation-guide/" name="Here">}} is a step-by-step installation guide, that we recommend you to follow.
 
 ### Run
 
@@ -44,11 +44,11 @@ file on your computer and sends the data to other widgets.
 ![file-widget-icon.png](/getting_started/file-widget.png)
                   
 Double click on the File widget icon to open it. Select "Browse documentation data sets..." and from the list of
-pre-installed data files chose iris.tab.
+pre-installed data files choose iris.tab.
 ![file-widget.png](/getting_started/browse-documentiation-data-sets.png)
 
 The File widget will now read the [the famous data set on
-150 Iris flowers](http://en.wikipedia.org/wiki/Iris_flower_data_set), and send it to the workflow. The changes will propagate through the workflow updating its
+150 Iris flowers](http://en.wikipedia.org/wiki/Iris_flower_data_set) and send it to the workflow. The changes will propagate through the workflow updating its
 widgets. Close the window of the File widget and double click on the Data Table widget to open it. This displays
 the data that we have just read.
 
