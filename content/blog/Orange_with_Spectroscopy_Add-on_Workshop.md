@@ -5,13 +5,12 @@ type = "blog"
 title = "Orange with Spectroscopy Add-on Workshop"
 weight = 15
 image = "/blog_img/Orange_with_Spectroscopy_Add-on_Workshop-1.jpg"
-#  Size of thumbImage:  width: 450px , height: 300px 
 thumbImage = "/blog_img/Orange_with_Spectroscopy_Add-on_Workshop-thumb.png"
 categories = ["infraorange", "spectral orange", "workshop"]
 hardLineBreak = true 
-excerpt = ""
 joinLines = false
-frontPageText = "We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis."
+shortExcerpt = "We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis."
+longExcerpt = "We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis."
 +++
 
 

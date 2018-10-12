@@ -1,15 +1,16 @@
 +++
 draft = false
+joinLines = false
+hardLineBreak = true 
 type = "blog"
 image = "/blog_img/IMG_20180713_092503.jpg"
 thumbImage = "/blog_img/Data_Mining_and_Machine_Learning_for_Economists-thumb.png"
 date = "2013-05-05"
 title = "Data Mining and Machine Learning for Economists"
 weight = 15
-hardLineBreak = true 
 categories = ["clustering", "data mining", "summer school"]
-excerpt = ""
-joinLines = false
+shortExcerpt = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+longExcerpt = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 +++
 
 Last week Blaž, Marko and I held a week long introductory Data Mining and Machine Learning course at the Ljubljana Doctoral Summer School 2018. We got a room full of dedicated students and we embarked on a journey through standard and advanced machine learning techniques, all presented of course in Orange.
