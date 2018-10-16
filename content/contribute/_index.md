@@ -1,5 +1,5 @@
 +++
-title = "Contributing"
+title = "Contributing to Orange"
 url = "/contribute/"
 +++
 

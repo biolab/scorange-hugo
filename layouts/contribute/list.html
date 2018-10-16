@@ -1,0 +1,99 @@
+{{ define "main"}}
+
+<section id="features" class="features section">
+    <div class="container page-background" >
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h1 class="title">{{.Title}}</h1>
+
+                <div class="content">
+                    {{.Content}}
+                <h2 class="custom-margin">Submitting CLA by email, fax, or paper</h2>
+                    <p>You may email a signed PDF of this document to <span class="fa fa-envelope-o"></span> <a class="mail-link" href="mailto:info@biolab.si">info@biolab.si</a>, or send this document by facsimile to (+386 1) 2419 350, or send us an original signed CLA to:</p>
+                    <div class="license-forms">
+                        <p class="print-label">
+                        Bioinformatics Laboratory<br>
+                        Faculty of Computer and Information Science<br>
+                        Vecna pot 113<br>
+                        1000 Ljubljana<br>
+                        Slovenia<br>
+                        </p>
+                        <br><br>
+                        <div class="print-label">Full Name:</div>
+                        <hr class="col-md-6 col-sm-6 col-xs-10">
+                        <div class="print-label">Mailing Address:</div>
+                        <hr class="col-md-6 col-sm-6 col-xs-10">
+                        <div class="print-label">Country:</div>
+                        <hr class="col-md-6 col-sm-6 col-xs-10">
+                        <div class="print-label">Telephone:</div>
+                        <hr class="col-md-6 col-sm-6 col-xs-10">
+                        <div class="print-label">E-mail:</div>
+                        <hr class="col-md-6 col-sm-6 col-xs-10">
+                        <div class="print-label">Personal Signature:</div>
+                        <hr class="col-md-6 col-sm-6 col-xs-10">
+                        <div class="print-label">Date:</div>
+                        <hr class="col-md-6 col-sm-6 col-xs-10">
+                        <div class="print-label"></div>
+
+                        <h2 class="custom-margin">Sign CLA Electronically</h2>
+                        <p>Alternatively to sending by postal mail, email, or fax, you may also choose to sign the form electronically:</p>
+                        <br>
+
+                        <form role="form" class="form-horizontal contact" action="" method="POST" name="license-form">
+                            <div class="form-group">
+                                <label class="col-md-2 col-sm-3 col-xs-10 span4" for="fullname">Full Name:</label>
+                                <div class="inline-label-input col-md-4 col-sm-4 col-xs-10">
+                                    <input class="form-control" type="text" id="fullname" name="Full Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 col-sm-3 col-xs-10" for="email">E-mail:</label>
+                                <div class="inline-label-input col-md-4 col-sm-4 col-xs-10">
+                                    <input class="form-control" type="email" id="email" name="E-mail" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 col-sm-3 col-xs-10" for="address">Mailing Address:</label>
+                                <div class="inline-label-input col-md-4 col-sm-4 col-xs-10">
+                                    <textarea class="form-control" id="address" name='Address' rows="7" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 col-sm-3 col-xs-10" for="country">Country:</label>
+                                <div class="inline-label-input col-md-4 col-sm-4 col-xs-10">
+                                    <input class="form-control" type="text" id="country" name="Country" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 col-sm-3 col-xs-10" for="number">Telephone Number:</label>
+                                <div class="inline-label-input col-md-4 col-sm-4 col-xs-10">
+                                    <input class="form-control" type="text" id="number" name="Number" size="25" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 col-sm-3 col-xs-10" for="signature">Electronic Signature:<br>(Type "I AGREE")</label>
+                                <div class="inline-label-input col-md-4 col-sm-4 col-xs-10">
+                                    <input class="form-control" type="text" id="signature" name="Signature" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10 col-sm-offset-3 col-sm-9">
+                                    <div class="g-recaptcha" data-sitekey="6Lemwf4SAAAAACdTLL0TYpvYQ9LE91r6r_i7Yg2a"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10 col-sm-offset-3 col-sm-9">
+                                    <button type="submit" class="btn btn-theme" value="Submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{{end}}
