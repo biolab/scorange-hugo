@@ -8,11 +8,24 @@ categories = ["data mining", "HSE", "python","workshop"]
 author = "Janez Novak"
 title = "Data Mining Course at Higher School of Economics, Moscow"
 weight = 15
+<<<<<<< HEAD
 image = "/blog_img/moscow-1.jpg"
 frontPageImage = "/blog_img/front_page_data_mining_for_economists.jpg"
 thumbImage = "/blog_img/moscow-thumb.png"
 shortExcerpt = "Janez and I have recently returned from a two-week stay in Moscow, Russian Federation, where we were teaching data mining to MA students of Applied Statistics."
 longExcerpt = ""
+=======
+frontPageImage = "/blog_img/front_page_data_mining_for_economists.jpg"
+image = "/blog_img/moscow-1.jpg"
+thumbImage = "/blog_img/moscow-thumb.png"
+type = "blog"
+categories = ["data mining", "HSE", "python","workshop"]
+hardLineBreak = true 
+author = "Janez Novak"
+joinLines = false
+shortExcerpt = "A two week course in Data Mining for students of Applied Statistics."
+longExcerpt = "Janez and I have recently returned from a two-week stay in Moscow, Russian Federation, where we were teaching data mining to MA students of Applied Statistics."
+>>>>>>> 7dba50c8f9e0a7463a97a691f78e7434d096105a
 +++
 
 Janez and I have recently returned from a two-week stay in Moscow, Russian Federation, where we were teaching data mining to MA students of {{< link_new url="https://www.hse.ru/en/ma/sna/" name="Applied Statistics">}}. This is a new Master’s course that attracts the best students from different backgrounds and teaches them statistical methods for work in the industry.

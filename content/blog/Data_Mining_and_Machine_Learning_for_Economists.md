@@ -1,19 +1,30 @@
 +++
 showonlyimage = false
 draft = false
+<<<<<<< HEAD
 hardLineBreak = true 
 joinLines = false
+=======
+joinLines = false
+hardLineBreak = true 
+>>>>>>> 7dba50c8f9e0a7463a97a691f78e7434d096105a
 type = "blog"
 date = "2013-05-05"
 categories = ["clustering", "data mining", "summer school"]
 author = "Janez Novak"
 title = "Data Mining and Machine Learning for Economists"
 weight = 15
+<<<<<<< HEAD
 image = "/blog_img/IMG_20180713_092503.jpg"
 frontPageImage = ""
 thumbImage = "/blog_img/Data_Mining_and_Machine_Learning_for_Economists-thumb.png"
 shortExcerpt = ""
 longExcerpt = ""
+=======
+categories = ["clustering", "data mining", "summer school"]
+shortExcerpt = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+longExcerpt = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+>>>>>>> 7dba50c8f9e0a7463a97a691f78e7434d096105a
 +++
 
 Last week Blaž, Marko and I held a week long introductory Data Mining and Machine Learning course at the Ljubljana Doctoral Summer School 2018. We got a room full of dedicated students and we embarked on a journey through standard and advanced machine learning techniques, all presented of course in Orange.

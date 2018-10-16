@@ -9,11 +9,21 @@ categories = ["infraorange", "spectral orange", "workshop"]
 author = "Janez Novak"
 title = "Orange with Spectroscopy Add-on Workshop"
 weight = 15
+<<<<<<< HEAD
 image = "/blog_img/Orange_with_Spectroscopy_Add-on_Workshop-1.jpg" 
 frontPageImage = ""
 thumbImage = "/blog_img/Orange_with_Spectroscopy_Add-on_Workshop-thumb.png"
 shortExcerpt = "We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis."
 longExcerpt = ""
+=======
+image = "/blog_img/Orange_with_Spectroscopy_Add-on_Workshop-1.jpg"
+thumbImage = "/blog_img/Orange_with_Spectroscopy_Add-on_Workshop-thumb.png"
+categories = ["infraorange", "spectral orange", "workshop"]
+hardLineBreak = true 
+joinLines = false
+shortExcerpt = "We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis."
+longExcerpt = "We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis."
+>>>>>>> 7dba50c8f9e0a7463a97a691f78e7434d096105a
 +++
 
 We have just concluded our enhanced Introduction to Data Science workshop, which included several workflows for spectroscopy analysis. {{< link_new url="https://www.tandfonline.com/doi/full/10.1080/08940886.2017.1338424?src=recsys" name="Spectroscopy add-on">}} is intended for the analysis of spectral data and it is just as fun as our other add-ons (if not more!).

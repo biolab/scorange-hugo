@@ -3,6 +3,7 @@ showonlyimage = false
 draft = false
 hardLineBreak = true 
 joinLines = false
+<<<<<<< HEAD
 type = "blog"
 date = "2016-03-05"
 categories = ["Python", "Numpy"]
@@ -14,6 +15,10 @@ frontPageImage = ""
 thumbImage = "/blog_img/Data_Mining_and_Machine_Learning_for_Economists-thumb.png"
 shortExcerpt = "Python Script is this mysterious widget most people don't know how to use, even those versed in Python. Python Script is the widget that supplements Orange functionalities with (almost) everything that Python can offer."
 longExcerpt = ""
+=======
+shortExcerpt = "Python Script is the widget that supplements Orange functionalities with almost everything that Python can offer."
+longExcerpt = "Python Script is this mysterious widget most people don't know how to use, even those versed in Python. Python Script is the widget that supplements Orange functionalities with (almost) everything that Python can offer."
+>>>>>>> 7dba50c8f9e0a7463a97a691f78e7434d096105a
 +++
 
 Python Script is this mysterious widget most people don't know how to use, even those versed in Python. Python Script is the widget that supplements Orange functionalities with (almost) everything that Python can offer.
