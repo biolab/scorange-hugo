@@ -79,6 +79,18 @@
                     $("#mac").show();
                 }
             }
+
+        window.addEventListener('hashchange', function() {
+            hash = window.location.hash.substr(1);
+            if (hash =="windows"){
+                    $("#mac").hide();
+                    $("#win").show();
+                }
+            else if( hash == "macos"){
+                $("#win").hide();
+                $("#mac").show();
+            }
+        });
         </script>
     </section>
 
