@@ -4,17 +4,31 @@ type = "blog"
 image = "/blog_img/2018-10-04/cell-clustering.png"
 thumbImage = "/blog_img/2018-10-04/cell-clustering.thumb.png"
 date = "2018-10-03"
-title = "Cell Clustering"
+title = "Cell Clustering and Cluster Analysis"
 weight = 2
 hardLineBreak = true 
 categories = ["clustering", "data mining", "genomics"]
 joinLines = false
 author = "Ajda Pretnar"
-shortExcerpt = "Use Louvain clustering to find cell grousp and visualize cell landscape in a t-SNE projection."
-longExcerpt = "Use Louvain clustering to find cell grousp and visualize cell landscape in a t-SNE projection."
+shortExcerpt = "Use Louvain clustering to group cells, visualize the cell landscape in a t-SNE projection and analyze clusters against Gene Ontology database."
+longExcerpt = "
+Discoverying new marker genes is a core step in analysis of single-cell
+sequencing data.  Use Louvain clustering to find cell populations and visualize
+the cell landscape in a t-SNE projection.  Examine the contents of each cluster
+by finding differentially expressed genes and their related functions according
+to the Gene Ontology database.
+"
 +++
 
-Louvain Clustering is a nice clustering method that detects communities in a network of nearest neighbours. We will use this on an example of *Bone marrow mononuclear cells with AML* data, that we have retrived with the Single Cell Datasets widget. First, let us observe the data in a Data Table.
+
+How can we find cell populations in absence of known markers?
+Automatic clustering methods and some background knowledge might help!
+
+Louvain Clustering is a neat clustering method that detects communities in a
+network of nearest neighbours. We will use this on an example of *Bone marrow
+mononuclear cells with AML* data (Zheng et al., 2017), that we have retrieved
+with the Single Cell Datasets widget. First, let us observe the data in a Data
+Table.
 \
 \
 
@@ -22,7 +36,10 @@ Louvain Clustering is a nice clustering method that detects communities in a net
 \
 \
 
-Now, let us pass the data through Louvain Clustering. We used the default 25 principal components and euclidean distance to determine communities. Louvain Clustering will append an additional column with information of community of each cell.
+Now, let us pass the data through Louvain Clustering. We use 25 principal
+components for better efficiency and the euclidean distance to determine
+similarities between each pair of cells. Louvain Clustering will append an
+additional column with information of cluster label of each cell.  
 \
 \
 
@@ -30,7 +47,10 @@ Now, let us pass the data through Louvain Clustering. We used the default 25 pri
 \
 \
 
-We can observe the results of clustering in a cell landscape, that we plot with the t-SNE widget. Cells get nicely clustered with t-SNE and the clusters also correspond with the Louvain clustering. Great!
+We can observe the results of clustering in a cell landscape, that we plot with
+the t-SNE widget. Coloring cells by cluster label comes in handy here.  Cells
+get nicely clustered with t-SNE and the clusters also correspond with the
+Louvain clustering. Great!
 \
 \
 
@@ -38,13 +58,46 @@ We can observe the results of clustering in a cell landscape, that we plot with 
 \
 \
 
-Finally, we can observe the distribution of cell types in a Box Plot. Let us select a group of cells from the t-SNE plot and send it to Box Plot. The group we have selected contains mostly healty cells. This means health cells have a distinct expression profile.
+What is in our newly found clusters?  We can observe the distribution of cell
+types in a Box Plot. Let us select a group of cells from the t-SNE plot and
+send it to Box Plot. The group we have selected contains mostly healthy cells.
+This means cells from healthy patients have generally a distinct expression
+profile.
 \
 \
 
 {{% figure src="/blog_img/2018-10-04/box-plot.png" %}}
 \
 \
+
+In our previous post, we used background knowledge in form of cell type markers
+to determine cell types. Here, we go a step further. First, we will use a
+statistical test seek genes that are differentially expressed in each cluster.
+Then, we will analyze each list of cluster-specific genes against the Gene
+Ontology term database, that associates genes to their biological processes,
+molecular functions and cellular localizations. These information will hint at 
+possible subpopulations in clusters!
+
+The clusters indeed contain something; C1 appears to be a cluster of T-cells,
+C2 appears to be related to red blood cells responsible for oxygen transport,
+C3 is another cluster of white blood cells. Cells in C4 regulate immune
+response and are most likely Natural Killer cells, which is exacerbated by
+their characteristic genes GNLY, NKG7 and others. 
+\
+\
+
+{{% figure src="/blog_img/2018-10-04/final-workflow2.png" caption="Cluster Analysis reveals cluster-specific genes and their associated functions." width="60%" height="60%" %}}
+\
+\
+
+Here is the final workflow that enabled us to find meaningful groups in our
+data without having to specify population markers directly!
+
 {{% figure src="/blog_img/2018-10-04/final-workflow2.png" caption="The final workflow." width="60%" height="60%" %}}
 \
 \
+
+*References*
+
+Zheng, Grace XY, et al. "Massively parallel digital transcriptional profiling
+of single cells." Nature communications 8 (2017): 14049.
