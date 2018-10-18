@@ -10,14 +10,8 @@ hardLineBreak = true
 categories = ["clustering", "data mining", "genomics", "t-sne", "single-cell sequencing"]
 joinLines = false
 author = "Ajda Pretnar"
-shortExcerpt = "A gentle introduction to scOrange starts by using marker genes to identify 
-cell populations and visualize the data set in two dimensions with t-SNE."
-longExcerpt = "
-Single-cell RNA sequencing protocols enable measuring the transcriptome on a
-single-cell resolution.  We explore the different cell types in a blood sample
-by a integrating existing knowledge on known marker genes and a t-SNE
-visualization, focusing on interactive exploration of data.
-"
+shortExcerpt = "A gentle introduction to scOrange starts by using marker genes to identify cell populations and visualize the data set in two dimensions with t-SNE." 
+longExcerpt = " Single-cell RNA sequencing protocols enable measuring the transcriptome on a single-cell resolution.  We explore the different cell types in a blood sample by a integrating existing knowledge on known marker genes and a t-SNE visualization, focusing on interactive exploration of data.  "
 +++
 
 Welcome to our very first blog on scOrange, a visual programming environment to
@@ -32,14 +26,14 @@ the resulting large gene expression matrices provide exciting opportunities for 
 visualization and modeling. ScOrange aims to provide the single-cell community with 
 a user-friendly environment for exploration, analysis and machine learning. 
 
+Exploratory data analysis hinges on effective data visualizations, so let us
+dive straight in! 
+
 The principal input to all workflows in scOrange is a gene expression matrix,
 quantifying the expression of each gene for each cell (or other biological
 unit) in the sample. It presents a standard output of many open and commercial
 protocols.
  
-Exploratory data analysis hinges on effective data visualizations, so let us
-dive straight in; scOrange can help you find interesting groups of cells. 
-
 Let us start by loading and example data set from the Single Cell Datasets
 widget. The data contains gene expressions in bone marrow mononuclear cells
 from a patient with acute myeloid leukemia (AML), a blood cancer, and two
@@ -72,7 +66,7 @@ maximum expression level from the reference data.
 \
 \
 
-{{% figure src="/blog_img/2018-10-03/Score-Cells1.png" width="40%" height="40%" %}}
+{{% figure src="/blog_img/2018-10-03/Score-Cells1.png" width="35%" height="35%" %}}
 \
 \
 
@@ -109,7 +103,9 @@ sample.
 \
 
 Follow our blog for more examples of interactive exploration of cell diversity!
-
+\
+\
+\
 
 *References*
 
