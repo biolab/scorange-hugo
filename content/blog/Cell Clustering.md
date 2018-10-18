@@ -10,14 +10,8 @@ hardLineBreak = true
 categories = ["clustering", "data mining", "genomics"]
 joinLines = false
 author = "Ajda Pretnar"
-shortExcerpt = "Use Louvain clustering to group cells, visualize the cell landscape in a t-SNE projection and analyze clusters against Gene Ontology database."
-longExcerpt = "
-Discoverying new marker genes is a core step in analysis of single-cell
-sequencing data.  Use Louvain clustering to find cell populations and visualize
-the cell landscape in a t-SNE projection.  Examine the contents of each cluster
-by finding differentially expressed genes and their related functions according
-to the Gene Ontology database.
-"
+shortExcerpt = "Use Louvain clustering to group cells, visualize the cell landscape in a t-SNE projection and analyze clusters against Gene Ontology database." 
+longExcerpt = " Discoverying new marker genes is a core step in analysis of single-cell sequencing data.  Use Louvain clustering to find cell populations and visualize the cell landscape in a t-SNE projection.  Examine the contents of each cluster by finding differentially expressed genes and their related functions according to the Gene Ontology database.  " 
 +++
 
 
@@ -43,7 +37,7 @@ additional column with information of cluster label of each cell.
 \
 \
 
-{{% figure src="/blog_img/2018-10-04/Louvain-clustering.png" width="40%" height="40%" %}}
+{{% figure src="/blog_img/2018-10-04/Louvain-clustering.png" width="35%" height="35%" %}}
 \
 \
 
@@ -86,14 +80,14 @@ their characteristic genes GNLY, NKG7 and others.
 \
 \
 
-{{% figure src="/blog_img/2018-10-04/final-workflow2.png" caption="Cluster Analysis reveals cluster-specific genes and their associated functions." width="60%" height="60%" %}}
+{{% figure src="/blog_img/2018-10-04/cluster-analysis.png" caption="Cluster Analysis reveals cluster-specific genes and their associated functions." width="95%" height="95%" %}}
 \
 \
 
 Here is the final workflow that enabled us to find meaningful groups in our
 data without having to specify population markers directly!
 
-{{% figure src="/blog_img/2018-10-04/final-workflow2.png" caption="The final workflow." width="60%" height="60%" %}}
+{{% figure src="/blog_img/2018-10-04/final-workflow2.png" width="80%" height="80%" %}}
 \
 \
 
