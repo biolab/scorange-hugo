@@ -1,30 +1,26 @@
 +++
 draft = false
 type = "blog"
-image = "/blog_img/2018-10-04/regressing-batch-effect.png"
-thumbImage = "/blog_img/2018-10-04/regressing-batch-effect.thumb.png"
+image = "/blog_img/2018-10-05/header.png"
+thumbImage = "/blog_img/2018-10-05/thumb.png"
 date = "2018-10-05"
 title = "Nuts and bolts: Preprocessing and Removing Batch Effects"
 weight = 2
 hardLineBreak = true 
 categories = ["preprocess", "batch effects", "t-SNE", "markers"]
 joinLines = false
-author = "Ajda Pretnar"
-shortExcerpt = "Preprocess read count gene expression data and regress-out cell cycle effects"
-longExcerpt = "
-Preprocess raw read count data to make expression values comparable across cells and genes.
-Use Gene Markers and Score Cells to estimate the cell cycle phase of each cell and regress out 
-this confouding factor."
-
+author = "Martin Stražar"
+shortExcerpt = "Preprocess read count gene expression data and regress-out cell cycle effects."
+longExcerpt = " Preprocess raw read count data to make expression values comparable across cells and genes.  Use Gene Markers and Score Cells to estimate the cell cycle phase of each cell and regress out this confouding factor." 
 +++
 
-Sequencing datasets often suffer from unwanted technical variability, causing
-some cells to pick up more signal than other. Also, the detection rate varies
+Sequencing datasets often suffer from undesired technical variability, causing
+some cells to pick up more signal than others. The detection rate can vary
 considerably among genes. Ultimately, the measurements can also vary
 significantly when comparing data from different runs of the same experiment,
-taken on a different day, by different technician, and more.
+taken on a different day, by a different technician, and so forth.
 
-All these effects call for preprocessing and normalization methods, making the
+This calls for preprocessing and normalization methods, making the
 values comparable across cells, genes and experimental conditions.  We will
 show their utility on raw count data that appears to be confounded by unwanted
 variation, attributed to cells being in a different cell cycle phase.
@@ -50,7 +46,7 @@ quantification, the data is transformed by a logarithmic transform
 \
 \
 
-{{% figure src="/blog_img/2018-10-05/sc-preprocess.png" width="40%" height="40%" %}}
+{{% figure src="/blog_img/2018-10-05/sc-preprocess.png" %}}
 \
 \
 
@@ -64,9 +60,7 @@ a numerical estimate of the corresponding cell cycle phase.
 \
 
 
-{{% figure src="/blog_img/2018-10-05/workflow-mini.png" width="60%" height="60%" %}}
-{{% figure src="/blog_img/2018-10-05/markers-g1.png" width="60%" height="60%" %}}
-{{% figure src="/blog_img/2018-10-05/sc-score-g1.png" width="60%" height="60%" %}}
+{{% figure src="/blog_img/2018-10-05/workflow-mini-score-markers.png" width="95%" height="95%" %}}
 \
 \
 
@@ -76,7 +70,7 @@ they are quite decorrelated, indicating that they mark distinct subgroups of cel
 \
 \
 
-{{% figure src="/blog_img/2018-10-05/scatter.png" width="60%" height="60%" %}}
+{{% figure src="/blog_img/2018-10-05/scatter.png" width="55%" height="55%" %}}
 \
 \
 
@@ -87,8 +81,7 @@ which we see by clusters of points with high scores of either cell cycle phase.
 \
 \
 
-{{% figure src="/blog_img/2018-10-05/tsne-1-g1.png" width="60%" height="60%" %}}
-{{% figure src="/blog_img/2018-10-05/tsne-1-g2m.png" width="60%" height="60%" %}}
+{{% figure src="/blog_img/2018-10-05/tsne-1-composite.png" width="95%" height="95%" %}}
 \
 \
 
@@ -96,11 +89,11 @@ To remove this unwanted variance that would confound true cell types or
 developmental stages, we make use of our good old friend linear regression.  It
 operates under the hood of the Batch Effect Removal widget. We can see that the
 two cell cycle phase score variables are significantly correlated to 43 % and
-58% of the genes, respectively.
+59% of the genes, respectively.
 \
 \
 
-{{% figure src="/blog_img/2018-10-05/batch-effect.png" width="60%" height="60%" %}}
+{{% figure src="/blog_img/2018-10-05/batch-effect.png" width="35%" height="35%" %}}
 \
 \
 
@@ -110,17 +103,14 @@ effect of cell cycle phase almost entirely!
 \
 \
 
-{{% figure src="/blog_img/2018-10-05/tsne-2-g1.png" width="60%" height="60%" %}}
-{{% figure src="/blog_img/2018-10-05/tsne-2-g2m.png" width="60%" height="60%" %}}
+{{% figure src="/blog_img/2018-10-05/tsne-2-composite.png" width="95%" height="95%" %}}
 \
 \
 
 
 Here is the final workflow:
-\ 
-\
 
-{{% figure src="/blog_img/2018-10-05/workflow.png" caption="The final workflow." width="60%" height="60%" %}}
+{{% figure src="/blog_img/2018-10-05/workflow.png"  width="95%" height="95%" %}}
 \
 \
 
