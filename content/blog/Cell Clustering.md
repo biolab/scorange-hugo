@@ -3,7 +3,7 @@ draft = false
 type = "blog"
 image = "/blog_img/2018-10-04/cell-clustering.png"
 thumbImage = "/blog_img/2018-10-04/cell-clustering.thumb.png"
-date = "2018-10-03"
+date = "2018-10-04"
 title = "Cell Clustering and Cluster Analysis"
 weight = 2
 hardLineBreak = true 
@@ -11,11 +11,11 @@ categories = ["clustering", "data mining", "genomics"]
 joinLines = false
 author = "Ajda Pretnar"
 shortExcerpt = "Use Louvain clustering to group cells, visualize the cell landscape in a t-SNE projection and analyze clusters against Gene Ontology database." 
-longExcerpt = " Discoverying new marker genes is a core step in analysis of single-cell sequencing data.  Use Louvain clustering to find cell populations and visualize the cell landscape in a t-SNE projection.  Examine the contents of each cluster by finding differentially expressed genes and their related functions according to the Gene Ontology database.  " 
+longExcerpt = "Discovering new marker genes is a core step in the analysis of single-cell sequencing data. Use Louvain clustering to find cell populations and visualize the cell landscape in a t-SNE projection. Examine the contents of each cluster by finding differentially expressed genes and their related functions according to the Gene Ontology database." 
 +++
 
 
-How can we find cell populations in absence of known markers?
+How can we find cell populations in the absence of known markers?
 Automatic clustering methods and some background knowledge might help!
 
 Louvain Clustering is a neat clustering method that detects communities in a
@@ -42,7 +42,7 @@ additional column with information of cluster label of each cell.
 \
 
 We can observe the results of clustering in a cell landscape, that we plot with
-the t-SNE widget. Coloring cells by cluster label comes in handy here.  Cells
+the t-SNE widget. Coloring cells by cluster label comes in handy here. Cells
 get nicely clustered with t-SNE and the clusters also correspond with the
 Louvain clustering. Great!
 \
@@ -52,7 +52,7 @@ Louvain clustering. Great!
 \
 \
 
-What is in our newly found clusters?  We can observe the distribution of cell
+What is in our newly found clusters? We can observe the distribution of cell
 types in a Box Plot. Let us select a group of cells from the t-SNE plot and
 send it to Box Plot. The group we have selected contains mostly healthy cells.
 This means cells from healthy patients have generally a distinct expression
@@ -68,7 +68,7 @@ In our previous post, we used background knowledge in form of cell type markers
 to determine cell types. Here, we go a step further. First, we will use a
 statistical test seek genes that are differentially expressed in each cluster.
 Then, we will analyze each list of cluster-specific genes against the Gene
-Ontology term database, that associates genes to their biological processes,
+Ontology term database, that associates genes with their biological processes,
 molecular functions and cellular localizations. These information will hint at 
 possible subpopulations in clusters!
 

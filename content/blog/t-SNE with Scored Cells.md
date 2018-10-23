@@ -11,7 +11,7 @@ categories = ["clustering", "data mining", "genomics", "t-sne", "single-cell seq
 joinLines = false
 author = "Ajda Pretnar"
 shortExcerpt = "A gentle introduction to scOrange starts by using marker genes to identify cell populations and visualize the data set in two dimensions with t-SNE." 
-longExcerpt = " Single-cell RNA sequencing protocols enable measuring the transcriptome on a single-cell resolution.  We explore the different cell types in a blood sample by a integrating existing knowledge on known marker genes and a t-SNE visualization, focusing on interactive exploration of data.  "
+longExcerpt = "Single-cell RNA sequencing protocols enable measuring the transcriptome on a single-cell resolution. We explore the different cell types in a blood sample by a integrating existing knowledge on known marker genes and a t-SNE visualization, focusing on interactive exploration of data."
 +++
 
 Welcome to our very first blog on scOrange, a visual programming environment to
@@ -19,9 +19,9 @@ explore single-cell sequencing data sets without writing a single line of code!
 
 Many questions related to organism development, evolution, disease progression or cell
 population heterogeneity cannot be answered with traditional, bulk sequencing
-protocols.  The emerging single-cell RNA sequencing (scRNA-seq) assays greatly
-improve resolution, as one can investigate transcriptome profiles on an individual
-cell level.  This brings new challenges for computational analysis methods, as
+protocols. The emerging single-cell RNA sequencing (scRNA-seq) assays greatly
+improve the resolution, as one can investigate transcriptome profiles on an individual
+cell level. This brings new challenges for computational analysis methods, as
 the resulting large gene expression matrices provide exciting opportunities for data
 visualization and modeling. ScOrange aims to provide the single-cell community with 
 a user-friendly environment for exploration, analysis and machine learning. 
@@ -73,7 +73,7 @@ maximum expression level from the reference data.
 Finally, we can observe the results in a visualization. The t-distributed
 Stochastic Neighbor Embedding (t-SNE) projects multidimensional data in a 2D
 plane in a non-linear fashion, emphasizing similarities between groups of most
-closely related cells. We get nice and compact clusters.  But what is even
+closely related cells. We get nice and compact clusters. But what is even
 better is that we can color them by the score and associate them to known cell
 populations! 
 
@@ -91,9 +91,9 @@ use the search bar to find more genes related to NK cells.
 \
 \
 
-Now on to exploit the full power of interactivity. Keep the Marker Genes widget
+Now to exploit the full power of interactivity. Keep the Marker Genes widget
 open, select a different set of genes and observe the result with t-SNE. We
-leave for you to find out whether there are T cells or B cells in this blood
+leave it to you to find out whether there are T cells or B cells in this blood
 sample.
 
 \

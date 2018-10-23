@@ -5,13 +5,13 @@ image = "/blog_img/2018-10-05/header.png"
 thumbImage = "/blog_img/2018-10-05/thumb.png"
 date = "2018-10-05"
 title = "Nuts and bolts: Preprocessing and Removing Batch Effects"
-weight = 2
+weight = 3
 hardLineBreak = true 
 categories = ["preprocess", "batch effects", "t-SNE", "markers"]
 joinLines = false
 author = "Martin Stražar"
 shortExcerpt = "Preprocess read count gene expression data and regress-out cell cycle effects."
-longExcerpt = " Preprocess raw read count data to make expression values comparable across cells and genes.  Use Gene Markers and Score Cells to estimate the cell cycle phase of each cell and regress out this confouding factor." 
+longExcerpt = "Preprocess raw read count data to make expression values comparable across cells and genes. Use Gene Markers and Score Cells to estimate the cell cycle phase of each cell and regress out this confouding factor." 
 +++
 
 Sequencing datasets often suffer from undesired technical variability, causing
@@ -21,7 +21,7 @@ significantly when comparing data from different runs of the same experiment,
 taken on a different day, by a different technician, and so forth.
 
 This calls for preprocessing and normalization methods, making the
-values comparable across cells, genes and experimental conditions.  We will
+values comparable across cells, genes and experimental conditions. We will
 show their utility on raw count data that appears to be confounded by unwanted
 variation, attributed to cells being in a different cell cycle phase.
 
@@ -36,12 +36,11 @@ observe it in a Data Table.
 \
 
 The Single-cell Preprocess widget consists of a modifiable sequence of steps to
-be applied on the expression data.  First, we take care of different sequencing
+be applied on the expression data. First, we take care of different sequencing
 depths between the cells using the counts-per-million reads (CPM) from the
 Single Cell Preprocess. Then, select 3000 highly-variable genes to
 significantly reduce the dataset size. To account for volatile expression
-quantification, the data is transformed by a logarithmic transform
-. Finally, expression of individual genes is made comparable with standardization.
+quantification, the data is transformed by a logarithmic transform. Finally, expression of individual genes is made comparable with standardization.
 
 \
 \
@@ -86,9 +85,9 @@ which we see by clusters of points with high scores of either cell cycle phase.
 \
 
 To remove this unwanted variance that would confound true cell types or
-developmental stages, we make use of our good old friend linear regression.  It
+developmental stages, we make use of our good old friend linear regression. It
 operates under the hood of the Batch Effect Removal widget. We can see that the
-two cell cycle phase score variables are significantly correlated to 43 % and
+two cell cycle phase score variables are significantly correlated to 43% and
 59% of the genes, respectively.
 \
 \
@@ -98,8 +97,7 @@ two cell cycle phase score variables are significantly correlated to 43 % and
 \
 
 To see what we just did, let us fire up another t-SNE. The expression profiles of 
-all remaining genes were corrected according to the scoring variables, removing the
-effect of cell cycle phase almost entirely!
+all remaining genes were corrected according to the scoring variables, removing the effect of cell cycle phase almost entirely!
 \
 \
 
