@@ -5,7 +5,7 @@ listing = true
 +++
 
 
-### Download and Install
+<!-- ### Download and Install
 {{< link_new url="/download/" name="Download">}} Orange distribution package and run the
 installation file on your local computer.{{< link_new url="http://biolab.github.io/datafusion-installation-guide/" name="Here">}} is a step-by-step installation guide, that we recommend you to follow.
 
@@ -104,5 +104,5 @@ the first class. How about the crew? Who had the higest probability of survival?
                         
 You have now learned how to place widgets on the canvas, connect them to make workflows, read the data and visualize it. 
 Consider exploring other widgets and their combinations, or load some data of
-your own and see how Orange can help you in the analysis.
+your own and see how Orange can help you in the analysis. -->
                        
