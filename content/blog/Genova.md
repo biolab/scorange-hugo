@@ -20,7 +20,7 @@ implementing the FAIR principles in bioinformatics, hosted by the charming city
 of Genova. The contemporary reproducibility crisis in science in general has
 led to many initiatives to raise standards in data sharing and management.
 <b>F</b>indability, <b>a</b>ccessibility, <b>i</b>nteroperability, and
-<b>e</b>eusability (FAIR) is an instance of such an initiative (Wilkinson
+<b>r</b>eusability (FAIR) is an instance of such an initiative (Wilkinson
 et. al, 2016).
 
 Our software demo and poster attracted many interested researchers, interested
