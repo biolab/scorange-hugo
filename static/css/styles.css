@@ -486,7 +486,7 @@ blockquote {
 .promo .overview .note p {
   padding-top: 30px;
 }
-.promo .overview .note .left-arrow {
+/*.promo .overview .note .left-arrow {
   position: absolute;
   left: 60px;
   bottom: 15px;
@@ -517,7 +517,7 @@ blockquote {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
-}
+}*/
 .promo .iphone {
   position: relative;
 }
