@@ -2605,7 +2605,8 @@ li.pingback:first-child {
   }
 }
 
-.blog-excerpt{
-  text-align: left !important;
+.more-link-wrapper{
+  padding-top: 10px; 
+  text-align: center !important;
 }
 

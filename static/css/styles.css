@@ -1653,6 +1653,10 @@ input[type="search"] {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   margin-bottom: 1.5em;
+
+}
+.excerpt .blog-excerpt {
+text-align: left !important;
 }
 
 
