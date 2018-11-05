@@ -5,7 +5,6 @@ image = "/blog_img/2018-10-23/genova.jpg"
 thumbImage = "/blog_img/2018-10-23/poster_NETTAB_A1-thumb.png"
 date = "2018-10-23"
 title = "scOrange representing the FAIR principles in bioinformatics"
-weight = 2
 hardLineBreak = true 
 categories = ["conference", "FAIR", "reproducibility"]
 joinLines = false

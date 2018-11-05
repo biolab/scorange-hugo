@@ -5,7 +5,6 @@ image = "/blog_img/2018-10-05/header.png"
 thumbImage = "/blog_img/2018-10-05/thumb.png"
 date = "2018-10-05"
 title = "Nuts and bolts: Preprocessing and Removing Batch Effects"
-weight = 3
 hardLineBreak = true 
 categories = ["preprocess", "batch effects", "t-SNE", "markers"]
 joinLines = false
