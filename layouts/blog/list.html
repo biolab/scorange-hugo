@@ -72,13 +72,15 @@
                         </h2>
                      </div>
                      <div class='excerpt-content'>
-                        <article>
-                           {{ if and (isset .Params "longExcerpt") .Params.longExcerpt }}
+                        <article class="blog-excerpt">
+                           <span >
+                           {{ if .Params.longExcerpt }}
                            {{ .Params.longExcerpt}}
                            {{else}}
                            {{ .Summary }}
                            {{end}}
-                           <div class="more-link-wrapper"><a class="more-link" href="{{ .Permalink }}">Read the post<span class="screen-reader-text">This is a Standard Post</span></a></div>
+                           </span>
+                           <div class="more-link-wrapper"><a class="more-link" href="{{ .Permalink }}" >Read the post<span class="screen-reader-text">This is a Standard Post</span></a></div>
                         </article>
                      </div>
                   </div>

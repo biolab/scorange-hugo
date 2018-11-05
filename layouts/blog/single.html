@@ -18,14 +18,7 @@
         <div class="entry-meta">
           <span class="date">{{ .Date.Format "02 January" }}</span>	<span>  </span>
 
-          <span class="author">
-            {{ if and (isset .Site.Params "author") .Site.Params.author }}
-
-            <a href="{{ .Site.Params.authorLink | default "" | absURL}}" title="Posts by {{ .Site.Params.author | default "" }}" rel="author">{{ .Site.Params.author | default ""}}</a>
-            {{ else }}
-            {{ .Site.Params.author | default "" }}
-            {{ end }}
-          </span>
+          
 
 
           {{ range .Params.categories }}
@@ -40,7 +33,15 @@
         </div>
         <div class='entry-header'>
           <h1 class='entry-title'> {{ .Title }}</h1>
+          <span class="author-blog ">
+            {{ if .Params.author }}
+            Author: {{ .Params.author | default ""}}
+            {{ else }}
+            {{ .Params.author | default "" }}
+            {{ end }}
+          </span>
         </div>
+
         <div class="entry-container">
           <div class="entry-content">
             <article>
@@ -48,14 +49,7 @@
             </article>
           </div>
           
-      <div class='entry-meta-bottom'>
-        <span> Written by: 
-        <a>{{ .Params.author | default "" }}</a>
 
-         </span>
-        <br>
-
-</div>
 
 </div>
 </div>

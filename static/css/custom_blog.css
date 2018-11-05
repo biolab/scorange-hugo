@@ -2605,3 +2605,8 @@ li.pingback:first-child {
   }
 }
 
+.more-link-wrapper{
+  padding-top: 10px; 
+  text-align: center !important;
+}
+
