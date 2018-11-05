@@ -125,9 +125,9 @@
                 {{ end }}
             </div>
         </div>
-        <div class='content col-xs-12 feature-image {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
+        <div class='content col-md-6 col-xs-12 feature-image {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
             {{ if isset .Params "learnMore" }}<a href="{{ .Permalink }}">{{end}}
-                <img class='image {{.Params.thumbnailImagePosition}}' src="{{ .Params.thumbnailImage}}">
+                <img class='image {{.Params.thumbnailImagePosition}}' src="{{ .Params.image}}">
             {{ if isset .Params "learnMore" }}</a>{{end}}
         </div>
     </div>
