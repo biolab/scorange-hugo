@@ -33,7 +33,7 @@
              </div>
             <div class="row center-block">
                 {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
-                <div class="col-lg-4 col-md-5 col-xs-12 home-page-blog" onclick="window.location.href = {{ .Permalink }}" style="cursor: pointer;" >
+                <div class="col-lg-4 col-md-12 col-xs-12 home-page-blog" onclick="window.location.href = {{ .Permalink }}" style="cursor: pointer;" >
                 {{ if and (isset .Params "image") .Params.image }}
                 
                     <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured excerpt" >
