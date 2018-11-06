@@ -3676,6 +3676,10 @@ li.pingback:first-child {
     }
 }
 
+.no-break-buttons{
+  white-space: nowrap;
+}
+
 /*
 ATTENTION:
 
