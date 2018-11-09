@@ -5,7 +5,6 @@ image = "/blog_img/2018-10-04/cell-clustering.png"
 thumbImage = "/blog_img/2018-10-04/cell-clustering.thumb.png"
 date = "2018-10-04"
 title = "Cell Clustering and Cluster Analysis"
-weight = 2
 hardLineBreak = true 
 categories = ["clustering", "data mining", "genomics"]
 joinLines = false

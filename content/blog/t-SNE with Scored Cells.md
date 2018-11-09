@@ -5,7 +5,6 @@ image = "/blog_img/2018-10-03/t-SNE-with-Scored-Cells.png"
 thumbImage = "/blog_img/2018-10-03/t-SNE-with-Scored-Cells.thumb.png"
 date = "2018-10-03"
 title = "Exploring cell populations with t-SNE"
-weight = 1
 hardLineBreak = true 
 categories = ["clustering", "data mining", "genomics", "t-sne", "single-cell sequencing"]
 joinLines = false
