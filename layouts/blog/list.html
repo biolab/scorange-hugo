@@ -107,6 +107,7 @@
 					      	$("#search-results").show();
 					      	var search_results = document.getElementById('search-results')
 					     	search_results.innerHTML = "";
+                     console.log(results);
 					     	
 					      	for(var page in results){
 					      		if ( results[page].image != "<no value>"){
@@ -130,7 +131,13 @@
 					      		else if (results[page].image != "<no value>"){
 					      			html_el += '<a class="featured-image-link" href="' + results[page].uri+'"><div class="featured-image lazy lazy-bg-image"><img src="'+results[page].image +'"></div></a>';
 					      		}
-					      		html_el += '<div class="excerpt-container"><div class="excerpt-meta"><span class="date"> 02 January</span>	<span> / </span>';
+					      		html_el += '<div class="excerpt-container"><div class="excerpt-meta"><span class="date">';
+
+                           if (results[page].date != "<no value>") {
+
+                              html_el += results[page].date + '</span> <span> / </span>';
+                           }
+
 					      		if (results[page].author != "<no value>") {
 
 					      			html_el += '<span class="author">'+results[page].author+'</span>';
@@ -140,9 +147,9 @@
 					      				html_el += '<span> / </span><span class="category"><a href="/categories/'+ encodeURIComponent(results[page].categories[categories])+'">'+results[page].categories[categories]+'</a></span>';
 					      			}	
 					      		}
-					      		html_el += '</div> <div class="excerpt-header"><h2 class="excerpt-title"><a href="'+"test"+'"> '+results[page].title+' </a> </h2></div> <div class="excerpt-content"><article>';
-					      		if (results[page].excerpt != "<no value>" && results[page].excerpt != "" ){
-					      			html_el += results[page].excerpt
+					      		html_el += '</div> <div class="excerpt-header"><h2 class="excerpt-title"><a href="'+"test"+'"> '+results[page].title+' </a> </h2></div> <div class="excerpt-content"><article class="blog-excerpt">';
+					      		if (results[page].longExcerpt != "<no value>" && results[page].longExcerpt != "" ){
+					      			html_el += results[page].longExcerpt
 					      		}
 					      		else{
 					      			html_el += results[page].summary

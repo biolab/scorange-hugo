@@ -8,10 +8,12 @@
 	"description": "{{ htmlEscape .Description}}",
 	"content": {{$page.Plain | jsonify}},
 	"image" : "{{ $page.Params.image}}",
-	"thumbImage" : "{{ $page.Params.thumbImage}}",
-	"excerpt" : "{{ $page.Params.excerpt}}",
+	"thumbImage" : "{{ .Params.thumbImage}}",
+	"shortExcerpt" : "{{ .Params.shortExcerpt}}",
+	"longExcerpt" : "{{ .Params.longExcerpt}}",
 	"author" : "{{ $page.Params.author}}",
-	"summary" : {{ $page.Summary | jsonify}}
+	"summary" : {{ $page.Summary | jsonify}},
+	"date" : {{ $page.Date.Format "02 January" | jsonify }}
 }
 {{- end -}}
 {{- end -}}]
