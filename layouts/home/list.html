@@ -2,9 +2,9 @@
 <div id="promoo">
 <section id="promo" class="promo section offset-header has-pattern">
         <div class="container cover-image" style="margin-top:20px;">
-            <div class="row">
+            <div class="row ">
                 <div class="overview">
-                    <div class="col-lg-4 col-md-5 col-xs-12">
+                    <div class="col-lg-4 col-md-5 col-xs-12 intro">
                         
                         <h1 class="title firstpagetitle"><span style="white-space:nowrap">{{.Title}}</span> <span style="white-space:nowrap">{{ .Description}}</span></h1>
                     <div class="content">
@@ -33,7 +33,7 @@
              </div>
             <div class="row center-block">
                 {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
-                <div class="col-lg-4 col-md-5 col-xs-12 home-page-blog" onclick="window.location.href = {{ .Permalink }}" style="cursor: pointer;" >
+                <div class="col-lg-4 col-md-12 col-xs-12 home-page-blog" onclick="window.location.href = {{ .Permalink }}" style="cursor: pointer;" >
                 {{ if and (isset .Params "image") .Params.image }}
                 
                     <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-memories tag-normal-post tag-standard-2 excerpt zoom full-without-featured excerpt" >
@@ -108,7 +108,7 @@
             <p class="feature-text">{{ .Params.excerpt }}</p>
             <div class="more">
                 {{ if .Params.learnMore }}
-                <a href="{{ .Permalink }}">
+                <a href="{{ .Permalink }}" class="no-break-buttons">
                     <div class="learn-more feature-block">
                         <div class="feature-block fa fa-arrow-circle-o-right jsonly" > </div>
                         <div class="feature-block feature-link">Learn More</div>
@@ -120,16 +120,16 @@
                     {{ if .Params.learnMore }}
                         &nbsp;&nbsp;&nbsp;&nbsp;
                     {{ end }}
-                <a class="lightbox" href="https://www.youtube.com/watch?v={{ .Params.video }}&autoplay=1" target="_blank">
+                <a class="lightbox no-break-buttons" href="https://www.youtube.com/watch?v={{ .Params.video }}&autoplay=1" target="_blank" >
                     <div class="feature-block fa fa-play-circle-o jsonly"></div>
                     <div class="feature-block feature-link">Watch Video</div>
                 </a>
                 {{ end }}
             </div>
         </div>
-        <div class='content col-xs-12 feature-image {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
+        <div class='content col-md-6 col-xs-12 feature-image {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
             {{ if isset .Params "learnMore" }}<a href="{{ .Permalink }}">{{end}}
-                <img class='image {{.Params.thumbnailImagePosition}}' src="{{ .Params.thumbnailImage}}">
+                <img class='image {{.Params.thumbnailImagePosition}}' src="{{ .Params.image}}">
             {{ if isset .Params "learnMore" }}</a>{{end}}
         </div>
     </div>

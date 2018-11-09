@@ -942,6 +942,23 @@ svg{
   body {
     /*background-image: url('/images/bg2.png'); background-repeat: repeat-x;*/
   }
+  .downloados .row {
+    margin-top: 50px;
+  }
+  
+  .container{
+    padding: 0px !important;
+  }
+  .header-pad{
+    padding-left: 5% !important;
+  }
+  .intro{
+    padding: 0px !important;
+    padding-left: 5% !important;
+  }
+  .footer-pad{
+    padding-left: 5% !important;
+  }
 
   #main-page-download-button {
     display: none;
@@ -958,7 +975,7 @@ svg{
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  #features .row {
+  .downloados .row {
     margin-top: 50px;
   }
 
@@ -971,6 +988,9 @@ svg{
 
   .feature-panel {
     height: 425px;
+  }
+  .intro{
+    padding: 0px !important;
   }
 
   #features .feature-panel img {
@@ -3639,10 +3659,24 @@ li.pingback:first-child {
 .download-os{
     background-color: white;
     width: 100%;
-    padding-left: 160px;
-    padding-right: 160px;
+   /* padding-left: 160px;
+    padding-right: 160px;*/
     padding-bottom: 60px;
 }
+/*@media all and (max-width: 990) and (min-width: 501) {
+    .download-os {
+      width: 100%;
+      padding-left: 20% !important;
+      padding-right: 20% !important;
+    }
+}*/
+/*@media all and (max-width: 500){
+    .download-os {
+      width: 100% !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+}*/
 
 .getting-started-button a{
   font-size: 18px !important;
@@ -3674,6 +3708,15 @@ li.pingback:first-child {
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; 
 }
 
+@media (max-width: 991px) {
+    .feature-panel {
+        background: none !important;
+    }
+}
+
+.no-break-buttons{
+  white-space: nowrap;
+}
 
 /*
 ATTENTION:
