@@ -1,12 +1,7 @@
 {{ define "main"}}
 
-    <section id="features" class="features section padding-bottom">
-        <div class="container page-background">
-            <div class="row">
-                <!-- <div class="col-md-12 col-sm-12 col-xs-12">
-                    <h1 class="title">Getting Started</h1>
-                </div> -->
-            </div>
+    <section id="features" class="features section padding-bottom ">
+        <div class="container page-background getting-started">
            {{ range .Pages.ByWeight }}
             <div class=" row">
         <div class='content col-md-6 col-xs-12 feature-description pull-{{if (eq .Params.thumbnailImagePosition "left")}}right{{else}}left{{ end }}'>

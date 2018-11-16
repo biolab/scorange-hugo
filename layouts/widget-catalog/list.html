@@ -16,10 +16,11 @@
                <ul>
                   {{range $value}}
                   <li class="toctree-l1">
-                     <a href="{{ .title |urlize }}">
+
+                     <a href="{{ .url }}">
                      <img alt="{{ .title }}" src="/{{ .icon }}"/>
                      </a>
-                     <a class="reference internal" href="{{ .title |urlize }}">
+                     <a class="reference internal" href="{{ .url }}">
                      {{ .title }}
                      </a>
                   </li>
