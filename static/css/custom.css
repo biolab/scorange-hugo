@@ -798,3 +798,7 @@ blockquote cite {
 .padding-features{
     padding-top: 40px;
 }
+
+.padding-doc{
+    padding-top:20px;
+}

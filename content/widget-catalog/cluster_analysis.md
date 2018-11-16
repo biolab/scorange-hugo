@@ -19,7 +19,7 @@ Display differentially expressed genes that characterize the cluster.
 
 **Cluster Analysis** widget displays differentially expressed genes that characterize the cluster, and corresponding gene terms that describe differentially expressed genes.
 
-![](images/cluster_analysis/Cluster-Analysis-stamped.png)
+![](/images/cluster_analysis/Cluster-Analysis-stamped.png)
 
 1. Info
 2. Cluster Indicator
