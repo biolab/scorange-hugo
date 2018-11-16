@@ -1,0 +1,3 @@
+[submodule "external/orange3-bioinformatics"]
+	path = external/orange3-bioinformatics
+	url = https://github.com/biolab/orange3-bioinformatics
