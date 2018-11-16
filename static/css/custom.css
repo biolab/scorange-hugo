@@ -783,6 +783,11 @@ blockquote cite {
 .features{
     padding-top: 40px;
 }
+
+.search-widgets{
+    padding-top: 80px;
+}
+
 .getting-started{
     padding-top: 50px;
 }
@@ -793,4 +798,3 @@ blockquote cite {
 .padding-features{
     padding-top: 40px;
 }
-
