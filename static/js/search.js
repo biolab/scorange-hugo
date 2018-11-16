@@ -19,6 +19,9 @@ function initLunr() {
             lunrIndex = new lunr.Index
             lunrIndex.ref("uri");
             lunrIndex.field('title', {
+                boost: 20
+            });
+            lunrIndex.field('longExcerpt', {
                 boost: 15
             });
             lunrIndex.field('categories', {
@@ -85,6 +88,7 @@ $( document ).ready(function() {
                 'data-term="' + term + '" ' +
                 'data-title="' + item.title + '" ' +
                 'data-uri="'+ item.uri + '" ' +
+                'data-longExcerpt="'+ item.longExcerpt + '" ' +
                 'data-context="' + item.context + '">' +
                 '» ' + item.title +
                 '<div class="context">' +
