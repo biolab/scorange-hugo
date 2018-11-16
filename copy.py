@@ -36,10 +36,18 @@ def add_front_matter(filename,widget):
     return front_matter
 
 
+"""
+Copy images for widget catalog from external module.
+
+Parameters
+----------
+filename:
+    Name of the .md file
+path:
+location of the .md file
+
+"""
 def copy_images(path,filename):
-    # line = '![](images/'
-    # p = re.compile("images/")
-    # content = f.read()
     with open(path+filename, 'r+') as f:
         content = f.read()
 
@@ -47,7 +55,6 @@ def copy_images(path,filename):
         locationFrom = path+"/widgets/images/"
         locationTo = "static/images/"
         matches = re.findall(regex,content)
-        # print(matches)
         for match in matches:
             try:
                 shutil.copy2(locationFrom+match, locationTo+match)
@@ -78,10 +85,8 @@ def build_json(filename):
             if widget_obj["category"] not in json_content:
                 json_content[widget_obj["category"]] = []
             json_content[widget_obj["category"]].append(widget_obj)
-            # print("---",widget_obj['title'],"---")
             widget_obj['url'] = url = widget_obj['title'].lower().replace(" ", "_")
-        # front_matter += '"url" = "' + title + '"\n'
-        # print(title)
+
 
     with open('data/widgets.json', 'w') as outfile:
         json.dump(json_content, outfile)
