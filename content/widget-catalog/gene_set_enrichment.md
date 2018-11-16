@@ -20,7 +20,7 @@ Enrich gene sets.
 
 TODO Description.
 
-![](images/gene_set_enrichment/Gene-Set-Enrichment-stamped.png)
+![](/images/gene_set_enrichment/Gene-Set-Enrichment-stamped.png)
 
 1. Info
 2. Custom Gene Set Term Column
