@@ -1,0 +1,55 @@
+{{ define "main"}}
+
+<section id="features" class="features section padding-bottom ">
+    <div class="container page-background getting-started">
+    {{ $paginator := .Paginate (where (where .Pages.ByWeight.Reverse "Type" "workflow") "IsPage" true) }}
+    {{ range $index, $element := .Paginator.Pages }}
+        <div class=" row">
+
+            <div class='content col-md-6 col-xs-12 feature-description pull-{{if (eq .Params.thumbnailImagePosition "left")}}right{{else}}left{{ end }}'>
+                <h2 class="feature-title">
+                    {{ .Title }}
+                </h2>
+                <p class="feature-text">{{ .Content }}</p>
+                <div class="getting-started-button">
+                    {{ if .Params.download }}
+                    <a href="{{ .Permalink }}" class="no-break-buttons">
+                        <div class="learn-more feature-block">
+                            <div class="feature-block fa fa-download jsonly"></div>
+                            <div class="feature-block feature-link">Download</div>
+                        </div>
+                    </a>
+                    &nbsp;&nbsp;
+                    {{ end }}
+
+                    {{ if .Params.video }}
+                        
+                    <a class="lightbox no-break-buttons" href="{{ .Params.video }}" target="_blank" >
+                        <div class="feature-block fa fa-play-circle-o jsonly">
+                        </div>
+                        <div class="feature-block feature-link">Watch Video</div>
+                    </a>
+                    &nbsp;&nbsp;
+                    {{ end }}
+
+                    {{ if .Params.blog }}
+                        
+                    <a class="lightbox no-break-buttons" href="{{ .Params.blog }}">
+                        <div class="feature-block fa fa-book jsonly"></div>
+                        <div class="feature-block feature-link">Blog post</div>
+                    </a>
+                    &nbsp;&nbsp;
+                    {{ end }}
+                </div>
+            </div>
+            <div class='content col-md-6 col-xs-12 {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
+                <img class='image {{.Params.thumbnailImagePosition}}' src="{{ .Params.image}}" style="padding:40px;">
+            </div>
+        </div>
+        {{end}}       
+    </div>
+
+</section>
+
+{{end}}
+
