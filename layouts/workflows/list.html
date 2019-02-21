@@ -13,7 +13,7 @@
                 <p class="feature-text">{{ .Content }}</p>
                 <div class="getting-started-button">
                     {{ if .Params.download }}
-                    <a href="{{ .Permalink }}" class="no-break-buttons">
+                    <a href="https://service.biolab.si/download/workflow?name={{ .Params.download }}" class="no-break-buttons" target="_blank">
                         <div class="learn-more feature-block">
                             <div class="feature-block fa fa-download jsonly"></div>
                             <div class="feature-block feature-link">Download</div>
@@ -34,7 +34,7 @@
 
                     {{ if .Params.blog }}
                         
-                    <a class="lightbox no-break-buttons" href="{{ .Params.blog }}">
+                    <a class="lightbox no-break-buttons" href="https://singlecell.biolab.si/blog/{{ .Params.blog }}">
                         <div class="feature-block fa fa-book jsonly"></div>
                         <div class="feature-block feature-link">Blog post</div>
                     </a>
