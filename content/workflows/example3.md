@@ -1,11 +1,11 @@
 +++
 title= "Principal Component Analysis"
 image =  "/images/PCA.png"
-type = "workflow"
-blog =  "http://localhost:1313/blog/genova/"
+type = "workflows"
+blog =  ""
 video = ""
 download = "test.ows"
-tags = []
+tags = ["PCA", "datasets", "variance", "components"]
 thumbnailImagePosition = "right"
 weight = 10
 +++

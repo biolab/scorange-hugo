@@ -1,11 +1,11 @@
 +++
 title= "Bag of words"
 image =  "/images/bagOfWords.png"
-type = "workflow"
-blog =  "regress-effect-removal"
-video = "https://www.youtube.com/watch?v=HXjnDIgGDuI"
+type = "workflows"
+blog =  ""
+video = ""
 download = "test.ows"
-tags = []
+tags = ["introduction", "text-mining"]
 thumbnailImagePosition = "left"
 weight = 20
 +++

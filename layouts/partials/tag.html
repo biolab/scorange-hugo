@@ -1,41 +1,19 @@
-{{ define "main"}}
+<section id="features" class="features section padding-bottom " style="padding-top: 0px !important">
 
-<section id="features" class="features section padding-bottom ">
-    <div class="container page-background getting-started">
+<div class="container page-background ">
         <div style="text-align: center">
-           <h2 style="font-size: 40px" >
-              scOrange Workflows
+           <h2 style="font-size: 30px" >
+              Workflows with Tag - "{{ .Title }}"
            </h2>
-        </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-12 content" style="margin-top: 30px;  display: inline;">
-         <input type="text" class="jsonly search-widget-workflow" id="search-input" style="width: 90%;" placeholder="Search workflows" tabindex="1"  autofocus />
-        <button type="button" class="search-button-workflow" id="searchBtn" onclick="search_content()">
-            <i class="fa fa-search"></i>
-        </button>
-      </div>
-      
-    </div>
-    <div style="margin-top: 5px;" id="myUL">
-        <ul >
-            <span>Tags: </span>
-          {{ range first 10 .Site.Taxonomies.tags.ByCount }}
-            <li style="display: inline;"><a href="/tags/{{ .Name | urlize }}">{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
-    </div>
+		</div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="search-results" style="display: none;">  
-    </div>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="post_nor">
-    {{ $paginator := .Paginate (where (where .Pages.ByWeight.Reverse "Type" "workflows") "IsPage" true) }}
-    {{ range $index, $element := .Paginator.Pages }}
-        <div class=" row">
-            {{ if eq (mod $index 2) 0 }}
-            <div class='content col-md-6 col-xs-12 feature-description pull-left'>
-            {{else}}
-            <div class='content col-md-6 col-xs-12 feature-description pull-right'>
-            {{end}}
+
+<div id="post_nor">	
+    {{ $paginator := .Paginate (.Pages )}}
+	{{ range $index, $element := .Paginator.Pages }}
+        <div class="row">
+
+            <div class='content col-md-6 col-xs-12 feature-description pull-{{if (eq .Params.thumbnailImagePosition "left")}}right{{else}}left{{ end }}'>
                 <h2 class="workflow-title">
                     {{ .Title }}
                 </h2>
@@ -69,10 +47,6 @@
                     </a>
                     &nbsp;&nbsp;
                     {{ end }}
-                    <a href="{{ .Permalink }} "> 
-                        <div class="feature-block fa fa-arrow-right"></div>
-                        <div class="feature-block feature-link">Read more </div>
-                    </a>
                 </div>
             </div>
             <div class='content col-md-6 col-xs-12 {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
@@ -81,11 +55,9 @@
         </div>
         {{end}}       
     </div>
-</div>
-
+               
+	</div>
 </section>
-
-
 <script type="text/javascript">
 
       function search_content(){
@@ -135,29 +107,35 @@
                 html_el += '</div></div>'
                 var position = "";
                 if (page % 2 == 0){
+                    // position = "left";
                     html_el += '<div class="content col-md-6 col-xs-12 panel-left">';
                 }
                 else{
+                    // position = "right";
                     html_el += '<div class="content col-md-6 col-xs-12 " >';
                 }
+                //  {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
 
                 html_el += '<img class="image'+position+'" src="'+results[page].image+'" style="padding:40px;"></div>'
                 html_el += "</div> </div>"
             }
             search_results.innerHTML += html_el;
 
+
+
+
+
         }
     }
      
-   </script>
-   <script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}"></script>
-   <script type="text/javascript" src="{{"js/auto-complete.js" | relURL}}"></script>
-   <link href="{{"css/auto-complete.css" | relURL}}" rel="stylesheet">
-   <script type="text/javascript">
-      var baseurl = "{{.Site.BaseURL}}";
-   </script>
-   <script type="text/javascript" src="/js/search-workflow.js"></script>
+                   </script>
+                   <script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}"></script>
+                   <script type="text/javascript" src="{{"js/auto-complete.js" | relURL}}"></script>
+                   <link href="{{"css/auto-complete.css" | relURL}}" rel="stylesheet">
+                   <script type="text/javascript">
+                      var baseurl = "{{.Site.BaseURL}}";
+                   </script>
+                   <script type="text/javascript" src="/js/search-workflow.js"></script>
 
 
-{{end}}
-
+{{ partial "pagination.html" . }}

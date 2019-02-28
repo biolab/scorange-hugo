@@ -11,8 +11,10 @@ function initLunr() {
     };
 
     // First retrieve the index file
-    $.getJSON(baseurl +"blog.json")
+    console.log(baseurl)
+    $.getJSON(baseurl +"workflow.json")
         .done(function(index) {
+            console.log(index)
             pagesIndex =   index;
             // Set up lunrjs by declaring the fields we use
             // Also provide their boost level for the ranking
@@ -21,15 +23,13 @@ function initLunr() {
             lunrIndex.field('title', {
                 boost: 20
             });
-            lunrIndex.field('longExcerpt', {
+            lunrIndex.field('tags', {
                 boost: 15
             });
-            lunrIndex.field('categories', {
+            lunrIndex.field('content', {
                 boost: 10
             });
-            lunrIndex.field("content", {
-                boost: 5
-            });
+            
 
             // Feed lunr with each file and let lunr actually index them
             pagesIndex.forEach(function(page) {
@@ -38,6 +38,7 @@ function initLunr() {
             lunrIndex.pipeline.remove(lunrIndex.stemmer)
         })
         .fail(function(jqxhr, textStatus, error) {
+            console.log(jqxhr, textStatus, error)
             var err = textStatus + ", " + error;
             console.error("Error getting Hugo index file:", err);
         });
@@ -88,7 +89,6 @@ $( document ).ready(function() {
                 'data-term="' + term + '" ' +
                 'data-title="' + item.title + '" ' +
                 'data-uri="'+ item.uri + '" ' +
-                'data-longExcerpt="'+ item.longExcerpt + '" ' +
                 'data-context="' + item.context + '">' +
                 '» ' + item.title +
                 '<div class="context">' +
