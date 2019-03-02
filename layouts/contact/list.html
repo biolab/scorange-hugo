@@ -19,7 +19,7 @@
                         on our <a href="https://github.com/biolab/orange3/issues">GitHub issue tracker</a> instead.</p>
                     <br>
                 </div>
-                <form role="form" id="send_mail" class="form-horizontal contact" action="https://service.biolab.si/mail/" method="POST" name="license-form">
+                <form role="form" id="send_mail" class="form-horizontal contact" action="https://service.biolab.si/contact/mail/" method="POST" name="license-form">
                     <div class="form-group">
                         <label class="col-md-1 col-sm-2 col-xs-10" for="email">E-mail:</label>
                         <div class="inline-label-input col-md-4 col-sm-4 col-xs-10">
@@ -40,10 +40,11 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-1 col-md-10 col-sm-offset-3 col-sm-9">
-                        <div data-sitekey="6Lc_qZEUAAAAAHgxcVQnQOCXCYwjPUf9tt3tpnyN" class="g-recaptcha"> </div>
-                        <span id="captcha" style="color:red" />
+                            <div class="g-recaptcha" data-sitekey="6LfSKZEUAAAAANxFOBknr6eQSAJJeJA7n-u28bfg"></div>
+                        <span id="captcha" style="margin-left:100px;color:red" />
                         </div>
                     </div>
+                    <input class="form-control" type="hidden" id="subject" name="Page" value="singlecell">
                     <div class="form-group">
                         <div class="col-md-offset-1 col-md-10 col-sm-offset-3 col-sm-9">
                             <button type="submit" class="btn btn-theme" value="Submit">Submit</button>
