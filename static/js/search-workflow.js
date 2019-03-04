@@ -11,10 +11,8 @@ function initLunr() {
     };
 
     // First retrieve the index file
-    console.log(baseurl)
     $.getJSON(baseurl +"workflow.json")
         .done(function(index) {
-            console.log(index)
             pagesIndex =   index;
             // Set up lunrjs by declaring the fields we use
             // Also provide their boost level for the ranking

@@ -20,7 +20,7 @@
         <ul >
             <span>Tags: </span>
           {{ range first 10 .Site.Taxonomies.tags.ByCount }}
-            <li style="display: inline;"><a href="/tags/{{ .Name | urlize }}">{{ .Name }}</a></li>
+            <li style="display: inline;text-transform: capitalize;"><a href="/tags/{{ .Name | urlize }}">{{ .Name }}</a></li>
           {{ end }}
         </ul>
     </div>
@@ -40,6 +40,12 @@
                     {{ .Title }}
                 </h2>
                 <p class="feature-text">{{ .Content }}</p>
+                <div class="tags"  style="padding-bottom: 10px;text-transform: capitalize;">
+                    Tags:
+                    {{range .Params.tags}}
+                    <a class="tag-workflow" href="/tags/{{ . | urlize }}">{{ . }}</a>
+                    {{end}}
+                </div>
                 <div class="getting-started-button">
                     {{ if .Params.download }}
                     <a href="https://service.biolab.si/download/workflow?name={{ .Params.download }}" class="no-break-buttons" target="_blank">
@@ -69,84 +75,111 @@
                     </a>
                     &nbsp;&nbsp;
                     {{ end }}
-                    <a href="{{ .Permalink }} "> 
-                        <div class="feature-block fa fa-arrow-right"></div>
-                        <div class="feature-block feature-link">Read more </div>
-                    </a>
                 </div>
             </div>
-            <div class='content col-md-6 col-xs-12 {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
-                <img class='image {{.Params.thumbnailImagePosition}}' src="{{ .Params.image}}" style="padding:40px;">
+
+            <div class='content col-md-6 col-xs-12 {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }} '>
+                <img class='image {{.Params.thumbnailImagePosition}} workflow-image' src="{{ .Params.image}}" style="">
             </div>
         </div>
-        {{end}}       
+        {{end}}
+{{ partial "pagination.html" . }}
+
     </div>
+
 </div>
 
 </section>
 
 
 <script type="text/javascript">
+    // var slideIndex = 1;
+    // showSlides(slideIndex);
 
-      function search_content(){
-        
-        var param = document.getElementById('search-input').value;
+    // // Next/previous controls
+    // function plusSlides(n) {
+    //   showSlides(slideIndex += n);
+    // }
 
-        if (param.trim() ==""){
-            $("#post_nor").show();
-            $("#search-results").hide();
-        }
-        else{
-            $("#post_nor").hide();
-        
+    // // Thumbnail image controls
+    // function currentSlide(n) {
+    //   showSlides(slideIndex = n);
+    // }
 
-            var results  = search(param);
-            console.log(results)
-            $("#search-results").show();
-            var search_results = document.getElementById('search-results')
-            search_results.innerHTML = "";
-            var html_el = ""
+    // function showSlides(n) {
+    //   var i;
+    //   var slides = document.getElementsByClassName("mySlides");
+    //   // var dots = document.getElementsByClassName("dot");
+    //   if (n > slides.length) {slideIndex = 1} 
+    //   if (n < 1) {slideIndex = slides.length}
+    //   for (i = 0; i < slides.length; i++) {
+    //       slides[i].style.display = "none"; 
+    //   }
+    //   // for (i = 0; i < dots.length; i++) {
+    //   //     dots[i].className = dots[i].className.replace(" active", "");
+    //   // }
+    //   slides[slideIndex-1].style.display = "block"; 
+    //   // dots[slideIndex-1].className += " active";
+    // }
 
-            for(var page in results){
-                html_el += '<div class="row">';
-                if (page % 2 == 0){
-                    html_el += '<div class="content col-md-6 col-xs-12 feature-description pull-left">';
-                }
-                else{
-                    html_el += '<div class="content col-md-6 col-xs-12 feature-description pull-right"';
-                }
-                html_el += '<h2 class="workflow-title">'+results[page].title+'</h2>'
+  function search_content(){
+    
+    var param = document.getElementById('search-input').value;
 
-                
-                html_el += '<p class="feature-text">'+results[page].content+'</p>'
-                html_el += '<div class="getting-started-button">'
+    if (param.trim() ==""){
+        $("#post_nor").show();
+        $("#search-results").hide();
+    }
+    else{
+        $("#post_nor").hide();
+    
 
-                if (results[page].download != "<no value>"){
-                    html_el += '<a href="https://service.biolab.si/download/workflow?name='+results[page].download+'" class="no-break-buttons" target="_blank"><div class="learn-more feature-block"><div class="feature-block fa fa-download jsonly"></div><div class="feature-block feature-link">Download</div></div></a>&nbsp;&nbsp;'
-                }
-                if (results[page].video != "<no value>"){
-                    html_el += '<a class="lightbox no-break-buttons" href="'+results[page].video +'"target="_blank"><div class="feature-block fa fa-play-circle-o jsonly"></div><div class="feature-block feature-link">Watch Video</div></a>&nbsp;&nbsp;'
-                }
-                if (results[page].blog != "<no value>"){
-                    html_el += '<a class="lightbox no-break-buttons" href="https://singlecell.biolab.si/blog/'+results[page].blog+'"><div class="feature-block fa fa-book jsonly"></div><div class="feature-block feature-link">Blog post</div></a>&nbsp;&nbsp;'
-                }
+        var results  = search(param);
+        $("#search-results").show();
+        var search_results = document.getElementById('search-results')
+        search_results.innerHTML = "";
+        var html_el = ""
 
-
-                html_el += '</div></div>'
-                var position = "";
-                if (page % 2 == 0){
-                    html_el += '<div class="content col-md-6 col-xs-12 panel-left">';
-                }
-                else{
-                    html_el += '<div class="content col-md-6 col-xs-12 " >';
-                }
-
-                html_el += '<img class="image'+position+'" src="'+results[page].image+'" style="padding:40px;"></div>'
-                html_el += "</div> </div>"
+        for(var page in results){
+            html_el += '<div class="row">';
+            if (page % 2 == 0){
+                html_el += '<div class="content col-md-6 col-xs-12 feature-description pull-left">';
             }
-            search_results.innerHTML += html_el;
+            else{
+                html_el += '<div class="content col-md-6 col-xs-12 feature-description pull-right"';
+            }
+            html_el += '<h2 class="workflow-title">'+results[page].title+'</h2>'
 
+            
+            html_el += '<p class="feature-text">'+results[page].content+'</p>'
+            html_el += '<div class="getting-started-button">'
+
+            if (results[page].download != "<no value>"){
+                html_el += '<a href="https://service.biolab.si/download/workflow?name='+results[page].download+'" class="no-break-buttons" target="_blank"><div class="learn-more feature-block"><div class="feature-block fa fa-download jsonly"></div><div class="feature-block feature-link">Download</div></div></a>&nbsp;&nbsp;'
+            }
+            if (results[page].video != "<no value>"){
+                html_el += '<a class="lightbox no-break-buttons" href="'+results[page].video +'"target="_blank"><div class="feature-block fa fa-play-circle-o jsonly"></div><div class="feature-block feature-link">Watch Video</div></a>&nbsp;&nbsp;'
+            }
+            if (results[page].blog != "<no value>"){
+                html_el += '<a class="lightbox no-break-buttons" href="https://singlecell.biolab.si/blog/'+results[page].blog+'"><div class="feature-block fa fa-book jsonly"></div><div class="feature-block feature-link">Blog post</div></a>&nbsp;&nbsp;'
+            }
+
+
+            html_el += '</div></div>'
+            var position = "";
+            if (page % 2 == 0){
+                html_el += '<div class="content col-md-6 col-xs-12 panel-left">';
+            }
+            else{
+                html_el += '<div class="content col-md-6 col-xs-12 " >';
+            }
+
+            html_el += '<img class="image'+position+'" src="'+results[page].image+'" style="padding:40px;"></div>'
+            html_el += "</div> </div>"
         }
+        search_results.innerHTML += html_el;
+
+    }
     }
      
    </script>
@@ -157,6 +190,7 @@
       var baseurl = "{{.Site.BaseURL}}";
    </script>
    <script type="text/javascript" src="/js/search-workflow.js"></script>
+
 
 
 {{end}}
