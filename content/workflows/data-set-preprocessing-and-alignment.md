@@ -1,11 +1,11 @@
 +++
 title= "Data set preprocessing and alignment"
-image =  "/workflow_images/clustering.png"
+image =  "/workflow_images/data-set-preprocessing-and-aligement.png"
 type = "workflows"
 blog =  ""
 video = ""
-download = "data-set-preprocessing-and-alignment.ows"
-tags = []
+download = "sc/data-set-preprocessing-and-alignment.ows"
+tags = ["Dataset"]
 weight = 20
 +++
 

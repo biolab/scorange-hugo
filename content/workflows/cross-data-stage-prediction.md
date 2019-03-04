@@ -4,8 +4,8 @@ image =  "/workflow_images/cross-data-stage-prediction.png"
 type = "workflows"
 blog =  ""
 video = ""
-download = "cross-data-stage-prediction.ows"
-tags = []
+download = "sc/cross-data-stage-prediction.ows"
+tags = ["Cross-validation"]
 weight = 20
 +++
 

@@ -4,8 +4,8 @@ image =  "/workflow_images/markers-and-subpopulations.png"
 type = "workflows"
 blog =  ""
 video = ""
-download = "markers-and-subpopulations.ows"
-tags = []
+download = "sc/markers-and-subpopulations.ows"
+tags = ["Marker genes", "t-SNE"]
 weight = 20
 +++
 

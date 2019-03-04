@@ -4,8 +4,8 @@ image =  "/workflow_images/clustering-and-tsne.png"
 type = "workflows"
 blog =  ""
 video = ""
-download = "clustering-and-tsne.ows"
-tags = []
+download = "sc/clustering-and-tsne.ows"
+tags = ["Clustering", "t-SNE"]
 weight = 20
 +++
 
