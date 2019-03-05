@@ -4,7 +4,7 @@ image =  "/workflow_images/data-set-preprocessing-and-aligement.png"
 type = "workflows"
 blog =  ""
 video = ""
-download = "sc/data-set-preprocessing-and-alignment.ows"
+download = "data-set-preprocessing-and-alignment.ows"
 tags = ["Dataset"]
 weight = 20
 +++

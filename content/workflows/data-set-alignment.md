@@ -4,7 +4,7 @@ image =  "/images/clustering.png"
 type = "workflows"
 blog =  ""
 video = ""
-download = "sc/data-set-alignment.ows"
+download = "data-set-alignment.ows"
 tags = ["Data", "t-SNE"]
 weight = 20
 +++

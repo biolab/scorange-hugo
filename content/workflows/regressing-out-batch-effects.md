@@ -4,7 +4,7 @@ image =  "/workflow_images/regressing-out-batch-effects.png"
 type = "workflows"
 blog =  ""
 video = ""
-download = "sc/regressing-out-batch-effects.ows"
+download = "regressing-out-batch-effects.ows"
 tags = ["Cell-cycle"]
 weight = 20
 +++

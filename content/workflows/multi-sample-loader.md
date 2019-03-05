@@ -4,7 +4,7 @@ image =  "/workflow_images/multi-sample-loader.png"
 type = "workflows"
 blog =  ""
 video = ""
-download = "sc/multi-sample-loader.ows"
+download = "multi-sample-loader.ows"
 tags = ["Data"]
 weight = 30
 +++
