@@ -1,6 +1,6 @@
 +++
 title= "Multi-Sample loader"
-image =  "/workflow_images/multi-sample-loader.png"
+images =  ["/workflow_images/multi-sample-loader.png"]
 type = "workflows"
 blog =  ""
 video = ""

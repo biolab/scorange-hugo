@@ -3,12 +3,12 @@
 <section id="features" class="features section padding-bottom ">
     <div class="container page-background getting-started">
         <div style="text-align: center">
-           <h2 style="font-size: 40px" >
+           <h2 style="font-size: 34px;margin-top: 0px;" >
               scOrange Workflows
            </h2>
         </div>
     <div class="row">
-      <div class="col-xs-12 col-md-12 content" style="margin-top: 30px;  display: inline;">
+      <div class="col-xs-12 col-md-12 content" style="margin-top: 20px;  display: inline;">
          <input type="text" class="jsonly search-widget-workflow" id="search-input" style="width: 90%;" placeholder="Search workflows" tabindex="1"  autofocus />
         <button type="button" class="search-button-workflow" id="searchBtn" onclick="search_content()">
             <i class="fa fa-search"></i>
@@ -32,9 +32,9 @@
     {{ range $index, $element := .Paginator.Pages }}
         <div class=" row">
             {{ if eq (mod $index 2) 0 }}
-            <div class='content col-md-6 col-xs-12 feature-description pull-left'>
+            <div class='content col-md-6 col-xs-12 feature-description pull-left' style="padding-top: 60px;">
             {{else}}
-            <div class='content col-md-6 col-xs-12 feature-description pull-right'>
+            <div class='content col-md-6 col-xs-12 feature-description pull-right' style="padding-top: 60px;">
             {{end}}
                 <h2 class="workflow-title">
                     {{ .Title }}
@@ -78,14 +78,47 @@
                 </div>
             </div>
 
-            <div class='content col-md-6 col-xs-12 {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }} '>
-                <img class='image {{.Params.thumbnailImagePosition}} workflow-image' src="{{ .Params.image}}" style="">
+            <div class='content col-md-6 col-xs-12 {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}' style="padding: 20px;padding-top: 0px;">
+                {{if gt (len .Params.images) 1}}
+                <div id="myCarousel{{$index}}" class="carousel slide" data-interval="false" >
+            
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner workflow-slider">
+                    {{range $id, $element := .Params.images}}
+                      <div class="item {{if eq $id 0 }}active {{else}}{{end}}">
+                        <img src="{{$element}}" class="workflow-image" >
+                      </div>
+                    {{end}}
+                </div>
+                <!-- Indicators -->
+                <ol class="carousel-indicators" >
+                    {{range $id, $element := .Params.images }}
+                    <li data-target="#myCarousel{{$index}}" data-slide-to="{{$id}}" class="{{if eq $id 0}}active {{else}}{{end}}" ></li>
+                  {{end}}
+                </ol>
+
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel{{$index}}" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" style="color: black;"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel{{$index}}" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" style="color: black;"></span>
+                </a>
+              </div>
+              {{else}}
+                {{$image := index (.Params.images) 0 }}
+                <img src="{{$image}}" class="workflow-image" >
+              {{end}}
             </div>
+              
         </div>
+<hr/>
+
         {{end}}
 {{ partial "pagination.html" . }}
-
     </div>
+
 
 </div>
 
@@ -93,34 +126,6 @@
 
 
 <script type="text/javascript">
-    // var slideIndex = 1;
-    // showSlides(slideIndex);
-
-    // // Next/previous controls
-    // function plusSlides(n) {
-    //   showSlides(slideIndex += n);
-    // }
-
-    // // Thumbnail image controls
-    // function currentSlide(n) {
-    //   showSlides(slideIndex = n);
-    // }
-
-    // function showSlides(n) {
-    //   var i;
-    //   var slides = document.getElementsByClassName("mySlides");
-    //   // var dots = document.getElementsByClassName("dot");
-    //   if (n > slides.length) {slideIndex = 1} 
-    //   if (n < 1) {slideIndex = slides.length}
-    //   for (i = 0; i < slides.length; i++) {
-    //       slides[i].style.display = "none"; 
-    //   }
-    //   // for (i = 0; i < dots.length; i++) {
-    //   //     dots[i].className = dots[i].className.replace(" active", "");
-    //   // }
-    //   slides[slideIndex-1].style.display = "block"; 
-    //   // dots[slideIndex-1].className += " active";
-    // }
 
   function search_content(){
     

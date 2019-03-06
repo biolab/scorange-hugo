@@ -1,6 +1,6 @@
 +++
 title= "Cross-data stage prediciton"
-image =  "/workflow_images/cross-data-stage-prediction.png"
+images =  ["/workflow_images/cross-data-stage-prediction.png"]
 type = "workflows"
 blog =  ""
 video = ""

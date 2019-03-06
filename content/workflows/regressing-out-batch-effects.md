@@ -1,6 +1,6 @@
 +++
 title= "Regressing out batch effects"
-image =  "/workflow_images/regressing-out-batch-effects.png"
+images =  ["/workflow_images/regressing-out-batch-effects.png"]
 type = "workflows"
 blog =  ""
 video = ""

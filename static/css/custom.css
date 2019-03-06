@@ -836,3 +836,35 @@ blockquote cite {
 }
 
 .pagination1 a:hover:not(.active) {background-color: #ddd;}
+
+
+.carousel-control.left {
+    background-image:none !important; 
+}
+.carousel-control.right {
+    background-image:none !important; 
+}
+
+.carousel-indicators{
+    bottom: 0px !important;
+
+}
+.carousel-indicators li {
+  border-color: black !important;
+  background-color: rgba(255,255,255,.25) !important;
+}
+
+.carousel-indicators .active {
+  background-color: black !important;
+}
+
+.workflow-slider{
+
+    height: 340px !important;
+    width: 500px !important;
+
+}
+.hr{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}

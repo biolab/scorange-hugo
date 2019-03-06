@@ -1,6 +1,6 @@
 +++
 title= "Data set preprocessing and alignment"
-image =  "/workflow_images/data-set-preprocessing-and-aligement.png"
+images =  ["/workflow_images/data-set-preprocessing-and-aligement.png"]
 type = "workflows"
 blog =  ""
 video = ""

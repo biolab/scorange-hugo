@@ -1,6 +1,6 @@
 +++
 title= "Markers and subpopulations"
-image =  "/workflow_images/markers-and-subpopulations.png"
+images =  ["/workflow_images/markers-and-subpopulations.png"]
 type = "workflows"
 blog =  ""
 video = ""

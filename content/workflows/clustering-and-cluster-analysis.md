@@ -1,6 +1,6 @@
 +++
 title= "Clustering and t-SNE"
-image =  "/workflow_images/clustering-and-tsne.png"
+images =  ["/workflow_images/clustering-and-tsne.png"]
 type = "workflows"
 blog =  ""
 video = ""
