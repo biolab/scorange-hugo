@@ -1,5 +1,6 @@
 +++
 title= "Markers and subpopulations"
+# Slideshow gallery appears when more then one image is in array
 images =  ["/workflow_images/markers-and-subpopulations.png"]
 type = "workflows"
 blog =  ""

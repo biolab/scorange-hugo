@@ -1,5 +1,6 @@
 +++
 title= "Regressing out batch effects"
+# Slideshow gallery appears when more then one image is in array
 images =  ["/workflow_images/regressing-out-batch-effects.png"]
 type = "workflows"
 blog =  ""

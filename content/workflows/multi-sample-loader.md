@@ -1,5 +1,6 @@
 +++
 title= "Multi-Sample loader"
+# Slideshow gallery appears when more then one image is in array 
 images =  ["/workflow_images/multi-sample-loader.png"]
 type = "workflows"
 blog =  ""

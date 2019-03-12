@@ -1,5 +1,6 @@
 +++
 title= "Clustering and t-SNE"
+# Slideshow gallery appears when more then one image is in array
 images =  ["/workflow_images/clustering-and-tsne.png"]
 type = "workflows"
 blog =  ""

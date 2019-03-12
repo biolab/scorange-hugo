@@ -1,5 +1,6 @@
 +++
 title= "Cross-data stage prediciton"
+# Slideshow gallery appears when more then one image is in array
 images =  ["/workflow_images/cross-data-stage-prediction.png"]
 type = "workflows"
 blog =  ""

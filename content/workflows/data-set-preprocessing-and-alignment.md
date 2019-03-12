@@ -1,5 +1,6 @@
 +++
 title= "Data set preprocessing and alignment"
+# Slideshow gallery appears when more then one image is in array 
 images =  ["/workflow_images/data-set-preprocessing-and-aligement.png"]
 type = "workflows"
 blog =  ""

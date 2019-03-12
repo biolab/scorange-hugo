@@ -1,7 +1,8 @@
 +++
 title= "Data set alignment"
-image =  "/images/clustering.png"
-type = "workflows"
+# Slideshow gallery appears when more then one image is in array
+images =  []
+type = "workflow"
 blog =  ""
 video = ""
 download = "data-set-alignment.ows"
