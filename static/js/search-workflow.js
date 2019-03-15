@@ -36,7 +36,6 @@ function initLunr() {
             lunrIndex.pipeline.remove(lunrIndex.stemmer)
         })
         .fail(function(jqxhr, textStatus, error) {
-            console.log(jqxhr, textStatus, error)
             var err = textStatus + ", " + error;
             console.error("Error getting Hugo index file:", err);
         });
@@ -57,46 +56,6 @@ function search(query) {
         });
 }
 
-// function search_content(){
-//     console.log($("#search-by").get(0).value);
-//     var param = $("#search-by").get(0).value;
-//     var results  = search(param);
-//     console.log(results);
-//     // document.getElementById('search-by').value;
-// }
 
 // Let's get started
 initLunr();
-$( document ).ready(function() {
-    var searchList = new autoComplete({
-        /* selector for the search box element */
-        selector: $("#search-input").get(0),
-        /* source is the callback to perform the search */
-        source: function(term, response) {
-            response(search(term));
-        },
-        /* renderItem displays individual search results */
-        renderItem: function(item, term) {
-            var numContextWords = 2;
-            var text = item.content.match(
-                "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
-                    term+"(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}");
-            item.context = text;
-
-            return '<div class="autocomplete-suggestion" ' +
-                'data-term="' + term + '" ' +
-                'data-title="' + item.title + '" ' +
-                'data-uri="'+ item.uri + '" ' +
-                'data-context="' + item.context + '">' +
-                '» ' + item.title +
-                '<div class="context">' +
-                (item.context || '') +'</div>' +
-                '</div>';
-        },
-        /* onSelect callback fires when a search suggestion is chosen */
-        onSelect: function(e, term, item) {
-            console.log(item.getAttribute('data-val'));
-            location.href = item.getAttribute('data-uri');
-        }
-    });
-});

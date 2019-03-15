@@ -5,7 +5,7 @@
 	"uri": "{{ $page.Permalink }}",
 	"title": "{{ htmlEscape $page.Title}}",
 	"content": {{$page.Plain | jsonify}},
-	"image" : "{{ $page.Params.image}}",
+	"images": [{{ range $tindex, $image := $page.Params.images }}{{ if $tindex }}, {{ end }}"{{ $image| htmlEscape }}"{{ end }}],
 	"download": "{{$page.Params.download}}",
 	"blog" : "{{ $page.Params.blog}}",
 	"video" : "{{$page.Params.video}}",

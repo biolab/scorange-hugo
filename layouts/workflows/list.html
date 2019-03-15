@@ -7,7 +7,7 @@
               scOrange Workflows
            </h2>
         </div>
-    <div class="row">
+    <div class="row" style="padding-left: 20px;">
       <div class="col-xs-12 col-md-12 content" style="margin-top: 20px;  display: inline;">
          <input type="text" class="jsonly search-widget-workflow" id="search-input" style="width: 90%;" placeholder="Search workflows" tabindex="1"  autofocus />
         <button type="button" class="search-button-workflow" id="searchBtn" onclick="search_content()">
@@ -16,7 +16,7 @@
       </div>
       
     </div>
-    <div style="margin-top: 5px;" id="myUL">
+    <div style="margin-top: 5px;padding-left: 20px;" id="myUL">
         <ul >
             <span>Tags: </span>
           {{ range first 10 .Site.Taxonomies.tags.ByCount }}
@@ -172,14 +172,52 @@
 
             html_el += '</div></div>'
             var position = "";
+            
             if (page % 2 == 0){
-                html_el += '<div class="content col-md-6 col-xs-12 panel-left">';
+                html_el += '<div class="content col-md-6 col-xs-12 panel-left" style="padding: 20px;padding-top: 0px;">';
             }
             else{
-                html_el += '<div class="content col-md-6 col-xs-12 " >';
+                html_el += '<div class="content col-md-6 col-xs-12 " style="padding: 20px;padding-top: 0px;">';
+            }
+            if (results[page].images.length >1){
+                html_el+= '<div id="myCarousel'+page+'" class="carousel slide" data-interval="false" > <div class="carousel-inner workflow-slider">'
+                    for(var img in results[page].images){
+                        html_el+= '<div class="item'
+                        if(img==0){
+                            html_el += 'active">'
+                        }
+                        else{
+                            html_el+= '>'
+                        }
+
+                       html_el += '<img src="'+results[page].images[img]+'" class="workflow-image" ></div>'
+                      
+                    }
+                    html_el += '</div>'
+                html_el += '<ol class="carousel-indicators" >'
+                    for(var img in results[page].images){
+                     html_el += '<li data-target="#myCarousel'+page+'" data-slide-to="'+img+'" class="'
+                        if(img==0){
+                                html_el += 'active">'
+                            }
+                        else{
+                            html_el+= '>'
+                        }
+                        html_el +='</li>'
+                    }
+                html_el+='</ol>'
+
+                html_el += '<a class="left carousel-control" href="#myCarousel'+page+'" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" style="color: black;"></span></a>'
+                
+                html_el += '<a class="right carousel-control" href="#myCarousel'+page+'" data-slide="next"><span class="glyphicon glyphicon-chevron-right" style="color: black;"></span></a></div>'
+
+            }
+            else{
+                html_el += '<img class="image'+position+'" src="'+results[page].images+'" style="padding:40px;"></div>'
+
             }
 
-            html_el += '<img class="image'+position+'" src="'+results[page].image+'" style="padding:40px;"></div>'
+            
             html_el += "</div> </div>"
         }
         search_results.innerHTML += html_el;
