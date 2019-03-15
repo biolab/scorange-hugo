@@ -9,7 +9,7 @@
         </div>
     <div class="row" style="padding-left: 20px;">
       <div class="col-xs-12 col-md-12 content" style="margin-top: 20px;  display: inline;">
-         <input type="text" class="jsonly search-widget-workflow" id="search-input" style="width: 90%;" placeholder="Search workflows" tabindex="1"  autofocus />
+         <input type="text" class="jsonly search-widget-workflow" id="search-input" style="width: 90%;" placeholder="Search workflows" tabindex="1" onkeydown="check_key(event)" autofocus />
         <button type="button" class="search-button-workflow" id="searchBtn" onclick="search_content()">
             <i class="fa fa-search"></i>
         </button>
@@ -126,6 +126,17 @@
 
 
 <script type="text/javascript">
+    function check_key(e){
+        if(e.keyCode == 13) {
+            search_content();
+        }
+        else if(e.keyCode == 8){
+            if(document.getElementById('search-input').value.length <= 1){
+                $("#post_nor").show();
+                $("#search-results").hide();
+            }
+        }  
+    }
 
   function search_content(){
     

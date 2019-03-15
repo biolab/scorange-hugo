@@ -9,18 +9,27 @@
 
 
 <div id="post_nor">	
-    {{ $paginator := .Paginate (.Pages )}}
-	{{ range $index, $element := .Paginator.Pages }}
-        <div class="row">
-
-            <div class='content col-md-6 col-xs-12 feature-description pull-{{if (eq .Params.thumbnailImagePosition "left")}}right{{else}}left{{ end }}'>
+    {{ $paginator := .Paginate (where (where .Pages.ByWeight.Reverse "Type" "workflows") "IsPage" true) }}
+    {{ range $index, $element := .Paginator.Pages }}
+        <div class=" row">
+            {{ if eq (mod $index 2) 0 }}
+            <div class='content col-md-6 col-xs-12 feature-description pull-left' style="padding-top: 60px;">
+            {{else}}
+            <div class='content col-md-6 col-xs-12 feature-description pull-right' style="padding-top: 60px;">
+            {{end}}
                 <h2 class="workflow-title">
                     {{ .Title }}
                 </h2>
                 <p class="feature-text">{{ .Content }}</p>
+                <div class="tags"  style="padding-bottom: 10px;text-transform: capitalize;">
+                    Tags:
+                    {{range .Params.tags}}
+                    <a class="tag-workflow" href="/tags/{{ . | urlize }}">{{ . }}</a>
+                    {{end}}
+                </div>
                 <div class="getting-started-button">
                     {{ if .Params.download }}
-                    <a href="https://service.biolab.si/download/workflow?name={{ .Params.download }}" class="no-break-buttons" target="_blank">
+                    <a href="https://service.biolab.si/download/workflow?name={{ .Params.download }}&domain=sc " class="no-break-buttons" target="_blank">
                         <div class="learn-more feature-block">
                             <div class="feature-block fa fa-download jsonly"></div>
                             <div class="feature-block feature-link">Download</div>
@@ -49,11 +58,47 @@
                     {{ end }}
                 </div>
             </div>
-            <div class='content col-md-6 col-xs-12 {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
-                <img class='image {{.Params.thumbnailImagePosition}}' src="{{ .Params.image}}" style="padding:40px;">
+
+            <div class='content col-md-6 col-xs-12 {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}' style="padding: 20px;padding-top: 0px;">
+                {{if gt (len .Params.images) 1}}
+                <div id="myCarousel{{$index}}" class="carousel slide" data-interval="false" >
+            
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner workflow-slider">
+                    {{range $id, $element := .Params.images}}
+                      <div class="item {{if eq $id 0 }}active {{else}}{{end}}">
+                        <img src="{{$element}}" class="workflow-image" >
+                      </div>
+                    {{end}}
+                </div>
+                <!-- Indicators -->
+                <ol class="carousel-indicators" >
+                    {{range $id, $element := .Params.images }}
+                    <li data-target="#myCarousel{{$index}}" data-slide-to="{{$id}}" class="{{if eq $id 0}}active {{else}}{{end}}" ></li>
+                  {{end}}
+                </ol>
+
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel{{$index}}" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" style="color: black;"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel{{$index}}" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" style="color: black;"></span>
+                </a>
+              </div>
+              {{else}}
+                {{$image := index (.Params.images) 0 }}
+                <img src="{{$image}}" class="workflow-image" >
+              {{end}}
             </div>
+              
         </div>
-        {{end}}       
+        <hr/>
+
+        {{end}}
+{{ partial "pagination.html" . }}
+    </div>
     </div>
                
 	</div>
