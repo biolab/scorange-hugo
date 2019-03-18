@@ -4,11 +4,24 @@ title = "scOrange"
 paginate = 5 #frontpage pagination
 disqusShortname = "localblog-2"
 
+[outputFormats]
+  [outputFormats.workflow]
+    mediaType = "application/json"
+    baseName = "workflow"
+    notAlternative = true
+  [outputFormats.blog]
+    mediaType = "application/json"
+    baseName = "blog"
+    notAlternative = true
+
 [outputs]
-  home = [ "HTML", "RSS", "JSON"]
+  home = [ "HTML", "workflow", "blog"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
 
 [menu]
-
   [[menu.main]]
     identifier = "features"
     name = "Features"
@@ -32,9 +45,16 @@ disqusShortname = "localblog-2"
     weight = -100
 
   [[menu.main]]
+    name = "Workflows"
+    url = "/workflows/"
+    weight = -90
+
+  [[menu.main]]
     name = "Blog"
     url = "/blog/"
-    weight = -90
+    weight = -80
+
+  
 
 
 

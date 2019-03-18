@@ -35,13 +35,13 @@
 }
 
 .autocomplete-suggestion.selected {
-    background: #333;
-    color: #fff;
+    background: rgb(33,150,243, 0.5);
+    /*color: #fff;*/
 }
 
 .autocomplete-suggestion:hover {
-    background: #444;
-    color: #fff;
+    background: rgb(33,150,243, 0.3);
+    /*color: #fff;*/
 }
 
 .autocomplete-suggestion > .context {

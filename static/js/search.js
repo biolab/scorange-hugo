@@ -11,7 +11,7 @@ function initLunr() {
     };
 
     // First retrieve the index file
-    $.getJSON(baseurl +"index.json")
+    $.getJSON(baseurl +"blog.json")
         .done(function(index) {
             pagesIndex =   index;
             // Set up lunrjs by declaring the fields we use

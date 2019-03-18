@@ -802,3 +802,69 @@ blockquote cite {
 .padding-doc{
     padding-top:30px;
 }
+
+* {box-sizing:border-box}
+
+.center-pag {
+  text-align: center;
+}
+
+.pagination1 {
+  display: inline-block;
+  text-align: center;
+  margin-bottom:30px;
+}
+
+.pagination1 a {
+  color: black;
+  float: left;
+  font-size: 12px;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+.pagination1 a.active {
+  background-color: #2196F3;
+  color: white;
+  border: 1px solid #2196F3;
+}
+.pagination-current{
+    background-color: #2196F3 !important;
+    border:1px solid #2196F3 !important;
+}
+
+.pagination1 a:hover:not(.active) {background-color: #ddd;}
+
+
+.carousel-control.left {
+    background-image:none !important; 
+}
+.carousel-control.right {
+    background-image:none !important; 
+}
+
+.carousel-indicators{
+    bottom: 0px !important;
+
+}
+.carousel-indicators li {
+  border-color: black !important;
+  background-color: rgba(255,255,255,.25) !important;
+}
+
+.carousel-indicators .active {
+  background-color: black !important;
+}
+
+.workflow-slider{
+
+    height: 340px !important;
+    width: 500px !important;
+
+}
+.hr{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
