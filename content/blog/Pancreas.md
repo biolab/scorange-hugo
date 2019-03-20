@@ -26,6 +26,12 @@ cluster them according to their cell type and identify marker genes for each sub
 Firstly we need to load, order and nominalise our data. To achieve this, we use Load Data widget followed by Gene Name Matcher and Create Class widget
  which enables us the use the cell types as characterised by Baron et al as a control of our clustering. We normalise the data using Single Cell Preprocess.
 
+{{% figure src="/blog_img/2019-03-20/Blog_1.2.1.png" width="95%" height="95%" %}}
+\
+\
+
+
+
 *References*
 
 Wilkinson, Mark D., et al. "The FAIR Guiding Principles for scientific data management and stewardship." Scientific data 3 (2016).
