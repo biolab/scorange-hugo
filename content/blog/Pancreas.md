@@ -65,4 +65,4 @@ Finaly we use selected genes to create the heatmap.
 
 *References*
 
-Wilkinson, Mark D., et al. "The FAIR Guiding Principles for scientific data management and stewardship." Scientific data 3 (2016).
+Baron, Maayan et al. “A Single-Cell Transcriptomic Map of the Human and Mouse Pancreas Reveals Inter- and Intra-cell Population Structure” Cell systems vol. 3,4 (2016): 346-360.e4. 
