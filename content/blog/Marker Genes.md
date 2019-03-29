@@ -1,8 +1,8 @@
 +++
 draft = false
 type = "blog"
-image = "/blog_img/2019-03-29/marker_3.png"
-thumbImage = "/blog_img/2019-03-29/marker_3.png"
+image = "/blog_img/2019-03-29/marker_4.png"
+thumbImage = "/blog_img/2019-03-29/marker_4.png"
 date = "2019-03-29"
 title = "Importing and using your own marker genes"
 hardLineBreak = true 
@@ -12,7 +12,6 @@ author = "Iva Černoša"
 shortExcerpt = "If you ever felt limited by Marker Gene widget, here you can discover how to bypass it" 
 longExcerpt = "If you ever felt limited by Marker Gene widget, here you can discover how to bypass it" 
 +++
-<!--Dodaj cover sliko-->
 <i><b>Note:</b> This blog heavily references and uses the data we identified in our previous blog <a href="">Clustering Cells in Mouse Pancreas</a>, therefore it is advisable for everyone less experienced with scOrange to read it before tackling this one.</i>
 <br>
 <!--Dodaj link do bloga-->
