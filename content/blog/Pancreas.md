@@ -61,6 +61,7 @@ We use Select Columns widget to extract marker genes for heatmap. To do this we 
 \
 
 Finally, we use selected genes to create the heatmap. From it we can identify cell clusters by looking at the functions of the marker genes.  From it we can indentfy cell clussters by looking at the functions of the marker genes. Alpha cells are most strongly correlated with <i>GCG</i> encoding glucagon, beta cells with <i>INS1</i> and <i>INS2</i> encoding insulin, delta cells with <i>SST</i> encoding somatostatin, gamma cells with <i>PPY</i> encoding pancreatic polypeptide.
+<br> Using this principle we can cluster large bulks of cells to different cell type identities by identifying their marker genes and maping cell clusters according to functional roles of their marker genes.
 
 {{% figure src="/blog_img/2019-03-20/heatmap_misi.png" width="95%" height="95%" %}}
 \
