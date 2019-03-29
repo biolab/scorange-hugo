@@ -47,7 +47,8 @@ The only thing we still need to do now, is to identify the marker genes. There i
 \
 \
 
-The best way to approach this is to firstly run a Cluster Analysis widget. Secondly, we transfer <b>gene score data</b> produced by the widget into a new data table. Then we transfer the data for one cluster into a new data table where we organise it by the descending statistic score in order to identify top 3 most significant genes in this cluster. 
+The best way to approach this is to firstly run a Cluster Analysis widget. We can see that Orange already recognises some of the gene clusters associated with different groups of cells. For example, T cell receptor complex genes correlate with T cells.
+<br>Secondly, we transfer <b>gene score data</b> produced by the widget into a new data table. Then we transfer the data for one cluster into a new data table where we organise it by the descending statistic score in order to identify top 3 most significant genes in this cluster. 
 
 {{% figure src="/blog_img/2019-03-20/Blog_1.5.png" width="95%" height="95%" %}}
 \
@@ -59,7 +60,7 @@ We use Select Columns widget to extract marker genes for heatmap. To do this we 
 \
 \
 
-Finaly we use selected genes to create the heatmap.
+Finally, we use selected genes to create the heatmap. From it we can identify cell clusters by looking at the functions of the marker genes.  From it we can indentfy cell clussters by looking at the functions of the marker genes. Alpha cells are most strongly correlated with <i>GCG</i> encoding glucagon, beta cells with <i>INS1</i> and <i>INS2</i> encoding insulin, delta cells with <i>SST</i> encoding somatostatin, gamma cells with <i>PPY</i> encoding pancreatic polypeptide.
 
 {{% figure src="/blog_img/2019-03-20/heatmap_misi.png" width="95%" height="95%" %}}
 \
