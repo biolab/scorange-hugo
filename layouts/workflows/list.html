@@ -151,9 +151,13 @@
     
 
         var results  = search(param);
-        console.log(results)
+        
         $("#search-results").show();
         var search_results = document.getElementById('search-results')
+        if (results.length <1){
+            search_results.innerHTML = '<div style="padding: 30px 10px;"> No workflows found.</div>';
+        }
+        else{
         search_results.innerHTML = "";
         var html_el = ""
 
@@ -241,6 +245,7 @@
         }
         search_results.innerHTML += html_el;
 
+    }
     }
     }
      

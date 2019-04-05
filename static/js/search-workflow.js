@@ -39,7 +39,7 @@ function initLunr() {
             // pagesIndex.forEach(function(page) {
             //     lunrIndex.add(page);
             // });
-            lunrIndex.pipeline.remove(lunrIndex.stemmer)
+            // lunrIndex.pipeline.remove(lunrIndex.stemmer)
         })
         .fail(function(jqxhr, textStatus, error) {
             var err = textStatus + ", " + error;
@@ -54,25 +54,18 @@ function initLunr() {
  * @return {Array}  results
  */
 function search_tag(tag, search_param) {
-    // , { presence: lunr.Query.presence.REQUIRED }
-        //     q.term(tag)
-        // q.term(search_param)
-    // Find the item in our index corresponding to the lunr one to have more info
-    // console.log(lunrIndex)
-    // res = lunrIndex.query(function (q) {
-    //     q.term(tag)
-    
-    // test = 
 
-    // console.log(test," sad")
-    return lunrIndex.query(function (q) {
-         q.term(tag, { fields: ['tags']})
-         q.term(search_param,{ presence: lunr.Query.presence.REQUIRED })
-        }).map(function(result) {
+    var res = lunrIndex.search('tags:'+ tag)
+
+    var res2 = lunrIndex.search(search_param)
+    var inter= res.filter(a => res2.some(b => a.ref === b.ref));  
+
+    return inter.map(function(result) {
             return pagesIndex.filter(function(page) {
                 return page.uri === result.ref;
             })[0];
             });
+    
 
 }
 function search(query_s){
