@@ -36,6 +36,9 @@
             {{else}}
             <div class='content col-md-6 col-xs-12 feature-description pull-right' style="padding-top: 60px;">
             {{end}}
+                <p class="feature-text">Author: {{ .Params.author }}, {{ .Date.Format "Jan 2, 2006" }}</p>
+                <!-- <p class="feature-text"></p> -->
+                <!-- {{ .Date.Format "02 January" }} -->
                 <h2 class="workflow-title">
                     {{ .Title }}
                 </h2>
@@ -73,9 +76,9 @@
     </div>
     
     
-
-</div>
 {{ partial "pagination.html" . }}
+</div>
+
 
 </section>
 
@@ -89,6 +92,7 @@
             if(document.getElementById('search-input').value.length <= 1){
                 $("#post_nor").show();
                 $("#search-results").hide();
+                $("#pagination").show();
             }
         }  
     }
@@ -97,19 +101,28 @@
     
     var param = document.getElementById('search-input').value;
 
+     $("#pagination").hide();
+
     if (param.trim() ==""){
         $("#post_nor").show();
         $("#search-results").hide();
+        $("#pagination").show();
     }
     else{
         $("#post_nor").hide();
     
 
-        // var results  = search(param);
+        var results  = search(param);
         $("#search-results").show();
-        // var search_results = document.getElementById('search-results')
-        // search_results.innerHTML = "";
-        // var html_el = ""
+        var search_results = document.getElementById('search-results')
+        if (results.length< 1){
+            search_results.innerHTML = '<div style="padding:10px 10px"> No results found.</div>';
+
+        }
+        else{
+        search_results.innerHTML = "";
+
+        var html_el = ""
 
         for(var page in results){
             html_el += '<div class="row">';
@@ -194,7 +207,7 @@
             html_el += "</div> </div>"
         }
         search_results.innerHTML += html_el;
-
+}
     }
     }
      

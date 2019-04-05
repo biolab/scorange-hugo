@@ -1,7 +1,7 @@
 baseURL = ""
 languageCode = "en-us"
 title = "scOrange"
-paginate = 5 #frontpage pagination
+paginate = 4 #frontpage pagination
 disqusShortname = "localblog-2"
 
 [outputFormats]

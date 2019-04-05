@@ -47,11 +47,13 @@
                 </div>
                 <div class="getting-started-button" style="text-align:right">
                         
-                    <a class="lightbox no-break-buttons" href="{{ .Permalink }}">
-                        <div class="feature-block fa fa-book jsonly"></div>
-                        <div class="feature-block feature-link">Read more</div>
-                    </a>
-                    &nbsp;&nbsp;
+                    <a href="{{ .Permalink }}" class="no-break-buttons">
+                    <div class="learn-more feature-block">
+                        <div class="feature-block feature-link">Read More</div>
+                        <div class="feature-block fa fa-arrow-circle-o-right jsonly" > </div>
+                    </div>
+                </a>
+                    <!-- &nbsp;&nbsp; -->
                 </div>
                 </div>
             <div class='content col-md-6 col-xs-12 {{if eq (mod $index 2) 0}}panel-left {{else }}{{ end }}' style="padding: 20px;padding-top: 0px;">
@@ -67,9 +69,9 @@
     </div>
     
     
-
-</div>
 {{ partial "pagination.html" . }}
+</div>
+
 
 </section>
 
@@ -88,7 +90,8 @@
     }
 
   function search_content(){
-    
+    var url = window.location.pathname.split('/')
+    var tag_param = url.pop() || url.pop();
     var param = document.getElementById('search-input').value;
 
     if (param.trim() ==""){
@@ -99,11 +102,11 @@
         $("#post_nor").hide();
     
 
-        // var results  = search(param);
+        var results  = search_categories(tag_param,param);
         $("#search-results").show();
-        // var search_results = document.getElementById('search-results')
-        // search_results.innerHTML = "";
-        // var html_el = ""
+        var search_results = document.getElementById('search-results')
+        search_results.innerHTML = "";
+        var html_el = ""
 
         for(var page in results){
             html_el += '<div class="row">';
@@ -119,22 +122,15 @@
             html_el += '<p class="feature-text">'+results[page].content+'</p>'
 
             html_el += '<div class="tags"  style="padding-bottom: 10px;text-transform: capitalize;">Tags:'
-                    for(var img in results[page].tags){
+                    for(var cat in results[page].categories){
                     
-                    html_el += '<a class="tag-workflow" href="/tags/'+results[page].tags[img]+'">'+results[page].tags[img]+'</a>'
+                    html_el += '<a class="tag-workflow" href="/tags/'+results[page].categories[cat]+'">'+results[page].categories[cat]+'</a>'
                 }
                 html_el +='</div>'
             html_el += '<div class="getting-started-button">'
-
-            if (results[page].download != "" && results[page].download != '<no value>' ){
-                html_el += '<a href="https://service.biolab.si/download/workflow?name='+results[page].download+'" class="no-break-buttons" target="_blank"><div class="learn-more feature-block"><div class="feature-block fa fa-download jsonly"></div><div class="feature-block feature-link">Download</div></div></a>&nbsp;&nbsp;'
-            }
-            if (results[page].video != "" && results[page].video != '<no value>' ){
-                html_el += '<a class="lightbox no-break-buttons" href="'+results[page].video +'"target="_blank"><div class="feature-block fa fa-play-circle-o jsonly"></div><div class="feature-block feature-link">Watch Video</div></a>&nbsp;&nbsp;'
-            }
-            if (results[page].blog != "" && results[page].blog != '<no value>' ){
-                html_el += '<a class="lightbox no-break-buttons" href="https://singlecell.biolab.si/blog/'+results[page].blog+'"><div class="feature-block fa fa-book jsonly"></div><div class="feature-block feature-link">Blog post</div></a>&nbsp;&nbsp;'
-            }
+            html_el+= '<a href="'+results[page].uri+'" class="no-break-buttons"><div class="learn-more feature-block"><div class="feature-block feature-link">Read More</div><div class="feature-block fa fa-arrow-circle-o-right jsonly" > </div></div></a>'
+            // results[page].download != "" && results[page].download != '<no value>'
+             
 
 
             html_el += '</div></div>'
@@ -199,7 +195,7 @@
    <script type="text/javascript">
       var baseurl = "{{.Site.BaseURL}}";
    </script>
-   <script type="text/javascript" src="/js/search-workflow.js"></script>
+   <script type="text/javascript" src="/js/search.js"></script>
 
 
 

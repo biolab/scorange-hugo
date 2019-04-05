@@ -16,20 +16,24 @@ function initLunr() {
             pagesIndex =   index;
             // Set up lunrjs by declaring the fields we use
             // Also provide their boost level for the ranking
-            lunrIndex = new lunr.Index
-            lunrIndex.ref("uri");
-            lunrIndex.field('title', {
-                boost: 20
+            lunrIndex = lunr(function () {
+            this.ref("uri");
+            this.field('title', {
+                boost: 50
             });
-            lunrIndex.field('longExcerpt', {
-                boost: 15
+            this.field('categories', {
+                boost: 30
             });
-            lunrIndex.field('categories', {
+            this.field('longExcerpt', {
                 boost: 10
             });
-            lunrIndex.field("content", {
-                boost: 5
+            this.field('content', {
+                boost: 1
             });
+              pagesIndex.forEach(function (doc) {
+                this.add(doc)
+              }, this)
+            })
 
             // Feed lunr with each file and let lunr actually index them
             pagesIndex.forEach(function(page) {
@@ -42,6 +46,19 @@ function initLunr() {
             console.error("Error getting Hugo index file:", err);
         });
 }
+
+
+function search_categories(tag, search_param) {
+    return lunrIndex.query(function (q) {
+         q.term(tag, { fields: ['categories']})
+         q.term(search_param,{ presence: lunr.Query.presence.REQUIRED })
+        }).map(function(result) {
+            return pagesIndex.filter(function(page) {
+                return page.uri === result.ref;
+            })[0];
+            });
+}
+
 
 /**
  * Trigger a search in lunr and transform the result
