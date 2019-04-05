@@ -1,19 +1,11 @@
 {{ define "main" }}
   <div id="overflow-container" class="overflow-container">
 
-  <div id="loop-container" class="loop-container">
+  <div id="loop-container" class="loop-container" style="padding-top:40px !important;">
 
-        {{ if and (isset .Params "image") .Params.image }}
-    <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
 
-            <div class='featured-image lazy lazy-bg-image' 
-            style="background-image:url({{ .Params.image | absURL}}">
-			</div>
-      {{ else }}
 
       <div class="post type-post status-publish format-standard hentry category-standard category-travel entry full-without-featured odd excerpt-1">
-
-        {{ end }}
         
         <div class="entry-meta">
           <span class="date">{{ .Date.Format "02 January" }}</span>	<span>  </span>
@@ -41,6 +33,13 @@
             {{ end }}
           </span>
         </div>
+        {{ if and (isset .Params "image") .Params.image }}
+        <div class="entry-container">
+            <div class="entry-content">
+              <img src="{{ .Params.image | absURL}}">
+            </div>
+          </div>
+        {{end}}
 
         <div class="entry-container">
           <div class="entry-content">
@@ -56,7 +55,6 @@
 </div>
 </div>
 {{ partial "disqus.html" . }}
-</div>
 
 {{end}}
 
