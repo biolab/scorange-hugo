@@ -151,6 +151,7 @@
     
 
         var results  = search(param);
+        console.log(results)
         $("#search-results").show();
         var search_results = document.getElementById('search-results')
         search_results.innerHTML = "";
@@ -162,7 +163,7 @@
                 html_el += '<div class="content col-md-6 col-xs-12 feature-description pull-left">';
             }
             else{
-                html_el += '<div class="content col-md-6 col-xs-12 feature-description pull-right"';
+                html_el += '<div class="content col-md-6 col-xs-12 feature-description pull-right">';
             }
             html_el += '<h2 class="workflow-title">'+results[page].title+'</h2>'
 
@@ -244,7 +245,7 @@
     }
      
    </script>
-   <script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}"></script>
+   <script type="text/javascript" src="{{"js/lunr.js" | relURL}}"></script>
    <script type="text/javascript" src="{{"js/auto-complete.js" | relURL}}"></script>
    <link href="{{"css/auto-complete.css" | relURL}}" rel="stylesheet">
    <script type="text/javascript">

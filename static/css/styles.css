@@ -3793,6 +3793,11 @@ li.pingback:first-child {
   margin-right:2px;
 }
 
+
+.active-tag {
+    background-color: rgb(33,150,243, 0.3) !important;
+}
+
 .workflow-image{
   padding:20px;
   width: 500px;
