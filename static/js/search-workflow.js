@@ -1,4 +1,5 @@
 var lunrIndex, pagesIndex;
+// var lunr = require('lunr');
 
 function endsWith(str, suffix) {
     return str.indexOf(suffix, str.length - suffix.length) !== -1;
@@ -16,23 +17,28 @@ function initLunr() {
             pagesIndex =   index;
             // Set up lunrjs by declaring the fields we use
             // Also provide their boost level for the ranking
-            lunrIndex = new lunr.Index
-            lunrIndex.ref("uri");
-            lunrIndex.field('title', {
-                boost: 20
+
+            lunrIndex = lunr(function () {
+            this.ref("uri");
+            this.field('title', {
+                boost: 50
             });
-            lunrIndex.field('tags', {
-                boost: 15
+            this.field('tags', {
+                boost: 30
             });
-            lunrIndex.field('content', {
-                boost: 10
+            this.field('content', {
+                boost: 1
             });
+              pagesIndex.forEach(function (doc) {
+                this.add(doc)
+              }, this)
+            })
             
 
             // Feed lunr with each file and let lunr actually index them
-            pagesIndex.forEach(function(page) {
-                lunrIndex.add(page);
-            });
+            // pagesIndex.forEach(function(page) {
+            //     lunrIndex.add(page);
+            // });
             lunrIndex.pipeline.remove(lunrIndex.stemmer)
         })
         .fail(function(jqxhr, textStatus, error) {
@@ -47,9 +53,30 @@ function initLunr() {
  * @param  {String} query
  * @return {Array}  results
  */
-function search(query) {
+function search_tag(tag, search_param) {
+    // , { presence: lunr.Query.presence.REQUIRED }
+        //     q.term(tag)
+        // q.term(search_param)
     // Find the item in our index corresponding to the lunr one to have more info
-    return lunrIndex.search(query).map(function(result) {
+    // console.log(lunrIndex)
+    // res = lunrIndex.query(function (q) {
+    //     q.term(tag)
+    
+    // test = 
+
+    // console.log(test," sad")
+    return lunrIndex.query(function (q) {
+         q.term(tag, { fields: ['tags']})
+         q.term(search_param,{ presence: lunr.Query.presence.REQUIRED })
+        }).map(function(result) {
+            return pagesIndex.filter(function(page) {
+                return page.uri === result.ref;
+            })[0];
+            });
+
+}
+function search(query_s){
+    return lunrIndex.search(query_s).map(function(result) {
             return pagesIndex.filter(function(page) {
                 return page.uri === result.ref;
             })[0];

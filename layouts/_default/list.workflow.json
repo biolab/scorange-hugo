@@ -1,4 +1,4 @@
-[{{ range $index, $page := where .Pages "Section" "workflows" }}
+[{{ range $index, $page := where .Pages "Type" "workflows" }}
 {{- if ne $page.Type "json" -}}
 {{- if and $index (gt $index 0) -}},{{- end }}
 {
