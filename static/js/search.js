@@ -27,19 +27,19 @@ function initLunr() {
             this.field('longExcerpt', {
                 boost: 10
             });
-            this.field('content', {
-                boost: 1
-            });
+            // this.field('content', {
+            //     boost: 1
+            // });
               pagesIndex.forEach(function (doc) {
                 this.add(doc)
               }, this)
             })
 
             // Feed lunr with each file and let lunr actually index them
-            pagesIndex.forEach(function(page) {
-                lunrIndex.add(page);
-            });
-            lunrIndex.pipeline.remove(lunrIndex.stemmer)
+            // pagesIndex.forEach(function(page) {
+            //     lunrIndex.add(page);
+            // });
+            // lunrIndex.pipeline.remove(lunrIndex.stemmer)
         })
         .fail(function(jqxhr, textStatus, error) {
             var err = textStatus + ", " + error;
@@ -48,15 +48,19 @@ function initLunr() {
 }
 
 
-function search_categories(tag, search_param) {
-    return lunrIndex.query(function (q) {
-         q.term(tag, { fields: ['categories']})
-         q.term(search_param,{ presence: lunr.Query.presence.REQUIRED })
-        }).map(function(result) {
+function search_categories(category, search_param) {
+    var search_by_categories = lunrIndex.search('categories:'+ category)
+
+    var search_by_params = lunrIndex.search(search_param)
+    var intersection_of_results= search_by_categories.filter(a => search_by_params.some(b => a.ref === b.ref));  
+    
+    return intersection_of_results.map(function(result) {
             return pagesIndex.filter(function(page) {
                 return page.uri === result.ref;
             })[0];
             });
+    
+
 }
 
 
@@ -85,37 +89,3 @@ function search(query) {
 
 // Let's get started
 initLunr();
-$( document ).ready(function() {
-    var searchList = new autoComplete({
-        /* selector for the search box element */
-        selector: $("#search-input").get(0),
-        /* source is the callback to perform the search */
-        source: function(term, response) {
-            response(search(term));
-        },
-        /* renderItem displays individual search results */
-        renderItem: function(item, term) {
-            var numContextWords = 2;
-            var text = item.content.match(
-                "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
-                    term+"(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}");
-            item.context = text;
-
-            return '<div class="autocomplete-suggestion" ' +
-                'data-term="' + term + '" ' +
-                'data-title="' + item.title + '" ' +
-                'data-uri="'+ item.uri + '" ' +
-                'data-longExcerpt="'+ item.longExcerpt + '" ' +
-                'data-context="' + item.context + '">' +
-                '» ' + item.title +
-                '<div class="context">' +
-                (item.context || '') +'</div>' +
-                '</div>';
-        },
-        /* onSelect callback fires when a search suggestion is chosen */
-        onSelect: function(e, term, item) {
-            console.log(item.getAttribute('data-val'));
-            location.href = item.getAttribute('data-uri');
-        }
-    });
-});

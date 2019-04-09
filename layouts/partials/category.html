@@ -7,7 +7,7 @@
         </div>
     <div class="row" style="padding-left: 20px;">
       <div class="col-xs-12 col-md-12 content" style="margin-top: 20px;  display: inline;">
-         <input type="text" class="jsonly search-widget-workflow" id="search-input" style="width: 90%;" placeholder="Search workflows" tabindex="1" onkeydown="check_key(event)" autofocus />
+         <input type="text" class="jsonly search-widget-workflow" id="search-input" style="width: 90%;" placeholder="Search blog by categories, title and description." tabindex="1" onkeydown="check_key(event)" autofocus />
         <button type="button" class="search-button-workflow" id="searchBtn" onclick="search_content()">
             <i class="fa fa-search"></i>
         </button>
@@ -45,7 +45,7 @@
                     <a class="tag-workflow" href="/categories/{{ . | urlize }}">{{ . }}</a>
                     {{end}}
                 </div>
-                <div class="getting-started-button" style="text-align:right">
+                <div class="getting-started-button" >
                         
                     <a href="{{ .Permalink }}" class="no-break-buttons">
                     <div class="learn-more feature-block">
@@ -103,10 +103,17 @@
     
 
         var results  = search_categories(tag_param,param);
+        console.log(results)
         $("#search-results").show();
         var search_results = document.getElementById('search-results')
+        if (results.length<1){
+            search_results.innerHTML = '<div style="padding: 20px 10px"> No blog posts found. </div>';
+        // var html_el = ""
+        }
+        else{
         search_results.innerHTML = "";
         var html_el = ""
+        
 
         for(var page in results){
             html_el += '<div class="row">';
@@ -119,9 +126,9 @@
             html_el += '<h2 class="workflow-title">'+results[page].title+'</h2>'
 
             
-            html_el += '<p class="feature-text">'+results[page].content+'</p>'
+            html_el += '<p class="feature-text">'+results[page].longExcerpt+'</p>'
 
-            html_el += '<div class="tags"  style="padding-bottom: 10px;text-transform: capitalize;">Tags:'
+            html_el += '<div class="tags" style="padding-bottom: 10px;text-transform: capitalize;">Tags:'
                     for(var cat in results[page].categories){
                     
                     html_el += '<a class="tag-workflow" href="/tags/'+results[page].categories[cat]+'">'+results[page].categories[cat]+'</a>'
@@ -142,56 +149,56 @@
             else{
                 html_el += '<div class="content col-md-6 col-xs-12 " style="padding: 20px;padding-top: 0px;">';
             }
-            if (results[page].images.length >1){
-                html_el+= '<div id="myCarousel'+page+'" class="carousel slide" data-interval="false" > <div class="carousel-inner workflow-slider">'
-                    for(var img in results[page].images){
-                        html_el+= '<div class="item'
-                        if(img==0){
-                            html_el += 'active">'
-                        }
-                        else{
-                            html_el+= '>'
-                        }
+            // if (results[page].image.length >1){
+            //     html_el+= '<div id="myCarousel'+page+'" class="carousel slide" data-interval="false" > <div class="carousel-inner workflow-slider">'
+            //         for(var img in results[page].images){
+            //             html_el+= '<div class="item'
+            //             if(img==0){
+            //                 html_el += 'active">'
+            //             }
+            //             else{
+            //                 html_el+= '>'
+            //             }
 
-                       html_el += '<img src="'+results[page].images[img]+'" class="workflow-image" ></div>'
+            //            html_el += '<img src="'+results[page].images[img]+'" class="workflow-image" ></div>'
                       
-                    }
-                    html_el += '</div>'
-                html_el += '<ol class="carousel-indicators" >'
-                    for(var img in results[page].images){
-                     html_el += '<li data-target="#myCarousel'+page+'" data-slide-to="'+img+'" class="'
-                        if(img==0){
-                                html_el += 'active">'
-                            }
-                        else{
-                            html_el+= '>'
-                        }
-                        html_el +='</li>'
-                    }
-                html_el+='</ol>'
+            //         }
+            //         html_el += '</div>'
+            //     html_el += '<ol class="carousel-indicators" >'
+            //         for(var img in results[page].images){
+            //          html_el += '<li data-target="#myCarousel'+page+'" data-slide-to="'+img+'" class="'
+            //             if(img==0){
+            //                     html_el += 'active">'
+            //                 }
+            //             else{
+            //                 html_el+= '>'
+            //             }
+            //             html_el +='</li>'
+            //         }
+            //     html_el+='</ol>'
 
-                html_el += '<a class="left carousel-control" href="#myCarousel'+page+'" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" style="color: black;"></span></a>'
+            //     html_el += '<a class="left carousel-control" href="#myCarousel'+page+'" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" style="color: black;"></span></a>'
                 
-                html_el += '<a class="right carousel-control" href="#myCarousel'+page+'" data-slide="next"><span class="glyphicon glyphicon-chevron-right" style="color: black;"></span></a></div>'
+            //     html_el += '<a class="right carousel-control" href="#myCarousel'+page+'" data-slide="next"><span class="glyphicon glyphicon-chevron-right" style="color: black;"></span></a></div>'
 
+            // }
+            // else{
+            if(results[page].image){
+                html_el += '<img class="image'+position+'" src="'+results[page].image+'" style="padding:40px;"></div>'
             }
-            else{
-                html_el += '<img class="image'+position+'" src="'+results[page].images+'" style="padding:40px;"></div>'
 
-            }
+            // }
 
             
-            html_el += "</div> </div>"
+            html_el += "</div> </div><hr/>"
         }
         search_results.innerHTML += html_el;
-
+}
     }
     }
      
    </script>
-   <script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}"></script>
-   <script type="text/javascript" src="{{"js/auto-complete.js" | relURL}}"></script>
-   <link href="{{"css/auto-complete.css" | relURL}}" rel="stylesheet">
+   <script type="text/javascript" src="/js/lunr.js"></script>
    <script type="text/javascript">
       var baseurl = "{{.Site.BaseURL}}";
    </script>
