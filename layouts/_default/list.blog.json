@@ -13,7 +13,7 @@
 	"longExcerpt" : "{{ .Params.longExcerpt}}",
 	"author" : "{{ $page.Params.author}}",
 	"summary" : {{ $page.Summary | jsonify}},
-	"date" : {{ $page.Date.Format "02 January" | jsonify }}
+	"date" : {{ $page.Date.Format "Jan 2, 2006" | jsonify }}
 }
 {{- end -}}
 {{- end -}}]
