@@ -10,11 +10,11 @@ categories = ["clustering", "marker genes", "tSNE", "heatmap"]
 joinLines = false
 author = "Iva Černoša"
 shortExcerpt = "Learn how to cluster cells and identify marker genes for clusters" 
-longExcerpt = "Clustering Cells in Mouse Pancreas - reproducing a study" 
+longExcerpt = "To reproduce a part of a study by Baron et al. (Cell Systems, 2017), we cluster mouse pancreatic cells and identify marker genes for each type of the cells."
 +++
 
 Single cell data can be used to identify and separate individual cell types from bulk samples. 
-In this blog we will look at pancreatic cells from two mouse strains (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a>, 2017, GEO accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133">GSE84133</a>), 
+In this blog we will look at pancreatic cells from two mouse strains (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron cet al.</i></a>, 2017, GEO accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133">GSE84133</a>), 
 cluster them according to their cell type and identify marker genes for each subpopulation of cells. 
 \
 \
@@ -23,7 +23,7 @@ cluster them according to their cell type and identify marker genes for each sub
 \
 
 
-Firstly we need to load, order and nominalise our data. To achieve this, we use the Load Data widget followed by the Gene Name Matcher and the Create Class widget which enables us the use the cell types as characterised by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> as a control of our clustering. We normalise the data using the Single Cell Preprocess widget.
+Firstly we need to load, order and nominalise our data. To achieve this, we use the Load Data widget followed by the Gene Name Matcher and the Create Class widget, which enables us the use the cell types as characterised by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> as a control of our clustering. We normalise the data using the Single Cell Preprocess widget.
 <br>
 \
 \
@@ -61,14 +61,14 @@ The best way to approach this is to firstly run a Cluster Analysis widget. We ca
 Secondly, we transfer the <b>gene score data</b> produced by the widget into a new data table. Then we transfer the data for one cluster into a new data table where we organise it by the descending statistic score in order to identify top three most significant genes in this cluster. 
 <br> 
 <br> 
-After we have identified all the marker genes, we select them and save them using the Save Data widget for additional processing which will be further explored in the next blog. 
+After we have identified all the marker genes, we select and save them using the Save Data widget for additional processing, which will be further explored in the next blog. 
 \
 \
 {{% figure src="/blog_img/2019-03-20/Blog_1.5.png" width="95%" height="95%" %}}
 \
 \
 
-We use Select Columns widget to extract marker genes for heatmap. To do this we manually search for the genes in Available Variables and transfer our marker genes into the features section. 
+We use Select Columns widget to extract marker genes for heatmap. To do this, we manually search for the genes in Available Variables and transfer our marker genes into the features section. 
 \
 \
 {{% figure src="/blog_img/2019-03-20/Blog_1.6.png" width="95%" height="95%" %}}
