@@ -1,10 +1,10 @@
 ﻿+++
 draft = false
 type = "blog"
-image = "/blog_img/2019-04-23/headerCD8.png"
-thumbImage = "/blog_img/2019-04-23/headerCD8s.png"
+image = "/blog_img/2019-04-23/header-cd8.png"
+thumbImage = "/blog_img/2019-04-23/header-cd8-small.png"
 date = "2019-04-23" 
-title = "Subsets of exhausted CD8+  T cells" 
+title = "Subsets of exhausted CD8+ T cells" 
 hardLineBreak = true 
 categories = ["clustering", "marker genes", "t-SNE", "immunology", "CD8+", "checkpoint blockade"]
 joinLines = false
@@ -91,4 +91,4 @@ We have demonstrated that scOrange is applicable to the single cell data from st
 
 *References* 
 \
-Miller C.M., Sen D.R, Abosy R.A., <i>et al.</i> Subsets of Exhausted CD8+ T Cells Differentially Mediate Tumor Control and Respond to Checkpoint Blockade. <i>Nat Immunol.</i> 2019; 20:326–336. doi:<a href="https://www.nature.com/articles/s41590-019-0312-6">10.1038/s41590-019-0312-6 </a>
+Miller CM, Sen DR, Abosy RA <i>et al.</i> (2019) <a href="https://www.nature.com/articles/s41590-019-0312-6">Subsets of Exhausted CD8+ T Cells Differentially Mediate Tumor Control and Respond to Checkpoint Blockade.</a> <i>Nat Immunol.</i> 20:326–336.
