@@ -34,9 +34,8 @@ disqusShortname = "localblog-2"
     weight = -120
 
   [[menu.main]]
-    identifier = "download"
-    name = "Download"
-    url = "/download/"
+    name = "Workflows"
+    url = "/workflows/"
     weight = -110
 
   [[menu.main]]
@@ -45,8 +44,9 @@ disqusShortname = "localblog-2"
     weight = -100
 
   [[menu.main]]
-    name = "Workflows"
-    url = "/workflows/"
+    identifier = "download"
+    name = "Download"
+    url = "/download/"
     weight = -90
 
   [[menu.main]]
