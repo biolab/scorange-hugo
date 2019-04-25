@@ -32,7 +32,7 @@ So, now we have both datasets and before we start clustering them, we have to na
 {{% figure src="/blog_img/2019-04-23/subset2.png" width="95%" height="95%" %}}
 \
 \
-After that we start by clustering the LCMV superset and later using the marker genes, we identify here for stem-like and terminally exhausted CD8<sup>+</sup> T cells, to see if we can classify the same groups in TIL superset. 
+After that we start by clustering the LCMV superset and later, using the marker genes, we identify here, for stem-like and terminally exhausted CD8<sup>+</sup> T cells, to see if we can classify the same groups in TIL superset. 
 \
 \
 {{% figure src="/blog_img/2019-04-23/workflow2.png" width="95%" height="95%" %}}
@@ -85,10 +85,9 @@ Because of that we decided to seek out another marker gene for progenitor exhaus
 {{% figure src="/blog_img/2019-04-23/tSNExcl1.png" width="95%" height="95%" %}}
 \
 \
-<!--dodaj še zaključek-->
+We have demonstrated that scOrange is applicable to the single cell data from studies in the field of immunotherapy. The marker genes singled out here could help identify and better target progenitor exhausted T cells to reinvigorate their response to tumour cells with anti-PD-1 therapy.
 \
 \
-\ 
 
 *References* 
 \
