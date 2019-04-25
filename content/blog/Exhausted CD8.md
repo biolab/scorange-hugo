@@ -1,8 +1,8 @@
 ﻿+++
 draft = false
 type = "blog"
-image = "blog_img/2019-04-23/headerCD8.png"
-thumbImage = "blog_img/2019-04-23/headerCD8s.png"
+image = "/blog_img/2019-04-23/headerCD8.png"
+thumbImage = "/blog_img/2019-04-23/headerCD8s.png"
 date = "2019-04-23" 
 title = "Subsets of exhausted CD8+  T cells" 
 hardLineBreak = true 
