@@ -6,7 +6,7 @@ thumbImage = "/blog_img/2019-03-20/cover.png"
 date = "2019-03-29"
 title = "Clustering Cells in Mouse Pancreas"
 hardLineBreak = true 
-categories = ["clustering", "marker genes", "tSNE", "heatmap"]
+categories = ["clustering", "marker genes", "t-SNE", "heatmap"]
 joinLines = false
 author = "Iva Černoša"
 shortExcerpt = "Learn how to cluster cells and identify marker genes for clusters" 
@@ -48,7 +48,7 @@ We check the accuracy of clustering with box plot and t-SNE where we use Groups 
 \
 \
 
-The only thing we still need to do now, is to identify the marker genes. There is no specific widget in scOrange to accomplish this task so we will use similar steps as were used in the article by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> to find the three most significant markers for each cluster and create a heatmap with them. 
+The only thing we still need to do now, is to identify the marker genes. There is no specific widget in scOrange to accomplish this task, so we will use similar steps as were used in the article by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> to find the three most significant markers for each cluster and create a heatmap with them. 
 \
 \
 {{% figure src="/blog_img/2019-03-20/Workflow_1.4.PNG" width="95%" height="95%" %}}
@@ -75,7 +75,7 @@ We use Select Columns widget to extract marker genes for heatmap. To do this, we
 \
 \
 
-Finally, we use selected genes to create the heatmap. From it we can identify cell clusters by looking at the functions of the marker genes.  From it we can indentfy cell clussters by looking at the functions of the marker genes. Alpha cells are most strongly correlated with <i>GCG</i> encoding glucagon, beta cells with <i>INS1</i> and <i>INS2</i> encoding insulin, delta cells with <i>SST</i> encoding somatostatin, gamma cells with <i>PPY</i> encoding pancreatic polypeptide.
+Finally, we use selected genes to create the heatmap. From it we can identify cell clusters by looking at the functions of the marker genes. Alpha cells are most strongly correlated with <i>GCG</i> encoding glucagon, beta cells with <i>INS1</i> and <i>INS2</i> encoding insulin, delta cells with <i>SST</i> encoding somatostatin, gamma cells with <i>PPY</i> encoding pancreatic polypeptide.
 <br> <br> Using this principle we can cluster large bulks of cells to different cell type identities by identifying their marker genes and maping cell clusters according to functional roles of their marker genes.
 \
 \
