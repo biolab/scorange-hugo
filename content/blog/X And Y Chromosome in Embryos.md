@@ -55,7 +55,13 @@ Additionally, we can check expression of X-linked genes to exclude any cells wit
 {{% figure src="/blog_img/2019-05-06/chrX_distribution.png" width="75%" height="75%" %}}
 \
 \
-Some of the cells seem to have suspiciously low expression of X chromosome. Most probably the reason behind this observation is that one of the embryos in this dataset has been identified as having XO karyotype by <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al.</i> </a>.
+Some of the cells seem to have suspiciously low expression of X chromosome. Most probably the reason behind this observation is that one of the embryos in this dataset has been identified as having XO karyotype by <a href= ”https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al.</i> </a>.
 <br>
 
 So, today we have showed how scOrange can be used to sort cells by karyotype and study time of activation of chromosomes in inhuman preimplantation embryos. 
+
+*References* 
+\
+Miller CM, Sen DR, Abosy RA <i>et al.</i> (2019) <a href="https://www.nature.com/articles/s41590-019-0312-6">Subsets of Exhausted CD8+ T Cells Differentially Mediate Tumor Control and Respond to Checkpoint Blockade.</a> <i>Nat Immunol.</i> 20:326–336.
+
+Petropoulos, S., Edsgärd, D., Reinius <i>et al.</i> (2016). <a href=”https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Single-Cell RNA-Seq Reveals Lineage and X Chromosome Dynamics in Human Preimplantation Embryos.</a> <i>Cell</i>, 165(4), 1012–1026. 
