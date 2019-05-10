@@ -1,8 +1,8 @@
 +++
 draft = false
 type = "blog"
-image = "" 
-thumbImage = ""
+image = "/blog_img/2019-05-06/cover_embryo.png" 
+thumbImage = "/blog_img/2019-05-06/cover_embryo.png"
 date = "2019-05-06" 
 title = "X And Y Chromosome Expression in Human Preimplantation Embryos" 
 hardLineBreak = true 
@@ -12,8 +12,6 @@ author = "Iva Černoša"
 shortExcerpt = "Determine karyotype (XY, XX) of the samples from single cell data and observe the time of activation of Y chromosome in a preimplantation embryo." 
 longExcerpt = "Using the single cell data from Petropoulos et al. (Cell, 2016) we determine the karyotype (XY, XX) of the cells and inspect the time of activation of Y chromosome in a preimplantation embryo." 
 +++
-<!--dodaj cover slike-->
-
 We have already demonstrated how to identify cell types using marker genes in our previous <a href= "https://singlecell.biolab.si/blog/marker-genes/">blog</a>. Today we will apply the same principle to determine the biological sex of human preimplantation embryos sampled by <a href= ”https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a> (Cell, 2016) and examine the time of Y chromosome activation. 
 <br>
 
@@ -57,7 +55,7 @@ Additionally, we can check expression of X-linked genes to exclude any cells wit
 {{% figure src="/blog_img/2019-05-06/chrX_distribution.png" width="75%" height="75%" %}}
 \
 \
-Some of the cells seem to have suspiciously low expression of X chromosome. Most probably the reason behind this observation is that one of the embryos in this dataset has been identified as having XO karyotype by <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a>.
+Some of the cells seem to have suspiciously low expression of X chromosome. Most probably the reason behind this observation is that one of the embryos in this dataset has been identified as having XO karyotype by <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al.</i> </a>.
 <br>
 
-<!--dodaj zaključek-->
+So, today we have showed how scOrange can be used to sort cells by karyotype and study time of activation of chromosomes in inhuman preimplantation embryos. 
