@@ -2,7 +2,7 @@
 draft = false
 type = "blog"
 image = "/blog_img/2019-05-06/cover_embryo.png" 
-thumbImage = "/blog_img/2019-05-06/cover_embryo.png"
+thumbImage = "/blog_img/2019-05-06/cover_embryo_small.png"
 date = "2019-05-06" 
 title = "X And Y Chromosome Expression in Human Preimplantation Embryos" 
 hardLineBreak = true 
@@ -22,7 +22,7 @@ We import the data into Orange using The Load Data widget, followed by Gene Name
 {{% figure src="/blog_img/2019-05-06/createclass_workflow.png" width="95%" height="95%" %}}
 \
 \
-We are now ready to dive into a more demanding task of separating cells based on their biological sex. In order to do that, we need to score cells based on X- and Y-linked genes. We shall start with the Y-linked genes. Firstly, we connect a new Data Table widget from the data we normalised so far and use it as the first input for the Score Cell widget. As the second input, we select Y-linked genes (<i>AMELY , DAZ1, Ddx3y, EIF1AY, KDM5D, PCDH11Y, RBMY1A1, RPS4Y1, RPS4Y2, SRY , TSPY1, USP9Y, UTY, ZFY</i>) in a separate Data Table widget. 
+We are now ready to dive into a more demanding task of separating cells based on their biological sex. In order to do that, we need to score cells based on X- and Y-linked genes. We shall start with the Y-linked genes. Firstly, we connect a new Data Table widget from the data we normalised so far and use it as the first input for the Score Cell widget. As the second input, we select Y-linked genes (<i>AMELY , DAZ1, Ddx3y, EIF1AY, KDM5D, PCDH11Y, RBMY1A1, RPS4Y1, RPS4Y2, SRY , TSPY1, USP9Y, UTY, ZFY</i>) in a separate Data Table into which we have imported the genes from the Gene Name Matcher widget. 
 \
 \
 {{% figure src="/blog_img/2019-05-06/workflow_embryo_partial2.PNG" width="95%" height="95%" %}}
@@ -37,7 +37,7 @@ Distribution widget is the most fitting way to depict the scores.
 Observing the outcome, we can quickly deduce that the bar on the far left is representative of the cells with the XX karyotype and the rest represent cells from male embryos. 
 <br>
 
-To check weather Y-linked genes are ubiquitously expressed at all stages of preimplantation embryos, we foremost have to elect the cells with XY karyotype.  We utilise the Data Table widget and sort the cells according to their score for Y-linked genes. Judging from the distribution, a good cut off mark for the XY cells seems to lie between 0,3 and 0,5, therefore we select 0,4. The Box Plot widget reveals an increase between E3 (day 3) and E4 (day 4). 
+To check weather Y-linked genes are ubiquitously expressed at all stages of preimplantation embryos, we foremost have to elect the cells with XY karyotype.  We utilise the Data Table widget and sort the cells according to their score for Y-linked genes. Judging from the distribution, a good cut off mark for the XY cells seems to lie between 0.1 and 0.2, therefore we select cells with the score of at least 0.2. The Box Plot widget reveals an increase between E3 (day 3) and E4 (day 4). 
 \
 \
 {{% figure src="/blog_img/2019-05-06/chrY_male_box.png" width="95%" height="95%" %}}
@@ -46,22 +46,47 @@ To check weather Y-linked genes are ubiquitously expressed at all stages of prei
 As demonstrated by <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a> this is due to incomplete zygotic genome activation at E3, since cells at this stage still contain lingering maternal transcripts.
 \
 \
-{{% figure src="/blog_img/2019-05-06/workfow_embryos.PNG" width="95%" height="95%" %}}
+{{% figure src="/blog_img/2019-05-06/workflow_embryo_partial3.PNG" width="95%" height="95%" %}}
 \
 \
+The best way to visualise the cells, we determined to have XY karyotype, is t-SNE. To separate cells with XY karyotype from those with XX karyotype, we use the Select Rows widget. We select the same cut off mark for the XY cells as before: 0.2, then we proceed to transfer all the data from the Select Rows widget to t-SNE widget.
+\
+\
+{{% figure src="/blog_img/2019-05-06/selectrows.png" width="95%" height="95%" %}}
+\
+\
+In t-SNE widget we colour cells according to their class, size them according to their score and chose shape to separate the cells with XY karyotype we selected in Select Rows widget from those with XX karyotype. 
+\
+\
+{{% figure src="/blog_img/2019-05-06/tSNEy.png" width="95%" height="95%" %}}
+\
+\
+Samples from all timepoints include male (Yes) and female (No) embryos. 
+<br>
+
 Additionally, we can check expression of X-linked genes to exclude any cells with too low overall expression profiles and asses the possibility of X0 karyotype. We aproach this the same way as before; by selecting X-linked genes (<i>AMELX, DDX3X, EIF1AX,KDM5C, PCDH11X, RPS4X, SOX3, USP9X, UTX</i>) in a separate Data Table and scoring cells with them. 
 \
 \
 {{% figure src="/blog_img/2019-05-06/chrX_distribution.png" width="75%" height="75%" %}}
 \
 \
-Some of the cells seem to have suspiciously low expression of X chromosome. Most probably the reason behind this observation is that one of the embryos in this dataset has been identified as having XO karyotype by <a href= ”https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al.</i> </a>.
+Some of the cells seem to have suspiciously low expression of X chromosome. A probable reason for this observation could be that at least one of the embryos in this dataset has X0 karyotype. 
+\
+\
+{{% figure src="/blog_img/2019-05-06/workfow_embryos.PNG" width="95%" height="95%" %}}
+\
+\
+To see just how few of the cells exhibit X0 karyotype, we select cells with score of at least 1 in Select Rows widget and use the same displaying options as before in t-SNE widget.  
+\
+\
+{{% figure src="/blog_img/2019-05-06/tSNEx.png" width="95%" height="95%" %}}
+\
+\
+Most of the cells with X0 karyotype (displayed as No) appear to be in the E5 sampling cluster, which is the exact sampling time where <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a> identified one embryo with Turner syndrome. 
 <br>
 
-So, today we have showed how scOrange can be used to sort cells by karyotype and study time of activation of chromosomes in inhuman preimplantation embryos. 
+In conclusion, today we have showed how scOrange can be used to sort cells by karyotype and study time of activation of chromosomes in human preimplantation embryos. 
 
 *References* 
 \
-Miller CM, Sen DR, Abosy RA <i>et al.</i> (2019) <a href="https://www.nature.com/articles/s41590-019-0312-6">Subsets of Exhausted CD8+ T Cells Differentially Mediate Tumor Control and Respond to Checkpoint Blockade.</a> <i>Nat Immunol.</i> 20:326–336.
-
 Petropoulos, S., Edsgärd, D., Reinius <i>et al.</i> (2016). <a href=”https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Single-Cell RNA-Seq Reveals Lineage and X Chromosome Dynamics in Human Preimplantation Embryos.</a> <i>Cell</i>, 165(4), 1012–1026. 
