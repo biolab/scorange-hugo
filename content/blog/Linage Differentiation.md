@@ -10,29 +10,30 @@ categories = ["PCA", "tSNE", "differentiation", "embryo", "linage", "clustering"
 joinLines = false
 author = "Iva Černoša"
 shortExcerpt = "Combine clustering and time component to pinpoint the time of trophectoderm (TE) and inner cell mass (ICM) differentiation in human preimplantation embryotic cells" 
-longExcerpt = "Combine clustering and time component to pinpoint the time of trophectoderm (TE) and inner cell mass (ICM) differentiation in human preimplantation embryotic cells and recriate a part of study by Petropoulos et al. (Cell, 2016)" 
+longExcerpt = "Combine clustering and time component to pinpoint the time of trophectoderm (TE) and inner cell mass (ICM) differentiation in human preimplantation embryotic cells and recreate a part of study by Petropoulos et al. (Cell, 2016)" 
 +++
 <!--dodaj uvod-->
 <!--dodaj cover sliki-->
+<!--linkaj zadnji blog v prvi povedi-->
 We will be using the same single cell data from human preimplantation embryos as in the last blog. The data was published by <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a>and is deposited in ArrayExpress database under the accession number <a href=”https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/”>E-MTAB-3929</a>. 
 <br>
 
 Naturally, we have to start by loading the data into Orange and pre-processing it using the familiar workflow with the following widgets: Load Data, Gene Name Matcher, Create Class to sort cells by sampling and of course Single Cell Preprocess to normalise the data and select 500 most variable genes.
 \
 \
-{{% figure src="/blog_img/2019-05-10/workfow_embryos2nd_1.png" width="95%" height="95%" %}}
+{{% figure src="/blog_img/2019-05-10/workfow_embryos2nd_1.png" width="85%" height="85%" %}}
 \
 \
 To show that cells expression changes with time, we cluster the cells using the Louvain Clustering widget with resolution set to 1.7 and k-neighbours to 100. t-SNE distinctly depicts 7 clusters. E4 and E5 samples are slightly divided, which is in accordance to the fact that Petropoulos <i>et al.</i> sampled those cells at two occasions 4-6 hours apart.
 \
 \
-{{% figure src="/blog_img/2019-05-10/tSNE2.png" width="95%" height="95%" %}}
+{{% figure src="/blog_img/2019-05-10/tSNE2.png" width="85%" height="85%" %}}
 \
 \
 Another way to confirm that time play a crucial role in the cell segregation is by using the Principal Component Analysis (PCA) widget. 
 \
 \
-{{% figure src="/blog_img/2019-05-10/workfow_embryos2nd_2.png" width="95%" height="95%" %}}
+{{% figure src="/blog_img/2019-05-10/workfow_embryos2nd_2.PNG" width="95%" height="95%" %}}
 \
 \
 Scatter Plot widget reveals that cells are clearly aligned in the accordance with the time of development (embryonic day) when dimensionally reduced, meaning that time is one of the prevalent factors for segregation.
