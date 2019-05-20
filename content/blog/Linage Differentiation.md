@@ -4,15 +4,15 @@ type = "blog"
 image = "/blog_img/2019-05-10/linage_cover.png"
 thumbImage = "/blog_img/2019-05-10/linage_cover_small.png"
 date = "2019-05-10"
-title = "Pinpointing Linage Differentiation in Human Preimplantation Embryotic Cells"
+title = "Pinpointing Lineage Differentiation in Human Preimplantation Embryotic Cells"
 hardLineBreak = true 
-categories = ["PCA", "tSNE", "differentiation", "embryo", "linage", "clustering", "scatter plot"]
+categories = ["PCA", "tSNE", "differentiation", "embryo", "lineage", "clustering", "scatter plot"]
 joinLines = false
 author = "Iva Černoša"
 shortExcerpt = "Combine clustering and time component to pinpoint the time of trophectoderm (TE) and inner cell mass (ICM) differentiation in human preimplantation embryotic cells" 
 longExcerpt = "Combine clustering and time component to pinpoint the time of trophectoderm (TE) and inner cell mass (ICM) differentiation in human preimplantation embryotic cells and recreate a part of study by Petropoulos et al. (Cell, 2016)" 
 +++
-Embryonic development has been well studied in mouse models but our knowledge of this process in the human embryo is rudimentary. Here we will take a closer look at TE-ICM maturation during the first 7 days of human development to help with the assessment of the degree of conservation between the mouse and human blastocyst formation.
+Embryonic development has been well studied in mouse models but our knowledge of this process in the human embryo is rudimentary. Here we will take a closer look at trophectoderm and inner cell mass maturation during the first 7 days of human development to help with the assessment of the degree of conservation between the mouse and human blastocyst formation.
 
 We will be using the same single cell data from human preimplantation embryos as in the previous <a href=”https://singlecell.biolab.si/blog/x-and-y-chromosome-in-embryos/”>blog</a>. The data was published by <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a>and is deposited in ArrayExpress database under the accession number <a href=”https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/”>E-MTAB-3929</a>. 
 <br>
@@ -55,7 +55,7 @@ As the second input we need to select all the cells in a Data Table widget that 
 {{% figure src="/blog_img/2019-05-10/tSNE2_2.png" width="95%" height="95%" %}}
 \
 \
-tSNE projection reveals that cells sampled on 5<sup>th</sup> (E5), 6<sup>th</sup> (E6) and 7<sup>th</sup> (E7) day separate into two different clusters, but is as a hole does not considerably different form tSNE that does not take into account marker genes.
+tSNE projection reveals that cells sampled on 5<sup>th</sup> (E5), 6<sup>th</sup> (E6) and 7<sup>th</sup> (E7) day separate into two different clusters, but is not considerably different form tSNE that is not preeceed by the Score Cells widget that takes into account the TE and ICM marker genes.
 <br>
 
 We could try running two Score Cells widgets consecutively; first scoring cells as TE (<i>GATA2</i>, <i>GATA3</i>), the second scoring cells as ICM (<i>SOX2</i>, <i>PDGFRA</i>). Additional benefit of this approach is that we will turn cell scores into two variables and consequently be able to display them on the scatter plot.
@@ -72,7 +72,7 @@ We can now appoint TE and ICM scores on the X and Y axis of a scatter plot.
 Observing which cells score high for TE and ICM markers, we can see that cells really do enter blastocoel formation on the 5<sup>th</sup> day. 
 <br>
 
-To illustrate that even more evidently, we cluster (k-neighbours: 100, resolution: 1.6) and display them with t-SNE widget. We set ICM score as a sizing factor. The linage differentiation is well visible in the projection since about half of the cells in E5, E6 and E7 score high for ICM, . 
+To illustrate that even more evidently, we cluster (k-neighbours: 100, resolution: 1.6) and display them with t-SNE widget. We set ICM score as a sizing factor. The lineage differentiation is well visible in the projection since about half of the cells in E5, E6 and E7 diplay higher scores for ICM. 
 \
 \
 {{% figure src="/blog_img/2019-05-10/tSNE2_3.png" width="95%" height="95%" %}}
