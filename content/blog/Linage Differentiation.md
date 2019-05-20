@@ -55,7 +55,7 @@ As the second input we need to select all the cells in a Data Table widget that 
 {{% figure src="/blog_img/2019-05-10/tSNE2_2.png" width="95%" height="95%" %}}
 \
 \
-tSNE projection reveals that cells sampled on 5<sup>th</sup> (E5), 6<sup>th</sup> (E6) and 7<sup>th</sup> (E7) day separate into two different clusters, but is not considerably different form tSNE that is not preeceed by the Score Cells widget that takes into account the TE and ICM marker genes.
+tSNE projection reveals that cells sampled on 5<sup>th</sup> (E5), 6<sup>th</sup> (E6) and 7<sup>th</sup> (E7) day separate into two different clusters, but is not considerably different form tSNE that is not preceded by the Score Cells widget that takes into account the TE and ICM marker genes.
 <br>
 
 We could try running two Score Cells widgets consecutively; first scoring cells as TE (<i>GATA2</i>, <i>GATA3</i>), the second scoring cells as ICM (<i>SOX2</i>, <i>PDGFRA</i>). Additional benefit of this approach is that we will turn cell scores into two variables and consequently be able to display them on the scatter plot.
