@@ -914,8 +914,9 @@ a img {
 }
 
 .entry-title {
+  font-size: 30px !important;
   font-weight: normal !important;
-  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif' !important;
+  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
 }
 
 .entry-header {
