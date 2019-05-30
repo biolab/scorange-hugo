@@ -1302,4 +1302,33 @@ h2.docs-subtitle {
   line-height: 30px;
   }
 
+@media (min-width: 1350px) {
+  .downloadsize{
+    padding-left:10%;
+    padding-right:10%;
+  }
 
+}
+
+ @media (min-width: 1500px) {
+  .downloadsize{
+    padding-left:10%;
+    padding-right:10%;
+  }
+
+}
+
+
+@media (max-width: 1349px) {
+  .downloadsize{    
+    padding-left:10%;
+    padding-right:10%;
+  }   
+}
+.download-back{
+  background:white;
+}
+.downloados .row{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
