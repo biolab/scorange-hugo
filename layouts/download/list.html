@@ -1,12 +1,13 @@
 {{ define "main"}}
-<section id="features" class="features section downloads">
-        <div class="container-fluid downloados" style="margin-top: 40px">
+
+<section id="features" class="features section downloads download-back">
+        <div class="container-fluid downloados " style="margin-top: 50px">
             <div class="row">
-                <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10" style="padding: 0px !important;">
+                <div style="padding: 0px !important;">
                     {{ range .Site.Data.tabs}}
-                    <div class="icon-item col-md-3 col-sm-3 col-xs-6 text-center" >
+                    <div class="icon-item col-lg-3 col-md-4 col-sm-4 col-xs-6 text-center" >
                         <a onclick="windows({{.os}})" href="#{{.os}}">
-                            <div class="icon{{ if eq os .os }}-selected{{end}}">
+                            <div id="{{.os}}1" class="icon">
                                 <i class="fa fa-{{ .icon }} jsonly icon-button"></i>
                             </div><!--//icon-->
                             <h2 class="content title">{{ .title }}</h2>
@@ -17,13 +18,16 @@
             </div><!--//row-->
         </div><!--//container-->
 
-        <div class="container-fluid">
-            <div id="win" class="container download-os">
-                <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+        <div class="container-fluid" style="padding-bottom: 40px;">
+            <div class="row col">
+            <div id="win" class=" download-os downloadsize">
+                <div class="">
                     <div class="content">
                         <h2>Download the latest version for Windows</h2>
                         <a id="recommended-download" style="margin-top: 10px" class="btn btn-warning big-button-base" onclick="windows()" href="https://service.biolab.si/download/singlecell?platform=win">
-                            Download scOrange
+                            Download scOrange {{ if and (isset .Params "version") .Params.version }}  
+                            {{.Params.version}}
+                            {{end}}
                         </a>
 
                         <h3><a id="standalone"></a>Standalone installer</h3>
@@ -31,24 +35,28 @@
                         <p>Can be used without administrative priviledges.</p>
 
                     </div>
+                </div>
             </div>
-        </div>
 
-        <div id="mac" class="container mac download-os">
-                 <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
-                    <div class="content">
+        <div id="mac" class=" mac download-os downloadsize">
+                 <div class="" >
+                   <div class="content">
                         <h2>Download the latest version for Mac</h2>
                         <a id="recommended-download" onclick="mac()"style="margin-top: 10px" class="btn btn-warning big-button-base" href="https://service.biolab.si/download/singlecell?platform=mac">
-                            Download scOrange
+                            Download scOrange {{ if and (isset .Params "version") .Params.version }}  
+                            {{.Params.version}}
+                            {{end}}
                         </a>
                         <h3><a id="standalone"></a>Bundle</h3>
                         <a href="https://service.biolab.si/download/singlecell?platform=mac">scOrange.dmg</a><br/>
                         <p>A universal bundle with everything packed in and ready to use.</p>
                     </div>
-            </div>
+                </div>
         </div>
+    </div>
+    </div>
 
-        </div>
+
         <script type="text/javascript">
             hash = window.location.hash.substr(1);
 
@@ -58,39 +66,59 @@
             }
                         
             if (hash == "windows"){
+                var element = document.getElementById("windows1");
+                element.classList.add("icon-selected");
                 $("#mac").hide();
                 $("#win").show();
                 window.location.hash = hash;
             }
 
             else if( hash == "macos"){
+                var element = document.getElementById("macos1");
+                element.classList.add("icon-selected");
                 window.location.hash = hash;
                     $("#win").hide();
                     $("#mac").show();
             }
 
             function windows(os) {
+                _removeClasses();
                 if (os =="windows"){
+                    var element = document.getElementById("windows1");
+                    element.classList.add("icon-selected");
                     $("#mac").hide();
                     $("#win").show();
                 }
                 else if( os == "macos"){
+                    var element = document.getElementById("macos1");
+                    element.classList.add("icon-selected");
                     $("#win").hide();
                     $("#mac").show();
                 }
             }
 
         window.addEventListener('hashchange', function() {
+            _removeClasses();
             hash = window.location.hash.substr(1);
             if (hash =="windows"){
-                    $("#mac").hide();
-                    $("#win").show();
+                 var element = document.getElementById(hash+"1");
+                 element.classList.add("icon-selected");
+                 $("#mac").hide();
+                 $("#win").show();
                 }
             else if( hash == "macos"){
-                $("#win").hide();
-                $("#mac").show();
+                 var element = document.getElementById(hash+"1");
+                 element.classList.add("icon-selected");
+                 $("#win").hide();
+                 $("#mac").show();
             }
         });
+        function _removeClasses() {
+          var els = document.querySelectorAll('.icon-selected');
+          for (var i = 0; i < els.length; i++) {
+            els[i].classList.remove('icon-selected');
+          }
+        }
         </script>
     </section>
 
