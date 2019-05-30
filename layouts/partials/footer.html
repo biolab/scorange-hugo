@@ -1,5 +1,6 @@
 <footer class="footer">
         <div class="container">
+            <div class="header-pad">
             <div class="row footer-pad">
 
                 <div class="col-md-4 col-sm-6 col-xs-12">
@@ -71,8 +72,8 @@
                             <li>
                             <div class="row">
                             <div class="col-md-2"><a class="sitemap-sub"> {{ .Date.Format "02 Jan" }} </a></div>
-                            <div class="col-md-10">
-                                <a class="sitemap-sub" style="color: orange" href="{{.Permalink}}">{{.Title}}</a>
+                            <div class="col-md-10" >
+                                <a class="sitemap-sub" style="white-space: normal !important;"style="color: orange" href="{{.Permalink}}" >{{.Title}}</a>
                             </div>
                             </div>
                             </li>
@@ -80,7 +81,6 @@
                         </ul>
                     </div>
                 </div>
-
             </div><!--//row-->
 
             <div class="row footer-pad">
@@ -88,5 +88,6 @@
                     <small class="copyright pull-left"  >Copyright © University of Ljubljana</small>
                 </div>
             </div>
+        </div>
         </div>
     </footer><!--//footer-->
