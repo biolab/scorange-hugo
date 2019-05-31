@@ -1299,6 +1299,19 @@ h2.docs-subtitle {
   line-height: 30px;
   }
 
+@media (min-width: 1350px) {
+  .downloadsize{
+    padding-left:10%;
+    padding-right:10%;
+  }
+
+}
+
+ @media (min-width: 1500px) {
+  .downloadsize{
+    padding-left:10%;
+    padding-right:10%;
+  }
 
 
  @media (min-width: 1500px) {
@@ -1318,6 +1331,7 @@ h2.docs-subtitle {
 .header .container{
   margin-left: 0px !important;
   margin-right: 0px !important;
+
 }
 
 
@@ -1351,5 +1365,3 @@ h2.docs-subtitle {
      width: 100%; 
 }
 }
-
-
