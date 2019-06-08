@@ -63,7 +63,7 @@ In case we run into problems identifying genes with this approach, we can always
 Now that we have matched clusters with cell types, we can use Edit Domain widget to change annotations of the clusters. 
 \
 \
-{{% figure src="/blog_img/2019-06-06/editdomain.PNG" width="95%" height="95%" %}}
+{{% figure src="/blog_img/2019-06-06/editdomain.PNG" width="80%" height="80%" %}}
 \
 \
 Additionally, we can merge the annotation file provided by Galen  <i> et al.</i></a> with our data and display both cell classifications on t-SNE projection simultaneously. 
@@ -75,7 +75,7 @@ Additionally, we can merge the annotation file provided by Galen  <i> et al.</i>
 To make the annotation file readable to Orange, we need to rename it from <i>GSM3588001_BM4.anno.txt.gz</i> to <i>GSM3588001_BM4.anno.<b>tab</b>.gz</i>. After that we can load it and merge it with our data using Merge Data widget.
 \
 \
-{{% figure src="/blog_img/2019-06-06/mergedata.PNG" width="95%" height="95%" %}}
+{{% figure src="/blog_img/2019-06-06/mergedata.PNG" width="75%" height="75%" %}}
 \
 \
 Have you noticed that we did not use Cluster Analysis widget as our output for the data we are about to display using t-SNE? That is because it reduces the data and therefore negatively influences our t-SNE visualisation. 
