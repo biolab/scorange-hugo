@@ -20,7 +20,7 @@
         <ul >
             <span>Categories: </span>
           {{ range first 10 .Site.Taxonomies.categories.ByCount }}
-            <li style="display: inline;text-transform: capitalize;"><a href="/categories/{{ .Name | urlize }}">{{ .Name }}</a></li>
+            <li style="display: inline;text-transform: capitalize;"><a class="tag-workflow" href="/categories/{{ .Name | urlize }}">{{ .Name }}</a></li>
           {{ end }}
         </ul>
     </div>

@@ -959,6 +959,9 @@ svg{
   .footer-pad{
     padding-left: 5% !important;
   }
+  .header-padding{
+    padding-left: 1% !important;
+  }
 
   .workflow-image{
     padding-bottom:0px !important;
@@ -1299,27 +1302,29 @@ h2.docs-subtitle {
   line-height: 30px;
   }
 
-@media (min-width: 1350px) {
+/*@media (min-width: 1350px) {
   .downloadsize{
     padding-left:10%;
     padding-right:10%;
   }
+
+}*/
+
+ @media (min-width: 1500px) {
+  
+  .header-pad{
+  margin-left: 8% !important;
+  padding-right: 8% !important;
+}
+
 
 }
 
- @media (min-width: 1500px) {
-  .downloadsize{
-    padding-left:10%;
-    padding-right:10%;
-  }
-
-
- @media (min-width: 1500px) {
-  .downloadsize{
-    padding-left:10%;
-    padding-right:10%;
-  }
-
+@media(min-width: 1700px){
+  .header-pad{
+  margin-left: 15% !important;
+  padding-right: 15% !important;
+}
 }
 
 
@@ -1328,18 +1333,19 @@ h2.docs-subtitle {
   padding-right: 8%;
 }
 
-.header .container{
-  margin-left: 0px !important;
-  margin-right: 0px !important;
+/*.header .container{
+  margin-left: 0px ;
+  margin-right: 0px ;
 
-}
+}*/
 
 
 @media (max-width: 1349px) {
   .downloadsize{    
     padding-left:8%;
     padding-right:8%;
-  }   
+  }
+    
 }
 
 .download-back{
@@ -1347,10 +1353,13 @@ h2.docs-subtitle {
 }
 
 
-@media (max-width: 1090px){
+@media (max-width: 1095px){
 .header-pad{
   margin-left: 8% !important;
   padding-right: 8% !important;
+}
+.promo{
+  padding-left: 2% !important;
 }
 }
 
@@ -1360,8 +1369,12 @@ h2.docs-subtitle {
   margin-right: 0 !important;
 }
 
-
-.container {
-     width: 100%; 
+.os-download .row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
+
+.cover-image .row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
