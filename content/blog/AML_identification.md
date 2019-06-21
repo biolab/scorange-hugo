@@ -15,7 +15,7 @@ longExcerpt = "We identify cell populations in a dataset of healthy human bone m
 
 In order to study diseases such as leukaemia on cell populations level, we first need to characterise a healthy bone marrow cell population. So in this blog we set out to do just that. 
 
-The data from<a href= “https://www.sciencedirect.com/science/article/pii/S0092867419300947”> Galen  <i> et al.</i>(Cell, 2019)</a> in available in the GEO database under the accession number <a href= “https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116256”>GSE116256</a>. We will be using the data from only one healthy patient <a href= “https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588000”> BM4 </a> and its <a href= https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001> annotation file </a> since this is by far the biggest nonenriched sample from a healthy individual in this dataset. 
+The data from<a href="https://www.sciencedirect.com/science/article/pii/S0092867419300947"> Galen  <i> et al.</i>(Cell, 2019)</a> in available in the GEO database under the accession number <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116256">GSE116256</a>. We will be using the data from only one healthy patient <a href= “https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588000”> BM4 </a> and its <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001"> annotation file </a> since this is by far the biggest nonenriched sample from a healthy individual in this dataset. 
 \
 \
 {{% figure src="/blog_img/2019-06-06/workflow_partial1.PNG" width="40%" height="40%" %}}
@@ -33,7 +33,7 @@ Since the relationships between the cell clusters is important for this analysis
 {{% figure src="/blog_img/2019-06-06/clustering.png" width="95%" height="95%" %}}
 \
 \
-We can tackle the identification of the clusters using two different approaches. The first is by identifying the most significant genes in each cluster as described in one of our previous <a href= “https://singlecell.biolab.si/blog/pancreas/ “> blogs</a> and assuming cell types according to marker genes’ functions, the other is using the <a href= https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001> annotation file </a> provided by <a href= “https://www.sciencedirect.com/science/article/pii/S0092867419300947”> Galen  <i> et al.</i></a>.
+We can tackle the identification of the clusters using two different approaches. The first is by identifying the most significant genes in each cluster as described in one of our previous <a href="https://singlecell.biolab.si/blog/pancreas/"> blogs</a> and assuming cell types according to marker genes’ functions, the other is using the <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001"> annotation file </a> provided by <a href="https://www.sciencedirect.com/science/article/pii/S0092867419300947"> Galen  <i> et al.</i></a>.
 \
 \
 {{% figure src="/blog_img/2019-06-06/workflow_partial3.PNG" width="85%" height="85%" %}}
@@ -48,7 +48,7 @@ But before we take a closer look at either of the alternatives, let us take a lo
 C2 is the biggest cluster. This information might come in handy when we try to identify them.
 <br>
 
-What we have also already done in this workflow, is identified markers for each cluster with the help of Data Tables (explained in detail in <a href= “https://singlecell.biolab.si/blog/pancreas/“> this blog</a>). With these markers we can classify clusters. For example, <i>CD3D</i> is the most significant gene in cluster 4. It encodes T-cell surface glycoprotein CD3. Similarly <i>MS4A1</i> in the cluster 3 encodes B-lymphocyte antigen CD20.
+What we have also already done in this workflow, is identified markers for each cluster with the help of Data Tables (explained in detail in <a href="https://singlecell.biolab.si/blog/pancreas/"> this blog</a>). With these markers we can classify clusters. For example, <i>CD3D</i> is the most significant gene in cluster 4. It encodes T-cell surface glycoprotein CD3. Similarly <i>MS4A1</i> in the cluster 3 encodes B-lymphocyte antigen CD20.
 \
 \
 {{% figure src="/blog_img/2019-06-06/workflow_partial4.PNG" width="95%" height="95%" %}}
@@ -94,5 +94,5 @@ Thus we have achieved what we undertook; characterised human bone marrow cell po
 
 *References* 
 \
-Petropoulos, S., Edsgärd, D., Reinius <i>et al.</i> (2016). <a href=”https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Single-Cell RNA-Seq Reveals Lineage and X Chromosome Dynamics in Human Preimplantation Embryos.</a> <i>Cell</i>, 165(4), 1012–1026.
+Petropoulos, S., Edsgärd, D., Reinius <i>et al.</i> (2016). <a href="https://www.cell.com/fulltext/S0092-8674(16)30280-X">Single-Cell RNA-Seq Reveals Lineage and X Chromosome Dynamics in Human Preimplantation Embryos.</a> <i>Cell</i>, 165(4), 1012–1026.
 <!-- popravi-->

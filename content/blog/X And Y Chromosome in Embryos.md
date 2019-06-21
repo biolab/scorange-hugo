@@ -12,10 +12,10 @@ author = "Iva Černoša"
 shortExcerpt = "Determine karyotype (XY, XX, X0) of the samples from single cell data and observe the time of activation of Y chromosome in a preimplantation embryo." 
 longExcerpt = "Using the single cell data from Petropoulos et al. (Cell, 2016) we determine the karyotype (XY, XX, X0) of the cells and inspect the time of activation of Y chromosome in a preimplantation embryo." 
 +++
-We have already demonstrated how to identify cell types using marker genes in our previous <a href= "https://singlecell.biolab.si/blog/marker-genes/">blog</a>. Today we will apply the same principle to determine the biological sex of human preimplantation embryos sampled by <a href= ”https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a> (Cell, 2016) and examine the time of Y chromosome activation. 
+We have already demonstrated how to identify cell types using marker genes in our previous <a href="https://singlecell.biolab.si/blog/marker-genes/">blog</a>. Today we will apply the same principle to determine the biological sex of human preimplantation embryos sampled by <a href= ”https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a> (Cell, 2016) and examine the time of Y chromosome activation. 
 <br>
 
-The data we need for this example is deposited in ArrayExpress database under the accession number <a href=”https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/”> E-MTAB-3929 </a>. This single cell data was collected from human preimplantation embryos at different timepoints.
+The data we need for this example is deposited in ArrayExpress database under the accession number <a href="https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/"> E-MTAB-3929 </a>. This single cell data was collected from human preimplantation embryos at different timepoints.
 We import the data into Orange using The Load Data widget, followed by Gene Name Matcher widget. Employing Create Class widget helps us to classificate cells based on the sampling day.
 \
 \
@@ -43,7 +43,7 @@ To check weather Y-linked genes are ubiquitously expressed at all stages of prei
 {{% figure src="/blog_img/2019-05-06/chrY_male_box.png" width="95%" height="95%" %}}
 \
 \
-As demonstrated by <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a> this is due to incomplete zygotic genome activation at E3, since cells at this stage still contain lingering maternal transcripts.
+As demonstrated by <a href="https://www.cell.com/fulltext/S0092-8674(16)30280-X">Petropoulos <i> et al. </i> </a> this is due to incomplete zygotic genome activation at E3, since cells at this stage still contain lingering maternal transcripts.
 \
 \
 {{% figure src="/blog_img/2019-05-06/workflow_embryo_partial3.PNG" width="95%" height="95%" %}}
@@ -82,11 +82,11 @@ To see just how few of the cells exhibit X0 karyotype, we select cells with scor
 {{% figure src="/blog_img/2019-05-06/tSNEx.png" width="95%" height="95%" %}}
 \
 \
-Most of the cells with X0 karyotype (displayed as No) appear to be in the E5 sampling cluster, which is the exact sampling time where <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a> identified one embryo with Turner syndrome. 
+Most of the cells with X0 karyotype (displayed as No) appear to be in the E5 sampling cluster, which is the exact sampling time where <a href="https://www.cell.com/fulltext/S0092-8674(16)30280-X">Petropoulos <i> et al. </i> </a> identified one embryo with Turner syndrome. 
 <br>
 
 In conclusion, today we have showed how scOrange can be used to sort cells by karyotype and study time of activation of chromosomes in human preimplantation embryos. 
 
 *References* 
 \
-Petropoulos, S., Edsgärd, D., Reinius <i>et al.</i> (2016). <a href=”https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Single-Cell RNA-Seq Reveals Lineage and X Chromosome Dynamics in Human Preimplantation Embryos.</a> <i>Cell</i>, 165(4), 1012–1026. 
+Petropoulos, S., Edsgärd, D., Reinius <i>et al.</i> (2016). <a href="https://www.cell.com/fulltext/S0092-8674(16)30280-X">Single-Cell RNA-Seq Reveals Lineage and X Chromosome Dynamics in Human Preimplantation Embryos.</a> <i>Cell</i>, 165(4), 1012–1026. 
