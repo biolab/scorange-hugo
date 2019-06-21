@@ -28,6 +28,8 @@ In scOrange, we load the Excel file, use Gene widget to translate the common gen
 
 We selected the marker gene for B cells, and use Score Cells to score the cells according to the mean expression of selected marker genes. It turns out that there is a cluster of cells in t-SNE visualization that express this marker. Nice! We select these cells, and we are now ready to characterize them with differentially expressed genes.
 
+{{% figure src="/images/features/b-cells-in-tsne.png"  %}}
+
 ## Differentially Expressed Genes
 
 We could characterize cells that have been selected in t-SNE by producing a table with all the data that includes additional feature telling scOrange if the cell was selected or not. Note that by default, t-SNE would output chosen only data items, and to change this we need to rewire the link between t-SNE and Differential Expression widget by double-clicking on the corresponding link, removing the default "Selected Data" to "Data" connection and connecting the "Data" output of t-SNE to the input of differential expression widget.
