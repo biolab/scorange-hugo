@@ -8,6 +8,9 @@ weight = -20
 excerpt = "Identify signature genes for each subpopulation using multiple methods. Use gene ontology enrichment to explore the biological meaning and identify cell types."
 +++
 
+
+
+
 Orange is all about data visualizations that help to uncover hidden data patterns, provide intuition behind data analysis procedures or support communication between data scientists and domain experts. Visualization widgets include scatter plot, box plot and histogram, and model-specific visualizations like dendrogram, silhouette plot, and tree visualizations, just to mention a few. Many other visualizations are available in add-ons and include visualizations of networks, word clouds, geographical maps, and more.
 
 We take care to make Orange visualizations interactive: you can select data points from a scatter plot, a node in the tree, a branch in the dendrogram. Any such interaction will instruct visualization to send out a data subset that corresponds to the selected part of visualization. Consider the combination of a scatter plot and classification tree below. Scatter plot shows all the data, but highlights the data subset that corresponds to the selected node in the classification tree.
@@ -17,7 +20,7 @@ We take care to make Orange visualizations interactive: you can select data poin
 
 Orange includes many standard visualizations. Scatter plot is great for visualizing correlations between pair of attributes, box plot for displaying basic statistics, heat map to provide an overview across entire data set, and projection plots like MDS for plotting the multinomial data in two dimensions.
 
-{{% figure src="/images/features/vis/tree-selection-scatterplot.png"  %}}
+{{% figure src="/images/tree-selection-scatterplot.png"  %}}
 
 
 ## Exploratory Data Analysis
