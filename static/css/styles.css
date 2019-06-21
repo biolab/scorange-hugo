@@ -1309,9 +1309,14 @@ h2.docs-subtitle {
   }
 
 }*/
+.featurePadding{
+    padding: 0 28%;
+  }
 
  @media (min-width: 1500px) {
-  
+  .featurePadding{
+    padding: 0 30% !important;
+  }
   .header-pad{
   margin-left: 8% !important;
   padding-right: 8% !important;
@@ -1321,6 +1326,9 @@ h2.docs-subtitle {
 }
 
 @media(min-width: 1700px){
+  .featurePadding{
+    padding: 0 30% !important;
+  }
   .header-pad{
   margin-left: 15% !important;
   padding-right: 15% !important;
@@ -1341,6 +1349,9 @@ h2.docs-subtitle {
 
 
 @media (max-width: 1349px) {
+  .featurePadding{
+    padding: 0 25% !important;
+  }
   .downloadsize{    
     padding-left:8%;
     padding-right:8%;
@@ -1354,6 +1365,9 @@ h2.docs-subtitle {
 
 
 @media (max-width: 1095px){
+  .featurePadding{
+    padding: 0 23% !important;
+  }
 .header-pad{
   margin-left: 8% !important;
   padding-right: 8% !important;
@@ -1362,7 +1376,23 @@ h2.docs-subtitle {
   padding-left: 2% !important;
 }
 }
+@media (max-width: 890px){
+  .featurePadding{
+    padding: 0 18% !important;
+  }
+}
 
+@media (max-width: 700px){
+  .featurePadding{
+    padding: 0 16% !important;
+  }
+}
+
+@media (max-width: 550px){
+  .featurePadding{
+    padding: 0 10% !important;
+  }
+}
 
 .downloados .row{
   margin-left: 0 !important;
@@ -1377,4 +1407,8 @@ h2.docs-subtitle {
 .cover-image .row{
   margin-left: 0px !important;
   margin-right: 0px !important;
+}
+
+.featureColor {
+  background-color: white !important;
 }
