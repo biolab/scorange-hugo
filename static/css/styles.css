@@ -970,9 +970,9 @@ svg{
     padding-top: 20px !important;
   }
 
-  #main-page-download-button {
+  /*#main-page-download-button {
     display: none;
-  }
+  }*/
   .image-container{
     padding: 10px !important;
     padding-top: 0px !important;
@@ -1386,6 +1386,12 @@ h2.docs-subtitle {
   .featurePadding{
     padding: 0 16% !important;
   }
+  .firstpagecontent{
+    font-size: 16px !important;
+  }
+  .promo .overview{
+    margin-top: 0px !important;
+  }
 }
 
 @media (max-width: 550px){
@@ -1416,3 +1422,11 @@ h2.docs-subtitle {
 .backgroundcolor{
   background-color: white !important;
 }
+
+@media (max-width: 1000px) {
+  .firstpagetitle{
+    font-size: 30px !important;
+  }
+}
+
+
