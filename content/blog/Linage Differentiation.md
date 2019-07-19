@@ -17,10 +17,10 @@ Embryonic development has been well studied in mouse models but our knowledge of
 We will be using the same single cell data from human preimplantation embryos as in the previous <a href=”https://singlecell.biolab.si/blog/x-and-y-chromosome-in-embryos/”>blog</a>. The data was published by <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a>and is deposited in ArrayExpress database under the accession number <a href=”https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/”>E-MTAB-3929</a>. 
 <br>
 
-Naturally, we have to start by loading the data into Orange and pre-processing it using the familiar workflow with the following widgets: Load Data, Gene Name Matcher, Create Class to sort cells by sampling day and of course Single Cell Preprocess to normalise the data and select 500 most variable genes.
+Naturally, we have to start by loading the data into Orange and pre-processing it using the familiar workflow with the following widgets: Load Data, Genes, Create Class to sort cells by sampling day and of course Single Cell Preprocess to normalise the data and select 500 most variable genes.
 \
 \
-{{% figure src="/blog_img/2019-05-10/workfow_linage_1.png" width="85%" height="85%" %}}
+{{% figure src="/blog_img/2019-05-10/workfow_linage_1.png" width="75%" height="75%" %}}
 \
 \
 To show that cells expression changes with time, we cluster the cells using the Louvain Clustering widget with resolution set to 1.7 and k-neighbours to 100. t-SNE distinctly depicts 7 clusters. E4 and E5 samples are slightly divided, which complies with the fact that Petropoulos <i>et al.</i> sampled those cells at two occasions 4-6 hours apart.
@@ -32,7 +32,7 @@ To show that cells expression changes with time, we cluster the cells using the 
 Another way to confirm that time plays a crucial role in the cell segregation is by using the Principal Component Analysis (PCA) widget. 
 \
 \
-{{% figure src="/blog_img/2019-05-10/workfow_linage_2.PNG" width="95%" height="95%" %}}
+{{% figure src="/blog_img/2019-05-10/workfow_linage_2.PNG" width="75%" height="75%" %}}
 \
 \
 Scatter Plot widget reveals that cells are clearly aligned in the accordance with the time of development (embryonic day) when dimensionally reduced, meaning that time is one of the prevalent factors for segregation.
