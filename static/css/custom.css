@@ -872,3 +872,11 @@ blockquote cite {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
 }
+
+.carousel-inner > .item > img{
+  margin: 0 auto;
+}
+
+.images-center{
+    text-align: center;
+}
