@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div class='content col-md-6 col-xs-12 {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}' style="padding: 20px;padding-top: 0px;">
+            <div class='content col-md-6 col-xs-12 images-center {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}' style="padding: 20px;padding-top: 0px;">
                 {{if gt (len .Params.images) 1}}
                 <div id="myCarousel{{$index}}" class="carousel slide" data-interval="false" >
             
