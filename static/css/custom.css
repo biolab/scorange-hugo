@@ -858,11 +858,15 @@ blockquote cite {
   background-color: black !important;
 }
 
+
 .workflow-slider{
 
-    height: 340px !important;
-    width: 500px !important;
+    /*height: 340px !important;*/
+    /*width: 500px !important;*/
 
+}
+.carousel {
+    text-align: center;
 }
 .hr{
     margin-top: 0px !important;
