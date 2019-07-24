@@ -1,0 +1,12 @@
++++
+title= "Clustering and t-SNE"
+images =  ["/workflow_images/clusters-in-tsne.png", "/workflow_images/workflow-clustering-and-tsne.png"]
+type = "workflows"
+blog =  ""
+video = ""
+download = "data-to-tsne.ows"
+tags = ["Clustering", "t-SNE"]
+weight = 4800
++++
+
+Load the data, cluster, and explore the clustering structure in the t-SNE embedding. Select a subset of cells in the embedding to examine their type in the Box Plot.
