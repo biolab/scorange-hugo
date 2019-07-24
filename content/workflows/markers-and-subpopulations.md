@@ -1,13 +1,15 @@
 +++
-title= "Markers and subpopulations"
-# Slideshow gallery appears when more then one image is in array
-images =  ["/workflow_images/markers-and-subpopulations.png"]
+title= "Marker Genes and Subpopulations"
+# the aspect ratio of images should match 460 : 280
+images =  ["/workflow_images/markers-and-subpopulations.png", 
+           "/workflow_images/marked-tsne.png", 
+           "/workflow_images/table-with-cell-scores.png"]
 type = "workflows"
 blog =  ""
-video = ""
+video = "https://www.youtube.com/watch?v=-xB3Jga1dC0"
 download = "markers-and-subpopulations.ows"
-tags = ["Marker genes", "t-SNE"]
+tags = ["Marker Genes", "t-SNE"]
 weight = 20
 +++
 
-Load data and a list of marker genes from our database. Select marker genes of choice. Score cells according to the expression of selected markers, and reveal marker-specific cells in the t-SNE cell landscape. Simultaneously open both Data Table (marker selection) and t-SNE visualization to turn scOrange into an interactive gene marker browser.
+This workflow uses Score Cell and Marker Genes widget to score the cells according to the expression of selected markers. Scored cells can be passed to, say, t-SNE visualization, where any change of a selection of marker genes will automatically trigger the update in t-SNE to identify an associated subpopulation of cells.
