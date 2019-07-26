@@ -16,13 +16,13 @@ We have already demonstrated how to identify cell types using marker genes in ou
 <br>
 
 The data we need for this example is deposited in ArrayExpress database under the accession number <a href=”https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/”> E-MTAB-3929 </a>. This single cell data was collected from human preimplantation embryos at different timepoints.
-We import the data into Orange using The Load Data widget, followed by Gene Name Matcher widget. Employing Create Class widget helps us to classificate cells based on the sampling day.
+We import the data into Orange using The Load Data widget, followed by Genes widget. Alternatively, you can load the human preimplantation embryos dataset using Single Cell Datasets widget. Employing Create Class widget helps us to classificate cells based on the sampling day.
 \
 \
 {{% figure src="/blog_img/2019-05-06/createclass_workflow.png" width="95%" height="95%" %}}
 \
 \
-We are now ready to dive into a more demanding task of separating cells based on their biological sex. In order to do that, we need to score cells based on X- and Y-linked genes. We shall start with the Y-linked genes. Firstly, we connect a new Data Table widget from the data we normalised so far and use it as the first input for the Score Cell widget. As the second input, we select Y-linked genes (<i>AMELY , DAZ1, Ddx3y, EIF1AY, KDM5D, PCDH11Y, RBMY1A1, RPS4Y1, RPS4Y2, SRY , TSPY1, USP9Y, UTY, ZFY</i>) in a separate Data Table into which we have imported the genes from the Gene Name Matcher widget. 
+We are now ready to dive into a more demanding task of separating cells based on their biological sex. In order to do that, we need to score cells based on X- and Y-linked genes. We shall start with the Y-linked genes. Firstly, we connect a new Data Table widget from the data we normalised so far and use it as the first input for the Score Cell widget. As the second input, we select Y-linked genes (<i>AMELY , DAZ1, Ddx3y, EIF1AY, KDM5D, PCDH11Y, RBMY1A1, RPS4Y1, RPS4Y2, SRY , TSPY1, USP9Y, UTY, ZFY</i>) in a separate Data Table into which we have imported the genes from the Genes widget. 
 \
 \
 {{% figure src="/blog_img/2019-05-06/workflow_embryo_partial2.PNG" width="95%" height="95%" %}}
