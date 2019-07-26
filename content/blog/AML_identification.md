@@ -21,7 +21,7 @@ The data from<a href= “https://www.sciencedirect.com/science/article/pii/S0092
 {{% figure src="/blog_img/2019-06-06/workflow_partial1.PNG" width="40%" height="40%" %}}
 \
 \
-After loading the data and matching the genes in the dataset to those in databases, we filter out all the genes that appear in less than 10 cells. Besides the usual normalisation, we select 5000 most variable genes. 
+After loading the data (alternatively, you can load the Healthy human bone marrow dataset using Single Cell Datasets widget) and matching the genes in the dataset to those in databases, we filter out all the genes that appear in less than 10 cells. Besides the usual normalisation, we select 5000 most variable genes. 
 \
 \
 {{% figure src="/blog_img/2019-06-06/workflow_partial2.PNG" width="65%" height="65%" %}}

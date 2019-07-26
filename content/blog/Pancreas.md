@@ -25,7 +25,7 @@ cluster them according to their cell type and identify marker genes for each sub
 \
 \
 
-Firstly we need to load, order and nominalise our data. To achieve this, we use the Load Data widget followed by the Genes (don't forget to set organism to <i>Mus Musculus</i>) and the Create Class widget, which enables us the use the cell types as characterised by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> as a control of our clustering. We normalise the data using the Single Cell Preprocess widget.
+Firstly we need to load, order and nominalise our data. To achieve this, we use the Load Data widget followed by the Genes (don't forget to set organism to <i>Mus Musculus</i>) and the Create Class widget, which enables us the use the cell types as characterised by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> as a control of our clustering. We normalise the data using the Single Cell Preprocess widget. Alternatively you can use Single Cell Datasets widget and load the Pancreas cells in mouse dataset with it.  
 <br>
 \
 \

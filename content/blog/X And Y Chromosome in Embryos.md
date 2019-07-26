@@ -16,7 +16,7 @@ We have already demonstrated how to identify cell types using marker genes in ou
 <br>
 
 The data we need for this example is deposited in ArrayExpress database under the accession number <a href=”https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/”> E-MTAB-3929 </a>. This single cell data was collected from human preimplantation embryos at different timepoints.
-We import the data into Orange using The Load Data widget, followed by Genes widget. Employing Create Class widget helps us to classificate cells based on the sampling day.
+We import the data into Orange using The Load Data widget, followed by Genes widget. Alternatively, you can load the human preimplantation embryos dataset using Single Cell Datasets widget. Employing Create Class widget helps us to classificate cells based on the sampling day.
 \
 \
 {{% figure src="/blog_img/2019-05-06/createclass_workflow.png" width="95%" height="95%" %}}

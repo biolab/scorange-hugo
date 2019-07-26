@@ -17,7 +17,7 @@ Embryonic development has been well studied in mouse models but our knowledge of
 We will be using the same single cell data from human preimplantation embryos as in the previous <a href=”https://singlecell.biolab.si/blog/x-and-y-chromosome-in-embryos/”>blog</a>. The data was published by <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a>and is deposited in ArrayExpress database under the accession number <a href=”https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/”>E-MTAB-3929</a>. 
 <br>
 
-Naturally, we have to start by loading the data into Orange and pre-processing it using the familiar workflow with the following widgets: Load Data, Genes, Create Class to sort cells by sampling day and of course Single Cell Preprocess to normalise the data and select 500 most variable genes.
+Naturally, we have to start by loading the data into Orange and pre-processing it using the familiar workflow with the following widgets: Load Data, Genes, Create Class to sort cells by sampling day and of course Single Cell Preprocess to normalise the data and select 500 most variable genes. Alternatively, you can load the human preimplantation embryos dataset using Single Cell Datasets widget.  
 \
 \
 {{% figure src="/blog_img/2019-05-10/workfow_linage_1.png" width="75%" height="75%" %}}

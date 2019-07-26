@@ -18,7 +18,7 @@ Nobel prize in medicine 2018 was awarded for the discovery of cancer therapy by 
 
 Namely, we will be comparing single cell expression profiles of T cells isolated from tumours (<b>TIL</b>) and from T cells during chronic viral infection with lymphocytic choriomeningitis virus (<b>LCMV</b>), to see whether the states of dysfunctional CD8<sup>+</sup> TILs are comparable to those of T cell exhaustion in LCMVs. 
 
-Naturally, we first need to download data which was deposited on GEO database by Miller <i>et al.</i> in two supersets: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122675"> GSE122675 </a>  - TIL superset and <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122712"> GSE122712 </a> - LCMV superset.
+Naturally, we first need to download data which was deposited on GEO database by Miller <i>et al.</i> in two supersets: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122675"> GSE122675 </a>  - TIL superset and <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122712"> GSE122712 </a> - LCMV superset. Alternatively you can use Single Cell Datasets widget to load the Tumor infiltrating CD8+ and the CD8+ in chronic viral infection datasets. 
 
 Make sure you download files in MTX format, each superset into a separate folder, and rename files into <i>matrix.mtx</i>, <i>genes.tvs</i> and <i>barcodes.tvs</i>, since this is the format automatically recognised by the Load Data widget in scOrange. 
 \
