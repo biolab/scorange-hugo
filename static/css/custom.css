@@ -405,7 +405,7 @@ h3.custom-accordion-title {
 }
 
 #main {
-    overflow: auto;
+    overflow: hidden;
 }
 #main > div.container {
     padding-right: 0;
@@ -640,7 +640,7 @@ a.donate:hover {
     border: solid 2px !important;
     border-color: #d99614 !important;
 }
-@media (max-width: 990px) {
+@media (max-width: 992px) {
     .navbar-header {
         float: none;
     }
@@ -858,13 +858,25 @@ blockquote cite {
   background-color: black !important;
 }
 
+
 .workflow-slider{
 
-    height: 340px !important;
-    width: 500px !important;
+    /*height: 340px !important;*/
+    /*width: 500px !important;*/
 
+}
+.carousel {
+    text-align: center;
 }
 .hr{
     margin-top: 0px !important;
     margin-bottom: 0px !important;
+}
+
+.carousel-inner > .item > img{
+  margin: 0 auto;
+}
+
+.images-center{
+    text-align: center;
 }

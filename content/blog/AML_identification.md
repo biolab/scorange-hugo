@@ -78,7 +78,7 @@ To make the annotation file readable to Orange, we need to rename it from <i>GSM
 {{% figure src="/blog_img/2019-06-06/mergedata.PNG" width="75%" height="75%" %}}
 \
 \
-Have you noticed that we did not use Cluster Analysis widget as our output for the data we are about to display using t-SNE? That is because it reduces the data and therefore negatively influences our t-SNE visualisation. 
+Have you noticed that we did not use Cluster Analysis widget as our output for the data we are about to display using t-SNE? This is because it reduces the data and therefore negatively influences our t-SNE visualisation, so we used Edit Domain widget as out output for the data. 
 <br>
 
 Lets check how our clustering and cell identification compares to that of Galen  <i> et al.</i>.
@@ -87,11 +87,13 @@ Lets check how our clustering and cell identification compares to that of Galen 
 {{% figure src="/blog_img/2019-06-06/tSNE.png" width="95%" height="95%" %}}
 \
 \
-Apart from some mismatches along the putative cell differentiation trajectories (for example with Progenitor Monocytes and Monocytes), cell types overlap. 
+Apart from some mismatches along the putative cell differentiation trajectories (for example with Progenitor Monocytes and Monocytes along the continuum of cells from HSCs to monocytes), cell types overlap. 
 <br>    
 
-Thus we have achieved what we undertook; characterised human bone marrow cell population and displayed cell differentiation trajectories on t-SNE projection.
+So, we have achieved what we undertook; characterised human bone marrow cell population and displayed cell differentiation trajectories on t-SNE projection.
 
 *References* 
 \
+
 Van Galen P, Hovestadt V, Wadsworth MH, <i>et al.</i> (2016). <a href=”https://www.sciencedirect.com/science/article/pii/S0092867419300947”>Single-Cell RNA-Seq Reveals AML Hierarchies Relevant to Disease Progression and Immunity.</a> <i>Cell</i>, 176(6), 1265–1281.
+

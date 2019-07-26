@@ -1,6 +1,6 @@
 {{ define "main"}}
 
-<section id="features" class="features section padding-bottom ">
+<section id="features" class="features section padding-bottom backgroundcolor">
     <div class="container page-background getting-started">
         <div style="text-align: center">
            <h2 style="font-size: 34px;margin-top: 0px;" >
@@ -17,10 +17,10 @@
       
     </div>
     <div class="categoriesList" id="myUL">
-        <ul >
+        <ul>
             <span>Categories: </span>
           {{ range first 10 .Site.Taxonomies.categories.ByCount }}
-            <li style="display: inline;text-transform: capitalize;"><a href="/categories/{{ .Name | urlize }}">{{ .Name }}</a></li>
+            <li style="display: inline;text-transform: capitalize;"><a class="tag-workflow" href="/categories/{{ .Name | urlize }}">{{ .Name }}</a></li>
           {{ end }}
         </ul>
     </div>
