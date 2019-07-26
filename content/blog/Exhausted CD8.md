@@ -18,15 +18,15 @@ Nobel prize in medicine 2018 was awarded for the discovery of cancer therapy by 
 
 Namely, we will be comparing single cell expression profiles of T cells isolated from tumours (<b>TIL</b>) and from T cells during chronic viral infection with lymphocytic choriomeningitis virus (<b>LCMV</b>), to see whether the states of dysfunctional CD8<sup>+</sup> TILs are comparable to those of T cell exhaustion in LCMVs. 
 
-Naturally, we first need to download data which was deposited on GEO database by Miller <i>et al.</i> in two supersets: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122675"> GSE122675 </a>  - TIL superset and <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122712"> GSE122712 </a> - LCMV superset.
+Naturally, we first need to download data which was deposited on GEO database by Miller <i>et al.</i> in two supersets: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122675"> GSE122675 </a>  - TIL superset and <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122712"> GSE122712 </a> - LCMV superset. Alternatively you can use Single Cell Datasets widget to load the Tumor infiltrating CD8+ and the CD8+ in chronic viral infection datasets. 
 
 Make sure you download files in MTX format, each superset into a separate folder, and rename files into <i>matrix.mtx</i>, <i>genes.tvs</i> and <i>barcodes.tvs</i>, since this is the format automatically recognised by the Load Data widget in scOrange. 
 \
 \
-{{% figure src="/blog_img/2019-04-23/workflow1.PNG" width="60%" height="60%" %}}
+{{% figure src="/blog_img/2019-04-23/workflow1.PNG" width="40%" height="40%" %}}
 \
 \
-So, now we have both datasets and before we start clustering them, we have to name genes and normalise the data using Gene Name Matcher and Single Cell Preprocess widgets.   
+So, now we have both datasets and before we start clustering them, we have to name genes and normalise the data using Genes and Single Cell Preprocess widgets.   
 \
 \
 {{% figure src="/blog_img/2019-04-23/subset2.PNG" width="85%" height="85%" %}}
@@ -35,7 +35,7 @@ So, now we have both datasets and before we start clustering them, we have to na
 After that we start by clustering the LCMV superset and later, using the marker genes, we identify here, for stem-like and terminally exhausted CD8<sup>+</sup> T cells, to see if we can classify the same groups in TIL superset. 
 \
 \
-{{% figure src="/blog_img/2019-04-23/workflow2.PNG" width="95%" height="95%" %}}
+{{% figure src="/blog_img/2019-04-23/workflow2.PNG" width="85%" height="85%" %}}
 \
 \
 We drive the data through the Louvain Clustering widget, where we set the resolution to 2,3 and k neighbours to 100 to elicit 6 clusters.
@@ -53,13 +53,13 @@ Accordingly, C1 cluster is identified as containing terminally exhausted  T cell
 t-SNE projection is created with the t-SNE widget.  
 \
 \
-{{% figure src="/blog_img/2019-04-23/tSNElcmv.png" width="95%" height="95%" %}}
+{{% figure src="/blog_img/2019-04-23/tSNELCMV.png" width="95%" height="95%" %}}
 \
 \
 We use the same workflow to attain t-SNE projection for the TIL subset, but this time we set the resolution to 1,4 in Louvain Clustering widget to elicit 8 clusters.
 \
 \
-{{% figure src="/blog_img/2019-04-23/workflow3.PNG" width="90%" height="90%" %}}
+{{% figure src="/blog_img/2019-04-23/workflow3.PNG" width="70%" height="70%" %}}
 \
 \
 {{% figure src="/blog_img/2019-04-23/tSNEtil.png" width="95%" height="95%" %}}
@@ -76,7 +76,7 @@ One of the marker genes for terminally exhausted T-cell we have identified is <i
 Similarly we both identified <i>Tcf7</i> as the marker gene for progenitor exhausted T cells and occurrence of it is in different clusters of T cells isolated from mousses chronically infected with LCMB than the occurrence of <i>Cd7</i>, but the arrangement of its significance in T cells isolated from tumours is not noticeably divergent.
 \
 \
-{{% figure src="/blog_img/2019-04-23/tSNEtcf7.png" width="95%" height="95%" %}}
+{{% figure src="/blog_img/2019-04-23/tSNETcf7.png" width="95%" height="95%" %}}
 \
 \
 Because of that we decided to seek out another marker gene for progenitor exhausted T cells which is predominantly significant in different clusters in TIL and LCMV subsets. One of the highest scoring genes for C3 cluster in LCMV superset is <i>Xcl1</i> and tSNE projections reveal much better distinguishment in TIL subset as <i>Tcf7</i>.
