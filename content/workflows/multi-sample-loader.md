@@ -4,7 +4,7 @@ title= "Multi-Sample loader"
 images =  ["/workflow_images/multi-sample-loader.png"]
 type = "workflows"
 blog =  ""
-video = ""
+video = "https://www.youtube.com/watch?v=0CY8XrFm2Y8&list=PLmNPvQr9Tf-a4MrEG5thq3qzlkrF5NFbC&index=2"
 download = "multi-sample-loader.ows"
 tags = ["Data"]
 weight = 30

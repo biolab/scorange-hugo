@@ -16,14 +16,16 @@ longExcerpt = "To reproduce a part of a study by Baron et al. (Cell Systems, 201
 Single cell data can be used to identify and separate individual cell types from bulk samples. 
 In this blog we will look at pancreatic cells from two mouse strains (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron cet al.</i></a>, 2017, GEO accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133">GSE84133</a>), 
 cluster them according to their cell type and identify marker genes for each subpopulation of cells. 
+<center>
 \
 \
-{{% figure src="/blog_img/2019-03-20/Blog_1.1.png" width="95%" height="95%" %}}
+{{% figure src="/blog_img/2019-03-20/Blog_1.1.1.png" width="65%" height="65%" %}}
+</center>
+{{% figure src="/blog_img/2019-03-20/Blog_1.1.2.png" width="95%" height="95%" %}}
 \
 \
 
-
-Firstly we need to load, order and nominalise our data. To achieve this, we use the Load Data widget followed by the Gene Name Matcher and the Create Class widget, which enables us the use the cell types as characterised by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> as a control of our clustering. We normalise the data using the Single Cell Preprocess widget.
+Firstly we need to load, order and nominalise our data. To achieve this, we use the Load Data widget followed by the Genes (don't forget to set organism to <i>Mus Musculus</i>) and the Create Class widget, which enables us the use the cell types as characterised by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> as a control of our clustering. We normalise the data using the Single Cell Preprocess widget. Alternatively you can use Single Cell Datasets widget and load the Pancreas cells in mouse dataset with it.  
 <br>
 \
 \
@@ -32,11 +34,11 @@ Firstly we need to load, order and nominalise our data. To achieve this, we use 
 \
 
 Once the data has been normalised, we utilize the Louvain Clustering widget to cluster our cells. We adjust the resolution so that the clustering produces 13 clusters since this is the number of cell types described in mouse pancreas in literature. 
+<center>
 \
 \
-{{% figure src="/blog_img/2019-03-20/Blog_1.3.1.png" width="95%" height="95%" %}}
-\
-\
+{{% figure src="/blog_img/2019-03-20/Blog_1.3.1.png" width="75%" height="75%" %}}
+</center>
 {{% figure src="/blog_img/2019-03-20/Blog_1.3.2.png" width="95%" height="95%" %}}
 \
 \

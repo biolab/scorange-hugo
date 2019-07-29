@@ -1,6 +1,6 @@
 {{ define "main"}}
 
-<section id="features" class="features section padding-bottom ">
+<section id="features" class="features section padding-bottom backgroundcolor ">
     <div class="container page-background getting-started">
         <div style="text-align: center">
            <h2 style="font-size: 34px;margin-top: 0px;" >
@@ -32,9 +32,9 @@
     {{ range $index, $element := .Paginator.Pages }}
         <div class=" row">
             {{ if eq (mod $index 2) 0 }}
-            <div class='content col-md-6 col-xs-12 feature-description pull-left' style="padding-top: 60px;">
+            <div class='content col-md-6 col-xs-12 feature-description pull-left' style="padding-top: 40px;">
             {{else}}
-            <div class='content col-md-6 col-xs-12 feature-description pull-right' style="padding-top: 60px;">
+            <div class='content col-md-6 col-xs-12 feature-description pull-right' style="padding-top: 40px;">
             {{end}}
                 <h2 class="workflow-title">
                     {{ .Title }}
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div class='content col-md-6 col-xs-12 {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}' style="padding: 20px;padding-top: 0px;">
+            <div class='content col-md-6 col-xs-12 images-center {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}' style="padding: 20px;padding-top: 0px;">
                 {{if gt (len .Params.images) 1}}
                 <div id="myCarousel{{$index}}" class="carousel slide" data-interval="false" >
             

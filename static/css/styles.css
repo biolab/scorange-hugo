@@ -959,6 +959,9 @@ svg{
   .footer-pad{
     padding-left: 5% !important;
   }
+  .header-padding{
+    padding-left: 1% !important;
+  }
 
   .workflow-image{
     padding-bottom:0px !important;
@@ -967,9 +970,9 @@ svg{
     padding-top: 20px !important;
   }
 
-  #main-page-download-button {
+  /*#main-page-download-button {
     display: none;
-  }
+  }*/
   .image-container{
     padding: 10px !important;
     padding-top: 0px !important;
@@ -1299,27 +1302,37 @@ h2.docs-subtitle {
   line-height: 30px;
   }
 
-@media (min-width: 1350px) {
+/*@media (min-width: 1350px) {
   .downloadsize{
     padding-left:10%;
     padding-right:10%;
   }
+
+}*/
+.featurePadding{
+    padding: 0 28%;
+  }
+
+ @media (min-width: 1500px) {
+  .featurePadding{
+    padding: 0 30% !important;
+  }
+  .header-pad{
+  margin-left: 8% !important;
+  padding-right: 8% !important;
+}
+
 
 }
 
- @media (min-width: 1500px) {
-  .downloadsize{
-    padding-left:10%;
-    padding-right:10%;
+@media(min-width: 1700px){
+  .featurePadding{
+    padding: 0 30% !important;
   }
-
-
- @media (min-width: 1500px) {
-  .downloadsize{
-    padding-left:10%;
-    padding-right:10%;
-  }
-
+  .header-pad{
+  margin-left: 15% !important;
+  padding-right: 15% !important;
+}
 }
 
 
@@ -1328,18 +1341,22 @@ h2.docs-subtitle {
   padding-right: 8%;
 }
 
-.header .container{
-  margin-left: 0px !important;
-  margin-right: 0px !important;
+/*.header .container{
+  margin-left: 0px ;
+  margin-right: 0px ;
 
-}
+}*/
 
 
 @media (max-width: 1349px) {
+  .featurePadding{
+    padding: 0 25% !important;
+  }
   .downloadsize{    
     padding-left:8%;
     padding-right:8%;
-  }   
+  }
+    
 }
 
 .download-back{
@@ -1347,21 +1364,69 @@ h2.docs-subtitle {
 }
 
 
-@media (max-width: 1090px){
+@media (max-width: 1095px){
+  .featurePadding{
+    padding: 0 23% !important;
+  }
 .header-pad{
   margin-left: 8% !important;
   padding-right: 8% !important;
 }
+.promo{
+  padding-left: 2% !important;
+}
+}
+@media (max-width: 890px){
+  .featurePadding{
+    padding: 0 18% !important;
+  }
 }
 
+@media (max-width: 700px){
+  .featurePadding{
+    padding: 0 16% !important;
+  }
+  .firstpagecontent{
+    font-size: 16px !important;
+  }
+  .promo .overview{
+    margin-top: 0px !important;
+  }
+}
+
+@media (max-width: 550px){
+  .featurePadding{
+    padding: 0 10% !important;
+  }
+}
 
 .downloados .row{
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
 
+.os-download .row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
 
-.container {
-     width: 100%; 
+.cover-image .row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
+
+.featureColor {
+  background-color: white !important;
 }
+
+.backgroundcolor{
+  background-color: white !important;
+}
+
+@media (max-width: 1000px) {
+  .firstpagetitle{
+    font-size: 30px !important;
+  }
+}
+
+
