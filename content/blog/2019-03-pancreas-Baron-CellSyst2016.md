@@ -10,11 +10,11 @@ categories = ["clustering", "marker genes", "t-SNE", "heatmap"]
 joinLines = false
 author = "Iva Černoša"
 shortExcerpt = "Learn how to cluster cells and identify marker genes for clusters" 
-longExcerpt = "To reproduce a part of a study by Baron et al. (Cell Systems, 2017), we cluster mouse pancreatic cells and identify marker genes for each type of the cells."
+longExcerpt = "To reproduce a part of a study by Baron et al. (Cell Systems, 2016), we cluster mouse pancreatic cells and identify marker genes for each type of the cells."
 +++
 
 Single cell data can be used to identify and separate individual cell types from bulk samples. 
-In this blog we will look at pancreatic cells from two mouse strains (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron cet al.</i></a>, 2017, GEO accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133">GSE84133</a>), 
+In this blog we will look at pancreatic cells from two mouse strains (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a>, 2017, GEO accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133">GSE84133</a>), 
 cluster them according to their cell type and identify marker genes for each subpopulation of cells. 
 
 \
