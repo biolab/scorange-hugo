@@ -7,7 +7,7 @@ blog =  ""
 video = "https://www.youtube.com/watch?v=0CY8XrFm2Y8&list=PLmNPvQr9Tf-a4MrEG5thq3qzlkrF5NFbC&index=2"
 download = "multi-sample-loader.ows"
 tags = ["Data"]
-weight = 30
+weight = 10
 +++
 
 Load Data widget can load the from tab or comma delimited text files or annotated 10x Genomics data files. Drag-and-drop to create a list of files to load. Use cell or gene sampling, if required. The loader creates a single data set and marks the cells according to the data source.
