@@ -6,13 +6,16 @@ thumbImage = "/blog_img/2019-08-05/cover-small.png"
 date = "2019-08-05"
 title = "Automatic Cell Type Annotation"
 hardLineBreak = true 
-categories = ["Annotator", "Marker genes", "new widget"]
+categories = ["Annotator", "Marker genes", "new widget", "tSNE"]
 joinLines = false
 author = "Iva Černoša"
 shortExcerpt = "Learn how to effortlessly group and identify cell types in your dataset with a new widget: the Annotator." 
 longExcerpt = "Learn how to effortlessly group and identify cell types in your dataset with a new widget: the Annotator as demonstrated here on the data from human pancreas (Baron et al., Cell Syst 2016)." 
 +++
 
+<i><b>Note:</b> This blog deals with the same topic as our previous blog <a href=" https://singlecell.biolab.si/blog/pancreas/ "> Clustering Cells in Mouse Pancreas </a>, but uses a new widget the Annotator in doing so, therefore it is advisable to run through it first and get some background from it. </i>
+<br>
+<br>
 
 We have some great news for you: do you still remember how many steps we took in (<a href="https://singlecell.biolab.si/blog/pancreas/">Clustering Cells in Mouse Pancreas blog</a>  to identify and group cell types? Well, the whole process just got much simpler with our new widget: the Annotator. 
 <br>
