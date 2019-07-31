@@ -13,11 +13,11 @@ shortExcerpt = "Learn how to effortlessly group and identify cell types in your 
 longExcerpt = "Learn how to effortlessly group and identify cell types in your dataset with a new widget: the Annotator as demonstrated here on the data from human pancreas (Baron et al., Cell Syst 2016)." 
 +++
 
-<i><b>Note:</b> This blog deals with the same topic as our previous blog <a href=" https://singlecell.biolab.si/blog/pancreas/ "> Clustering Cells in Mouse Pancreas </a>, but uses a new widget the Annotator in doing so, therefore it is advisable to run through it first and get some background from it. </i>
+<i><b>Note:</b> This blog deals with the same topic as our previous blog <a href=" https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/ "> Clustering Cells in Mouse Pancreas </a>, but uses a new widget the Annotator in doing so, therefore it is advisable to run through it first and get some background from it. </i>
 <br>
 <br>
 
-We have some great news for you: do you still remember how many steps we took in (<a href="https://singlecell.biolab.si/blog/pancreas/">Clustering Cells in Mouse Pancreas blog</a>  to identify and group cell types? Well, the whole process just got much simpler with our new widget: the Annotator. 
+We have some great news for you: do you still remember how many steps we took in (<a href="https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/">Clustering Cells in Mouse Pancreas blog</a>  to identify and group cell types? Well, the whole process just got much simpler with our new widget: the Annotator. 
 <br>
 
 Again, we will be looking at the single cell data from the pancreas (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a>, 2017, GEO accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133">GSE84133</a>), but this time we will be using the data from human donors. 
@@ -42,4 +42,4 @@ See, it is that simple to annotate cell types. Now you are able to move towards 
 
 *References*
 
-Baron M., Veres A., Wolock S.L., <i>et al.</i> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">A Single-Cell Transcriptomic Map of the Human and Mouse Pancreas Reveals Inter- and Intra-cell Population Structure. </a> Cell Syst. 2016;3(4):346–360.e4. 
+Baron M., Veres A., Wolock S.L., <i>et al.</i> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">A Single-Cell Transcriptomic Map of the Human and Mouse Pancreas Reveals Inter- and Intra-cell Population Structure. </a> <i>Cell Syst.</i> 2016;3(4):346–360.e4. 
