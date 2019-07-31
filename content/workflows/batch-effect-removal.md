@@ -9,4 +9,4 @@ tags = ["Batch Effects", "t-SNE", "Data Set Alignment"]
 weight = 80
 +++
 
-Eliminate batch effects by aligning two data sets. Use a database of marker genes to infer cell types and observe the results in a t-sne plot.
+Eliminate batch effects by aligning two data sets. Use a database of marker genes to infer cell types and observe the results in a t-SNE plot.
