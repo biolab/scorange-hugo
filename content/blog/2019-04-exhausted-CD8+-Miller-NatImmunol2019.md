@@ -3,6 +3,7 @@ draft = false
 type = "blog"
 image = "/blog_img/2019-04-23/header-cd8.png"
 thumbImage = "/blog_img/2019-04-23/header-cd8-small.png"
+frontPageImage = "/blog_img/2019-04-23/header-cd8-small.png"
 date = "2019-04-23" 
 title = "Subsets of Exhausted CD8+ T Cells" 
 hardLineBreak = true 
@@ -22,29 +23,21 @@ Naturally, we first need to download data which was deposited on GEO database by
 
 Make sure you download files in MTX format, each superset into a separate folder, and rename files into <i>matrix.mtx</i>, <i>genes.tvs</i> and <i>barcodes.tvs</i>, since this is the format automatically recognised by the Load Data widget in scOrange. 
 \
-\
-{{% figure src="/blog_img/2019-04-23/workflow1.PNG" width="40%" height="40%" %}}
-\
+{{% figure src="/blog_img/2019-04-23/workflow1.PNG" %}}
 \
 So, now we have both datasets and before we start clustering them, we have to name genes and normalise the data using Genes and Single Cell Preprocess widgets.   
 \
-\
-{{% figure src="/blog_img/2019-04-23/subset2.PNG" width="85%" height="85%" %}}
-\
+{{% figure src="/blog_img/2019-04-23/subset2.PNG" %}}
 \
 After that we start by clustering the LCMV superset and later, using the marker genes, we identify here, for stem-like and terminally exhausted CD8<sup>+</sup> T cells, to see if we can classify the same groups in TIL superset. 
 \
-\
-{{% figure src="/blog_img/2019-04-23/workflow2.PNG" width="85%" height="85%" %}}
-\
+{{% figure src="/blog_img/2019-04-23/workflow2.PNG" %}}
 \
 We drive the data through the Louvain Clustering widget, where we set the resolution to 2,3 and k neighbours to 100 to elicit 6 clusters.
 
 In order to identify our clusters and their marker genes we run the Cluster Analysis widget using the Mann-Whitney method since our data is not normally distributed. We set set the gene count to 200 to determine a higher number of the significant genes. 
 \
-\
-{{% figure src="/blog_img/2019-04-23/subset6_cluster.PNG" width="95%" height="95%" %}}
-\
+{{% figure src="/blog_img/2019-04-23/subset6-cluster.PNG" %}}
 \
 Data Table widget helps us in displaying marker genes for selected clusters and ordering them by their statistic score. 
 
@@ -52,41 +45,30 @@ Accordingly, C1 cluster is identified as containing terminally exhausted  T cell
 
 t-SNE projection is created with the t-SNE widget.  
 \
-\
-{{% figure src="/blog_img/2019-04-23/tSNELCMV.png" width="95%" height="95%" %}}
-\
+{{% figure src="/blog_img/2019-04-23/tSNElcmv.png" %}}
 \
 We use the same workflow to attain t-SNE projection for the TIL subset, but this time we set the resolution to 1,4 in Louvain Clustering widget to elicit 8 clusters.
+
 \
+{{% figure src="/blog_img/2019-04-23/workflow3.PNG" %}}
 \
-{{% figure src="/blog_img/2019-04-23/workflow3.PNG" width="70%" height="70%" %}}
-\
-\
-{{% figure src="/blog_img/2019-04-23/tSNEtil.png" width="95%" height="95%" %}}
-\
+{{% figure src="/blog_img/2019-04-23/tSNEtil.png" %}}
 \
 To test if LCMVs and TILs elicit analogous subsets of exhausted T cells, we use the marker genes we identified for both subgroups in previous steps colour and size cells in t-SNE projections. 
 
 One of the marker genes for terminally exhausted T-cell we have identified is <i>Cd7</i>. The same gene was singled out by <a href="https://www.nature.com/articles/s41590-019-0312-6">Miller <i>et al.</i> </a> as well. So, let's take a look at how it applies on TIL (left) and LCMV (right) datasets. In both projections the cells associated with the selected gene seem to be predominantly located in specific clusters. 
 \
-\
-{{% figure src="/blog_img/2019-04-23/tSNEcd7.png" width="95%" height="95%" %}}
-\
+{{% figure src="/blog_img/2019-04-23/tSNEcd7.png" %}}
 \
 Similarly we both identified <i>Tcf7</i> as the marker gene for progenitor exhausted T cells and occurrence of it is in different clusters of T cells isolated from mousses chronically infected with LCMB than the occurrence of <i>Cd7</i>, but the arrangement of its significance in T cells isolated from tumours is not noticeably divergent.
 \
-\
-{{% figure src="/blog_img/2019-04-23/tSNETcf7.png" width="95%" height="95%" %}}
-\
+{{% figure src="/blog_img/2019-04-23/tSNETcf7.png" %}}
 \
 Because of that we decided to seek out another marker gene for progenitor exhausted T cells which is predominantly significant in different clusters in TIL and LCMV subsets. One of the highest scoring genes for C3 cluster in LCMV superset is <i>Xcl1</i> and tSNE projections reveal much better distinguishment in TIL subset as <i>Tcf7</i>.
 \
-\
-{{% figure src="/blog_img/2019-04-23/tSNExcl1.png" width="95%" height="95%" %}}
-\
+{{% figure src="/blog_img/2019-04-23/tSNExcl1.png" %}}
 \
 We have demonstrated that scOrange is applicable to the single cell data from studies in the field of immunotherapy. The marker genes singled out here could help identify and better target progenitor exhausted T cells to reinvigorate their response to tumour cells with anti-PD-1 therapy.
-\
 \
 
 *References* 
