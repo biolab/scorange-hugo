@@ -3,6 +3,7 @@ draft = false
 type = "blog"
 image = "/blog_img/2019-03-20/cover.png"
 thumbImage = "/blog_img/2019-03-20/cover.png"
+frontPageImage = "/blog_img/2019-03-20/cover.png"
 date = "2019-03-29"
 title = "Clustering Cells in Mouse Pancreas"
 hardLineBreak = true 

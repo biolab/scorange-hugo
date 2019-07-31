@@ -3,6 +3,7 @@ draft = false
 type = "blog"
 image = "/blog_img/2019-06-14/cover.png"
 thumbImage = "/blog_img/2019-06-14/cover-small.png"
+frontPageImage = "/blog_img/2019-06-14/cover-small.png"
 date = "2019-06-14"
 title = "Embedding New Cells onto an Existing t-SNE Projection"
 hardLineBreak = true 
@@ -13,14 +14,14 @@ shortExcerpt = "We project single cell data from an AML patient undergoing chemo
 longExcerpt = "We analyse cell population changes in the course of chemotherapy by recreating a part of a study from Galen et al. (Cell, 2019) and projecting single cell data set from an AML patient undergoing treatment onto a t-SNE of a healthy individual." 
 +++
 
-<i><b>Note:</b> This blog is in many ways a continuation of our previous blog <a href=" https://singlecell.biolab.si/blog/aml_identification/ "> Identification of Cell Populations in Healthy Bone Marrow </a>, therefore it is advisable to read it before tackling this one.</i>
+<i><b>Note:</b> This blog is in many ways a continuation of our previous blog <a href=" https://singlecell.biolab.si/blog/2019-06-aml-identification-vangalen-cell2016/ "> Identification of Cell Populations in Healthy Bone Marrow </a>, therefore it is advisable to read it before tackling this one.</i>
 <br>
 <br>
 
-Batch effects can be a real nuisance when producing t-SNE plots of multiple data sets. In today’s blog we will show how to bypass them in scOrange by projecting single cell data set from an AML patient onto a t-SNE of healthy individual's bone marrow cells clustered according to cell type we have generated in our previous <a href= ”https://singlecell.biolab.si/blog/aml_identification/”> blog</a>. 
+Batch effects can be a real nuisance when producing t-SNE plots of multiple data sets. In today’s blog we will show how to bypass them in scOrange by projecting single cell data set from an AML patient onto a t-SNE of healthy individual's bone marrow cells clustered according to cell type we have generated in our previous <a href= ”https://singlecell.biolab.si/blog/2019-06-aml-identification-vangalen-cell2016/”> blog</a>. 
 <br>
 
-We will be using the same data as in our <a href=" https://singlecell.biolab.si/blog/aml_identification/ ">previous blog</a> gathered by <a href= “https://www.sciencedirect.com/science/article/pii/S0092867419300947”> Galen  <i> et al.</i> (Cell, 2019) </a> which is available in the GEO database under the accession number <a href= “https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116256”>GSE116256</a>. More accurately, we will be using the data as we annotated it after clustering in the last blog. We need the annotated data from the healthy subject (<a href= “https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588000”>BM4</a>) and one AML patient (AML556) <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3587963"> before</a>, <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3587965">15 days after</a> and <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3587967"> 31 days after</a> undergoing chemotherapy. If you want to skip recreating the whole workflow from our previous blog, just use the Merge Data widget to merge the data from the healthy person with its <a href= “https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001“>annotation file</a>. If you followed the previous workflow, use the Save data widget after the Merge Data widget to export the annotated data.  
+We will be using the same data as in our <a href=" https://singlecell.biolab.si/blog/2019-06-aml-identification-vangalen-cell2016/ ">previous blog</a> gathered by <a href= “https://www.sciencedirect.com/science/article/pii/S0092867419300947”> Galen  <i> et al.</i> (Cell, 2019) </a> which is available in the GEO database under the accession number <a href= “https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116256”>GSE116256</a>. More accurately, we will be using the data as we annotated it after clustering in the last blog. We need the annotated data from the healthy subject (<a href= “https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588000”>BM4</a>) and one AML patient (AML556) <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3587963"> before</a>, <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3587965">15 days after</a> and <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3587967"> 31 days after</a> undergoing chemotherapy. If you want to skip recreating the whole workflow from our previous blog, just use the Merge Data widget to merge the data from the healthy person with its <a href= “https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001“>annotation file</a>. If you followed the previous workflow, use the Save data widget after the Merge Data widget to export the annotated data.  
 \
 {{% figure src="/blog_img/2019-06-14/workflow-partial1.png" %}}
 \
@@ -44,7 +45,7 @@ This is our projection of the single cell data from the AML patient before the c
 \
 {{% figure src="/blog_img/2019-06-14/Day15.png" %}}
 \
-Looking at the clustering pattern from our earlier <a href= ”https://singlecell.biolab.si/blog/aml_identification/”>blog</a>, we can conclude that the cells here are predominantly T and natural killer cells, which is consistent with clearance of the cells during the chemotherapy.
+Looking at the clustering pattern from our earlier <a href= ”https://singlecell.biolab.si/blog/2019-06-aml-identification-vangalen-cell2016/”>blog</a>, we can conclude that the cells here are predominantly T and natural killer cells, which is consistent with clearance of the cells during the chemotherapy.
 <br>
 
 And how about a month after the chemotherapy?

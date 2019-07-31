@@ -3,6 +3,7 @@ draft = false
 type = "blog"
 image = "/blog_img/2019-07-28/coverphoto.png"
 thumbImage = "/blog_img/2019-07-28/coverphoto-small.png"
+frontPageImage = "/blog_img/2019-07-28/coverphoto-small.png"
 date = "2019-07-28"
 title = "Profiling Human Osteoarthritis Cartilage Chondrocytes"
 hardLineBreak = true 

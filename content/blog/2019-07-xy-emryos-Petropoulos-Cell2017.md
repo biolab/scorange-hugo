@@ -3,6 +3,7 @@ draft = false
 type = "blog"
 image = "/blog_img/2019-05-06/cover-embryo.png" 
 thumbImage = "/blog_img/2019-05-06/cover-embryo-small.png"
+frontPageImage = "/blog_img/2019-05-06/cover-embryo-small.png"
 date = "2019-05-06" 
 title = "X And Y Chromosome Expression in Human Preimplantation Embryos" 
 hardLineBreak = true 
@@ -12,7 +13,7 @@ author = "Iva Černoša"
 shortExcerpt = "Determine karyotype (XY, XX, X0) of the samples from single cell data and observe the time of activation of Y chromosome in a preimplantation embryo." 
 longExcerpt = "Using the single cell data from Petropoulos et al. (Cell, 2016) we determine the karyotype (XY, XX, X0) of the cells and inspect the time of activation of Y chromosome in a preimplantation embryo." 
 +++
-We have already demonstrated how to identify cell types using marker genes in our previous <a href="https://singlecell.biolab.si/blog/marker-genes/">blog</a>. Today we will apply the same principle to determine the biological sex of human preimplantation embryos sampled by <a href= ”https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a> (Cell, 2016) and examine the time of Y chromosome activation. 
+We have already demonstrated how to identify cell types using marker genes in our previous <a href="https://singlecell.biolab.si/blog/2019-07-xy-emryos-petropoulos-cell2017/">blog</a>. Today we will apply the same principle to determine the biological sex of human preimplantation embryos sampled by <a href= ”https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a> (Cell, 2016) and examine the time of Y chromosome activation. 
 <br>
 
 

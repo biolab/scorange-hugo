@@ -3,6 +3,7 @@ draft = false
 type = "blog"
 image = "/blog_img/2019-05-10/linage-cover.png"
 thumbImage = "/blog_img/2019-05-10/linage-cover-small.png"
+frontPageImage = "/blog_img/2019-04-23/header-cd8-small.png"
 date = "2019-05-10"
 title = "Pinpointing Lineage Differentiation in Human Preimplantation Embryotic Cells"
 hardLineBreak = true 
@@ -14,7 +15,7 @@ longExcerpt = "Combine clustering and time component to pinpoint the time of tro
 +++
 Embryonic development has been well studied in mouse models but our knowledge of this process in the human embryo is rudimentary. Here we will take a closer look at trophectoderm and inner cell mass maturation during the first 7 days of human development to help with the assessment of the degree of conservation between the mouse and human blastocyst formation.
 
-We will be using the same single cell data from human preimplantation embryos as in the previous <a href=”https://singlecell.biolab.si/blog/x-and-y-chromosome-in-embryos/”>blog</a>. The data was published by <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a>and is deposited in ArrayExpress database under the accession number <a href=”https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/”>E-MTAB-3929</a>. 
+We will be using the same single cell data from human preimplantation embryos as in the previous <a href=”https://singlecell.biolab.si/blog/2019-07-xy-emryos-petropoulos-cell2017/”>blog</a>. The data was published by <a href=” https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a>and is deposited in ArrayExpress database under the accession number <a href=”https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/”>E-MTAB-3929</a>. 
 <br>
 
 Naturally, we have to start by loading the data into Orange and pre-processing it using the familiar workflow with the following widgets: Load Data, Genes, Create Class to sort cells by sampling day and of course Single Cell Preprocess to normalise the data and select 500 most variable genes. Alternatively, you can load the human preimplantation embryos dataset using Single Cell Datasets widget.  

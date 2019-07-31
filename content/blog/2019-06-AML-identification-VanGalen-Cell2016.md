@@ -3,6 +3,7 @@ draft = false
 type = "blog"
 image = "/blog_img/2019-06-06/coverphoto.png"
 thumbImage = "/blog_img/2019-06-06/coverphoto-small.png"
+frontPageImage = "/blog_img/2019-06-06/coverphoto-small.png"
 date = "2019-06-06"
 title = "Identification of Cell Populations in Healthy Bone Marrow"
 hardLineBreak = true 
@@ -29,7 +30,7 @@ Since the relationships between the cell clusters is important for this analysis
 {{% figure src="/blog_img/2019-06-06/clustering.png" %}}
 \
 
-We can tackle the identification of the clusters using two different approaches. The first is identifying the most significant genes in each cluster as described in one of our previous <a href= “https://singlecell.biolab.si/blog/pancreas/ “> blogs</a> and assuming cell types according to marker genes’ functions, the other is using the <a href= https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001> annotation file </a> provided by <a href= “https://www.sciencedirect.com/science/article/pii/S0092867419300947”> Galen  <i> et al.</i></a>.
+We can tackle the identification of the clusters using two different approaches. The first is identifying the most significant genes in each cluster as described in one of our previous <a href= “https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/ “> blogs</a> and assuming cell types according to marker genes’ functions, the other is using the <a href= https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001> annotation file </a> provided by <a href= “https://www.sciencedirect.com/science/article/pii/S0092867419300947”> Galen  <i> et al.</i></a>.
 
 \
 {{% figure src="/blog_img/2019-06-06/workflow-partial3.PNG" %}}
@@ -41,7 +42,7 @@ But before we take a closer look at either of the alternatives, let us take a lo
 C2 is the biggest cluster. This information might come in handy when we try to identify them.
 <br>
 
-What we have also already done in this workflow, is identified markers for each cluster with the help of Data Tables (explained in detail in <a href="https://singlecell.biolab.si/blog/pancreas/"> this blog</a>). With these markers we can classify clusters. For example, <i>CD3D</i> is the most significant gene in cluster 4. It encodes T-cell surface glycoprotein CD3. Similarly <i>MS4A1</i> in the cluster 3 encodes B-lymphocyte antigen CD20.
+What we have also already done in this workflow, is identified markers for each cluster with the help of Data Tables (explained in detail in <a href="https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/"> this blog</a>). With these markers we can classify clusters. For example, <i>CD3D</i> is the most significant gene in cluster 4. It encodes T-cell surface glycoprotein CD3. Similarly <i>MS4A1</i> in the cluster 3 encodes B-lymphocyte antigen CD20.
 \
 {{% figure src="/blog_img/2019-06-06/workflow-partial4.PNG" %}}
 \

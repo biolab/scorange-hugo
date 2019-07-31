@@ -3,6 +3,7 @@ draft = false
 type = "blog"
 image = "/blog_img/2019-04-23/header-cd8.png"
 thumbImage = "/blog_img/2019-04-23/header-cd8-small.png"
+frontPageImage = "/blog_img/2019-04-23/header-cd8-small.png"
 date = "2019-04-23" 
 title = "Subsets of Exhausted CD8+ T Cells" 
 hardLineBreak = true 

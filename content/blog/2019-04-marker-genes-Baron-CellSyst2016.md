@@ -3,6 +3,7 @@ draft = false
 type = "blog"
 image = "/blog_img/2019-03-29/cover.png"
 thumbImage = "/blog_img/2019-03-29/marker-5.png"
+frontPageImage = "/blog_img/2019-03-29/marker-5.png"
 date = "2019-04-01"
 title = "Importing and Using Your Own Marker Genes"
 hardLineBreak = true 
@@ -12,14 +13,14 @@ author = "Iva Černoša"
 shortExcerpt = "If you ever felt limited by Marker Gene widget, here you can discover how to bypass it" 
 longExcerpt = "If you ever felt limited by Marker Gene widget, here you can discover how to bypass it by importing your own marker genes and using them to score your dataset" 
 +++
-<i><b>Note:</b> This blog heavily references and uses the data we identified in our previous blog <a href="https://singlecell.biolab.si/blog/pancreas/">Clustering Cells in Mouse Pancreas</a>, therefore it is advisable for everyone less experienced with scOrange to read it before tackling this one.</i>
+<i><b>Note:</b> This blog heavily references and uses the data we identified in our previous blog <a href="https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/">Clustering Cells in Mouse Pancreas</a>, therefore it is advisable for everyone less experienced with scOrange to read it before tackling this one.</i>
 <br>
 <br>
 Orange already has a build-in widget with marker genes, but what if your marker genes are not in included its library? Well, there is no reason to give up, with only a few extra steps you can easily import our own. 
 \
 {{% figure src="/blog_img/2019-03-29/marker-1-1.png" %}}
 \
-As usual, we first need to import our data. We are using the data from mouse pancreas (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a>, GEO accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133">GSE84133</a>). We import and normalise our data using Load Data, Gene Name Matcher and Single Cell Preprocess widgets (a detailed description of these steps is available in our previous blog <a href="https://singlecell.biolab.si/blog/pancreas/">Clustering Cells in Mouse Pancreas</a>).
+As usual, we first need to import our data. We are using the data from mouse pancreas (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a>, GEO accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133">GSE84133</a>). We import and normalise our data using Load Data, Gene Name Matcher and Single Cell Preprocess widgets (a detailed description of these steps is available in our previous blog <a href="https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/">Clustering Cells in Mouse Pancreas</a>).
 \
 {{% figure src="/blog_img/2019-03-29/marker-1-2.png" %}}
 \
