@@ -2,7 +2,7 @@
 
 Files for scOrange web page in hugo.
 
-### Installation
+## Installation
 
 If you are on macOS and using Homebrew, you can install Hugo with the following one-liner:
 
@@ -23,6 +23,19 @@ To prepare the files for the widget documentation, do (clones Orange add-ons wit
     git submodule update
     python copy.pu
     
-### Run
+## Run
 
     hugo server
+
+## Guidelines
+
+Following is a set of guidelines for authors of material on scOrange web page.
+
+* Use spell checker (and Grammarly) before submission.
+
+### Guidelines for Workflows
+
+* Markdown file with a workflow description should have the same name as the title of the workflow, all lowercase, with dashes in place of spaces.
+* Order workflows from simple to more complex ones.
+* Ordering is set by the `weight` parameters. Workflows with higher weight appear first.
+* Images on the cover page are listed in `images` parameter. The aspect ratio for these images should strictly be 460 : 280. Use low resolution. Reduce the number of colors in color palette (In Gimp, Image > Mode > Indexed).
