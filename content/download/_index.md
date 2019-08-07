@@ -1,7 +1,7 @@
 +++
 title = "Download"
 url = "/download/"
-version = ""
+version = "1.1.0"
 listing = true
 +++
 
