@@ -1,11 +1,11 @@
 +++
-title= "Workflow examples"
+title= "Workflows"
 image =  "/images/template_workflow.png"
-button =  false
+button = true
 thumbnailImagePosition = "right"
 weight = 30
-buttonText = ""
+buttonText = "Workflow Examples"
+buttonURL = "/workflows/"
 +++
 
-
-Software scOrange includes a wide array of workflow templates designed to help you get familiar with the application. Pick Templates on the Welcome screen to explore.
+From loading the data to preprocessing, visualization, to modeling, workflows define the data analysis pipelines. Check out our workflow gallery, download any workflow, and run it with scOrange. Or pick a workflow from Templates gallery in scOrange's Welcome screen.
