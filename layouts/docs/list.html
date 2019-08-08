@@ -1,25 +1,30 @@
 {{ define "main"}}
 
-<section id="documentation" class="features section custom-reduce-padding-2 backgroundcolor" style="height: 100%; width: 100%;">
-    <div class=" padding-top-page" style="background-color: white;">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <h1 class="title">{{ .Title }}</h1>
-                    <div class="content">
-                    {{ range .Pages.ByWeight }}
-                        <div class="col-md-12 col-xs-12 doc-section" >
-                            <img class="docs-image" src="{{ .Params.image }}" style="margin-bottom: 30px;">
-
-                            <!-- <h2>{{.Title}}</h2> -->
-                            {{ .Content }}
-                        </div>
-                    {{ end }}
-
-                    </div>
+    <section id="features" class="features section padding-bottom backgroundcolor">
+        <div class="container page-background getting-started">
+           {{ range .Pages.ByWeight }}
+            <div class=" row">
+        <div class='content col-md-6 col-xs-12 feature-description pull-{{if (eq .Params.thumbnailImagePosition "left")}}right{{else}}left{{ end }}'>
+            <h2 class="feature-title">
+                {{ .Title }}
+            </h2>
+            <p class="feature-text">{{ .Content }}</p>
+            <div class="getting-started-button">
+                {{ if isset .Params "button"}}
+                 {{ if .Params.button }}
+                <a class="btn btn-warning" href="{{.Params.buttonURL}}">{{.Params.buttonText}}
+                    </a>
+                    {{end }}
+                    {{end}}
             </div>
         </div>
+        <div class='content col-md-6 col-xs-12 {{if (eq .Params.thumbnailImagePosition "left") }}{{else }}panel-left{{ end }}'>
+                <img class='image {{.Params.thumbnailImagePosition}}' src="{{ .Params.image}}" style="padding:40px;">
+        </div>
     </div>
+            {{ end }}
+            
+        </div>
+    </section>
 
-</section>
-
-{{end }}
+{{ end }}

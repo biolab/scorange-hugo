@@ -2,6 +2,7 @@
 title = "Visual Programming"
 weight = -120
 image = "/images/orange_docs_01_small.png"
+draft = true
 +++
 
 [Getting started](/getting-started)
