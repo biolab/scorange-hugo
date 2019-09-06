@@ -17,6 +17,7 @@ longExcerpt = "Learn how to quickly embed new cells onto and existing tSNE proje
 <i><b>Note:</b> This blog deals with the same topic as our blog <a href=" https://singlecell.biolab.si/blog/2019-06-aml-projection-vangalen-cell2016/"> Embedding New Cells onto an Existing t-SNE Projection</a>, but uses a new widget the Annotator in doing so, therefore it is advisable to run through it first and get some background from it. </i>
 <br>
 <br>
+<br>
 
 In our <a href=" https://singlecell.biolab.si/blog/2019-08-automatic-annotation-Baron-CellSyst2016/"> previous blog</a> we looked at the new Annotator widget and how it can be used effortlessly group and identify cell types in your dataset. Here we will explore another feature of the same widget: embedding of the new cells onto and existing tSNE projection.
 <br>
