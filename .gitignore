@@ -7,6 +7,10 @@
 .pydevproject
 .settings/*
 .DS_Store
+.vscode
+
+# Cython generated files
+__pycache__
 
 # Windows temp files
 Thumbs.db
