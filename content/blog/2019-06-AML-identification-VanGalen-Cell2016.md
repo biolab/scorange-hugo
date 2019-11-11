@@ -25,12 +25,12 @@ After loading the data (alternatively, you can load the Healthy human bone marro
 \
 {{% figure src="/blog_img/2019-06-06/workflow-partial2.PNG" %}}
 \
-Since the relationships between the cell clusters is important for this analysis, we use Hierarhical Clustering and not Louvian Clustering widget to cluster the data. Firstly, we calculate the distances between the cells and then visually determine the number of clusters by dragging the vertical line over the graph.
+Since the relationships between the cell clusters is important for this analysis, we use the Hierarhical Clustering and not the Louvian Clustering widget to cluster the data. Firstly, we calculate the distances between the cells and then visually determine the number of clusters by dragging the vertical line over the graph.
 \
 {{% figure src="/blog_img/2019-06-06/clustering.png" %}}
 \
 
-We can tackle the identification of the clusters using two different approaches. The first is identifying the most significant genes in each cluster as described in one of our previous <a href= "https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/"> blogs</a> and assuming cell types according to marker genes’ functions, the other is using the <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001"> annotation file </a> provided by <a href= "https://www.sciencedirect.com/science/article/pii/S0092867419300947"> Galen  <i> et al.</i></a>.
+We can tackle the identification of the clusters using two different approaches. The first is identifying the most significant genes in each cluster as described in one of our previous <a href= "https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/"> blogs</a> and assuming cell types according to marker genes’ functions, the other is using the <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001"> annotation file </a> provided by <a href= "https://www.sciencedirect.com/science/article/pii/S0092867419300947"> Galen <i> et al.</i></a>.
 
 \
 {{% figure src="/blog_img/2019-06-06/workflow-partial3.PNG" %}}
