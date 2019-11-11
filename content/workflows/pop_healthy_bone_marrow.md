@@ -1,6 +1,6 @@
 +++
-title= "Embedding New Cells onto an Existing t-SNE Projection"
-images =  ["/workflow_images/embedding_worfklow.png", "/workflow_images/embedding_tSNEs.png"]
+title= "Identification of Cell Populations in Healthy Bone Marrow"
+images =  ["/workflow_images/pop_healthy_bone_marrow_tSNE.png", "pop_healthy_bone_marrow_workflow.png"]
 type = "workflows"
 blog =  "/2019-06-aml-identification-vangalen-cell2016/"
 video = ""
