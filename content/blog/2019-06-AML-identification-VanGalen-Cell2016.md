@@ -16,7 +16,7 @@ longExcerpt = "We identify cell populations in a dataset of healthy human bone m
 
 In order to study diseases such as leukaemia on cell populations level, we first need to characterise a healthy bone marrow cell population. So in this blog we set out to do just that. 
 
-The data from<a href= “https://www.sciencedirect.com/science/article/pii/S0092867419300947”> Galen  <i> et al.</i>(Cell, 2019)</a> is available in the GEO database under the accession number <a href= “https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116256”>GSE116256</a>. We will be using the data from only one healthy person <a href= “https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588000”> BM4 </a> and its <a href= https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001> annotation file </a> since this is by far the biggest nonenriched sample from a healthy individual in this dataset. 
+The data from<a href= "https://www.sciencedirect.com/science/article/pii/S0092867419300947"> Galen  <i> et al.</i>(Cell, 2019)</a> is available in the GEO database under the accession number <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116256">GSE116256</a>. We will be using the data from only one healthy person <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588000"> BM4 </a> and its <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001"> annotation file </a> since this is by far the biggest nonenriched sample from a healthy individual in this dataset. 
 
 \
 {{% figure src="/blog_img/2019-06-06/workflow-partial1.PNG" %}}
@@ -30,7 +30,7 @@ Since the relationships between the cell clusters is important for this analysis
 {{% figure src="/blog_img/2019-06-06/clustering.png" %}}
 \
 
-We can tackle the identification of the clusters using two different approaches. The first is identifying the most significant genes in each cluster as described in one of our previous <a href= “https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/ “> blogs</a> and assuming cell types according to marker genes’ functions, the other is using the <a href= https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001> annotation file </a> provided by <a href= “https://www.sciencedirect.com/science/article/pii/S0092867419300947”> Galen  <i> et al.</i></a>.
+We can tackle the identification of the clusters using two different approaches. The first is identifying the most significant genes in each cluster as described in one of our previous <a href= "https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/"> blogs</a> and assuming cell types according to marker genes’ functions, the other is using the <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3588001"> annotation file </a> provided by <a href= "https://www.sciencedirect.com/science/article/pii/S0092867419300947"> Galen  <i> et al.</i></a>.
 
 \
 {{% figure src="/blog_img/2019-06-06/workflow-partial3.PNG" %}}
@@ -77,4 +77,4 @@ So, we have achieved what we undertook; characterised human bone marrow cell pop
 *References* 
 \
 
-Van Galen P, Hovestadt V, Wadsworth MH, <i>et al.</i> (2016). <a href=”https://www.sciencedirect.com/science/article/pii/S0092867419300947”>Single-Cell RNA-Seq Reveals AML Hierarchies Relevant to Disease Progression and Immunity.</a> <i>Cell</i>, 176(6), 1265–1281.
+Van Galen P, Hovestadt V, Wadsworth MH, <i>et al.</i> (2016). <a href="https://www.sciencedirect.com/science/article/pii/S0092867419300947">Single-Cell RNA-Seq Reveals AML Hierarchies Relevant to Disease Progression and Immunity.</a> <i>Cell</i>, 176(6), 1265–1281.

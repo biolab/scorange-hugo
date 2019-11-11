@@ -18,7 +18,7 @@ Osteoarthritis is one of the most costly and common chronic conditions. A better
 \
 {{% figure src="/blog_img/2019-07-28/workflow-partial1.PNG" %}}
 \
-Processing of the data downloaded from the GEO database (accession number: <a href= “https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE104782”>GSE104782</a>) will be a bit longer than usual this time.  We start by eliminating the batch effect, since we don't want the differences between the 32 individuals sampled in this study to interfere with our analysis of gene expression. After that we use Genes widget to match gene names in the data to their IDs and Create Class widget to mark cells based on the stage of osteoarthritis as microscopically diagnosed by Ji <i>et al.</i> (S0 = normal articular cartilage, S4=exposed subchondral bone). 
+Processing of the data downloaded from the GEO database (accession number: <a href= "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE104782">GSE104782</a>) will be a bit longer than usual this time.  We start by eliminating the batch effect, since we don't want the differences between the 32 individuals sampled in this study to interfere with our analysis of gene expression. After that we use Genes widget to match gene names in the data to their IDs and Create Class widget to mark cells based on the stage of osteoarthritis as microscopically diagnosed by Ji <i>et al.</i> (S0 = normal articular cartilage, S4=exposed subchondral bone). 
 \
 {{% figure src="/blog_img/2019-07-28/createclass.PNG" %}}
 \
@@ -49,4 +49,4 @@ Now you see, just how quick and easy identifying, annotating and explaining the 
 *References* 
 \
 
-Ji Q, Zheng Y, Zhang G, <i>et al.</i> (2019) <a href= “https://ard.bmj.com/content/78/1/100.long”> Single-cell RNA-seq Analysis Reveals the Progression of Human Osteoarthritis.</a> <i> Annals of the Rheumatic Diseases</i>, 78(1), 100–110. 
+Ji Q, Zheng Y, Zhang G, <i>et al.</i> (2019) <a href= "https://ard.bmj.com/content/78/1/100.long"> Single-cell RNA-seq Analysis Reveals the Progression of Human Osteoarthritis.</a> <i> Annals of the Rheumatic Diseases</i>, 78(1), 100–110. 

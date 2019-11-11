@@ -13,11 +13,10 @@ author = "Iva Černoša"
 shortExcerpt = "Determine karyotype (XY, XX, X0) of the samples from single cell data and observe the time of activation of Y chromosome in a preimplantation embryo." 
 longExcerpt = "Using the single cell data from Petropoulos et al. (Cell, 2016) we determine the karyotype (XY, XX, X0) of the cells and inspect the time of activation of Y chromosome in a preimplantation embryo." 
 +++
-We have already demonstrated how to identify cell types using marker genes in our previous <a href="https://singlecell.biolab.si/blog/2019-07-xy-emryos-petropoulos-cell2017/">blog</a>. Today we will apply the same principle to determine the biological sex of human preimplantation embryos sampled by <a href= ”https://www.cell.com/fulltext/S0092-8674(16)30280-X”>Petropoulos <i> et al. </i> </a> (Cell, 2016) and examine the time of Y chromosome activation. 
+We have already demonstrated how to identify cell types using marker genes in our previous <a href="https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/">blog</a>. Today we will apply the same principle to determine the biological sex of human preimplantation embryos sampled by <a href= "https://www.cell.com/fulltext/S0092-8674(16)30280-X">Petropoulos <i> et al. </i> </a> (Cell, 2016) and examine the time of Y chromosome activation. 
 <br>
 
-
-The data we need for this example is deposited in ArrayExpress database under the accession number <a href=”https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/”> E-MTAB-3929 </a>. This single cell data was collected from human preimplantation embryos at different timepoints.
+The data we need for this example is deposited in ArrayExpress database under the accession number <a href="https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/"> E-MTAB-3929 </a>. This single cell data was collected from human preimplantation embryos at different timepoints.
 We import the data into Orange using The Load Data widget, followed by Genes widget. Alternatively, you can load the human preimplantation embryos dataset using Single Cell Datasets widget. Employing Create Class widget helps us to classificate cells based on the sampling day.
 
 \

@@ -20,11 +20,11 @@ Orange already has a build-in widget with marker genes, but what if your marker 
 \
 {{% figure src="/blog_img/2019-03-29/marker-1-1.png" %}}
 \
-As usual, we first need to import our data. We are using the data from mouse pancreas (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a>, GEO accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133">GSE84133</a>). We import and normalise our data using Load Data, Gene Name Matcher and Single Cell Preprocess widgets (a detailed description of these steps is available in our previous blog <a href="https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/">Clustering Cells in Mouse Pancreas</a>).
+As usual, we first need to import our data. We are using the data from mouse pancreas (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a>, GEO accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133">GSE84133</a>). We import and normalise our data using Load Data, Gene Name Matcher and Single Cell Preprocess widgets (a detailed description of these steps is available in our previous blog <a href="https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/">Clustering Cells in Mouse Pancreas</a>). Alternatively, you can avoid downloading the data from the GEO database by using the Single Cell Datasets widget to load the dataset Pancreas cells in mouse.
 \
 {{% figure src="/blog_img/2019-03-29/marker-1-2.png" %}}
 \
-Now we import our marker genes using File widget. Here we are using the marker genes that we identified and saved in the last steps of our earlier blog. Marker genes can be formatted in a simple table. In case your data does not include Entrez IDs for your genes, you have to process them with the Genes widget first (with organism set to <i>Mus Musculus</i>), so that scOrange assigns them Entrez IDs and can later match them to the genes in the data you are analysing. 
+We can import our marker genes using File widget. Here we are using the marker genes that we identified and saved in the last steps of our earlier blog. Marker genes can be formatted in a simple table. In case your data does not include Entrez IDs for your genes, you have to process them with the Genes widget first (with organism set to <i>Mus Musculus</i> in this case), so that scOrange assigns them Entrez IDs and can later match them to the genes in the data you are analysing. 
 \
 {{% figure src="/blog_img/2019-03-29/marker-2.PNG" %}}
 \

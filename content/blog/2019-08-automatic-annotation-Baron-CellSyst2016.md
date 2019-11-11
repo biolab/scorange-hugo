@@ -2,7 +2,7 @@
 draft = false
 type = "blog"
 image = "/blog_img/2019-08-05/cover.png"
-thumbImage = "/blog_img/2019-08-05/cover-small.png"
+thumbImage = "/blog_img/2019-08-19/cover-small.png"
 date = "2019-08-05"
 title = "Automatic Cell Type Annotation"
 hardLineBreak = true 

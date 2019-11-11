@@ -14,8 +14,8 @@ shortExcerpt = "Learn how to cluster cells and identify marker genes for cluster
 longExcerpt = "To reproduce a part of a study by Baron et al. (Cell Systems, 2016), we cluster mouse pancreatic cells and identify marker genes for each type of the cells."
 +++
 
-Single cell data can be used to identify and separate individual cell types from bulk samples. 
-In this blog we will look at pancreatic cells from two mouse strains (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a>, 2017, GEO accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133">GSE84133</a>), 
+Single cell data can be used to identify and separate individual cell types in bulk samples. 
+In this blog we will take a look at pancreatic cells from two mouse strains (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a>, 2017, GEO accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133">GSE84133</a>), 
 cluster them according to their cell type and identify marker genes for each subpopulation of cells. 
 
 \
@@ -24,13 +24,13 @@ cluster them according to their cell type and identify marker genes for each sub
 {{% figure src="/blog_img/2019-03-20/blog-1-1-2.png" %}}
 \
 
-Firstly we need to load, order and nominalise our data. To achieve this, we use the Load Data widget followed by the Genes (don't forget to set organism to <i>Mus Musculus</i>) and the Create Class widget, which enables us the use the cell types as characterised by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> as a control of our clustering. We normalise the data using the Single Cell Preprocess widget. Alternatively you can use Single Cell Datasets widget and load the Pancreas cells in mouse dataset with it.  
+Firstly, we need to load, order and nominalise our data. To achieve this, we use the Load Data widget followed by the Genes (don't forget to set organism to <i>Mus Musculus</i>) and the Create Class widget, which enables us to use the cell types as characterised by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> as a control of our clustering. We normalise the data using the Single Cell Preprocess widget. Alternatively you can use Single Cell Datasets widget and load the Pancreas cells in mouse dataset with it.  
 
 \
 {{% figure src="/blog_img/2019-03-20/blog-1-2-1.png" %}}
 \
 
-Once the data has been normalised, we utilize the Louvain Clustering widget to cluster our cells. We adjust the resolution so that the clustering produces 13 clusters since this is the number of cell types described in mouse pancreas in literature. 
+Once the data has been normalised, we utilize the Louvain Clustering widget to cluster our cells. We adjust the resolution so that the clustering produces 13 clusters, since this is the number of cell types described in mouse pancreas in literature. 
 
 \
 {{% figure src="/blog_img/2019-03-20/blog-1-3-1.png" %}}
@@ -43,7 +43,7 @@ We check the accuracy of clustering with box plot and t-SNE where we use Groups 
 {{% figure src="/blog_img/2019-03-20/tSNE-mouse.png" %}}
 \
 
-The only thing we still need to do now, is to identify the marker genes. There is no specific widget in scOrange to accomplish this task, so we will use similar steps as were used in the article by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> to find the three most significant markers for each cluster and create a heatmap with them. 
+The only thing we still need to do now is to identify the marker genes. There is no specific widget in scOrange to accomplish this task, so we will use similar steps as the ones used in the article by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> to find the three most significant markers for each cluster and create a heatmap with them. 
 \
 {{% figure src="/blog_img/2019-03-20/workflow-1-4.PNG" %}}
 \

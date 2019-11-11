@@ -15,11 +15,11 @@ longExcerpt = "We reproduce a part of the study by Miller et al. (Nature Immunol
 +++
 
 
-Nobel prize in medicine 2018 was awarded for the discovery of cancer therapy by inhibition of negative immune regulation. Since then the attempts to improve the results of the checkpoint blockade immunotherapy have highlighted the importance of understanding the heterogeneity of the cells. Here we will show how scOrange can be used in this expanding field of research by reproducing a part of the study by <a href="https://www.nature.com/articles/s41590-019-0312-6"> Miller <i>et al.</i></a> published in Nature Immunology this March.  
+The Nobel prize in medicine 2018 was awarded for the discovery of cancer therapy by inhibition of negative immune regulation. Since then the attempts to improve the results of the checkpoint blockade immunotherapy have highlighted the importance of understanding the heterogeneity of the cells. Here we will show how scOrange can be used in this expanding field of research by reproducing a part of the study by <a href="https://www.nature.com/articles/s41590-019-0312-6"> Miller <i>et al.</i></a> published in Nature Immunology this March.  
 
 Namely, we will be comparing single cell expression profiles of T cells isolated from tumours (<b>TIL</b>) and from T cells during chronic viral infection with lymphocytic choriomeningitis virus (<b>LCMV</b>), to see whether the states of dysfunctional CD8<sup>+</sup> TILs are comparable to those of T cell exhaustion in LCMVs. 
 
-Naturally, we first need to download data which was deposited on GEO database by Miller <i>et al.</i> in two supersets: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122675"> GSE122675 </a>  - TIL superset and <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122712"> GSE122712 </a> - LCMV superset. Alternatively you can use Single Cell Datasets widget to load the Tumor infiltrating CD8+ and the CD8+ in chronic viral infection datasets. 
+Naturally, we first need to download data which was deposited on the GEO database by Miller <i>et al.</i> in two supersets: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122675"> GSE122675 </a>  - TIL superset and <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122712"> GSE122712 </a> - LCMV superset. Alternatively, you can avoiding having to download data from the GEO database by using the Single Cell Datasets widget to load the Tumor infiltrating CD8+ and the CD8+ in chronic viral infection datasets.
 
 Make sure you download files in MTX format, each superset into a separate folder, and rename files into <i>matrix.mtx</i>, <i>genes.tvs</i> and <i>barcodes.tvs</i>, since this is the format automatically recognised by the Load Data widget in scOrange. 
 \
@@ -41,7 +41,7 @@ In order to identify our clusters and their marker genes we run the Cluster Anal
 \
 Data Table widget helps us in displaying marker genes for selected clusters and ordering them by their statistic score. 
 
-Accordingly, C1 cluster is identified as containing terminally exhausted  T cells (<i>Cd7</i>, <i>Cd160</i>, <i>Rgs1</i>), C2 as effector cells (<i>Cd7</i>, <i>Cd160</i>, <i>Rgs1</i>), C3 are progenitor exhausted T cells (<i>Tcf 7</i>, <i>Xcl</i>) and C4 proliferating cells (<i>Cdc6</i>, <i>Bub1</i>). Given the size and the genes that define the remaining two clusters, we can assume they are representative of contaminating naive T cells. <!--malo še razširi-->
+Accordingly, C1 cluster is identified as containing terminally exhausted  T cells (<i>Cd7</i>, <i>Cd160</i>, <i>Rgs1</i>), C2 as effector cells (<i>Cd7</i>, <i>Cd160</i>, <i>Rgs1</i>), C3 are progenitor exhausted T cells (<i>Tcf 7</i>, <i>Xcl</i>) and C4 proliferating cells (<i>Cdc6</i>, <i>Bub1</i>). Given the size and the genes that define the remaining two clusters, we can assume they are representative of contaminating naive T cells. 
 
 t-SNE projection is created with the t-SNE widget.  
 \

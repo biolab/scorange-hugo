@@ -14,18 +14,18 @@ shortExcerpt = "Learn how to quickly embed new cells onto and existing tSNE proj
 longExcerpt = "Learn how to quickly embed new cells onto and existing tSNE projection using the new widget the Annotator on the dataset of a healthy individual and AML patient undergoing chemotherapy gathered by Van Galen et al. (Cell, 2016)" 
 +++
 
-<i><b>Note:</b> This blog deals with the same topic as our blog <a href=" https://singlecell.biolab.si/blog/2019-06-aml-projection-vangalen-cell2016/"> Embedding New Cells onto an Existing t-SNE Projection</a>, but uses a new widget the Annotator in doing so, therefore it is advisable to run through it first and get some background from it. </i>
+<i><b>Note:</b> This blog deals with the same topic as our blog <a href="https://singlecell.biolab.si/blog/2019-06-aml-projection-vangalen-cell2016/"> Embedding New Cells onto an Existing t-SNE Projection</a>, but uses a new widget the Annotator in doing so, therefore it is advisable to run through it first and get some background from it. </i>
 <br>
 <br>
 <br>
 
-In our <a href=" https://singlecell.biolab.si/blog/2019-08-automatic-annotation-Baron-CellSyst2016/"> previous blog</a> we looked at the new Annotator widget and how it can be used effortlessly group and identify cell types in your dataset. Here we will explore another feature of the same widget: embedding of the new cells onto and existing tSNE projection.
+In our <a href="https://singlecell.biolab.si/blog/2019-08-automatic-annotation-Baron-CellSyst2016/"> previous blog</a> we looked at the new Annotator widget and how it can be used effortlessly group and identify cell types in your dataset. Here we will explore another feature of the same widget: embedding of the new cells onto and existing tSNE projection.
 <br>
 
-We will be using the data gathered by <a href= “https://www.sciencedirect.com/science/article/pii/S0092867419300947”> Galen  <i> et al.</i> (Cell, 2019) </a> which is available in our datasets, so you do not have to be concerned with downloading and importing it.
+We will be using the data gathered by <a href= "https://www.sciencedirect.com/science/article/pii/S0092867419300947"> Galen  <i> et al.</i> (Cell, 2019) </a> which is available in our datasets, so you do not have to be concerned with downloading and importing it.
 <br>
 
-Essentially, we will go through the same process as in blog <a href=" https://singlecell.biolab.si/blog/2019-06-aml-projection-vangalen-cell2016/"> Embedding New Cells onto an Existing t-SNE Projection</a>, but thanks to the new widget it will take us considerably less effort and time. 
+Essentially, we will go through the same process as in blog <a href="https://singlecell.biolab.si/blog/2019-06-aml-projection-vangalen-cell2016/"> Embedding New Cells onto an Existing t-SNE Projection</a>, but thanks to the new widget it will take us considerably less effort and time. 
 \
 {{% figure src="/blog_img/2019-08-19/workflow-partial.PNG" %}}
 \
@@ -55,11 +55,11 @@ Sample taken on the 31<sup>st</sup> day show that the patient has recovered and 
 \
 {{% figure src="/blog_img/2019-08-19/tSNEd31.png" %}}
 \
-As we can se comparing to the effort in our blog <a href=" https://singlecell.biolab.si/blog/2019-06-aml-projection-vangalen-cell2016/"> Embedding New Cells onto an Existing t-SNE Projection</a>, the Annotator widget really does simplify embedding of the new cells onto and existing tSNE projection.
+As we can se comparing to the effort in our blog <a href="https://singlecell.biolab.si/blog/2019-06-aml-projection-vangalen-cell2016/"> Embedding New Cells onto an Existing t-SNE Projection</a>, the Annotator widget really does simplify embedding of the new cells onto and existing tSNE projection.
 <br>
 <br>
 
 
 <i>References:</i>
 
-Van Galen P, Hovestadt V, Wadsworth MH, <i>et al.</i> (2016). <a href=”https://www.sciencedirect.com/science/article/pii/S0092867419300947”>Single-Cell RNA-Seq Reveals AML Hierarchies Relevant to Disease Progression and Immunity.</a> <i>Cell</i>, 176(6), 1265–1281.
+Van Galen P, Hovestadt V, Wadsworth MH, <i>et al.</i> (2016). <a href="https://www.sciencedirect.com/science/article/pii/S0092867419300947">Single-Cell RNA-Seq Reveals AML Hierarchies Relevant to Disease Progression and Immunity.</a> <i>Cell</i>, 176(6), 1265–1281.
