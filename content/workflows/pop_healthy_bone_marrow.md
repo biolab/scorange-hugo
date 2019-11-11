@@ -5,7 +5,7 @@ type = "workflows"
 blog =  "/2019-06-aml-identification-vangalen-cell2016/"
 video = ""
 download = "pop_healthy_bone_marrow.ows"
-tags = ["Hierarhical  Clustering", "Box Plot", "Scatter Plot", "tSNE", "Filter". "Marker Genes"]
+tags = ["Hierarhical  Clustering", "Box Plot", "Scatter Plot", "tSNE", "Filter", "Marker Genes"]
 weight = 967
 +++
 
