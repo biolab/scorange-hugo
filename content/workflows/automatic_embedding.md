@@ -9,4 +9,4 @@ tags = ["Annotator", "Embedding",  "tSNE", "Projection"]
 weight = 970
 +++
 
-Embedd single cell datasets from an AML patient collected on different timepoints in therapy onto a t-SNE of healthy individual’s bone marrow cells clustered according to cell type with the Annotator widget. 
+Embed single cell datasets from an AML patient collected on different timepoints in therapy onto a t-SNE of healthy individual’s bone marrow cells clustered according to cell type with the Annotator widget. 

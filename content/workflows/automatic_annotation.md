@@ -9,4 +9,4 @@ tags = ["Annotator", "Marker genes",  "tSNE"]
 weight = 969
 +++
 
-Identify cell types in the mouse pancreas using the Annotator widget.
+Identify cell types on t-SNE projection of the mouse pancreas cells in just one step using the Annotator widget.

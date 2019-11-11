@@ -1,5 +1,5 @@
 +++
-title= "Importing and Using Your Own Marker Genes"
+title= "Subsets of Exhausted CD8+ T Cells"
 images =  ["/workflow_images/checkpoint_blockade_workflow.png", "/workflow_images/checkpoint_blockade_tSNEs.png"]
 type = "workflows"
 blog =  "/2019-04-exhausted-cd8+-miller-natimmunol2019/"
