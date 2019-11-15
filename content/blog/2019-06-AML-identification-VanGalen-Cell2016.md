@@ -21,7 +21,7 @@ The data from<a href= "https://www.sciencedirect.com/science/article/pii/S009286
 \
 {{% figure src="/blog_img/2019-06-06/workflow-partial1.PNG" %}}
 \
-After loading the data (alternatively, you can load the Healthy human bone marrow dataset using Single Cell Datasets widget) and matching the genes in the dataset to those in databases, we filter out all the genes that appear in less than 10 cells. Besides the usual normalisation, we select 5000 most variable genes. 
+After we load the data (alternatively, you can load the Healthy human bone marrow dataset using Single Cell Datasets widget) and match the genes in the dataset to those in databases, we filter out all the genes that appear in less than 10 cells. Besides the usual normalisation, we select the 5000 most variable genes. 
 \
 {{% figure src="/blog_img/2019-06-06/workflow-partial2.PNG" %}}
 \
@@ -50,7 +50,7 @@ In case we run into problems identifying genes with this approach, we can always
 \
 {{% figure src="/blog_img/2019-06-06/NKcells.png" %}}
 \
-Now that we have matched clusters with cell types, we can use Edit Domain widget to change annotations of the clusters. 
+Now that we have matched clusters with the cell types, we can use the Edit Domain widget to change annotations of the clusters. 
 \
 {{% figure src="/blog_img/2019-06-06/editdomain.PNG" %}}
 \
@@ -72,7 +72,7 @@ Lets check how our clustering and cell identification compares to that of Galen 
 Apart from some mismatches along the putative cell differentiation trajectories (for example with Progenitor Monocytes and Monocytes along the continuum of cells from HSCs to monocytes), cell types overlap. 
 <br>    
 
-So, we have achieved what we undertook; characterised human bone marrow cell population and displayed cell differentiation trajectories on t-SNE projection.
+So, we have achieved what we undertook; characterised the human bone marrow cell population and displayed cell differentiation trajectories on t-SNE projection.
 
 *References* 
 \

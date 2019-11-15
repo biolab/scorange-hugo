@@ -19,7 +19,7 @@ longExcerpt = "Learn how to quickly embed new cells onto and existing tSNE proje
 <br>
 <br>
 
-In our <a href="https://singlecell.biolab.si/blog/2019-08-automatic-annotation-Baron-CellSyst2016/"> previous blog</a> we looked at the new Annotator widget and how it can be used effortlessly group and identify cell types in your dataset. Here we will explore another feature of the same widget: embedding of the new cells onto and existing tSNE projection.
+In our <a href="https://singlecell.biolab.si/blog/2019-08-automatic-annotation-Baron-CellSyst2016/"> previous blog</a> we looked at the new Annotator widget and how it can be used to effortlessly group and identify cell types in your dataset. Here we will explore another feature of the same widget: embedding of the new cells onto and existing tSNE projection.
 <br>
 
 We will be using the data gathered by <a href= "https://www.sciencedirect.com/science/article/pii/S0092867419300947"> Galen  <i> et al.</i> (Cell, 2019) </a> which is available in our datasets, so you do not have to be concerned with downloading and importing it.
@@ -29,11 +29,11 @@ Essentially, we will go through the same process as in blog <a href="https://sin
 \
 {{% figure src="/blog_img/2019-08-19/workflow-partial.PNG" %}}
 \
-Firstly, we need to load our datasets and pre-process them. We will be using Healthy human bone marrow as our primary and AML patient bone marrow day 0 as our secondary dataset. Find the mentioned datasets in two separate Single Cell Datasets widgets, annotate the genes with Genes widget, filter them and use Single Cell Preprocess widget to normalise the samples on counts per million and put them on a logarithmic scale. Make t-SNE projection from the Healthy human bone marrow dataset. 
+Firstly, we need to load our datasets and pre-process them. We will be using Healthy human bone marrow as our primary and AML patient bone marrow day 0 as our secondary dataset. Find the mentioned datasets in two separate Single Cell Datasets widgets, annotate the genes with Genes widget, filter them and use the Single Cell Preprocess widget to normalise the samples on counts per million and put them on a logarithmic scale. Make a t-SNE projection from the Healthy human bone marrow dataset. 
 \
 {{% figure src="/blog_img/2019-08-19/workflow-full.PNG" %}}
 \
-Use t-SNE as reference data input to the Annotator widget and AML patient dataset as secondary data input.
+Use the t-SNE as reference data input to the Annotator widget and AML patient dataset as secondary data input.
 \
 {{% figure src="/blog_img/2019-08-19/tSNE.png" %}}
 \
@@ -44,7 +44,7 @@ Since this projection would be much easier to analyse if it also displayed cell 
 Now this is much easier to interpret. The sample from the AML patient seems to contain most of the cell types present in a healthy donor.
 <br>
 
-There are two more datasets significant for this case in our database that we can explore. One of AML patient right after undergoing therapy and other of the same patient recovering from the treatment. Let us take a look at how they match up to the healthy sample by simply changing our datasets in the Single Cell Datasets widget that leads up to the Annotator widget as secondary data input.
+There are two more datasets significant for this case in our database that we can explore. One of the AML patient right after undergoing therapy and other of the same patient recovering from the treatment. Let us take a look at how they match up to the healthy sample by simply changing our datasets in the Single Cell Datasets widget that leads up to the Annotator widget as secondary data input.
 <br>
 
 The effect of chemotherapy in the sample AML patient bone marrow day 15 is well noticeable. Cell clearance has taken place and cells here are predominantly T cells. 
