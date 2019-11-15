@@ -1,12 +1,12 @@
 +++
 title= "Batch Effect Removal"
 images =  ["/workflow_images/batch-effect-removal.png"]
-type = "needs simplification and new image in the right proportion"
+type = "needs simplification"
 blog =  ""
 video = "https://youtu.be/ajGAvAa7HNE"
 download = "batch-effect-removal.ows"
 tags = ["Batch Effects", "t-SNE", "Data Set Alignment"]
-weight = 80
+weight = 1250
 ignore = true
 +++
 

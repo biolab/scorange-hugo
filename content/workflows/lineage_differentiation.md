@@ -6,7 +6,7 @@ blog =  "/2019-05-lineage-differentiation-petropoulos-cell2016/"
 video = ""
 download = "lineage_differentiation.ows"
 tags = ["Clustering", "Score Cells", "Scatter Plot", "tSNE", "PCA"]
-weight = 965
+weight = 600
 +++
 
 Pinpoint the time of trophectoderm (TE) and inner cell mass (ICM) differentiation in human preimplantation embryotic cells.

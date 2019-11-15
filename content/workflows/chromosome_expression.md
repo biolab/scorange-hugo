@@ -6,7 +6,7 @@ blog =  "/2019-07-xy-emryos-petropoulos-cell2017/"
 video = ""
 download = "chromosome_expression.ows"
 tags = ["Score Cells", "Distributions", "Box Plot", "tSNE"]
-weight = 964
+weight = 550
 +++
 
 Submerge yourself into the field of checkpoint blockade immunotherapy by identifying subsets of exhausted CD8+ T cells during chronic viral infections and corresponding groups in T cells isolated from tumours.

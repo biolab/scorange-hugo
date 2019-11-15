@@ -6,7 +6,7 @@ blog =  "/2019-03-pancreas-baron-cellsyst2016/"
 video = ""
 download = "mouse_pancreas.ows"
 tags = ["Score Cells", "tSNE", "Marker Genes", "Heatmap"]
-weight = 961
+weight = 800 
 +++
 
 This workflow clusters pancreatic cells from two mouse strains and identifies marker genes for each subpopulation of the cells.

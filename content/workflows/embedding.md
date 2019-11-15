@@ -6,7 +6,7 @@ blog =  "/2019-06-aml-projection-vangalen-cell2016/"
 video = ""
 download = "embedding.ows"
 tags = ["Apply Domain", "Embedding",  "tSNE"]
-weight = 968
+weight =  700
 +++
 
 Follow chemotherapy progression by projecting single cell datasets from an AML patient collected on different timepoints in therapy onto a t-SNE of healthy individual’s bone marrow cells clustered according to cell type.
