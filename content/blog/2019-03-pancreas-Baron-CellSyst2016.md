@@ -24,7 +24,7 @@ cluster them according to their cell type and identify marker genes for each sub
 {{% figure src="/blog_img/2019-03-20/blog-1-1-2.png" %}}
 \
 
-Firstly, we need to load, order and nominalise our data. To achieve this, we use the Load Data widget followed by the Genes (don't forget to set organism to <i>Mus Musculus</i>) and the Create Class widget, which enables us to use the cell types as characterised by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> as a control of our clustering. We normalise the data using the Single Cell Preprocess widget. Alternatively you can use Single Cell Datasets widget and load the Pancreas cells in mouse dataset with it.  
+Firstly, we need to load, organise and nominalise our data. To achieve this, we use the Load Data widget followed by the Genes (don't forget to set organism to <i>Mus Musculus</i>) and the Create Class widget, which enables us to use the cell types as characterised by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5228327/">Baron <i>et al.</i></a> as a control of our clustering. We normalise the data using the Single Cell Preprocess widget. Alternatively you can use Single Cell Datasets widget and load the Pancreas cells in mouse dataset with it.  
 
 \
 {{% figure src="/blog_img/2019-03-20/blog-1-2-1.png" %}}
@@ -38,7 +38,7 @@ Once the data has been normalised, we utilize the Louvain Clustering widget to c
 {{% figure src="/blog_img/2019-03-20/blog-1-3-2.png" %}}
 \
 
-We check the accuracy of clustering with box plot and t-SNE where we use Groups that we crated with the Create Class widget in the previous step to colour cells. 
+We check the accuracy of clustering with the box plot and t-SNE where we use Groups that we crated with the Create Class widget in the previous step to colour cells. 
 \
 {{% figure src="/blog_img/2019-03-20/tSNE-mouse.png" %}}
 \
@@ -65,7 +65,7 @@ We use Select Columns widget to extract marker genes for heatmap. To do this, we
 \
 
 Finally, we use selected genes to create the heatmap. From it we can identify cell clusters by looking at the functions of the marker genes. Alpha cells are most strongly correlated with <i>GCG</i> encoding glucagon, beta cells with <i>INS1</i> and <i>INS2</i> encoding insulin, delta cells with <i>SST</i> encoding somatostatin, gamma cells with <i>PPY</i> encoding pancreatic polypeptide.
-<br> <br> Using this principle we can cluster large bulks of cells to different cell type identities by identifying their marker genes and maping cell clusters according to functional roles of their marker genes.
+<br> <br> Using this principle we can cluster large bulks of cells into different cell type identities by identifying their marker genes and maping cell clusters according to functional roles of their marker genes.
 \
 {{% figure src="/blog_img/2019-03-20/heatmap-mouse.png" %}}
 \
