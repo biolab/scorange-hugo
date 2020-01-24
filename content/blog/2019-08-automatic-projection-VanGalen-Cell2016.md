@@ -19,7 +19,7 @@ longExcerpt = "Learn how to quickly embed new cells onto an existing tSNE projec
 <br>
 <br>
 
-In our <a href="https://singlecell.biolab.si/blog/2019-08-automatic-annotation-Baron-CellSyst2016/"> previous blog</a> we looked at the new Annotator widget and how it can be used to effortlessly group and identify cell types in your dataset. Here we will explore another feature of the same widget: the embedding of the new cells onto and existing tSNE projection.
+In our <a href="https://singlecell.biolab.si/blog/2019-08-automatic-annotation-Baron-CellSyst2016/"> previous blog</a> we looked at the new Annotator widget and how it can be used to effortlessly group and identify cell types in your dataset. Here we will explore another feature of the same widget: the embedding of the new cells onto an existing tSNE projection.
 <br>
 
 We will be using the data gathered by <a href= "https://www.sciencedirect.com/science/article/pii/S0092867419300947"> Galen  <i> et al.</i> (Cell, 2019) </a> which is available in our datasets, so you do not have to be concerned with downloading and importing it.

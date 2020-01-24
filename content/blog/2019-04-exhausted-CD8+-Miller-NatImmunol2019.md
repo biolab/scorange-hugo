@@ -33,9 +33,9 @@ After that we start by clustering the LCMV superset and later, using the marker 
 \
 {{% figure src="/blog_img/2019-04-23/workflow2.PNG" %}}
 \
-We drive the data through the Louvain Clustering widget, where we set the resolution to 2,3 and k neighbours to 100 to elicit 6 clusters.
+We drive the data through the Louvain Clustering widget, where we set the resolution to 2.3 and k neighbours to 100 to elicit 6 clusters.
 
-In order to identify our clusters and their marker genes, we run the Cluster Analysis widget using the Mann-Whitney method since our data is not normally distributed. We set set the gene count to 200 to determine a higher number of the significant genes. 
+In order to identify our clusters and their marker genes, we run the Cluster Analysis widget using the Mann-Whitney method since our data is not normally distributed. We set the gene count to 200 to determine a higher number of the significant genes. 
 \
 {{% figure src="/blog_img/2019-04-23/subset6-cluster.PNG" %}}
 \
@@ -47,7 +47,7 @@ t-SNE projection is created with the t-SNE widget.
 \
 {{% figure src="/blog_img/2019-04-23/tSNELCMV.png" %}}
 \
-We use the same workflow to attain t-SNE projection for the TIL subset, but this time we set the resolution to 1,4 in the Louvain Clustering widget to elicit 8 clusters.
+We use the same workflow to attain t-SNE projection for the TIL subset, but this time we set the resolution to 1.4 in the Louvain Clustering widget to elicit 8 clusters.
 
 \
 {{% figure src="/blog_img/2019-04-23/workflow3.PNG" %}}

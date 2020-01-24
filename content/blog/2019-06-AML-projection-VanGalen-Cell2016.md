@@ -34,7 +34,7 @@ Next, we use the t-SNE projection of the cells from the healthy individual as a 
 \
 {{% figure src="/blog_img/2019-06-14/workflow-partial2.png" %}}
 \
-Before we display the data, we have to merge it using the Concatenate widget, where we select the append data source ID so that we can display this selection in the Scatter Plot widget. t-SNE is our primary data input and Apply Domain our template data input. 
+Before we display the data, we have to merge it using the Concatenate widget, where we select the append data source ID so that we can display this selection in the Scatter Plot widget. t-SNE is our primary data input and Apply Domain our secondary data input. 
 \
 \
 {{% figure src="/blog_img/2019-06-14/workflow.png" %}}

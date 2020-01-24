@@ -14,7 +14,7 @@ shortExcerpt = "Identify the genes affiliated with osteoarthritis progression in
 longExcerpt = "Identify the genes affiliated with osteoarthritis progression in the cartilage data gathered by Ji Q et al. (Annals of the Rheumatic Diseases, 2019) to shed a light on predicting clinical outcomes of the patients" 
 +++
 
-Osteoarthritis is one of the most common and costly chronic conditions. A better understanding of the genetical background and the expression changes during osteoarthritis progression could help with the diagnosis and the predictions of treatment outcomes. Therefore, in his short blog, we will take a look at the genes affiliated with osteoarthritis progression.
+Osteoarthritis is one of the most common and costly chronic conditions. A better understanding of the genetical background and the expression changes during osteoarthritis progression could help with the diagnosis and the predictions of treatment outcomes. Therefore, in this short blog, we will take a look at the genes affiliated with osteoarthritis progression.
 \
 {{% figure src="/blog_img/2019-07-28/workflow-partial1.PNG" %}}
 \
@@ -39,11 +39,11 @@ This means we can now use PC4 scoring to determine genes associated with osteoar
 \
 We can now take a look at the genes with negative correlation for PC4 (<i>PTGES</i>, <i>NPR3</i>, <i>ANGPTL1</i>, <i>POSTN</i>) and those with positive correlation (<i>IL1B</i>, <i>CHRDL2</i>, <i>CCl3</i>, <i>CXCL3</i>) and determine their biological role using the GO Browser widget.
 
-Since the PCA widget overruns the gene annotations in our data, we have to run it trough the Genes widget again, than display it with the Scatter Plot widget, manual select positively or negatively corelated genes on the plot and use it as an input for the GO Browser. 
+Since the PCA widget overruns the gene annotations in our data, we have to run it trough the Genes widget again, then display it with the Scatter Plot widget, manual select positively or negatively corelated genes on the plot and use it as an input for the GO Browser. 
 \
 {{% figure src="/blog_img/2019-07-28/workflow-full.PNG" %}}
 \
-Genes with positive correlation for PC4, as displayed on the image bellow, are mainly involved in skeletal system development (ossification) and cellular responses to stress (defense response, innate immune response) suggesting the early changes that occur during the osteoarthritis pathogenesis and those with negative correlation for PC4 are mainly involved in extracellular matrix organisation (tissue development, animal organ morphogenesis) and collagen metabolism (skeletal system development, odontogenesis). This makes sense since metabolic pathways switch towards glycolysis during osteoarthritis progression and in doing so contribute to impaired extracellular matrix synthesis and anabolic processes. 
+Genes with positive correlation for PC4, as displayed on the image below, are mainly involved in skeletal system development (ossification) and cellular responses to stress (defense response, innate immune response) suggesting the early changes that occur during the osteoarthritis pathogenesis and those with negative correlation for PC4 are mainly involved in extracellular matrix organisation (tissue development, animal organ morphogenesis) and collagen metabolism (skeletal system development, odontogenesis). This makes sense since metabolic pathways switch towards glycolysis during osteoarthritis progression and in doing so contribute to impaired extracellular matrix synthesis and anabolic processes. 
 \
 \
 {{% figure src="/blog_img/2019-07-28/positivepathways.png" %}}
