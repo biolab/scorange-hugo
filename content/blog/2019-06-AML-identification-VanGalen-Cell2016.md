@@ -62,7 +62,7 @@ To make the annotation file readable to Orange, we need to rename it from <i>GSM
 \
 {{% figure src="/blog_img/2019-06-06/mergedata.PNG" %}}
 \
-Have you noticed that we did not use Cluster Analysis widget as our output for the data we are about to display using t-SNE? This is because it reduces the data and therefore negatively influences our t-SNE visualisation, so we used Edit Domain widget as out output for the data. 
+Have you noticed that we did not use Cluster Analysis widget as our output for the data we are about to display using t-SNE? This is because it reduces the data and therefore negatively influences our t-SNE visualisation, so we used Edit Domain widget as output for the data. 
 <br>
 
 Lets check how our clustering and cell identification compares to that of Galen  <i> et al.</i>.

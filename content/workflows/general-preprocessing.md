@@ -9,4 +9,4 @@ tags = ["Preprocessing", "Annotation", "Filtering"]
 weight = 1150 
 +++
 
-Loads the data, annotates it and filters it. Single Cell Preprocesses widget normalises and algorithmizes the samples, additionally it can be used to select the most variable genes or to standardizes them. Such data can be further analysed. 
+Loads the data, annotates it and filters it. Single Cell Preprocesses widget normalises and log-transforms the samples, additionally it can be used to select the most variable genes or to standardize them. Such data can be further analysed. 
