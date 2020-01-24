@@ -21,11 +21,12 @@ The data from<a href= "https://www.sciencedirect.com/science/article/pii/S009286
 \
 {{% figure src="/blog_img/2019-06-06/workflow-partial1.PNG" %}}
 \
-After we load the data (alternatively, you can load the Healthy human bone marrow dataset using Single Cell Datasets widget) and match the genes in the dataset to those in databases, we filter out all the genes that appear in less than 10 cells. Besides the usual normalisation, we select the 5000 most variable genes. 
+After we load the data (alternatively, you can load the Healthy human bone marrow dataset using the Single Cell Datasets widget) and match the genes in the dataset to those in databases, we filter out all the genes that appear in less than 10 cells. Besides the usual normalisation, we select the 5000 most variable genes. 
 \
 {{% figure src="/blog_img/2019-06-06/workflow-partial2.PNG" %}}
 \
 Since the relationships between the cell clusters is important for this analysis, we use the Hierarhical Clustering and not the Louvian Clustering widget to cluster the data. Firstly, we calculate the distances between the cells and then visually determine the number of clusters by dragging the vertical line over the graph.
+\
 \
 {{% figure src="/blog_img/2019-06-06/clustering.png" %}}
 \
@@ -42,15 +43,17 @@ But before we take a closer look at either of the alternatives, let us take a lo
 C2 is the biggest cluster. This information might come in handy when we try to identify them.
 <br>
 
-What we have also already done in this workflow, is identified markers for each cluster with the help of Data Tables (explained in detail in <a href="https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/"> this blog</a>). With these markers we can classify clusters. For example, <i>CD3D</i> is the most significant gene in cluster 4. It encodes T-cell surface glycoprotein CD3. Similarly <i>MS4A1</i> in the cluster 3 encodes B-lymphocyte antigen CD20.
+What we have also already done in this workflow, is identified markers for each cluster with the help of the Data Tables (explained in detail in <a href="https://singlecell.biolab.si/blog/2019-03-pancreas-baron-cellsyst2016/"> this blog</a>). With these markers we can classify clusters. For example, <i>CD3D</i> is the most significant gene in cluster 4. It encodes T-cell surface glycoprotein CD3. Similarly <i>MS4A1</i> in the cluster 3 encodes B-lymphocyte antigen CD20.
 \
 {{% figure src="/blog_img/2019-06-06/workflow-partial4.PNG" %}}
 \
-In case we run into problems identifying genes with this approach, we can always use the Score Cells widget to classify cells using known gene markers. Select the genes for the desired cell type, which are conveniently available in Marker Genes widget, and then order them by score in a new Data Table widget. As we can see in this case, most of the highly scored cells for natural killer cell markers show up in C1. 
+In case we run into problems identifying genes with this approach, we can always use the Score Cells widget to classify cells using known gene markers. Select the genes for the desired cell type, which are conveniently available in the Marker Genes widget, and then order them by score in a new Data Table widget. As we can see in this case, most of the highly scored cells for natural killer cell markers show up in C1. 
+\
 \
 {{% figure src="/blog_img/2019-06-06/NKcells.png" %}}
 \
 Now that we have matched clusters with the cell types, we can use the Edit Domain widget to change annotations of the clusters. 
+\
 \
 {{% figure src="/blog_img/2019-06-06/editdomain.PNG" %}}
 \
@@ -58,18 +61,19 @@ Additionally, we can merge the annotation file provided by Galen  <i> et al.</i>
 \
 {{% figure src="/blog_img/2019-06-06/workflow-final.PNG" %}}
 \
-To make the annotation file readable to Orange, we need to rename it from <i>GSM3588001_BM4.anno.txt.gz</i> to <i>GSM3588001_BM4.anno.<b>tab</b>.gz</i>. After that we can load it and merge it with our data using Merge Data widget.
+To make the annotation file readable to Orange, we need to rename it from <i>GSM3588001_BM4.anno.txt.gz</i> to <i>GSM3588001_BM4.anno.<b>tab</b>.gz</i>. After that we can load it and merge it with our data using the Merge Data widget.
+\
 \
 {{% figure src="/blog_img/2019-06-06/mergedata.PNG" %}}
 \
-Have you noticed that we did not use Cluster Analysis widget as our output for the data we are about to display using t-SNE? This is because it reduces the data and therefore negatively influences our t-SNE visualisation, so we used Edit Domain widget as out output for the data. 
+Have you noticed that we did not use the Cluster Analysis widget as our output for the data we are about to display using t-SNE? This is because it reduces the data and therefore negatively influences our t-SNE visualisation, therefore we used the Edit Domain widget as out output for the data. 
 <br>
 
 Lets check how our clustering and cell identification compares to that of Galen  <i> et al.</i>.
 \
 {{% figure src="/blog_img/2019-06-06/tSNE.png" %}}
 \
-Apart from some mismatches along the putative cell differentiation trajectories (for example with Progenitor Monocytes and Monocytes along the continuum of cells from HSCs to monocytes), cell types overlap. 
+Apart from some mismatches along the putative cell differentiation trajectories (for example with the Progenitor Monocytes and the Monocytes along the continuum of cells from HSCs to monocytes), cell types overlap. 
 <br>    
 
 So, we have achieved what we undertook; characterised the human bone marrow cell population and displayed cell differentiation trajectories on t-SNE projection.

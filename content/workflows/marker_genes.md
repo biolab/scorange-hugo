@@ -9,4 +9,4 @@ tags = ["Score Cells", "tSNE", "Marker Genes", "Import"]
 weight =  950
 +++
 
-Enables you importation of your own marker genes in .tab format. 
+Enables you the importation of your own marker genes in the .tab format. 

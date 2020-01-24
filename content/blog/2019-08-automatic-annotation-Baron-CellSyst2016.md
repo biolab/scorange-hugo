@@ -25,10 +25,12 @@ Again, we will be looking at the single cell data from the pancreas (<a href="ht
 \
 {{% figure src="/blog_img/2019-08-05/partialworkflow.png" %}}
 \
-You have two options here: download the data from the GEO database and import it into scOrange using the Load Data widget and annotate it with Genes widget or simply find it in Single Cell Datasets.
+You have two options here: download the data from the GEO database and import it into scOrange using the Load Data widget and annotate it with the Genes widget or simply find it in the Single Cell Datasets widget.
 \
 {{% figure src="/blog_img/2019-08-05/fullworkflow.png" %}}
+\
 Use the t-SNE widget for visualisation purposes and then drive all the data to the Annotator widget as reference data input. With the Marker Genes we can omit the trouble of finding the proper genes, just do not forget to select Human as your organism and fell free to select either of the databases currently available in the widget. 
+\
 \
 {{% figure src="/blog_img/2019-08-05/annotator.png" %}}
 \

@@ -9,4 +9,4 @@ tags = ["Apply Domain", "Embedding",  "tSNE"]
 weight =  700
 +++
 
-Follow chemotherapy progression by projecting single cell datasets from an AML patient collected on different timepoints in therapy onto a t-SNE of healthy individual’s bone marrow cells clustered according to cell type.
+Follow chemotherapy progression by projecting a single cell datasets from an AML patient collected on different timepoints in therapy onto a t-SNE of a healthy individual’s bone marrow cells clustered according to cell type.

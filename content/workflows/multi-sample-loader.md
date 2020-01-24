@@ -9,4 +9,4 @@ tags = ["Data"]
 weight = 1200
 +++
 
-Load Data widget reads the data from tab or comma delimited text files or annotated 10x Genomics data files. Drag-and-drop to create a list of files to load. Use cell or gene sampling, if required. The loader creates a single data set and marks the cells according to the data source.
+The Load Data widget reads the data from the tab or comma delimited text files or annotated 10x Genomics data files. Drag-and-drop to create a list of files to load. Use cell or gene sampling, if required. The loader creates a single data set and marks the cells according to the data source.

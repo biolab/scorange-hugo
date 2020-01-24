@@ -10,15 +10,15 @@ hardLineBreak = true
 categories = ["PCA", "tSNE", "differentiation", "embryo", "lineage", "clustering", "scatter plot"]
 joinLines = false
 author = "Iva Černoša"
-shortExcerpt = "Combine clustering and time component to pinpoint the time of trophectoderm (TE) and inner cell mass (ICM) differentiation in human preimplantation embryotic cells" 
-longExcerpt = "Combine clustering and time component to pinpoint the time of trophectoderm (TE) and inner cell mass (ICM) differentiation in human preimplantation embryotic cells and recreate a part of study by Petropoulos et al. (Cell, 2016)" 
+shortExcerpt = "Combine clustering and the time component to pinpoint the time of trophectoderm (TE) and inner cell mass (ICM) differentiation in human preimplantation embryotic cells" 
+longExcerpt = "Combine clustering and the time component to pinpoint the time of trophectoderm (TE) and inner cell mass (ICM) differentiation in human preimplantation embryotic cells and recreate a part of study by Petropoulos et al. (Cell, 2016)" 
 +++
 Embryonic development has been well studied in mouse models but our knowledge of this process in the human embryo is rudimentary. Here we will take a closer look at the trophectoderm and the inner cell mass maturation during the first 7 days of human development to help with the assessment of the degree of conservation between the mouse and human blastocyst formation.
 
 We will be using the same single cell data from human preimplantation embryos as in the previous <a href="https://singlecell.biolab.si/blog/2019-07-xy-emryos-petropoulos-cell2017/">blog</a>. The data was published by <a href="https://www.cell.com/fulltext/S0092-8674(16)30280-X">Petropoulos <i> et al. </i> </a>and is deposited in ArrayExpress database under the accession number <a href="https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3929/">E-MTAB-3929</a>. 
 <br>
 
-Naturally, we have to start by loading the data into Orange and pre-processing it using the familiar workflow with the following widgets: Load Data, Genes, Create Class to sort the cells by sampling day and of course Single Cell Preprocess to normalise the data and select the 500 most variable genes. Alternatively, you can load the human preimplantation embryos dataset using Single Cell Datasets widget.  
+Naturally, we have to start by loading the data into Orange and pre-processing it using the familiar workflow with the following widgets: Load Data, Genes, Create Class to sort the cells by sampling day and of course Single Cell Preprocess to normalise the data and select the 500 most variable genes. Alternatively, you can load the Human preimplantation embryos dataset using Single Cell Datasets widget.  
 \
 {{% figure src="/blog_img/2019-05-10/workfow-linage-1.png" %}}
 \
@@ -32,6 +32,7 @@ Another way to confirm that time plays a crucial role in the cell segregation is
 \
 Scatter Plot widget reveals that cells are clearly aligned in the accordance with the time of development (embryonic day) when dimensionally reduced, meaning that time is one of the prevalent factors for segregation.
 \
+\
 {{% figure src="/blog_img/2019-05-10/PCA.png" %}}
 \
 Additionally, we can explore another strong segregating factor which takes place during E5 and causes scatter plot to distinctly change shape. Since this timeline corresponds with blastocoel formation, we could try scoring the cells for trophectoderm (<b>TE</b>) and inner cell mass (<b>ICM</b>) gene markers and check whether this is the reason behind segregation of the cells on the scatter plot.  
@@ -40,7 +41,7 @@ Firstly we need to export genes into a new data table. In it we select <i>GATA2<
 \
 {{% figure src="/blog_img/2019-05-10/workfow-linage-3.png" %}}
 \
-As the second input we need to select all the cells in a Data Table widget that contains normalised data. After that we cluster the cells using the similar settings as before (k-neighbours: 100, resolution: 1.6) to elicit 8 clusters (5 for each sampling day and three additional ones to separate E5, E5 and E7 to ICM and TE cells).
+As the second input we need to select all the cells in the Data Table widget that contains normalised data. After that we cluster the cells using the similar settings as before (k-neighbours: 100, resolution: 1.6) to elicit 8 clusters (5 for each sampling day and three additional ones to separate E5, E6 and E7 to ICM and TE cells).
 \
 {{% figure src="/blog_img/2019-05-10/tSNE2-2.png" %}}
 \
@@ -62,7 +63,7 @@ To illustrate that even more evidently, we cluster (k-neighbours: 100, resolutio
 \
 {{% figure src="/blog_img/2019-05-10/tSNE2-3.png" %}}
 \
-Combining principal component analyses (PCA) with clustering this analysis of human preimplantation embryos indeed revealed that the segregation into TE and ICM lineages occurs at E5. 
+Combining principal component analyses (PCA) with clustering, this analysis of human preimplantation embryos indeed revealed that the segregation into TE and ICM lineages occurs at E5. 
 <br>
 
 *References* 

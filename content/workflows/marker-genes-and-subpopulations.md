@@ -12,4 +12,4 @@ tags = ["Marker Genes", "t-SNE"]
 weight = 1000
 +++
 
-This workflow uses Score Cell and Marker Genes widget to score the cells according to the expression of selected markers. Scored cells can be passed to, say, t-SNE visualization, where any change of a selection of marker genes will automatically trigger the update in t-SNE to identify an associated subpopulation of cells.
+This workflow uses the Score Cell and the Marker Genes widget to score the cells according to the expression of selected markers. Scored cells can be passed to, say, t-SNE visualization, where any change of a selection of marker genes will automatically trigger the update in t-SNE to identify an associated subpopulation of cells.
