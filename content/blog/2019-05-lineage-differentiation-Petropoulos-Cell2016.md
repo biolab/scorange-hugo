@@ -62,7 +62,7 @@ To illustrate that even more evidently, we cluster (k-neighbours: 100, resolutio
 \
 {{% figure src="/blog_img/2019-05-10/tSNE2-3.png" %}}
 \
-Ny combining principal component analyses (PCA) with clustering this analysis of human preimplantation embryos indeed revealed that the segregation into TE and ICM lineages occurs at E5. 
+By combining principal component analyses (PCA) with clustering this analysis of human preimplantation embryos indeed revealed that the segregation into TE and ICM lineages occurs at E5. 
 <br>
 
 *References* 
