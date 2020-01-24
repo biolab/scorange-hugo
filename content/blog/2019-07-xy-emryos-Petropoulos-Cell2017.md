@@ -30,7 +30,7 @@ Distribution widget is the most fitting way to depict the scores.
 \
 {{% figure src="/blog_img/2019-05-06/chrY-distribution.png" %}}
 \
-Observing the outcome, we can quickly deduce that the bar on the far left is representative of the cells with the XX karyotype and the rest represent cells from the male embryos. 
+Observing the outcome, we can quickly deduce that the bar on the far left represents the cells with the XX karyotype and the rest represent cells from the male embryos. 
 <br>
 
 To check weather the Y-linked genes are ubiquitously expressed at all stages of preimplantation embryos, we foremost have to elect the cells with XY karyotype.  We utilise the Data Table widget and sort the cells according to their score for Y-linked genes. Judging from the distribution, a good cut off mark for the XY cells seems to lie between 0.1 and 0.2, therefore we select the cells with the score of at least 0.2. The Box Plot widget reveals an increase between E3 (day 3) and E4 (day 4). 
@@ -41,7 +41,7 @@ As demonstrated by <a href="https://www.cell.com/fulltext/S0092-8674(16)30280-X"
 \
 {{% figure src="/blog_img/2019-05-06/workflow-embryo-partial3.PNG" %}}
 \
-The best way to visualise the cells, we determined to have XY karyotype, is t-SNE. To separate cells with the XY karyotype from those with the XX karyotype, we use the Select Rows widget. We select the same cut off mark for the XY cells as before: 0.2, then we proceed to transfer all the data from the Select Rows widget to t-SNE widget.
+The best way to visualise the cells, for which we determined to have XY karyotype, is t-SNE. To separate cells with the XY karyotype from those with the XX karyotype, we use the Select Rows widget. We select the same cut off mark for the XY cells as before: 0.2, then we proceed to transfer all the data from the Select Rows widget to t-SNE widget.
 \
 {{% figure src="/blog_img/2019-05-06/selectrows.png" %}}
 \

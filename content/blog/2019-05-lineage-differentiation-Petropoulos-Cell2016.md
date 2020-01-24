@@ -40,7 +40,7 @@ Firstly we need to export genes into a new data table. In it we select <i>GATA2<
 \
 {{% figure src="/blog_img/2019-05-10/workfow-linage-3.png" %}}
 \
-As the second input we need to select all the cells in a Data Table widget that contains normalised data. After that we cluster the cells using the similar settings as before (k-neighbours: 100, resolution: 1.6) to elicit 8 clusters (5 for each sampling day and three additional ones to separate E5, E5 and E7 to ICM and TE cells).
+As the second input we need to select all the cells in a Data Table widget that contains normalised data. After that we cluster the cells using the similar settings as before (k-neighbours: 100, resolution: 1.6) to elicit 8 clusters (5 for each sampling day and three additional ones to separate E5, E6 and E7 to ICM and TE cells).
 \
 {{% figure src="/blog_img/2019-05-10/tSNE2-2.png" %}}
 \
@@ -62,7 +62,7 @@ To illustrate that even more evidently, we cluster (k-neighbours: 100, resolutio
 \
 {{% figure src="/blog_img/2019-05-10/tSNE2-3.png" %}}
 \
-Combining principal component analyses (PCA) with clustering this analysis of human preimplantation embryos indeed revealed that the segregation into TE and ICM lineages occurs at E5. 
+Ny combining principal component analyses (PCA) with clustering this analysis of human preimplantation embryos indeed revealed that the segregation into TE and ICM lineages occurs at E5. 
 <br>
 
 *References* 

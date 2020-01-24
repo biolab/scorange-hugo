@@ -14,7 +14,7 @@ shortExcerpt = "Identify the genes affiliated with osteoarthritis progression in
 longExcerpt = "Identify the genes affiliated with osteoarthritis progression in the cartilage data gathered by Ji Q et al. (Annals of the Rheumatic Diseases, 2019) to shed a light on predicting clinical outcomes of the patients" 
 +++
 
-Osteoarthritis is one of the most common and costly chronic conditions. A better understanding of the genetical background and the expression changes during osteoarthritis progression could help with the diagnosis and the predictions of treatment outcomes, therefore, in his short blog, we will take a look at the genes affiliated with osteoarthritis progression.
+Osteoarthritis is one of the most common and costly chronic conditions. A better understanding of the genetical background and the expression changes during osteoarthritis progression could help with the diagnosis and the predictions of treatment outcomes, therefore, in this short blog, we will take a look at the genes affiliated with osteoarthritis progression.
 \
 {{% figure src="/blog_img/2019-07-28/workflow-partial1.PNG" %}}
 \
@@ -36,7 +36,7 @@ This means we can now use PC4 scoring to determine genes associated with osteoar
 \
 We can now take a look at genes with negative correlation for PC4 (<i>PTGES</i>, <i>NPR3</i>, <i>ANGPTL1</i>, <i>POSTN</i>) and those with positive correlation (<i>IL1B</i>, <i>CHRDL2</i>, <i>CCl3</i>, <i>CXCL3</i>) and determine their biological role using GO Browser widget.
 
-Since the PCA widget overruns the gene annotations in our data, we have to run it trough the Genes widget again, than display it with the Scatter Plot widget, manual select positively or negatively corelated genes on the plot and use it as an input for the GO Browser. 
+Since the PCA widget overruns the gene annotations in our data, we have to run it trough the Genes widget again, then display it with the Scatter Plot widget, manual select positively or negatively corelated genes on the plot and use it as an input for the GO Browser. 
 \
 {{% figure src="/blog_img/2019-07-28/workflow-full.PNG" %}}
 \
@@ -44,7 +44,7 @@ Genes with positive correlation for PC4, as displayed on the image bellow, are m
 \
 {{% figure src="/blog_img/2019-07-28/positivepathways.png" %}}
 \
-Now you see, just how quick and easy identifying, annotating and explaining the genes affiliated with a certain trait (osteoarthritis progression) is in scOrange.
+Now you see, just how quick and easy identifying, annotating, and explaining the genes affiliated with a certain trait (osteoarthritis progression) is in scOrange.
 
 *References* 
 \
