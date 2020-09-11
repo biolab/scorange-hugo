@@ -1,125 +1,25 @@
 {{ define "main"}}
 
 <section id="features" class="features section downloads download-back">
-        <div class="container downloados " style="margin-top: 50px">
-            <div class="row">
-                <div style="padding: 0px !important;">
-                    {{ range .Site.Data.tabs}}
-                    <div class="icon-item col-lg-3 col-md-4 col-sm-4 col-xs-6 text-center" >
-                        <a onclick="windows({{.os}})" href="#{{.os}}">
-                            <div id="{{.os}}1" class="icon">
-                                <i class="fa fa-{{ .icon }} jsonly icon-button"></i>
-                            </div><!--//icon-->
-                            <h2 class="content title">{{ .title }}</h2>
-                        </a>
-                    </div><!--//item-->
-                {{end}}
-                </div>
-            </div><!--//row-->
-        </div><!--//container-->
+    <div class="container downloads " style="margin-top: 50px">
+        <div class="content">
+            <h1>Download</h1>
+            <h3>Orange add-on</h3>
+            <p>Orange3-SingleCell can be installed directly from Orange add-on manager. You can find add-on manager in Options menu.</p>
 
-        <div class="container os-download" style="padding-bottom: 40px;">
-            <div class="row">
-            <div id="win" class=" download-os downloadsize">
-                <div class="">
-                    <div class="content">
-                        <h2>Download the latest version for Windows</h2>
-                        <a id="recommended-download" style="margin-top: 10px" class="btn btn-warning big-button-base" onclick="windows()" href="https://download.biolab.si/download/files/scOrange-1.3.0-Miniconda-x86_64.exe">
-                            Download scOrange {{ if and (isset .Params "version") .Params.version }}  
-                            {{.Params.version}}
-                            {{end}}
-                        </a>
+            <h3>Anaconda</h3>
+            <p>If you are using python provided by <a href="https://docs.conda.io/en/latest/miniconda.html">Anaconda</a>
+                distribution, you are almost ready to go. Add conda-forge to the list of channels you can
+                install packages from</p>
+            <pre><code>conda config --add channels conda-forge</code></pre>
+            <p>and run</p>
+            <pre><code>conda install orange3-singlecell</code></pre>
 
-                        <h3><a id="standalone"></a>Standalone installer</h3>
-                        <a href="https://download.biolab.si/download/files/scOrange-1.3.0-Miniconda-x86_64.exe">scOrange-win_amd64.exe (64 bit)</a><br />
-                        <p>Can be used without administrative priviledges.</p>
-
-                    </div>
-                </div>
-            </div>
-
-        <div id="mac" class=" mac download-os downloadsize">
-                 <div class="" >
-                   <div class="content">
-                        <h2>Download the latest version for Mac</h2>
-                        <a id="recommended-download" onclick="mac()"style="margin-top: 10px" class="btn btn-warning big-button-base" href="https://download.biolab.si/download/files/scOrange-1.3.0.dmg">
-                            Download scOrange {{ if and (isset .Params "version") .Params.version }}  
-                            {{.Params.version}}
-                            {{end}}
-                        </a>
-                        <h3><a id="standalone"></a>Bundle</h3>
-                        <a href="https://download.biolab.si/download/files/scOrange-1.3.0.dmg">scOrange.dmg</a><br/>
-                        <p>A universal bundle with everything packed in and ready to use.</p>
-                    </div>
-                </div>
+            <h3>Pip</h3>
+            <p>Orange3-SingleCell can also be installed from the Python Package Index:</p>
+            <pre><code>pip install orange3-singlecell</code></pre>
         </div>
     </div>
-    </div>
-
-
-        <script type="text/javascript">
-            hash = window.location.hash.substr(1);
-
-            if (hash == ""){
-                if (navigator.appVersion.indexOf("Win")!=-1) hash="windows";
-                if (navigator.appVersion.indexOf("Mac")!=-1) hash="macos";
-            }
-                        
-            if (hash == "windows"){
-                var element = document.getElementById("windows1");
-                element.classList.add("icon-selected");
-                $("#mac").hide();
-                $("#win").show();
-                window.location.hash = hash;
-            }
-
-            else if( hash == "macos"){
-                var element = document.getElementById("macos1");
-                element.classList.add("icon-selected");
-                window.location.hash = hash;
-                    $("#win").hide();
-                    $("#mac").show();
-            }
-
-            function windows(os) {
-                _removeClasses();
-                if (os =="windows"){
-                    var element = document.getElementById("windows1");
-                    element.classList.add("icon-selected");
-                    $("#mac").hide();
-                    $("#win").show();
-                }
-                else if( os == "macos"){
-                    var element = document.getElementById("macos1");
-                    element.classList.add("icon-selected");
-                    $("#win").hide();
-                    $("#mac").show();
-                }
-            }
-
-        window.addEventListener('hashchange', function() {
-            _removeClasses();
-            hash = window.location.hash.substr(1);
-            if (hash =="windows"){
-                 var element = document.getElementById(hash+"1");
-                 element.classList.add("icon-selected");
-                 $("#mac").hide();
-                 $("#win").show();
-                }
-            else if( hash == "macos"){
-                 var element = document.getElementById(hash+"1");
-                 element.classList.add("icon-selected");
-                 $("#win").hide();
-                 $("#mac").show();
-            }
-        });
-        function _removeClasses() {
-          var els = document.querySelectorAll('.icon-selected');
-          for (var i = 0; i < els.length; i++) {
-            els[i].classList.remove('icon-selected');
-          }
-        }
-        </script>
-    </section>
+</section>
 
 {{ end }}
