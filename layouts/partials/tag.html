@@ -49,7 +49,7 @@
                 </div>
                 <div class="getting-started-button">
                     {{ if .Params.download }}
-                    <a href="https://service.biolab.si/download/workflow?name={{ .Params.download }}&domain=sc " class="no-break-buttons" target="_blank">
+                    <a href="https://download.biolab.si/download/files/workflows/sc/{{ .Params.download }}" class="no-break-buttons" target="_blank">
                         <div class="learn-more feature-block">
                             <div class="feature-block fa fa-download jsonly"></div>
                             <div class="feature-block feature-link">Download</div>
@@ -187,7 +187,7 @@
             html_el += '<div class="getting-started-button">'
 
             if (results[page].download != "" && results[page].download != '<no value>' ){
-                html_el += '<a href="https://service.biolab.si/download/workflow?name='+results[page].download+'" class="no-break-buttons" target="_blank"><div class="learn-more feature-block"><div class="feature-block fa fa-download jsonly"></div><div class="feature-block feature-link">Download</div></div></a>&nbsp;&nbsp;'
+                html_el += '<a href="https://download.biolab.si/download/files/workflows/sc/'+results[page].download+'" class="no-break-buttons" target="_blank"><div class="learn-more feature-block"><div class="feature-block fa fa-download jsonly"></div><div class="feature-block feature-link">Download</div></div></a>&nbsp;&nbsp;'
             }
             if (results[page].video != "" && results[page].video != '<no value>' ){
                 html_el += '<a class="lightbox no-break-buttons" href="'+results[page].video +'"target="_blank"><div class="feature-block fa fa-play-circle-o jsonly"></div><div class="feature-block feature-link">Watch Video</div></a>&nbsp;&nbsp;'
